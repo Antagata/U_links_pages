@@ -681,20 +681,6 @@
     </style>
 </head>
 <body>
-<!-- Password Protection -->
-<script>
-    // Check if user is authenticated
-    const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
-    const sessionAuth = sessionStorage.getItem('dashboardAuth');
-
-    if (sessionAuth !== REQUIRED_HASH) {
-        // Not authenticated, redirect to login
-        window.location.href = 'index.html';
-    }
-</script>
-<!-- End Password Protection -->
-
-
     <div class="dashboard-container">
         <div class="header">
             <!-- Chaser Lights - Top Left -->

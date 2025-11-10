@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20251110114936">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEADS Campaigns - AVU</title>
+    <link rel="icon" type="image/x-icon" href="https://antagata.github.io/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .header .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .nav-links {
+            background: #f8f9fa;
+            padding: 15px 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            margin-right: 20px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        th:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        th::after {
+            content: '⇅';
+            position: absolute;
+            right: 10px;
+            opacity: 0.5;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:nth-child(even):hover {
+            background: #f0f0f0;
+        }
+
+        .campaign-no {
+            font-family: monospace;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .wine-name {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .vintage {
+            color: #666;
+            font-style: italic;
+        }
+
+        .producer {
+            color: #555;
+        }
+
+        .date {
+            color: #888;
+            font-size: 0.95em;
+        }
+
+        .update-time {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+<!-- Password Protection -->
+<script>
+    // Check if user is authenticated
+    const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
+    const sessionAuth = sessionStorage.getItem('dashboardAuth');
+
+    if (sessionAuth !== REQUIRED_HASH) {
+        // Not authenticated, redirect to login
+        window.location.href = 'index.html';
+    }
+</script>
+<!-- End Password Protection -->
+
+
+    <div class="container">
+        <div class="header">
+            <div class="icon">📢</div>
+            <h1>LEADS Campaigns</h1>
+            <div class="subtitle">Private Wine Campaign Leads - Sorted by Sent Date</div>
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">🏆 Winners Dashboard</a>
+            <a href="leads.html">📢 LEADS Campaigns</a>
+            <a href="index.html">🔐 Login</a>
+        </div>
+
+        <div class="content">
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">272</div>
+                    <div class="stat-label">Total LEADS Campaigns</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2331</div>
+                    <div class="stat-label">Total Wine Offers</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">PRIVATE</div>
+                    <div class="stat-label">Campaign Type</div>
+                </div>
+            </div>
+
+            <table id="leadsTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0, 'date')">Sent Date</th>
+                        <th onclick="sortTable(1, 'text')">Campaign No.</th>
+                        <th onclick="sortTable(2, 'text')">Wine Name</th>
+                        <th onclick="sortTable(3, 'text')">Vintage</th>
+                        <th onclick="sortTable(4, 'text')">Producer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="date">2025-11-07 15:03</td>
+                        <td class="campaign-no">CM-25-03076</td>
+                        <td class="wine-name">Figeac</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Château Figeac</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-11-04 17:00</td>
+                        <td class="campaign-no">CM-25-03044</td>
+                        <td class="wine-name">Champagne Brut Clos du Mesnil</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Krug</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-11-04 16:29</td>
+                        <td class="campaign-no">CM-25-03041</td>
+                        <td class="wine-name">Champagne Brut Collection</td>
+                        <td class="vintage">1982</td>
+                        <td class="producer">Krug</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-30 16:05</td>
+                        <td class="campaign-no">CM-25-02996</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-30 16:02</td>
+                        <td class="campaign-no">CM-25-02994</td>
+                        <td class="wine-name">Champagne Extra Brut Grand Cru Le Mesnil</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Frederic Savart</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-30 15:02</td>
+                        <td class="campaign-no">CM-25-02995</td>
+                        <td class="wine-name">Lafleur</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Château Lafleur</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-29 17:03</td>
+                        <td class="campaign-no">CM-25-02989</td>
+                        <td class="wine-name">Cos d'Estournel</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-28 15:03</td>
+                        <td class="campaign-no">CM-25-02960</td>
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-28 10:03</td>
+                        <td class="campaign-no">CM-25-02945</td>
+                        <td class="wine-name">Paixar A Serra</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Bodegas y Viñedos Luna Beberide</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-25 15:00</td>
+                        <td class="campaign-no">CM-25-02932</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2022 (Ex Chateau)</td>
+                        <td class="vintage">N/A</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-23 15:03</td>
+                        <td class="campaign-no">CM-25-02884</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2022 (Ex Chateau)</td>
+                        <td class="vintage">N/A</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-21 15:03</td>
+                        <td class="campaign-no">CM-25-02864</td>
+                        <td class="wine-name">Dominus</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Dominus Estate</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-18 15:02</td>
+                        <td class="campaign-no">CM-25-02824</td>
+                        <td class="wine-name">Latour</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-18 11:01</td>
+                        <td class="campaign-no">CM-25-02855</td>
+                        <td class="wine-name">Dominus</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Dominus Estate</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-16 15:03</td>
+                        <td class="campaign-no">CM-25-02819</td>
+                        <td class="wine-name">Latour</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-16 15:00</td>
+                        <td class="campaign-no">CM-25-02817</td>
+                        <td class="wine-name">Bonnes Mares</td>
+                        <td class="vintage">1996</td>
+                        <td class="producer">Domaine D'Auvenay</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-16 10:03</td>
+                        <td class="campaign-no">CM-25-02814</td>
+                        <td class="wine-name">Figeac</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Château Figeac</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-11 10:03</td>
+                        <td class="campaign-no">CM-25-02758</td>
+                        <td class="wine-name">La Mission Haut-Brion</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château La Mission Haut Brion</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-10 16:02</td>
+                        <td class="campaign-no">CM-25-02741</td>
+                        <td class="wine-name">Rieussec</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Rieussec</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-09 15:02</td>
+                        <td class="campaign-no">CM-25-02731</td>
+                        <td class="wine-name">Pavie</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Pavie</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-07 15:03</td>
+                        <td class="campaign-no">CM-25-02674</td>
+                        <td class="wine-name">The Flight</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Screaming Eagle Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-07 10:03</td>
+                        <td class="campaign-no">CM-25-02673</td>
+                        <td class="wine-name">La Fleur Pétrus</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Château La Fleur-Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-03 15:36</td>
+                        <td class="campaign-no">CM-25-02649</td>
+                        <td class="wine-name">Pavie</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Pavie</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-30 15:03</td>
+                        <td class="campaign-no">CM-25-02574</td>
+                        <td class="wine-name">Cabernet Franc G de la Gaffelière</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château La Gaffelière</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-30 15:01</td>
+                        <td class="campaign-no">CM-25-02612</td>
+                        <td class="wine-name">Pavie</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Pavie</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-25 16:42</td>
+                        <td class="campaign-no">CM-25-02579</td>
+                        <td class="wine-name">Lascombes</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Lascombes</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-25 15:03</td>
+                        <td class="campaign-no">CM-25-02570</td>
+                        <td class="wine-name">Pavie</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Pavie</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-25 12:31</td>
+                        <td class="campaign-no">CM-25-02568</td>
+                        <td class="wine-name">Lascombes</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Lascombes</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-23 15:03</td>
+                        <td class="campaign-no">CM-25-02533</td>
+                        <td class="wine-name">Sercial Madeira</td>
+                        <td class="vintage">1862</td>
+                        <td class="producer">Pereira d'Oliveira</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-23 10:03</td>
+                        <td class="campaign-no">CM-25-02532</td>
+                        <td class="wine-name">Colore</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Bibi Graetz</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-20 10:03</td>
+                        <td class="campaign-no">CM-25-02521</td>
+                        <td class="wine-name">Biserno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-18 15:02</td>
+                        <td class="campaign-no">CM-25-02481</td>
+                        <td class="wine-name">Cos d'Estournel</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-18 15:01</td>
+                        <td class="campaign-no">CM-25-02490</td>
+                        <td class="wine-name">Sauvignon Blanc</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Screaming Eagle Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-18 10:03</td>
+                        <td class="campaign-no">CM-25-02450</td>
+                        <td class="wine-name">Champagne Brut Rosé</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Maison Ruinart</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-16 17:04</td>
+                        <td class="campaign-no">CM-25-02464</td>
+                        <td class="wine-name">Pétrus</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-16 15:20</td>
+                        <td class="campaign-no">CM-25-02454</td>
+                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Léoville Las Cases</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-16 15:03</td>
+                        <td class="campaign-no">CM-25-02441</td>
+                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Léoville Las Cases</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-16 10:03</td>
+                        <td class="campaign-no">CM-25-02412</td>
+                        <td class="wine-name">Concerto</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-11 15:03</td>
+                        <td class="campaign-no">CM-25-02386</td>
+                        <td class="wine-name">Trotanoy</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château Trotanoy</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-11 10:35</td>
+                        <td class="campaign-no">CM-25-02387</td>
+                        <td class="wine-name">Family and Friends</td>
+                        <td class="vintage">2024</td>
+                        <td class="producer">Feudo Maccari</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-09 15:05</td>
+                        <td class="campaign-no">CM-25-02358</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-09 15:00</td>
+                        <td class="campaign-no">CM-25-02357</td>
+                        <td class="wine-name">Retout</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château du Retout</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-06 15:03</td>
+                        <td class="campaign-no">CM-25-02326</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-06 10:33</td>
+                        <td class="campaign-no">CM-25-02306</td>
+                        <td class="wine-name">Galatrona</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-06 10:33</td>
+                        <td class="campaign-no">CM-25-02334</td>
+                        <td class="wine-name">Galatrona</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-04 16:42</td>
+                        <td class="campaign-no">CM-25-02305</td>
+                        <td class="wine-name">Lascombes</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Lascombes</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-04 15:03</td>
+                        <td class="campaign-no">CM-25-02285</td>
+                        <td class="wine-name">Barolo Monfortino Riserva</td>
+                        <td class="vintage">2013</td>
+                        <td class="producer">Giacomo Conterno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-02 17:15</td>
+                        <td class="campaign-no">CM-25-02268</td>
+                        <td class="wine-name">Biserno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-02 15:33</td>
+                        <td class="campaign-no">CM-25-02260</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-09-02 15:03</td>
+                        <td class="campaign-no">CM-25-02258</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-28 16:44</td>
+                        <td class="campaign-no">CM-25-02221</td>
+                        <td class="wine-name">Overture</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Opus One Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-28 15:03</td>
+                        <td class="campaign-no">CM-25-02217</td>
+                        <td class="wine-name">Le Coeur Clos de Bouard</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Clos du Bouard</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-26 15:03</td>
+                        <td class="campaign-no">CM-25-02198</td>
+                        <td class="wine-name">Pétrus</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-23 15:03</td>
+                        <td class="campaign-no">CM-25-02187</td>
+                        <td class="wine-name">Hermitage La Chapelle</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Domaine Paul Jaboulet Aîné</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-23 14:00</td>
+                        <td class="campaign-no">CM-25-02173</td>
+                        <td class="wine-name">Bellevue</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Bellevue</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-21 15:03</td>
+                        <td class="campaign-no">CM-25-02165</td>
+                        <td class="wine-name">Angélus</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Angélus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-21 12:03</td>
+                        <td class="campaign-no">CM-25-02153</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-21 12:01</td>
+                        <td class="campaign-no">CM-25-02164</td>
+                        <td class="wine-name">PS</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Aalto Bodegas y Viñedos</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-19 15:45</td>
+                        <td class="campaign-no">CM-25-02124</td>
+                        <td class="wine-name">Bòggina Bianco</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-19 15:03</td>
+                        <td class="campaign-no">CM-25-02126</td>
+                        <td class="wine-name">Assortment 12x75cl 100 Parker (1xBDL,1xCli,1xCF,1xCos,1xDB,1xEva,1xLP,1xMon,1xPav,1xPC,1xSHLR,1xPCB)</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Unknown</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-15 15:03</td>
+                        <td class="campaign-no">CM-25-02110</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2022 (Ex Chateau)</td>
+                        <td class="vintage">N/A</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-14 15:03</td>
+                        <td class="campaign-no">CM-25-02089</td>
+                        <td class="wine-name">Palmer</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Château Palmer</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-14 10:03</td>
+                        <td class="campaign-no">CM-25-02091</td>
+                        <td class="wine-name">PS</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Aalto Bodegas y Viñedos</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-12 15:02</td>
+                        <td class="campaign-no">CM-25-02066</td>
+                        <td class="wine-name">Único Reserva Especial Venta 2025 (2011+2012+2013)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-12 11:45</td>
+                        <td class="campaign-no">CM-25-02065</td>
+                        <td class="wine-name">Mangot</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Mangot</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-09 10:05</td>
+                        <td class="campaign-no">CM-25-02054</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-08 15:03</td>
+                        <td class="campaign-no">CM-25-02041</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-07 10:03</td>
+                        <td class="campaign-no">CM-25-02012</td>
+                        <td class="wine-name">Bòggina Bianco</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-05 15:03</td>
+                        <td class="campaign-no">CM-25-02016</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-08-02 15:00</td>
+                        <td class="campaign-no">CM-25-02000</td>
+                        <td class="wine-name">Vivaltus</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Bodega Vivaltus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-31 17:03</td>
+                        <td class="campaign-no">CM-25-01999</td>
+                        <td class="wine-name">Solaia</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Antinori - Tenuta Tignanello</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-31 14:25</td>
+                        <td class="campaign-no">CM-25-01991</td>
+                        <td class="wine-name">La Lagune</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château La Lagune</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-31 10:45</td>
+                        <td class="campaign-no">CM-25-01979</td>
+                        <td class="wine-name">La Lagune</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château La Lagune</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-29 15:03</td>
+                        <td class="campaign-no">CM-25-01947</td>
+                        <td class="wine-name">Duclot 9 bottles Case Bordeaux Collection (1 x 75cl of each Petrus, Mouton, Lafite,Margaux,Haut Brion,Mission,Cheval ,Ausone,Yquem)</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Groupe Duclot</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-29 10:02</td>
+                        <td class="campaign-no">CM-25-01940</td>
+                        <td class="wine-name">Champagne Brut Dom Pérignon</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Dom Pérignon</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-24 15:03</td>
+                        <td class="campaign-no">CM-25-01901</td>
+                        <td class="wine-name">Pétrus</td>
+                        <td class="vintage">2012</td>
+                        <td class="producer">Château Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-24 11:33</td>
+                        <td class="campaign-no">CM-25-01898</td>
+                        <td class="wine-name">Sercial Madeira</td>
+                        <td class="vintage">1875</td>
+                        <td class="producer">Pereira d'Oliveira</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-22 15:03</td>
+                        <td class="campaign-no">CM-25-01864</td>
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-22 10:01</td>
+                        <td class="campaign-no">CM-25-01865</td>
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-19 15:03</td>
+                        <td class="campaign-no">CM-25-01836</td>
+                        <td class="wine-name">Lodovico</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-17 16:04</td>
+                        <td class="campaign-no">CM-25-01814</td>
+                        <td class="wine-name">Lodovico</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-17 16:04</td>
+                        <td class="campaign-no">CM-25-01812</td>
+                        <td class="wine-name">Lodovico</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-17 15:03</td>
+                        <td class="campaign-no">CM-25-01818</td>
+                        <td class="wine-name">Viñedo Chadwick</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Chadwick Eduardo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-17 10:03</td>
+                        <td class="campaign-no">CM-25-01817</td>
+                        <td class="wine-name">Clos Apalta</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Lapostolle Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-15 15:03</td>
+                        <td class="campaign-no">CM-25-01781</td>
+                        <td class="wine-name">Dominus</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Dominus Estate</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-12 15:03</td>
+                        <td class="campaign-no">CM-25-01763</td>
+                        <td class="wine-name">Sassicaia</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Tenuta San Guido</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-12 15:03</td>
+                        <td class="campaign-no">CM-25-01760</td>
+                        <td class="wine-name">Sassicaia</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Tenuta San Guido</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-10 15:03</td>
+                        <td class="campaign-no">CM-25-01734</td>
+                        <td class="wine-name">Masseto</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Masseto</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-08 15:03</td>
+                        <td class="campaign-no">CM-25-01708</td>
+                        <td class="wine-name">Champagne Brut Dom Pérignon P2</td>
+                        <td class="vintage">2006</td>
+                        <td class="producer">Dom Pérignon</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-03 15:03</td>
+                        <td class="campaign-no">CM-25-01691</td>
+                        <td class="wine-name">Sauvignon Blanc</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Screaming Eagle Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-03 15:03</td>
+                        <td class="campaign-no">CM-25-01686</td>
+                        <td class="wine-name">Ornellaia</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta dell'Ornellaia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-01 16:04</td>
+                        <td class="campaign-no">CM-25-01657</td>
+                        <td class="wine-name">Ornellaia</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta dell'Ornellaia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-01 15:03</td>
+                        <td class="campaign-no">CM-25-01648</td>
+                        <td class="wine-name">The Flight</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Screaming Eagle Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-01 10:03</td>
+                        <td class="campaign-no">CM-25-01646</td>
+                        <td class="wine-name">Il Pino di Biserno</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-28 15:03</td>
+                        <td class="campaign-no">CM-25-01630</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 75cl each vintage from 1995 to 2022 (Ex Chateau)</td>
+                        <td class="vintage">N/A</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-26 15:03</td>
+                        <td class="campaign-no">CM-25-01611</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-26 15:03</td>
+                        <td class="campaign-no">CM-25-01615</td>
+                        <td class="wine-name">Axelle de Valandraud</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Valandraud</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-26 10:23</td>
+                        <td class="campaign-no">CM-25-01614</td>
+                        <td class="wine-name">Le Coeur Clos de Bouard</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Clos du Bouard</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-24 15:03</td>
+                        <td class="campaign-no">CM-25-01574</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-19 15:03</td>
+                        <td class="campaign-no">CM-25-01540</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-19 10:03</td>
+                        <td class="campaign-no">CM-25-01533</td>
+                        <td class="wine-name">Guidalberto (2nd Vin)</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Tenuta San Guido</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-17 15:03</td>
+                        <td class="campaign-no">CM-25-01514</td>
+                        <td class="wine-name">Lafleur</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Château Lafleur</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-17 10:33</td>
+                        <td class="campaign-no">CM-25-01509</td>
+                        <td class="wine-name">Biserno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-17 10:03</td>
+                        <td class="campaign-no">CM-25-01439</td>
+                        <td class="wine-name">Labégorce</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Labégorce</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-16 14:57</td>
+                        <td class="campaign-no">CM-25-01497</td>
+                        <td class="wine-name">Champagne Brut Belle Epoque</td>
+                        <td class="vintage">2008</td>
+                        <td class="producer">Perrier-Jouët</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-16 14:45</td>
+                        <td class="campaign-no">CM-25-01494</td>
+                        <td class="wine-name">Champagne Brut Belle Epoque</td>
+                        <td class="vintage">2008</td>
+                        <td class="producer">Perrier-Jouët</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-13 10:03</td>
+                        <td class="campaign-no">CM-25-01452</td>
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Lynch Bages</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-12 15:03</td>
+                        <td class="campaign-no">CM-25-01441</td>
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Lynch Bages</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-10 10:47</td>
+                        <td class="campaign-no">CM-25-01427</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-10 10:29</td>
+                        <td class="campaign-no">CM-25-01426</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-29 10:03</td>
+                        <td class="campaign-no">CM-25-01257</td>
+                        <td class="wine-name">Colore</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Bibi Graetz</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-27 15:02</td>
+                        <td class="campaign-no">CM-25-01239</td>
+                        <td class="wine-name">Champagne Brut Cristal (Gift Box)</td>
+                        <td class="vintage">2012</td>
+                        <td class="producer">Louis Roederer</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-24 10:10</td>
+                        <td class="campaign-no">CM-25-01229</td>
+                        <td class="wine-name">Duclot 9 bottles Case Bordeaux Collection (1 x 75cl of each Petrus, Mouton, Lafite,Margaux,Haut Brion,Mission,Cheval ,Ausone,Yquem)</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Groupe Duclot</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-22 13:43</td>
+                        <td class="campaign-no">CM-25-01201</td>
+                        <td class="wine-name">Duclot 9 bottles Case Bordeaux Collection (1 x 75cl of each Petrus, Mouton, Lafite,Margaux,Haut Brion,Mission,Cheval ,Ausone,Yquem)</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Groupe Duclot</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-22 12:19</td>
+                        <td class="campaign-no">CM-25-01200</td>
+                        <td class="wine-name">Champagne Brut Dom Pérignon</td>
+                        <td class="vintage">2013</td>
+                        <td class="producer">Dom Pérignon</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-20 14:35</td>
+                        <td class="campaign-no">CM-25-01169</td>
+                        <td class="wine-name">Oreno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta Sette Ponti</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-20 13:39</td>
+                        <td class="campaign-no">CM-25-01165</td>
+                        <td class="wine-name">Hermitage La Chapelle</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Domaine Paul Jaboulet Aîné</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-19 10:59</td>
+                        <td class="campaign-no">CM-25-01150</td>
+                        <td class="wine-name">Lascombes</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Lascombes</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-15 14:07</td>
+                        <td class="campaign-no">CM-25-01118</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2024</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-13 14:15</td>
+                        <td class="campaign-no">CM-25-01082</td>
+                        <td class="wine-name">Duclot 9 bottles Case Bordeaux Collection (1 x 75cl of each Petrus, Mouton, Lafite,Margaux,Haut Brion,Mission,Cheval ,Ausone,Yquem)</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Groupe Duclot</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-13 10:32</td>
+                        <td class="campaign-no">CM-25-01074</td>
+                        <td class="wine-name">Il Pino di Biserno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-08 15:06</td>
+                        <td class="campaign-no">CM-25-01041</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2014</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-08 10:32</td>
+                        <td class="campaign-no">CM-25-01032</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2014</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-06 15:02</td>
+                        <td class="campaign-no">CM-25-01000</td>
+                        <td class="wine-name">Canon</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Canon</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-01 15:02</td>
+                        <td class="campaign-no">CM-25-00966</td>
+                        <td class="wine-name">Champagne le Mesnil</td>
+                        <td class="vintage">2013</td>
+                        <td class="producer">Maison Salon</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-05-01 10:33</td>
+                        <td class="campaign-no">CM-25-00967</td>
+                        <td class="wine-name">Assortment 14 Cru Bourgeois Exceptionnel (14x75cl)</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Assortment Bordeaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-29 15:02</td>
+                        <td class="campaign-no">CM-25-00952</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-29 14:02</td>
+                        <td class="campaign-no">CM-25-00949</td>
+                        <td class="wine-name">Clos l'Église</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Clos l'Eglise</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-29 14:02</td>
+                        <td class="campaign-no">CM-25-00950</td>
+                        <td class="wine-name">Massetino</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Masseto</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-26 15:42</td>
+                        <td class="campaign-no">CM-25-00922</td>
+                        <td class="wine-name">Le Difese</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Tenuta San Guido</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-26 15:42</td>
+                        <td class="campaign-no">CM-25-00924</td>
+                        <td class="wine-name">Sassicaia</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta San Guido</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-24 15:04</td>
+                        <td class="campaign-no">CM-25-00902</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 300cl each vintage from 1995 to 2022</td>
+                        <td class="vintage">N/A</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-22 16:20</td>
+                        <td class="campaign-no">CM-25-00893</td>
+                        <td class="wine-name">Certan de May</td>
+                        <td class="vintage">2024</td>
+                        <td class="producer">Château Certan de May</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-17 15:01</td>
+                        <td class="campaign-no">CM-25-00867</td>
+                        <td class="wine-name">Dominus</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Dominus Estate</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-17 10:41</td>
+                        <td class="campaign-no">CM-25-00868</td>
+                        <td class="wine-name">PS</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Aalto Bodegas y Viñedos</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-15 10:44</td>
+                        <td class="campaign-no">CM-25-00834</td>
+                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Léoville Las Cases</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-14 13:02</td>
+                        <td class="campaign-no">CM-25-00794</td>
+                        <td class="wine-name">Latour</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-10 16:36</td>
+                        <td class="campaign-no">CM-25-00800</td>
+                        <td class="wine-name">Dom Pérignon Special Edition Jean-Michel Basquiat</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Dom Pérignon</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-08 15:32</td>
+                        <td class="campaign-no">CM-25-00790</td>
+                        <td class="wine-name">Yquem</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château d'Yquem</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-03 15:32</td>
+                        <td class="campaign-no">CM-25-00761</td>
+                        <td class="wine-name">Sassicaia</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta San Guido</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-03 11:03</td>
+                        <td class="campaign-no">CM-25-00762</td>
+                        <td class="wine-name">Champagne Brut Grand Siecle N.26</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Laurent Perrier</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-03 10:12</td>
+                        <td class="campaign-no">CM-25-00763</td>
+                        <td class="wine-name">Testamatta</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Bibi Graetz</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-04-01 15:32</td>
+                        <td class="campaign-no">CM-25-00746</td>
+                        <td class="wine-name">Opus One</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Opus One Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-31 16:32</td>
+                        <td class="campaign-no">CM-25-00739</td>
+                        <td class="wine-name">Champagne Brut Cristal</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Louis Roederer</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-28 08:23</td>
+                        <td class="campaign-no">CM-25-00725</td>
+                        <td class="wine-name">Palmer</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Palmer</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-27 09:48</td>
+                        <td class="campaign-no">CM-25-00704</td>
+                        <td class="wine-name">Palmer</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Palmer</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-27 09:08</td>
+                        <td class="campaign-no">CM-25-00703</td>
+                        <td class="wine-name">Lafite (Ex-Château)</td>
+                        <td class="vintage">1982</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-26 15:02</td>
+                        <td class="campaign-no">CM-25-00699</td>
+                        <td class="wine-name">Galatrona</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-26 12:03</td>
+                        <td class="campaign-no">CM-25-00657</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-25 11:58</td>
+                        <td class="campaign-no">CM-25-00689</td>
+                        <td class="wine-name">DRC Romanée Conti</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Domaine de la Romanée Conti</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-25 10:32</td>
+                        <td class="campaign-no">CM-25-00688</td>
+                        <td class="wine-name">Pavie</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Pavie</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-20 15:02</td>
+                        <td class="campaign-no">CM-25-00656</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-20 10:32</td>
+                        <td class="campaign-no">CM-25-00654</td>
+                        <td class="wine-name">Flaccianello della Pieve</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Fontodi</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-17 11:23</td>
+                        <td class="campaign-no">CM-25-00638</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-13 15:02</td>
+                        <td class="campaign-no">CM-25-00593</td>
+                        <td class="wine-name">Dominus</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Dominus Estate</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-13 11:14</td>
+                        <td class="campaign-no">CM-25-00596</td>
+                        <td class="wine-name">La Mondotte</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château La Mondotte</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-13 10:32</td>
+                        <td class="campaign-no">CM-25-00589</td>
+                        <td class="wine-name">Dominus</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Dominus Estate</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-11 15:22</td>
+                        <td class="campaign-no">CM-25-00577</td>
+                        <td class="wine-name">Ausone</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Ausone</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-11 14:53</td>
+                        <td class="campaign-no">CM-25-00576</td>
+                        <td class="wine-name">Ausone</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Ausone</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-11 10:36</td>
+                        <td class="campaign-no">CM-25-00567</td>
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Lynch Bages</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-07 16:48</td>
+                        <td class="campaign-no">CM-25-00556</td>
+                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Léoville Las Cases</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-07 08:46</td>
+                        <td class="campaign-no">CM-25-00541</td>
+                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Léoville Las Cases</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-06 15:44</td>
+                        <td class="campaign-no">CM-25-00528</td>
+                        <td class="wine-name">Pape Clément Rouge</td>
+                        <td class="vintage">2014</td>
+                        <td class="producer">Château Pape Clément</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-06 15:02</td>
+                        <td class="campaign-no">CM-25-00527</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-06 10:52</td>
+                        <td class="campaign-no">CM-25-00525</td>
+                        <td class="wine-name">La Fleur Pétrus</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château La Fleur-Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-04 15:03</td>
+                        <td class="campaign-no">CM-25-00510</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-04 12:07</td>
+                        <td class="campaign-no">CM-25-00509</td>
+                        <td class="wine-name">Pavie</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Pavie</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-04 10:32</td>
+                        <td class="campaign-no">CM-25-00507</td>
+                        <td class="wine-name">PS</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Aalto Bodegas y Viñedos</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-27 15:02</td>
+                        <td class="campaign-no">CM-25-00480</td>
+                        <td class="wine-name">Pétrus</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-27 11:01</td>
+                        <td class="campaign-no">CM-25-00478</td>
+                        <td class="wine-name">Pavillon Blanc de Margaux</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-27 10:34</td>
+                        <td class="campaign-no">CM-25-00479</td>
+                        <td class="wine-name">Bòggina Bianco</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-25 15:02</td>
+                        <td class="campaign-no">CM-25-00450</td>
+                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-25 10:52</td>
+                        <td class="campaign-no">CM-25-00455</td>
+                        <td class="wine-name">Dominus</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Dominus Estate</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-25 10:32</td>
+                        <td class="campaign-no">CM-25-00452</td>
+                        <td class="wine-name">Galatrona</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-21 12:32</td>
+                        <td class="campaign-no">CM-25-00418</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2022 (Ex Chateau)</td>
+                        <td class="vintage">N/A</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-20 12:02</td>
+                        <td class="campaign-no">CM-25-00414</td>
+                        <td class="wine-name">Domaine de Chevalier Rouge</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Domaine de Chevalier</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-20 12:02</td>
+                        <td class="campaign-no">CM-25-00419</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2022 (Ex Chateau)</td>
+                        <td class="vintage">N/A</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-20 10:42</td>
+                        <td class="campaign-no">CM-25-00417</td>
+                        <td class="wine-name">Proprietary Red</td>
+                        <td class="vintage">2014</td>
+                        <td class="producer">Cardinale</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-18 15:02</td>
+                        <td class="campaign-no">CM-25-00383</td>
+                        <td class="wine-name">Latour</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Latour</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-18 12:20</td>
+                        <td class="campaign-no">CM-25-00384</td>
+                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Léoville Las Cases</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-18 11:25</td>
+                        <td class="campaign-no">CM-25-00382</td>
+                        <td class="wine-name">Ornellaia</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta dell'Ornellaia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-13 15:07</td>
+                        <td class="campaign-no">CM-25-00347</td>
+                        <td class="wine-name">Vivaltus</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Bodega Vivaltus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-13 15:03</td>
+                        <td class="campaign-no">CM-25-00345</td>
+                        <td class="wine-name">Cos d'Estournel</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-13 10:55</td>
+                        <td class="campaign-no">CM-25-00342</td>
+                        <td class="wine-name">Canon</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Canon</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-11 15:52</td>
+                        <td class="campaign-no">CM-25-00329</td>
+                        <td class="wine-name">Clos Apalta</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Lapostolle Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-11 15:03</td>
+                        <td class="campaign-no">CM-25-00324</td>
+                        <td class="wine-name">Le Pin</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Château Le Pin</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-11 10:30</td>
+                        <td class="campaign-no">CM-25-00323</td>
+                        <td class="wine-name">Pape Clément Rouge</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château Pape Clément</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-07 10:32</td>
+                        <td class="campaign-no">CM-25-00283</td>
+                        <td class="wine-name">Saffredi</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria le Pupille</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-06 17:22</td>
+                        <td class="campaign-no">CM-25-00286</td>
+                        <td class="wine-name">Montrose</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Montrose</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-06 15:02</td>
+                        <td class="campaign-no">CM-25-00281</td>
+                        <td class="wine-name">Cheval Blanc</td>
+                        <td class="vintage">2015</td>
+                        <td class="producer">Château Cheval Blanc</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-06 10:32</td>
+                        <td class="campaign-no">CM-25-00279</td>
+                        <td class="wine-name">Saffredi</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria le Pupille</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-04 15:02</td>
+                        <td class="campaign-no">CM-25-00252</td>
+                        <td class="wine-name">La Fleur Pétrus</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château La Fleur-Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-04 15:02</td>
+                        <td class="campaign-no">CM-25-00255</td>
+                        <td class="wine-name">La Fleur Pétrus</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château La Fleur-Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-02-04 10:32</td>
+                        <td class="campaign-no">CM-25-00244</td>
+                        <td class="wine-name">La Fleur Pétrus</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château La Fleur-Pétrus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-31 10:02</td>
+                        <td class="campaign-no">CM-25-00209</td>
+                        <td class="wine-name">Palmer</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Château Palmer</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-30 15:02</td>
+                        <td class="campaign-no">CM-25-00202</td>
+                        <td class="wine-name">Beau-Séjour Bécot</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Beau-Séjour Bécot</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-30 15:02</td>
+                        <td class="campaign-no">CM-25-00198</td>
+                        <td class="wine-name">DRC Romanée Conti</td>
+                        <td class="vintage">1999</td>
+                        <td class="producer">Domaine de la Romanée Conti</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-30 10:32</td>
+                        <td class="campaign-no">CM-25-00199</td>
+                        <td class="wine-name">Don PX Convento Selección</td>
+                        <td class="vintage">1946</td>
+                        <td class="producer">Toro Albalá</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-28 14:55</td>
+                        <td class="campaign-no">CM-25-00182</td>
+                        <td class="wine-name">Cos d'Estournel (Ex-Château 2024)</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-28 14:16</td>
+                        <td class="campaign-no">CM-25-00179</td>
+                        <td class="wine-name">Haut Brion</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Château Haut Brion</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-28 11:15</td>
+                        <td class="campaign-no">CM-25-00175</td>
+                        <td class="wine-name">Il Pino di Biserno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta di Biserno</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-23 15:16</td>
+                        <td class="campaign-no">CM-25-00144</td>
+                        <td class="wine-name">Lilian Ladouys</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Lilian Ladouys</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-23 14:58</td>
+                        <td class="campaign-no">CM-25-00143</td>
+                        <td class="wine-name">Angélus</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Angélus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-23 09:46</td>
+                        <td class="campaign-no">CM-25-00121</td>
+                        <td class="wine-name">La Gaffelière</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château La Gaffelière</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-20 15:28</td>
+                        <td class="campaign-no">CM-25-00108</td>
+                        <td class="wine-name">Hommage à Jacques Perrin</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château de Beaucastel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-16 15:25</td>
+                        <td class="campaign-no">CM-25-00086</td>
+                        <td class="wine-name">Hermitage La Chapelle</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Domaine Paul Jaboulet Aîné</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-16 15:02</td>
+                        <td class="campaign-no">CM-25-00083</td>
+                        <td class="wine-name">Hermitage La Chapelle</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Domaine Paul Jaboulet Aîné</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-15 10:11</td>
+                        <td class="campaign-no">CM-25-00065</td>
+                        <td class="wine-name">Galatrona</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-14 14:52</td>
+                        <td class="campaign-no">CM-25-00057</td>
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2003</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-13 15:11</td>
+                        <td class="campaign-no">CM-25-00050</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2019 (Ex Chateau)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-13 14:58</td>
+                        <td class="campaign-no">CM-25-00049</td>
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2003</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-13 14:30</td>
+                        <td class="campaign-no">CM-25-00048</td>
+                        <td class="wine-name">Champagne Brut Blanc de Blancs (2nd Skin)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Maison Ruinart</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-10 14:10</td>
+                        <td class="campaign-no">CM-25-00032</td>
+                        <td class="wine-name">Léoville Barton</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Léoville Barton</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-10 13:43</td>
+                        <td class="campaign-no">CM-25-00027</td>
+                        <td class="wine-name">Cheval Blanc</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Cheval Blanc</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-09 16:02</td>
+                        <td class="campaign-no">CM-25-00007</td>
+                        <td class="wine-name">Masseto</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Masseto</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-09 14:42</td>
+                        <td class="campaign-no">CM-25-00024</td>
+                        <td class="wine-name">Argentiera</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Tenuta Argentiera</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-07 14:50</td>
+                        <td class="campaign-no">CM-25-00006</td>
+                        <td class="wine-name">Léoville Barton</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Léoville Barton</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-01-03 14:33</td>
+                        <td class="campaign-no">CM-25-00002</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2019 (Ex Chateau)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-24 11:57</td>
+                        <td class="campaign-no">CM-24-02732</td>
+                        <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2019 (Ex Chateau)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-19 16:57</td>
+                        <td class="campaign-no">CM-24-02700</td>
+                        <td class="wine-name">Campo Lusso</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-19 16:29</td>
+                        <td class="campaign-no">CM-24-02697</td>
+                        <td class="wine-name">Campo Lusso</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-19 15:02</td>
+                        <td class="campaign-no">CM-24-02687</td>
+                        <td class="wine-name">Campo Lusso</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-19 14:09</td>
+                        <td class="campaign-no">CM-24-02692</td>
+                        <td class="wine-name">DRC Romanée Conti</td>
+                        <td class="vintage">2005</td>
+                        <td class="producer">Domaine de la Romanée Conti</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-18 15:18</td>
+                        <td class="campaign-no">CM-24-02680</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-17 10:58</td>
+                        <td class="campaign-no">CM-24-02670</td>
+                        <td class="wine-name">Hommage à Jacques Perrin</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château de Beaucastel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-17 10:10</td>
+                        <td class="campaign-no">CM-24-02669</td>
+                        <td class="wine-name">Galatrona</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Fattoria Petrolo</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-16 17:34</td>
+                        <td class="campaign-no">CM-24-02664</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-16 16:27</td>
+                        <td class="campaign-no">CM-24-02663</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-16 10:02</td>
+                        <td class="campaign-no">CM-24-02644</td>
+                        <td class="wine-name">Saffredi</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria le Pupille</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-14 10:02</td>
+                        <td class="campaign-no">CM-24-02643</td>
+                        <td class="wine-name">Saffredi</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria le Pupille</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-12 08:56</td>
+                        <td class="campaign-no">CM-24-02635</td>
+                        <td class="wine-name">Saffredi</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Fattoria le Pupille</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-11 10:49</td>
+                        <td class="campaign-no">CM-24-02627</td>
+                        <td class="wine-name">Hermitage La Chapelle</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Domaine Paul Jaboulet Aîné</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-10 14:02</td>
+                        <td class="campaign-no">CM-24-02614</td>
+                        <td class="wine-name">Hermitage La Chapelle</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Domaine Paul Jaboulet Aîné</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-09 14:30</td>
+                        <td class="campaign-no">CM-24-02607</td>
+                        <td class="wine-name">Hermitage La Chapelle</td>
+                        <td class="vintage">1990</td>
+                        <td class="producer">Domaine Paul Jaboulet Aîné</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-06 15:02</td>
+                        <td class="campaign-no">CM-24-02580</td>
+                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-06 10:02</td>
+                        <td class="campaign-no">CM-24-02581</td>
+                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-05 15:02</td>
+                        <td class="campaign-no">CM-24-02574</td>
+                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-05 10:02</td>
+                        <td class="campaign-no">CM-24-02577</td>
+                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-04 18:02</td>
+                        <td class="campaign-no">CM-24-02578</td>
+                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-04 17:02</td>
+                        <td class="campaign-no">CM-24-02579</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2014</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-02 17:10</td>
+                        <td class="campaign-no">CM-24-02562</td>
+                        <td class="wine-name">Pintia</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Bodegas Pintia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-02 17:04</td>
+                        <td class="campaign-no">CM-24-02561</td>
+                        <td class="wine-name">Aalto</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Aalto Bodegas y Viñedos</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-02 16:32</td>
+                        <td class="campaign-no">CM-24-02560</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2014</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-12-02 12:45</td>
+                        <td class="campaign-no">CM-24-02559</td>
+                        <td class="wine-name">Alión</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Bodegas Vega Sicilia</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-30 10:02</td>
+                        <td class="campaign-no">CM-24-02528</td>
+                        <td class="wine-name">Figeac</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Figeac</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-30 10:02</td>
+                        <td class="campaign-no">CM-24-02530</td>
+                        <td class="wine-name">Champagne Brut Carte Jaune</td>
+                        <td class="vintage">NV</td>
+                        <td class="producer">Veuve Clicquot Ponsardin</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-29 08:30</td>
+                        <td class="campaign-no">CM-24-02520</td>
+                        <td class="wine-name">PSI</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Dominio de Pingus</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-28 08:42</td>
+                        <td class="campaign-no">CM-24-02511</td>
+                        <td class="wine-name">Roda I Reserva</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Bodegas Roda</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-27 18:42</td>
+                        <td class="campaign-no">CM-24-02508</td>
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Lynch Bages</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-27 18:39</td>
+                        <td class="campaign-no">CM-24-02507</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-26 11:25</td>
+                        <td class="campaign-no">CM-24-02494</td>
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Lynch Bages</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-26 11:21</td>
+                        <td class="campaign-no">CM-24-02493</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-25 15:53</td>
+                        <td class="campaign-no">CM-24-02490</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-25 15:12</td>
+                        <td class="campaign-no">CM-24-02488</td>
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Lynch Bages</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-25 14:43</td>
+                        <td class="campaign-no">CM-24-02485</td>
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2010</td>
+                        <td class="producer">Château Margaux</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-25 11:38</td>
+                        <td class="campaign-no">CM-24-02480</td>
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Lynch Bages</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-23 15:00</td>
+                        <td class="campaign-no">CM-24-02473</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-23 10:00</td>
+                        <td class="campaign-no">CM-24-02472</td>
+                        <td class="wine-name">Cos d'Estournel</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-22 08:35</td>
+                        <td class="campaign-no">CM-24-02460</td>
+                        <td class="wine-name">Oreno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta Sette Ponti</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-22 08:34</td>
+                        <td class="campaign-no">CM-24-02459</td>
+                        <td class="wine-name">Overture</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Opus One Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-21 10:23</td>
+                        <td class="campaign-no">CM-24-02451</td>
+                        <td class="wine-name">Opus One</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Opus One Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-21 10:22</td>
+                        <td class="campaign-no">CM-24-02450</td>
+                        <td class="wine-name">Oreno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta Sette Ponti</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-20 16:43</td>
+                        <td class="campaign-no">CM-24-02448</td>
+                        <td class="wine-name">Opus One</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Opus One Winery</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-20 11:49</td>
+                        <td class="campaign-no">CM-24-02438</td>
+                        <td class="wine-name">Oreno</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta Sette Ponti</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-20 09:11</td>
+                        <td class="campaign-no">CM-24-02432</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-20 09:11</td>
+                        <td class="campaign-no">CM-24-02431</td>
+                        <td class="wine-name">Cos d'Estournel</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-19 09:53</td>
+                        <td class="campaign-no">CM-24-02425</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-19 09:43</td>
+                        <td class="campaign-no">CM-24-02423</td>
+                        <td class="wine-name">Cos d'Estournel</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-18 13:30</td>
+                        <td class="campaign-no">CM-24-02414</td>
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2009</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-18 10:32</td>
+                        <td class="campaign-no">CM-24-02412</td>
+                        <td class="wine-name">Cos d'Estournel</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Cos d'Estournel</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-14 16:12</td>
+                        <td class="campaign-no">CM-24-02390</td>
+                        <td class="wine-name">Champagne Brut Cristal (Gift Box)</td>
+                        <td class="vintage">2012</td>
+                        <td class="producer">Louis Roederer</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2024-11-11 11:05</td>
+                        <td class="campaign-no">CM-24-02350</td>
+                        <td class="wine-name">Figeac</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Figeac</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="update-time">
+            Last updated: 2025-11-10 11:45:48
+        </div>
+    </div>
+
+    <script>
+        // Simple table sorting
+        let sortDirections = {};
+
+        function sortTable(columnIndex, type) {
+            const table = document.getElementById('leadsTable');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+            // Toggle sort direction
+            const currentDir = sortDirections[columnIndex] || 'asc';
+            const newDir = currentDir === 'asc' ? 'desc' : 'asc';
+            sortDirections[columnIndex] = newDir;
+
+            rows.sort((a, b) => {
+                const aValue = a.cells[columnIndex].textContent.trim();
+                const bValue = b.cells[columnIndex].textContent.trim();
+
+                let comparison = 0;
+
+                if (type === 'date') {
+                    comparison = new Date(aValue) - new Date(bValue);
+                } else {
+                    comparison = aValue.localeCompare(bValue);
+                }
+
+                return newDir === 'asc' ? comparison : -comparison;
+            });
+
+            // Clear and re-append sorted rows
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
+</body>
+</html>

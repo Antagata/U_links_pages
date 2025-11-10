@@ -128,6 +128,18 @@
             color: white;
             box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+        }
+
+        .tag-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(255, 165, 0, 0.5);
+        }
+
+        .tag-icon.clickable {
+            cursor: pointer;
         }
 
         .header h1 {
@@ -727,9 +739,11 @@
 
             <!-- Tag Icons - Bottom Left -->
             <div class="tag-icons">
-                <div class="tag-icon" title="Wine">🍷</div>
-                <div class="tag-icon" title="Campaign">📊</div>
                 <div class="tag-icon" title="Winner">🏆</div>
+                <a href="leads.html" style="text-decoration: none;">
+                    <div class="tag-icon clickable" title="LEADS Campaigns">📢</div>
+                </a>
+                <div class="tag-icon" title="Campaign">📊</div>
                 <div class="tag-icon" title="Performance">⚡</div>
             </div>
 

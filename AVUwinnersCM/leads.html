@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="version" content="20251110114936">
+    <meta name="version" content="20251110141359">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEADS Campaigns - AVU</title>
@@ -25,7 +25,7 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
@@ -105,6 +105,14 @@
             margin-top: 5px;
         }
 
+        .section-title {
+            font-size: 2em;
+            color: #333;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -124,6 +132,7 @@
             cursor: pointer;
             user-select: none;
             position: relative;
+            font-size: 0.9em;
         }
 
         th:hover {
@@ -138,8 +147,9 @@
         }
 
         td {
-            padding: 12px 15px;
+            padding: 10px 15px;
             border-bottom: 1px solid #e0e0e0;
+            font-size: 0.85em;
         }
 
         tr:hover {
@@ -179,6 +189,28 @@
             font-size: 0.95em;
         }
 
+        .stock-icon {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .stock-high {
+            color: #28a745;
+        }
+
+        .rec-table {
+            background: #f8f9fa;
+        }
+
+        .rec-table td {
+            padding: 8px 12px;
+        }
+
+        .never-offered {
+            background: #fff3cd;
+            font-weight: 600;
+        }
+
         .update-time {
             text-align: center;
             padding: 20px;
@@ -213,33 +245,35 @@
         <div class="nav-links">
             <a href="dashboard.html">🏆 Winners Dashboard</a>
             <a href="leads.html">📢 LEADS Campaigns</a>
+            <a href="horeca.html">🏨 HORECA Campaigns</a>
             <a href="index.html">🔐 Login</a>
         </div>
 
         <div class="content">
             <div class="stats">
                 <div class="stat-box">
-                    <div class="stat-number">272</div>
+                    <div class="stat-number">261</div>
                     <div class="stat-label">Total LEADS Campaigns</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">2331</div>
+                    <div class="stat-number">2249</div>
                     <div class="stat-label">Total Wine Offers</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">PRIVATE</div>
-                    <div class="stat-label">Campaign Type</div>
+                    <div class="stat-number">SENT</div>
+                    <div class="stat-label">Campaign Status</div>
                 </div>
             </div>
 
+            <h2 class="section-title">📋 LEADS Campaign History</h2>
             <table id="leadsTable">
                 <thead>
                     <tr>
-                        <th onclick="sortTable(0, 'date')">Sent Date</th>
-                        <th onclick="sortTable(1, 'text')">Campaign No.</th>
-                        <th onclick="sortTable(2, 'text')">Wine Name</th>
-                        <th onclick="sortTable(3, 'text')">Vintage</th>
-                        <th onclick="sortTable(4, 'text')">Producer</th>
+                        <th onclick="sortTable(0, 'date', 'leadsTable')">Sent Date</th>
+                        <th onclick="sortTable(1, 'text', 'leadsTable')">Campaign No.</th>
+                        <th onclick="sortTable(2, 'text', 'leadsTable')">Wine Name</th>
+                        <th onclick="sortTable(3, 'text', 'leadsTable')">Vintage</th>
+                        <th onclick="sortTable(4, 'text', 'leadsTable')">Producer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -277,13 +311,6 @@
                         <td class="wine-name">Champagne Extra Brut Grand Cru Le Mesnil</td>
                         <td class="vintage">2022</td>
                         <td class="producer">Frederic Savart</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-10-30 15:02</td>
-                        <td class="campaign-no">CM-25-02995</td>
-                        <td class="wine-name">Lafleur</td>
-                        <td class="vintage">2005</td>
-                        <td class="producer">Château Lafleur</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-29 17:03</td>
@@ -352,7 +379,7 @@
                         <td class="date">2025-10-16 15:00</td>
                         <td class="campaign-no">CM-25-02817</td>
                         <td class="wine-name">Bonnes Mares</td>
-                        <td class="vintage">1996</td>
+                        <td class="vintage">1995</td>
                         <td class="producer">Domaine D'Auvenay</td>
                     </tr>
                     <tr>
@@ -442,14 +469,14 @@
                     <tr>
                         <td class="date">2025-09-23 15:03</td>
                         <td class="campaign-no">CM-25-02533</td>
-                        <td class="wine-name">Sercial Madeira</td>
-                        <td class="vintage">1862</td>
+                        <td class="wine-name">Malvasia Madeira</td>
+                        <td class="vintage">1875</td>
                         <td class="producer">Pereira d'Oliveira</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-23 10:03</td>
                         <td class="campaign-no">CM-25-02532</td>
-                        <td class="wine-name">Colore</td>
+                        <td class="wine-name">Testamatta</td>
                         <td class="vintage">2019</td>
                         <td class="producer">Bibi Graetz</td>
                     </tr>
@@ -519,8 +546,8 @@
                     <tr>
                         <td class="date">2025-09-11 10:35</td>
                         <td class="campaign-no">CM-25-02387</td>
-                        <td class="wine-name">Family and Friends</td>
-                        <td class="vintage">2024</td>
+                        <td class="wine-name">Family and Friends Firraru</td>
+                        <td class="vintage">2023</td>
                         <td class="producer">Feudo Maccari</td>
                     </tr>
                     <tr>
@@ -546,14 +573,14 @@
                     </tr>
                     <tr>
                         <td class="date">2025-09-06 10:33</td>
-                        <td class="campaign-no">CM-25-02306</td>
+                        <td class="campaign-no">CM-25-02334</td>
                         <td class="wine-name">Galatrona</td>
                         <td class="vintage">2023</td>
                         <td class="producer">Fattoria Petrolo</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-06 10:33</td>
-                        <td class="campaign-no">CM-25-02334</td>
+                        <td class="campaign-no">CM-25-02306</td>
                         <td class="wine-name">Galatrona</td>
                         <td class="vintage">2023</td>
                         <td class="producer">Fattoria Petrolo</td>
@@ -596,7 +623,7 @@
                     <tr>
                         <td class="date">2025-08-28 16:44</td>
                         <td class="campaign-no">CM-25-02221</td>
-                        <td class="wine-name">Overture</td>
+                        <td class="wine-name">Opus One</td>
                         <td class="vintage">2021</td>
                         <td class="producer">Opus One Winery</td>
                     </tr>
@@ -622,25 +649,11 @@
                         <td class="producer">Domaine Paul Jaboulet Aîné</td>
                     </tr>
                     <tr>
-                        <td class="date">2025-08-23 14:00</td>
-                        <td class="campaign-no">CM-25-02173</td>
-                        <td class="wine-name">Bellevue</td>
-                        <td class="vintage">2019</td>
-                        <td class="producer">Château Bellevue</td>
-                    </tr>
-                    <tr>
                         <td class="date">2025-08-21 15:03</td>
                         <td class="campaign-no">CM-25-02165</td>
                         <td class="wine-name">Angélus</td>
                         <td class="vintage">2022</td>
                         <td class="producer">Château Angélus</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-08-21 12:03</td>
-                        <td class="campaign-no">CM-25-02153</td>
-                        <td class="wine-name">Latour (Ex-Château)</td>
-                        <td class="vintage">2016</td>
-                        <td class="producer">Château Latour</td>
                     </tr>
                     <tr>
                         <td class="date">2025-08-21 12:01</td>
@@ -765,7 +778,7 @@
                         <td class="date">2025-07-29 10:02</td>
                         <td class="campaign-no">CM-25-01940</td>
                         <td class="wine-name">Champagne Brut Dom Pérignon</td>
-                        <td class="vintage">2015</td>
+                        <td class="vintage">2013</td>
                         <td class="producer">Dom Pérignon</td>
                     </tr>
                     <tr>
@@ -805,14 +818,14 @@
                     </tr>
                     <tr>
                         <td class="date">2025-07-17 16:04</td>
-                        <td class="campaign-no">CM-25-01814</td>
+                        <td class="campaign-no">CM-25-01812</td>
                         <td class="wine-name">Lodovico</td>
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta di Biserno</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-17 16:04</td>
-                        <td class="campaign-no">CM-25-01812</td>
+                        <td class="campaign-no">CM-25-01814</td>
                         <td class="wine-name">Lodovico</td>
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta di Biserno</td>
@@ -910,17 +923,17 @@
                     </tr>
                     <tr>
                         <td class="date">2025-06-26 15:03</td>
-                        <td class="campaign-no">CM-25-01611</td>
-                        <td class="wine-name">Latour (Ex-Château)</td>
-                        <td class="vintage">2016</td>
-                        <td class="producer">Château Latour</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-06-26 15:03</td>
                         <td class="campaign-no">CM-25-01615</td>
                         <td class="wine-name">Axelle de Valandraud</td>
                         <td class="vintage">2010</td>
                         <td class="producer">Château Valandraud</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-06-26 15:03</td>
+                        <td class="campaign-no">CM-25-01611</td>
+                        <td class="wine-name">Latour (Ex-Château)</td>
+                        <td class="vintage">2016</td>
+                        <td class="producer">Château Latour</td>
                     </tr>
                     <tr>
                         <td class="date">2025-06-26 10:23</td>
@@ -963,13 +976,6 @@
                         <td class="wine-name">Biserno</td>
                         <td class="vintage">2022</td>
                         <td class="producer">Tenuta di Biserno</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-06-17 10:03</td>
-                        <td class="campaign-no">CM-25-01439</td>
-                        <td class="wine-name">Labégorce</td>
-                        <td class="vintage">2019</td>
-                        <td class="producer">Château Labégorce</td>
                     </tr>
                     <tr>
                         <td class="date">2025-06-16 14:57</td>
@@ -1170,9 +1176,9 @@
                     <tr>
                         <td class="date">2025-04-22 16:20</td>
                         <td class="campaign-no">CM-25-00893</td>
-                        <td class="wine-name">Certan de May</td>
+                        <td class="wine-name">La Fleur Pétrus</td>
                         <td class="vintage">2024</td>
-                        <td class="producer">Château Certan de May</td>
+                        <td class="producer">Château La Fleur-Pétrus</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-17 15:01</td>
@@ -1187,13 +1193,6 @@
                         <td class="wine-name">PS</td>
                         <td class="vintage">2022</td>
                         <td class="producer">Aalto Bodegas y Viñedos</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-04-15 10:44</td>
-                        <td class="campaign-no">CM-25-00834</td>
-                        <td class="wine-name">Léoville Las Cases</td>
-                        <td class="vintage">2022</td>
-                        <td class="producer">Château Léoville Las Cases</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-14 13:02</td>
@@ -1303,8 +1302,8 @@
                     <tr>
                         <td class="date">2025-03-20 15:02</td>
                         <td class="campaign-no">CM-25-00656</td>
-                        <td class="wine-name">Latour (Ex-Château)</td>
-                        <td class="vintage">2016</td>
+                        <td class="wine-name">Les Forts de Latour (2nd Vin)</td>
+                        <td class="vintage">2019</td>
                         <td class="producer">Château Latour</td>
                     </tr>
                     <tr>
@@ -1327,13 +1326,6 @@
                         <td class="wine-name">Dominus</td>
                         <td class="vintage">2016</td>
                         <td class="producer">Dominus Estate</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-03-13 11:14</td>
-                        <td class="campaign-no">CM-25-00596</td>
-                        <td class="wine-name">La Mondotte</td>
-                        <td class="vintage">2016</td>
-                        <td class="producer">Château La Mondotte</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-13 10:32</td>
@@ -1366,23 +1358,16 @@
                     <tr>
                         <td class="date">2025-03-07 16:48</td>
                         <td class="campaign-no">CM-25-00556</td>
-                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="wine-name">Canon</td>
                         <td class="vintage">2022</td>
-                        <td class="producer">Château Léoville Las Cases</td>
+                        <td class="producer">Château Canon</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-07 08:46</td>
                         <td class="campaign-no">CM-25-00541</td>
-                        <td class="wine-name">Léoville Las Cases</td>
+                        <td class="wine-name">Canon</td>
                         <td class="vintage">2022</td>
-                        <td class="producer">Château Léoville Las Cases</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-03-06 15:44</td>
-                        <td class="campaign-no">CM-25-00528</td>
-                        <td class="wine-name">Pape Clément Rouge</td>
-                        <td class="vintage">2014</td>
-                        <td class="producer">Château Pape Clément</td>
+                        <td class="producer">Château Canon</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-06 15:02</td>
@@ -1415,8 +1400,8 @@
                     <tr>
                         <td class="date">2025-03-04 10:32</td>
                         <td class="campaign-no">CM-25-00507</td>
-                        <td class="wine-name">PS</td>
-                        <td class="vintage">2022</td>
+                        <td class="wine-name">Anniversary XX</td>
+                        <td class="vintage">NV</td>
                         <td class="producer">Aalto Bodegas y Viñedos</td>
                     </tr>
                     <tr>
@@ -1467,13 +1452,6 @@
                         <td class="wine-name">Vertical Mouton Rothschild 1 x 500cl each vintage from 1995 to 2022 (Ex Chateau)</td>
                         <td class="vintage">N/A</td>
                         <td class="producer">Château Mouton Rothschild</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-02-20 12:02</td>
-                        <td class="campaign-no">CM-25-00414</td>
-                        <td class="wine-name">Domaine de Chevalier Rouge</td>
-                        <td class="vintage">2018</td>
-                        <td class="producer">Domaine de Chevalier</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-20 12:02</td>
@@ -1582,14 +1560,14 @@
                     </tr>
                     <tr>
                         <td class="date">2025-02-04 15:02</td>
-                        <td class="campaign-no">CM-25-00252</td>
+                        <td class="campaign-no">CM-25-00255</td>
                         <td class="wine-name">La Fleur Pétrus</td>
                         <td class="vintage">2009</td>
                         <td class="producer">Château La Fleur-Pétrus</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-04 15:02</td>
-                        <td class="campaign-no">CM-25-00255</td>
+                        <td class="campaign-no">CM-25-00252</td>
                         <td class="wine-name">La Fleur Pétrus</td>
                         <td class="vintage">2009</td>
                         <td class="producer">Château La Fleur-Pétrus</td>
@@ -1632,7 +1610,7 @@
                     <tr>
                         <td class="date">2025-01-28 14:55</td>
                         <td class="campaign-no">CM-25-00182</td>
-                        <td class="wine-name">Cos d'Estournel (Ex-Château 2024)</td>
+                        <td class="wine-name">Cos d'Estournel</td>
                         <td class="vintage">2010</td>
                         <td class="producer">Château Cos d'Estournel</td>
                     </tr>
@@ -1751,8 +1729,8 @@
                     <tr>
                         <td class="date">2025-01-09 14:42</td>
                         <td class="campaign-no">CM-25-00024</td>
-                        <td class="wine-name">Argentiera</td>
-                        <td class="vintage">2021</td>
+                        <td class="wine-name">Ventaglio</td>
+                        <td class="vintage">2018</td>
                         <td class="producer">Tenuta Argentiera</td>
                     </tr>
                     <tr>
@@ -1810,13 +1788,6 @@
                         <td class="wine-name">Mouton Rothschild</td>
                         <td class="vintage">2020</td>
                         <td class="producer">Château Mouton Rothschild</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2024-12-17 10:58</td>
-                        <td class="campaign-no">CM-24-02670</td>
-                        <td class="wine-name">Hommage à Jacques Perrin</td>
-                        <td class="vintage">2019</td>
-                        <td class="producer">Château de Beaucastel</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-17 10:10</td>
@@ -1891,15 +1862,15 @@
                     <tr>
                         <td class="date">2024-12-06 10:02</td>
                         <td class="campaign-no">CM-24-02581</td>
-                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
-                        <td class="vintage">NV</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2014</td>
                         <td class="producer">Bodegas Vega Sicilia</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-05 15:02</td>
                         <td class="campaign-no">CM-24-02574</td>
-                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
-                        <td class="vintage">NV</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2014</td>
                         <td class="producer">Bodegas Vega Sicilia</td>
                     </tr>
                     <tr>
@@ -1912,8 +1883,8 @@
                     <tr>
                         <td class="date">2024-12-04 18:02</td>
                         <td class="campaign-no">CM-24-02578</td>
-                        <td class="wine-name">Único Reserva Especial Venta 2024 (2010+2011+2012)</td>
-                        <td class="vintage">NV</td>
+                        <td class="wine-name">Único</td>
+                        <td class="vintage">2014</td>
                         <td class="producer">Bodegas Vega Sicilia</td>
                     </tr>
                     <tr>
@@ -1926,9 +1897,9 @@
                     <tr>
                         <td class="date">2024-12-02 17:10</td>
                         <td class="campaign-no">CM-24-02562</td>
-                        <td class="wine-name">Pintia</td>
+                        <td class="wine-name">Smith Haut Lafitte Rouge</td>
                         <td class="vintage">2019</td>
-                        <td class="producer">Bodegas Pintia</td>
+                        <td class="producer">Château Smith Haut Lafitte</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-02 17:04</td>
@@ -1940,9 +1911,9 @@
                     <tr>
                         <td class="date">2024-12-02 16:32</td>
                         <td class="campaign-no">CM-24-02560</td>
-                        <td class="wine-name">Único</td>
-                        <td class="vintage">2014</td>
-                        <td class="producer">Bodegas Vega Sicilia</td>
+                        <td class="wine-name">Aalto</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Aalto Bodegas y Viñedos</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-02 12:45</td>
@@ -2092,20 +2063,6 @@
                         <td class="producer">Tenuta Sette Ponti</td>
                     </tr>
                     <tr>
-                        <td class="date">2024-11-20 09:11</td>
-                        <td class="campaign-no">CM-24-02432</td>
-                        <td class="wine-name">Mouton Rothschild</td>
-                        <td class="vintage">2009</td>
-                        <td class="producer">Château Mouton Rothschild</td>
-                    </tr>
-                    <tr>
-                        <td class="date">2024-11-20 09:11</td>
-                        <td class="campaign-no">CM-24-02431</td>
-                        <td class="wine-name">Cos d'Estournel</td>
-                        <td class="vintage">2017</td>
-                        <td class="producer">Château Cos d'Estournel</td>
-                    </tr>
-                    <tr>
                         <td class="date">2024-11-19 09:53</td>
                         <td class="campaign-no">CM-24-02425</td>
                         <td class="wine-name">Mouton Rothschild</td>
@@ -2149,10 +2106,342 @@
                     </tr>
                 </tbody>
             </table>
+
+            <h2 class="section-title">💡 Recommended LEADS Campaigns (Top 30)</h2>
+            <p style="color: #666; margin-bottom: 20px;">
+                <strong>Selection Criteria:</strong><br>
+                ✓ Rule 1: Not offered in last 30 months<br>
+                ✓ Rule 2: Stock level > 200 bottles<br>
+                Sorted by stock level (highest first)
+            </p>
+            <table id="recommendationsTable" class="rec-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0, 'text', 'recommendationsTable')">Wine Name</th>
+                        <th onclick="sortTable(1, 'text', 'recommendationsTable')">Vintage</th>
+                        <th onclick="sortTable(2, 'text', 'recommendationsTable')">Producer</th>
+                        <th onclick="sortTable(3, 'number', 'recommendationsTable')">Stock</th>
+                        <th onclick="sortTable(4, 'text', 'recommendationsTable')">Last Offered</th>
+                        <th onclick="sortTable(5, 'number', 'recommendationsTable')">CHF</th>
+                        <th onclick="sortTable(6, 'number', 'recommendationsTable')">EUR</th>
+                        <th>Stock Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="never-offered">
+                        <td class="wine-name">Aalto</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Aalto Bodegas y Viñedos</td>
+                        <td style="text-align: right; font-weight: 600;">11466</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">38.00</td>
+                        <td style="text-align: right;">39.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Prosecco Brut Millesimato</td>
+                        <td class="vintage">2024</td>
+                        <td class="producer">Villa Marcello</td>
+                        <td style="text-align: right; font-weight: 600;">4740</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">10.00</td>
+                        <td style="text-align: right;">9.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2024</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                        <td style="text-align: right; font-weight: 600;">3690</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">318.00</td>
+                        <td style="text-align: right;">336.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Beychevelle</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Château Beychevelle</td>
+                        <td style="text-align: right; font-weight: 600;">3600</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">72.00</td>
+                        <td style="text-align: right;">70.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                        <td style="text-align: right; font-weight: 600;">3378</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">725.00</td>
+                        <td style="text-align: right;">798.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Lynch Bages</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Château Lynch Bages</td>
+                        <td style="text-align: right; font-weight: 600;">3258</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">79.00</td>
+                        <td style="text-align: right;">80.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Haut Marbuzet</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Haut Marbuzet</td>
+                        <td style="text-align: right; font-weight: 600;">3144</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">30.00</td>
+                        <td style="text-align: right;">35.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">D'Armailhac</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Château d’Armailhac</td>
+                        <td style="text-align: right; font-weight: 600;">2808</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">40.00</td>
+                        <td style="text-align: right;">38.20</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Clerc Milon</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Château Clerc Milon</td>
+                        <td style="text-align: right; font-weight: 600;">2778</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">64.00</td>
+                        <td style="text-align: right;">62.20</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Le Petit Mouton Rothschild (2nd Vin)</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                        <td style="text-align: right; font-weight: 600;">2664</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">155.00</td>
+                        <td style="text-align: right;">155.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Montrose</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Montrose</td>
+                        <td style="text-align: right; font-weight: 600;">2394</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">90.00</td>
+                        <td style="text-align: right;">95.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Pontet Canet</td>
+                        <td class="vintage">2017</td>
+                        <td class="producer">Château Pontet Canet</td>
+                        <td style="text-align: right; font-weight: 600;">2364</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">68.00</td>
+                        <td style="text-align: right;">75.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Opus One</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Opus One Winery</td>
+                        <td style="text-align: right; font-weight: 600;">2256</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">255.00</td>
+                        <td style="text-align: right;">272.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Concerto</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
+                        <td style="text-align: right; font-weight: 600;">2244</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">50.00</td>
+                        <td style="text-align: right;">55.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Margaux</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Margaux</td>
+                        <td style="text-align: right; font-weight: 600;">2232</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">730.00</td>
+                        <td style="text-align: right;">803.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Palmer</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Palmer</td>
+                        <td style="text-align: right; font-weight: 600;">2172</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">250.00</td>
+                        <td style="text-align: right;">260.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Baronarques Blanc</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Domaine de Baronarques</td>
+                        <td style="text-align: right; font-weight: 600;">2166</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">35.00</td>
+                        <td style="text-align: right;">37.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Lafite Rothschild</td>
+                        <td class="vintage">2020</td>
+                        <td class="producer">Château Lafite Rothschild</td>
+                        <td style="text-align: right; font-weight: 600;">2166</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">700.00</td>
+                        <td style="text-align: right;">770.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Phélan Ségur</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Phélan Ségur</td>
+                        <td style="text-align: right; font-weight: 600;">2124</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">30.00</td>
+                        <td style="text-align: right;">32.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Beychevelle</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Beychevelle</td>
+                        <td style="text-align: right; font-weight: 600;">2058</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">78.00</td>
+                        <td style="text-align: right;">85.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Mouton Rothschild</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Mouton Rothschild</td>
+                        <td style="text-align: right; font-weight: 600;">2052</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">510.00</td>
+                        <td style="text-align: right;">530.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Concerto</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
+                        <td style="text-align: right; font-weight: 600;">2028</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">50.00</td>
+                        <td style="text-align: right;">55.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Guidalberto (2nd Vin)</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta San Guido</td>
+                        <td style="text-align: right; font-weight: 600;">1962</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">34.00</td>
+                        <td style="text-align: right;">35.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Les Carmes Haut Brion</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Château Les Carmes Haut-Brion</td>
+                        <td style="text-align: right; font-weight: 600;">1884</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">90.00</td>
+                        <td style="text-align: right;">89.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">D'Armailhac</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château d’Armailhac</td>
+                        <td style="text-align: right; font-weight: 600;">1836</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">48.00</td>
+                        <td style="text-align: right;">53.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Calon Ségur</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Château Calon Ségur</td>
+                        <td style="text-align: right; font-weight: 600;">1812</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">92.00</td>
+                        <td style="text-align: right;">90.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Rauzan Ségla</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Rauzan-Ségla</td>
+                        <td style="text-align: right; font-weight: 600;">1812</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">98.00</td>
+                        <td style="text-align: right;">108.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Duhart Milon</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Duhart Milon</td>
+                        <td style="text-align: right; font-weight: 600;">1806</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">68.00</td>
+                        <td style="text-align: right;">75.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Sette</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Tenuta Sette Ponti</td>
+                        <td style="text-align: right; font-weight: 600;">1749</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">95.00</td>
+                        <td style="text-align: right;">98.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                    <tr class="never-offered">
+                        <td class="wine-name">Clerc Milon</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Clerc Milon</td>
+                        <td style="text-align: right; font-weight: 600;">1728</td>
+                        <td class="date">Never</td>
+                        <td style="text-align: right;">70.00</td>
+                        <td style="text-align: right;">77.00</td>
+                        <td class="stock-icon stock-high">🟢</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 5px; border-left: 4px solid #ffc107;">
+                <strong>Legend:</strong><br>
+                🟢 Very High Stock (&gt;500 bottles) |
+                🟡 High Stock (&gt;300 bottles) |
+                🟠 Good Stock (&gt;200 bottles)<br>
+                <span style="background: #fff3cd; padding: 2px 8px; border-radius: 3px;">Highlighted rows</span> = Never offered before
+            </div>
         </div>
 
         <div class="update-time">
-            Last updated: 2025-11-10 11:45:48
+            Last updated: 2025-11-10 14:13:52
         </div>
     </div>
 
@@ -2160,15 +2449,18 @@
         // Simple table sorting
         let sortDirections = {};
 
-        function sortTable(columnIndex, type) {
-            const table = document.getElementById('leadsTable');
+        function sortTable(columnIndex, type, tableId) {
+            const table = document.getElementById(tableId);
             const tbody = table.querySelector('tbody');
             const rows = Array.from(tbody.querySelectorAll('tr'));
 
+            // Create unique key for this table+column
+            const sortKey = tableId + '_' + columnIndex;
+
             // Toggle sort direction
-            const currentDir = sortDirections[columnIndex] || 'asc';
+            const currentDir = sortDirections[sortKey] || 'asc';
             const newDir = currentDir === 'asc' ? 'desc' : 'asc';
-            sortDirections[columnIndex] = newDir;
+            sortDirections[sortKey] = newDir;
 
             rows.sort((a, b) => {
                 const aValue = a.cells[columnIndex].textContent.trim();
@@ -2178,6 +2470,10 @@
 
                 if (type === 'date') {
                     comparison = new Date(aValue) - new Date(bValue);
+                } else if (type === 'number') {
+                    const aNum = parseFloat(aValue.replace(/,/g, '')) || 0;
+                    const bNum = parseFloat(bValue.replace(/,/g, '')) || 0;
+                    comparison = aNum - bNum;
                 } else {
                     comparison = aValue.localeCompare(bValue);
                 }

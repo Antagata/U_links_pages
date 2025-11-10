@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="version" content="20251110120721">
+    <meta name="version" content="20251110141359">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HORECA Campaigns - AVU</title>
@@ -19,13 +19,13 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
             padding: 20px;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
@@ -34,10 +34,11 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
             padding: 30px;
             text-align: center;
             color: white;
+            position: relative;
         }
 
         .header h1 {
@@ -56,6 +57,25 @@
             margin-bottom: 15px;
         }
 
+        .price-toggle {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .price-toggle:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
         .nav-links {
             background: #f8f9fa;
             padding: 15px 30px;
@@ -64,7 +84,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #f5576c;
+            color: #11998e;
             font-weight: 600;
             margin-right: 20px;
             padding: 8px 16px;
@@ -73,7 +93,7 @@
         }
 
         .nav-links a:hover {
-            background: #f5576c;
+            background: #11998e;
             color: white;
         }
 
@@ -97,7 +117,7 @@
         .stat-number {
             font-size: 2.5em;
             font-weight: bold;
-            color: #f5576c;
+            color: #11998e;
         }
 
         .stat-label {
@@ -113,7 +133,7 @@
         }
 
         thead {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
             color: white;
         }
 
@@ -157,7 +177,7 @@
         .campaign-no {
             font-family: monospace;
             font-weight: 600;
-            color: #f5576c;
+            color: #11998e;
         }
 
         .wine-name {
@@ -197,12 +217,131 @@
             color: #f57c00;
         }
 
+        .price-col {
+            display: none;
+            font-weight: 600;
+            color: #11998e;
+        }
+
+        .price-col.visible {
+            display: table-cell;
+        }
+
+        th.price-col.visible {
+            display: table-cell;
+        }
+
         .update-time {
             text-align: center;
             padding: 20px;
             color: #888;
             font-size: 0.9em;
             border-top: 1px solid #e0e0e0;
+        }
+
+        /* Price modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content h2 {
+            color: #11998e;
+            margin-bottom: 20px;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .modal-content input:focus {
+            outline: none;
+            border-color: #11998e;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17,153,142,0.4);
+        }
+
+        .btn-cancel {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .btn-cancel:hover {
+            background: #d0d0d0;
+        }
+
+        .error-msg {
+            color: #c33;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .error-msg.show {
+            display: block;
         }
     </style>
 </head>
@@ -225,7 +364,8 @@
         <div class="header">
             <div class="icon">🏨</div>
             <h1>HORECA Campaigns</h1>
-            <div class="subtitle">Hotels & Restaurants Wine Campaigns (HORECA Only)</div>
+            <div class="subtitle">Hotels & Restaurants Wine Campaigns (HORECA Only - Sent Status)</div>
+            <button class="price-toggle" onclick="togglePrices()">🔒 Show Prices</button>
         </div>
 
         <div class="nav-links">
@@ -238,20 +378,20 @@
         <div class="content">
             <div class="stats">
                 <div class="stat-box">
-                    <div class="stat-number">293</div>
+                    <div class="stat-number">286</div>
                     <div class="stat-label">Total HORECA Campaigns</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">252</div>
+                    <div class="stat-number">247</div>
                     <div class="stat-label">Normal Campaigns</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">41</div>
+                    <div class="stat-number">39</div>
                     <div class="stat-label">Lead Campaigns</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">HORECA</div>
-                    <div class="stat-label">Campaign Type</div>
+                    <div class="stat-number">SENT</div>
+                    <div class="stat-label">Campaign Status</div>
                 </div>
             </div>
 
@@ -264,6 +404,8 @@
                         <th onclick="sortTable(3, 'text')">Vintage</th>
                         <th onclick="sortTable(4, 'text')">Producer</th>
                         <th onclick="sortTable(5, 'text')">Campaign Sub-Type</th>
+                        <th class="price-col" onclick="sortTable(6, 'number')">Price CHF</th>
+                        <th class="price-col" onclick="sortTable(7, 'number')">Price EUR</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -274,6 +416,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Bibi Graetz</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">240.00</td>
+                        <td class="price-col">260.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-11-08 15:02</td>
@@ -282,6 +426,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Bibi Graetz</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">100.00</td>
+                        <td class="price-col">110.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-11-07 10:33</td>
@@ -290,6 +436,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château Croix de Labrie</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1270.00</td>
+                        <td class="price-col">1375.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-11-07 10:33</td>
@@ -298,6 +446,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château Croix de Labrie</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">64.00</td>
+                        <td class="price-col">70.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-11-04 10:33</td>
@@ -306,6 +456,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fontodi</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">395.00</td>
+                        <td class="price-col">430.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-11-02 10:03</td>
@@ -314,6 +466,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fontodi</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">79.00</td>
+                        <td class="price-col">85.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-31 16:02</td>
@@ -322,6 +476,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Les Carmes Haut-Brion</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">74.00</td>
+                        <td class="price-col">80.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-31 16:00</td>
@@ -330,6 +486,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Les Carmes Haut-Brion</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">74.00</td>
+                        <td class="price-col">80.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-29 16:30</td>
@@ -338,14 +496,18 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">16.00</td>
+                        <td class="price-col">18.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-28 16:02</td>
                         <td class="campaign-no">CM-25-02949</td>
-                        <td class="wine-name">Barbera d'Asti Ai Suma</td>
+                        <td class="wine-name">Barbera d'Asti Bricco dell'Uccellone</td>
                         <td class="vintage">2021</td>
                         <td class="producer">Braida</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">43.00</td>
+                        <td class="price-col">47.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-28 16:02</td>
@@ -354,6 +516,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Braida</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">42.00</td>
+                        <td class="price-col">46.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-26 10:00</td>
@@ -362,6 +526,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">140.00</td>
+                        <td class="price-col">150.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-25 10:03</td>
@@ -370,22 +536,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Clos l'Eglise</td>
                         <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-10-25 10:03</td>
-                        <td class="campaign-no">CM-25-02936</td>
-                        <td class="wine-name">Clos l'Église (Ex-Château)</td>
-                        <td class="vintage">2009</td>
-                        <td class="producer">Clos l'Eglise</td>
-                        <td><span class="subtype lead">Lead</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-10-24 15:03</td>
-                        <td class="campaign-no">CM-25-02922</td>
-                        <td class="wine-name">Cantenac Brown</td>
-                        <td class="vintage">2021</td>
-                        <td class="producer">Château Cantenac-Brown</td>
-                        <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">95.00</td>
+                        <td class="price-col">103.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-24 15:03</td>
@@ -394,6 +546,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cantenac-Brown</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">26.00</td>
+                        <td class="price-col">28.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-24 15:03</td>
@@ -402,14 +556,18 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cantenac-Brown</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">25.00</td>
+                        <td class="price-col">27.00</td>
                     </tr>
                     <tr>
-                        <td class="date">2025-10-24 09:15</td>
-                        <td class="campaign-no">CM-25-02905</td>
-                        <td class="wine-name">Champagne Brut Dom Pérignon P2</td>
-                        <td class="vintage">2006</td>
-                        <td class="producer">Dom Pérignon</td>
+                        <td class="date">2025-10-24 15:03</td>
+                        <td class="campaign-no">CM-25-02922</td>
+                        <td class="wine-name">Cantenac Brown</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Cantenac-Brown</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">25.00</td>
+                        <td class="price-col">27.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-23 11:10</td>
@@ -418,6 +576,8 @@
                         <td class="vintage">2006</td>
                         <td class="producer">Dom Pérignon</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">310.00</td>
+                        <td class="price-col">335.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-23 10:30</td>
@@ -426,14 +586,18 @@
                         <td class="vintage">2006</td>
                         <td class="producer">Dom Pérignon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">310.00</td>
+                        <td class="price-col">335.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-22 10:03</td>
                         <td class="campaign-no">CM-25-02876</td>
-                        <td class="wine-name">Il Pino di Biserno</td>
+                        <td class="wine-name">Biserno</td>
                         <td class="vintage">2022</td>
                         <td class="producer">Tenuta di Biserno</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">89.00</td>
+                        <td class="price-col">96.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-22 10:03</td>
@@ -442,6 +606,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Tenuta di Biserno</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">34.00</td>
+                        <td class="price-col">45.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-21 10:03</td>
@@ -450,6 +616,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Montrose</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">78.00</td>
+                        <td class="price-col">85.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-21 10:03</td>
@@ -458,6 +626,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Montrose</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">78.00</td>
+                        <td class="price-col">85.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-17 15:55</td>
@@ -466,6 +636,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Domini Castellare di Castellina</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">90.00</td>
+                        <td class="price-col">98.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-17 09:29</td>
@@ -474,14 +646,18 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Domini Castellare di Castellina</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">450.00</td>
+                        <td class="price-col">485.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-07 16:32</td>
                         <td class="campaign-no">CM-25-02686</td>
-                        <td class="wine-name">Colore</td>
-                        <td class="vintage">2021</td>
+                        <td class="wine-name">Testamatta</td>
+                        <td class="vintage">2020</td>
                         <td class="producer">Bibi Graetz</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">99.00</td>
+                        <td class="price-col">107.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-07 16:30</td>
@@ -490,14 +666,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Bibi Graetz</td>
                         <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-10-04 10:45</td>
-                        <td class="campaign-no">CM-25-02659</td>
-                        <td class="wine-name">Concerto</td>
-                        <td class="vintage">2023</td>
-                        <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
-                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">43.00</td>
+                        <td class="price-col">47.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-04 10:45</td>
@@ -506,6 +676,18 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">31.00</td>
+                        <td class="price-col">34.00</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-10-04 10:45</td>
+                        <td class="campaign-no">CM-25-02659</td>
+                        <td class="wine-name">Concerto</td>
+                        <td class="vintage">2023</td>
+                        <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
+                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">740.00</td>
+                        <td class="price-col">800.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-10-04 10:45</td>
@@ -514,14 +696,18 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">16.00</td>
+                        <td class="price-col">18.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-26 13:37</td>
                         <td class="campaign-no">CM-25-02592</td>
-                        <td class="wine-name">Mouton Rothschild</td>
-                        <td class="vintage">2022</td>
-                        <td class="producer">Château Mouton Rothschild</td>
+                        <td class="wine-name">La Dame de Bouard</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Château Clos du Bouard</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">8.00</td>
+                        <td class="price-col">8.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-23 16:06</td>
@@ -530,6 +716,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Lagrange</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">29.00</td>
+                        <td class="price-col">32.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-23 16:03</td>
@@ -538,6 +726,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Lagrange</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">29.00</td>
+                        <td class="price-col">32.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-23 11:00</td>
@@ -546,6 +736,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Pétrus</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">4350.00</td>
+                        <td class="price-col">4350.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-23 11:00</td>
@@ -554,6 +746,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Pétrus</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">4350.00</td>
+                        <td class="price-col">4350.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-19 15:01</td>
@@ -562,6 +756,8 @@
                         <td class="vintage">2005</td>
                         <td class="producer">Château Mouton Rothschild</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1650.00</td>
+                        <td class="price-col">1550.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-19 15:00</td>
@@ -570,6 +766,8 @@
                         <td class="vintage">2005</td>
                         <td class="producer">Château Mouton Rothschild</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">5000.00</td>
+                        <td class="price-col">5500.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-18 15:55</td>
@@ -578,6 +776,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Figeac</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">140.00</td>
+                        <td class="price-col">150.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-18 11:05</td>
@@ -586,6 +786,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Figeac</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">140.00</td>
+                        <td class="price-col">150.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-18 10:00</td>
@@ -594,6 +796,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Margaux</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">970.00</td>
+                        <td class="price-col">1050.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-17 17:45</td>
@@ -602,6 +806,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Margaux</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">5945.00</td>
+                        <td class="price-col">6425.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-17 16:25</td>
@@ -610,6 +816,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">115.00</td>
+                        <td class="price-col">115.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-17 11:45</td>
@@ -618,6 +826,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">21.00</td>
+                        <td class="price-col">21.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-16 16:25</td>
@@ -626,6 +836,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">18.00</td>
+                        <td class="price-col">20.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-16 16:25</td>
@@ -634,6 +846,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">18.00</td>
+                        <td class="price-col">20.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-10 17:30</td>
@@ -642,6 +856,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">42.00</td>
+                        <td class="price-col">46.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-10 15:16</td>
@@ -650,6 +866,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">440.00</td>
+                        <td class="price-col">475.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-09-10 15:16</td>
@@ -658,6 +876,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">45.00</td>
+                        <td class="price-col">49.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-08-28 16:02</td>
@@ -666,6 +886,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château Clos du Bouard</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">57.00</td>
+                        <td class="price-col">62.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-08-06 14:42</td>
@@ -674,6 +896,8 @@
                         <td class="vintage">NV</td>
                         <td class="producer">Maison Ruinart</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">180.00</td>
+                        <td class="price-col">195.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-23 15:00</td>
@@ -682,6 +906,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">30.00</td>
+                        <td class="price-col">33.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-23 10:33</td>
@@ -690,6 +916,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">19.00</td>
+                        <td class="price-col">21.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-23 10:33</td>
@@ -698,6 +926,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">32.00</td>
+                        <td class="price-col">35.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-23 10:33</td>
@@ -706,6 +936,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">32.00</td>
+                        <td class="price-col">35.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-10 15:03</td>
@@ -714,6 +946,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">380.00</td>
+                        <td class="price-col">410.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-05 15:03</td>
@@ -722,6 +956,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">380.00</td>
+                        <td class="price-col">410.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-04 15:00</td>
@@ -730,6 +966,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">380.00</td>
+                        <td class="price-col">410.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-04 15:00</td>
@@ -738,6 +976,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1880.00</td>
+                        <td class="price-col">2030.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-04 15:00</td>
@@ -746,14 +986,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-07-01 16:04</td>
-                        <td class="campaign-no">CM-25-01655</td>
-                        <td class="wine-name">Cheval Blanc</td>
-                        <td class="vintage">2021</td>
-                        <td class="producer">Château Cheval Blanc</td>
-                        <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">370.00</td>
+                        <td class="price-col">400.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-07-01 16:04</td>
@@ -762,6 +996,18 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">3880.00</td>
+                        <td class="price-col">4195.00</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-07-01 16:04</td>
+                        <td class="campaign-no">CM-25-01655</td>
+                        <td class="wine-name">Cheval Blanc</td>
+                        <td class="vintage">2021</td>
+                        <td class="producer">Château Cheval Blanc</td>
+                        <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">3880.00</td>
+                        <td class="price-col">4195.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-06-21 10:00</td>
@@ -770,6 +1016,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château d’Armailhac</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">45.00</td>
+                        <td class="price-col">48.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-06-19 10:03</td>
@@ -778,6 +1026,8 @@
                         <td class="vintage">2024</td>
                         <td class="producer">Bruno Giacosa</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">22.00</td>
+                        <td class="price-col">24.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-06-17 14:00</td>
@@ -786,14 +1036,18 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Malartic Lagravière</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1320.00</td>
+                        <td class="price-col">1425.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-06-04 13:30</td>
                         <td class="campaign-no">CM-25-01356</td>
                         <td class="wine-name">Opus One</td>
-                        <td class="vintage">2019</td>
+                        <td class="vintage">2021</td>
                         <td class="producer">Opus One Winery</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">145.00</td>
+                        <td class="price-col">158.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-30 15:33</td>
@@ -802,6 +1056,8 @@
                         <td class="vintage">2012</td>
                         <td class="producer">Louis Roederer</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">450.00</td>
+                        <td class="price-col">485.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-28 11:03</td>
@@ -810,6 +1066,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">5800.00</td>
+                        <td class="price-col">6500.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-21 17:47</td>
@@ -818,14 +1076,18 @@
                         <td class="vintage">1990</td>
                         <td class="producer">Domaine Paul Jaboulet Aîné</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">600.00</td>
+                        <td class="price-col">700.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-20 08:38</td>
                         <td class="campaign-no">CM-25-01159</td>
                         <td class="wine-name">Alter Ego de Palmer (2nd Vin)</td>
-                        <td class="vintage">2021</td>
+                        <td class="vintage">2019</td>
                         <td class="producer">Château Palmer</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">72.00</td>
+                        <td class="price-col">78.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-17 16:00</td>
@@ -834,6 +1096,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château d’Armailhac</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">450.00</td>
+                        <td class="price-col">486.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-16 15:02</td>
@@ -842,6 +1106,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château La Fleur-Pétrus</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">240.00</td>
+                        <td class="price-col">260.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-15 16:02</td>
@@ -850,14 +1116,18 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château La Fleur-Pétrus</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">590.00</td>
+                        <td class="price-col">640.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-13 14:29</td>
                         <td class="campaign-no">CM-25-01083</td>
-                        <td class="wine-name">Le Petit Mouton Rothschild (2nd Vin)</td>
+                        <td class="wine-name">Clerc Milon</td>
                         <td class="vintage">2024</td>
-                        <td class="producer">Château Mouton Rothschild</td>
+                        <td class="producer">Château Clerc Milon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">110.00</td>
+                        <td class="price-col">111.40</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-13 13:51</td>
@@ -866,14 +1136,18 @@
                         <td class="vintage">2010</td>
                         <td class="producer">Château Mouton Rothschild</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">595.00</td>
+                        <td class="price-col">645.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-10 16:38</td>
                         <td class="campaign-no">CM-25-01059</td>
-                        <td class="wine-name">Champagne Brut Rosé</td>
+                        <td class="wine-name">Champagne Brut Blanc de Blancs</td>
                         <td class="vintage">NV</td>
                         <td class="producer">Maison Ruinart</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">69.00</td>
+                        <td class="price-col">74.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-05-08 14:00</td>
@@ -882,14 +1156,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Labégorce</td>
                         <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-05-06 17:24</td>
-                        <td class="campaign-no">CM-25-01016</td>
-                        <td class="wine-name">Lafite Rothschild</td>
-                        <td class="vintage">2024</td>
-                        <td class="producer">Château Lafite Rothschild</td>
-                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">20.00</td>
+                        <td class="price-col">22.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-29 13:55</td>
@@ -898,6 +1166,8 @@
                         <td class="vintage">2024</td>
                         <td class="producer">Château Lafite Rothschild</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">95400.00</td>
+                        <td class="price-col">100800.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-22 11:03</td>
@@ -906,6 +1176,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Lilian Ladouys</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">15.00</td>
+                        <td class="price-col">16.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-17 16:03</td>
@@ -914,6 +1186,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Phélan Ségur</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">30.00</td>
+                        <td class="price-col">32.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-16 16:02</td>
@@ -922,6 +1196,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">740.00</td>
+                        <td class="price-col">790.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-16 16:02</td>
@@ -930,6 +1206,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1150.00</td>
+                        <td class="price-col">1230.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-15 14:47</td>
@@ -938,6 +1216,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">The Mascot</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">270.00</td>
+                        <td class="price-col">289.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-15 09:33</td>
@@ -946,6 +1226,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Langoa Barton</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">32.00</td>
+                        <td class="price-col">34.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-14 15:02</td>
@@ -954,6 +1236,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Domaine de Baronarques</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">29.00</td>
+                        <td class="price-col">31.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-11 16:02</td>
@@ -962,6 +1246,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château de Fieuzal</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">66.00</td>
+                        <td class="price-col">73.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-10 12:32</td>
@@ -970,6 +1256,8 @@
                         <td class="vintage">2016</td>
                         <td class="producer">Château Latour</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">300.00</td>
+                        <td class="price-col">325.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-04 10:05</td>
@@ -978,6 +1266,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Luce della Vite</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">70.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-03 16:40</td>
@@ -986,6 +1276,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Bibi Graetz</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">260.00</td>
+                        <td class="price-col">280.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-02 15:02</td>
@@ -994,6 +1286,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Langoa Barton</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">180.00</td>
+                        <td class="price-col">193.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-04-01 12:00</td>
@@ -1002,6 +1296,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Tenuta San Guido</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">35.00</td>
+                        <td class="price-col">35.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-28 15:32</td>
@@ -1010,6 +1306,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">33.00</td>
+                        <td class="price-col">35.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-26 12:41</td>
@@ -1018,6 +1316,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Tenuta San Guido</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">225.00</td>
+                        <td class="price-col">250.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-26 11:44</td>
@@ -1026,6 +1326,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">45.00</td>
+                        <td class="price-col">48.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-20 10:39</td>
@@ -1034,6 +1336,8 @@
                         <td class="vintage">2016</td>
                         <td class="producer">Château Latour</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">5180.00</td>
+                        <td class="price-col">5438.32</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-17 10:36</td>
@@ -1042,6 +1346,8 @@
                         <td class="vintage">2016</td>
                         <td class="producer">Château Latour</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">5180.00</td>
+                        <td class="price-col">5438.32</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-13 15:34</td>
@@ -1050,6 +1356,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château d'Yquem</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">295.28</td>
+                        <td class="price-col">310.00</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-12 15:43</td>
@@ -1058,14 +1366,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Braida</td>
                         <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-03-11 15:34</td>
-                        <td class="campaign-no">CM-25-00569</td>
-                        <td class="wine-name">Yquem</td>
-                        <td class="vintage">2021</td>
-                        <td class="producer">Château d'Yquem</td>
-                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">28.00</td>
+                        <td class="price-col">29.40</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-11 15:32</td>
@@ -1074,6 +1376,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Masseto</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">225.00</td>
+                        <td class="price-col">236.22</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-11 15:32</td>
@@ -1082,30 +1386,38 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Masseto</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">225.00</td>
+                        <td class="price-col">236.22</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-07 14:33</td>
                         <td class="campaign-no">CM-25-00549</td>
-                        <td class="wine-name">Léoville Las Cases</td>
-                        <td class="vintage">2022</td>
-                        <td class="producer">Château Léoville Las Cases</td>
-                        <td><span class="subtype lead">Lead</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-03-07 10:53</td>
-                        <td class="campaign-no">CM-25-00544</td>
-                        <td class="wine-name">La Conseillante</td>
-                        <td class="vintage">2022</td>
-                        <td class="producer">Château La Conseillante</td>
-                        <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-03-07 10:11</td>
-                        <td class="campaign-no">CM-25-00543</td>
                         <td class="wine-name">Canon</td>
                         <td class="vintage">2022</td>
                         <td class="producer">Château Canon</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">1380.00</td>
+                        <td class="price-col">1448.82</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-07 10:53</td>
+                        <td class="campaign-no">CM-25-00544</td>
+                        <td class="wine-name">Canon</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château Canon</td>
+                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1380.00</td>
+                        <td class="price-col">1448.82</td>
+                    </tr>
+                    <tr>
+                        <td class="date">2025-03-07 10:11</td>
+                        <td class="campaign-no">CM-25-00543</td>
+                        <td class="wine-name">La Conseillante</td>
+                        <td class="vintage">2022</td>
+                        <td class="producer">Château La Conseillante</td>
+                        <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">256.00</td>
+                        <td class="price-col">268.77</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-05 16:02</td>
@@ -1114,6 +1426,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">370.00</td>
+                        <td class="price-col">388.45</td>
                     </tr>
                     <tr>
                         <td class="date">2025-03-04 15:05</td>
@@ -1122,6 +1436,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Tenuta Argentiera</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">220.00</td>
+                        <td class="price-col">230.97</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-28 11:08</td>
@@ -1130,14 +1446,18 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">150.00</td>
+                        <td class="price-col">157.96</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-20 16:02</td>
                         <td class="campaign-no">CM-25-00421</td>
                         <td class="wine-name">Champagne le Mesnil</td>
-                        <td class="vintage">2012</td>
+                        <td class="vintage">1995</td>
                         <td class="producer">Maison Salon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1550.00</td>
+                        <td class="price-col">1632.27</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-17 14:28</td>
@@ -1146,6 +1466,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">73.00</td>
+                        <td class="price-col">76.87</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-17 10:00</td>
@@ -1154,6 +1476,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Fattoria le Pupille</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">57.00</td>
+                        <td class="price-col">60.03</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-15 15:03</td>
@@ -1162,6 +1486,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">73.00</td>
+                        <td class="price-col">76.87</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-13 15:02</td>
@@ -1170,6 +1496,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château Cantemerle</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">23.00</td>
+                        <td class="price-col">24.22</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-10 14:16</td>
@@ -1178,6 +1506,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Fattoria le Pupille</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">135.00</td>
+                        <td class="price-col">142.17</td>
                     </tr>
                     <tr>
                         <td class="date">2025-02-07 15:05</td>
@@ -1186,14 +1516,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château La Fleur-Pétrus</td>
                         <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2025-02-01 15:04</td>
-                        <td class="campaign-no">CM-25-00211</td>
-                        <td class="wine-name">Léoville Las Cases</td>
-                        <td class="vintage">2022</td>
-                        <td class="producer">Château Léoville Las Cases</td>
-                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">240.00</td>
+                        <td class="price-col">252.74</td>
                     </tr>
                     <tr>
                         <td class="date">2025-01-30 15:02</td>
@@ -1202,6 +1526,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Château Beau-Séjour Bécot</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">345.00</td>
+                        <td class="price-col">366.48</td>
                     </tr>
                     <tr>
                         <td class="date">2025-01-24 15:32</td>
@@ -1210,6 +1536,8 @@
                         <td class="vintage">2012</td>
                         <td class="producer">Louis Roederer</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">7200.00</td>
+                        <td class="price-col">7648.18</td>
                     </tr>
                     <tr>
                         <td class="date">2025-01-23 16:02</td>
@@ -1218,6 +1546,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Bodegas Vega Sicilia</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">315.00</td>
+                        <td class="price-col">334.61</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-18 11:09</td>
@@ -1226,6 +1556,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.64</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-15 10:00</td>
@@ -1234,6 +1566,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Lilian Ladouys</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">110.00</td>
+                        <td class="price-col">116.16</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-14 09:30</td>
@@ -1242,6 +1576,8 @@
                         <td class="vintage">NV</td>
                         <td class="producer">Maison Ruinart</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">61.00</td>
+                        <td class="price-col">64.41</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-08 09:30</td>
@@ -1250,14 +1586,18 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria le Pupille</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">60.00</td>
+                        <td class="price-col">63.36</td>
                     </tr>
                     <tr>
                         <td class="date">2024-12-06 10:30</td>
                         <td class="campaign-no">CM-24-02589</td>
-                        <td class="wine-name">Masseto</td>
-                        <td class="vintage">2020</td>
-                        <td class="producer">Masseto</td>
+                        <td class="wine-name">Ornellaia</td>
+                        <td class="vintage">2018</td>
+                        <td class="producer">Tenuta dell'Ornellaia</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">410.00</td>
+                        <td class="price-col">432.95</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-30 10:00</td>
@@ -1266,22 +1606,28 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Pavie Macquin</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">395.00</td>
+                        <td class="price-col">416.18</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-29 11:19</td>
                         <td class="campaign-no">CM-24-02531</td>
-                        <td class="wine-name">Único</td>
-                        <td class="vintage">2014</td>
-                        <td class="producer">Bodegas Vega Sicilia</td>
+                        <td class="wine-name">Pintia</td>
+                        <td class="vintage">2019</td>
+                        <td class="producer">Bodegas Pintia</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">49.00</td>
+                        <td class="price-col">51.63</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-29 10:01</td>
                         <td class="campaign-no">CM-24-02527</td>
-                        <td class="wine-name">Macan Clasico</td>
-                        <td class="vintage">2018</td>
-                        <td class="producer">Rothschild/Vega Sicilia</td>
+                        <td class="wine-name">Muga Prado Enea Gran Reserva</td>
+                        <td class="vintage">2014</td>
+                        <td class="producer">Bodegas Muga</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">46.00</td>
+                        <td class="price-col">48.47</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-28 14:26</td>
@@ -1290,6 +1636,8 @@
                         <td class="vintage">2012</td>
                         <td class="producer">Louis Roederer</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">7200.00</td>
+                        <td class="price-col">7586.13</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-28 09:30</td>
@@ -1298,6 +1646,8 @@
                         <td class="vintage">2012</td>
                         <td class="producer">Louis Roederer</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">440.00</td>
+                        <td class="price-col">463.60</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-27 10:00</td>
@@ -1306,6 +1656,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">34.00</td>
+                        <td class="price-col">35.82</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-26 09:30</td>
@@ -1314,6 +1666,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">2700.00</td>
+                        <td class="price-col">2844.80</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-26 09:30</td>
@@ -1322,30 +1676,28 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype lead">Lead</span></td>
+                        <td class="price-col">106.00</td>
+                        <td class="price-col">111.68</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-21 15:34</td>
                         <td class="campaign-no">CM-24-02456</td>
-                        <td class="wine-name">Sito Moresco</td>
-                        <td class="vintage">2021</td>
+                        <td class="wine-name">Rossj Bass Chardonnay</td>
+                        <td class="vintage">2022</td>
                         <td class="producer">Gaja</td>
                         <td><span class="subtype lead">Lead</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2024-11-20 09:30</td>
-                        <td class="campaign-no">CM-24-02428</td>
-                        <td class="wine-name">La Fleur Pétrus</td>
-                        <td class="vintage">2009</td>
-                        <td class="producer">Château La Fleur-Pétrus</td>
-                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">30.00</td>
+                        <td class="price-col">31.61</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-19 09:52</td>
                         <td class="campaign-no">CM-24-02424</td>
-                        <td class="wine-name">Rossj Bass Chardonnay</td>
-                        <td class="vintage">2022</td>
+                        <td class="wine-name">Sito Moresco</td>
+                        <td class="vintage">2021</td>
                         <td class="producer">Gaja</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">36.00</td>
+                        <td class="price-col">37.93</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-15 08:20</td>
@@ -1354,6 +1706,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Gruaud Larose</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.49</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-14 12:12</td>
@@ -1362,6 +1716,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Il Caggio</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">475.00</td>
+                        <td class="price-col">500.47</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-13 09:30</td>
@@ -1370,6 +1726,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Grand Puy Lacoste</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">58.00</td>
+                        <td class="price-col">61.11</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-12 09:40</td>
@@ -1378,6 +1736,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.40</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-12 09:40</td>
@@ -1386,6 +1746,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.40</td>
                     </tr>
                     <tr>
                         <td class="date">2024-11-05 14:00</td>
@@ -1394,6 +1756,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">73.00</td>
+                        <td class="price-col">76.91</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-31 14:00</td>
@@ -1402,6 +1766,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.40</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-31 14:00</td>
@@ -1410,14 +1776,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
-                    </tr>
-                    <tr>
-                        <td class="date">2024-10-30 09:24</td>
-                        <td class="campaign-no">CM-24-02258</td>
-                        <td class="wine-name">Galatrona</td>
-                        <td class="vintage">2022</td>
-                        <td class="producer">Fattoria Petrolo</td>
-                        <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.40</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-25 11:48</td>
@@ -1426,6 +1786,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fontodi</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">400.00</td>
+                        <td class="price-col">420.92</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-22 14:00</td>
@@ -1434,6 +1796,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Phélan Ségur</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">38.00</td>
+                        <td class="price-col">39.99</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-15 14:00</td>
@@ -1442,6 +1806,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Montrose</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">29.00</td>
+                        <td class="price-col">30.52</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-12 09:30</td>
@@ -1450,6 +1816,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">245.00</td>
+                        <td class="price-col">247.27</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-11 09:07</td>
@@ -1458,6 +1826,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Tenuta di Biserno</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">298.00</td>
+                        <td class="price-col">313.59</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-10 10:48</td>
@@ -1466,6 +1836,8 @@
                         <td class="vintage">2010</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">205.00</td>
+                        <td class="price-col">215.72</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-08 10:26</td>
@@ -1474,6 +1846,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Suduiraut</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">55.00</td>
+                        <td class="price-col">57.88</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-04 09:00</td>
@@ -1482,6 +1856,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fontodi</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">420.00</td>
+                        <td class="price-col">423.90</td>
                     </tr>
                     <tr>
                         <td class="date">2024-10-02 09:39</td>
@@ -1490,6 +1866,8 @@
                         <td class="vintage">2010</td>
                         <td class="producer">Château La Lagune</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">68.00</td>
+                        <td class="price-col">70.94</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-30 17:22</td>
@@ -1498,6 +1876,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Lascombes</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">53.00</td>
+                        <td class="price-col">54.75</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-27 08:22</td>
@@ -1506,6 +1886,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">165.00</td>
+                        <td class="price-col">168.13</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-27 08:22</td>
@@ -1514,6 +1896,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">165.00</td>
+                        <td class="price-col">168.13</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-20 15:10</td>
@@ -1522,6 +1906,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Feudi San Marzano</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">16.00</td>
+                        <td class="price-col">16.69</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-19 17:03</td>
@@ -1530,14 +1916,18 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta di Biserno</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">120.00</td>
+                        <td class="price-col">122.61</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-18 16:32</td>
                         <td class="campaign-no">CM-24-01933</td>
-                        <td class="wine-name">Colore</td>
-                        <td class="vintage">2020</td>
+                        <td class="wine-name">Testamatta</td>
+                        <td class="vintage">2021</td>
                         <td class="producer">Bibi Graetz</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">260.00</td>
+                        <td class="price-col">271.23</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-17 08:57</td>
@@ -1546,6 +1936,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Pavie</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">210.00</td>
+                        <td class="price-col">219.07</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-12 08:31</td>
@@ -1554,6 +1946,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">The Mascot</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">125.00</td>
+                        <td class="price-col">130.40</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-11 14:09</td>
@@ -1562,6 +1956,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Poujeaux</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">155.00</td>
+                        <td class="price-col">161.59</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-04 16:37</td>
@@ -1570,14 +1966,18 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Dom Pérignon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">155.00</td>
+                        <td class="price-col">158.37</td>
                     </tr>
                     <tr>
                         <td class="date">2024-09-02 10:01</td>
                         <td class="campaign-no">CM-24-01803</td>
-                        <td class="wine-name">Overture</td>
+                        <td class="wine-name">Opus One</td>
                         <td class="vintage">2021</td>
                         <td class="producer">Opus One Winery</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">295.00</td>
+                        <td class="price-col">295.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-31 10:00</td>
@@ -1586,6 +1986,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Dom Pérignon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">150.00</td>
+                        <td class="price-col">153.26</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-29 08:42</td>
@@ -1594,6 +1996,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Pavie</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">545.00</td>
+                        <td class="price-col">572.54</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-27 09:00</td>
@@ -1602,6 +2006,8 @@
                         <td class="vintage">2016</td>
                         <td class="producer">Luce della Vite</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">75.00</td>
+                        <td class="price-col">76.63</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-26 09:00</td>
@@ -1610,6 +2016,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">34.00</td>
+                        <td class="price-col">34.74</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-25 09:00</td>
@@ -1618,6 +2026,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Harlan Estate</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1150.00</td>
+                        <td class="price-col">1167.63</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-24 09:00</td>
@@ -1626,6 +2036,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">690.00</td>
+                        <td class="price-col">705.02</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-23 08:26</td>
@@ -1634,6 +2046,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Palmer</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">230.00</td>
+                        <td class="price-col">232.14</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-22 09:00</td>
@@ -1642,6 +2056,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1900.00</td>
+                        <td class="price-col">1941.55</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-21 09:00</td>
@@ -1650,6 +2066,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.28</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-20 09:00</td>
@@ -1658,6 +2076,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">39.00</td>
+                        <td class="price-col">39.85</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-19 09:00</td>
@@ -1666,14 +2086,18 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">29.00</td>
+                        <td class="price-col">29.63</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-17 09:00</td>
                         <td class="campaign-no">CM-24-01590</td>
                         <td class="wine-name">Único</td>
-                        <td class="vintage">2014</td>
+                        <td class="vintage">2012</td>
                         <td class="producer">Bodegas Vega Sicilia</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">780.00</td>
+                        <td class="price-col">797.06</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-16 09:23</td>
@@ -1682,6 +2106,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">71.00</td>
+                        <td class="price-col">72.55</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-16 09:00</td>
@@ -1690,6 +2116,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Lascombes</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">59.00</td>
+                        <td class="price-col">60.95</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-14 09:00</td>
@@ -1698,6 +2126,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Fattoria le Pupille</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">78.00</td>
+                        <td class="price-col">79.71</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-13 09:00</td>
@@ -1706,6 +2136,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Luce della Vite</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">67.00</td>
+                        <td class="price-col">68.47</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-12 09:12</td>
@@ -1714,6 +2146,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">25.00</td>
+                        <td class="price-col">25.23</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-10 09:00</td>
@@ -1722,6 +2156,8 @@
                         <td class="vintage">2012</td>
                         <td class="producer">Maison Salon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">900.00</td>
+                        <td class="price-col">913.80</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-09 13:51</td>
@@ -1730,6 +2166,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">115.00</td>
+                        <td class="price-col">116.76</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-07 09:00</td>
@@ -1738,6 +2176,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fontodi</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">420.00</td>
+                        <td class="price-col">423.90</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-06 09:00</td>
@@ -1746,6 +2186,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Rothschild/Vega Sicilia</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">39.00</td>
+                        <td class="price-col">39.85</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-05 10:53</td>
@@ -1754,6 +2196,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">895.00</td>
+                        <td class="price-col">914.48</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-05 09:00</td>
@@ -1762,6 +2206,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fattoria le Pupille</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">17.00</td>
+                        <td class="price-col">17.32</td>
                     </tr>
                     <tr>
                         <td class="date">2024-08-02 09:00</td>
@@ -1770,6 +2216,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Mouton Rothschild</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">540.00</td>
+                        <td class="price-col">558.72</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-31 09:00</td>
@@ -1778,6 +2226,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Montevetrano di Silvia Imparato</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">195.00</td>
+                        <td class="price-col">196.81</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-30 09:00</td>
@@ -1786,6 +2236,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">44.00</td>
+                        <td class="price-col">45.53</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-29 08:45</td>
@@ -1794,6 +2246,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">5.80</td>
+                        <td class="price-col">5.93</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-26 08:04</td>
@@ -1802,6 +2256,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Figeac</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">190.00</td>
+                        <td class="price-col">200.89</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-25 08:11</td>
@@ -1810,6 +2266,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">76.00</td>
+                        <td class="price-col">78.33</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-24 09:30</td>
@@ -1818,6 +2276,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Tenuta Argentiera</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">56.00</td>
+                        <td class="price-col">56.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-23 09:30</td>
@@ -1826,6 +2286,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">9.00</td>
+                        <td class="price-col">9.20</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-22 10:14</td>
@@ -1834,6 +2296,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Villa Marcello</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">7.00</td>
+                        <td class="price-col">7.15</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-19 13:40</td>
@@ -1842,6 +2306,8 @@
                         <td class="vintage">2006</td>
                         <td class="producer">Dom Pérignon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">330.00</td>
+                        <td class="price-col">330.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-19 09:00</td>
@@ -1850,6 +2316,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Tenuta di Biserno</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">299.00</td>
+                        <td class="price-col">308.18</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-18 14:00</td>
@@ -1858,6 +2326,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">80.00</td>
+                        <td class="price-col">81.23</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-17 09:30</td>
@@ -1866,6 +2336,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria le Pupille</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">57.00</td>
+                        <td class="price-col">58.75</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-11 08:38</td>
@@ -1874,6 +2346,8 @@
                         <td class="vintage">2013</td>
                         <td class="producer">Perrier-Jouët</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">180.00</td>
+                        <td class="price-col">185.53</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-10 08:07</td>
@@ -1882,6 +2356,8 @@
                         <td class="vintage">2022</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">105.00</td>
+                        <td class="price-col">105.97</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-09 14:00</td>
@@ -1890,6 +2366,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Cardinale</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">180.00</td>
+                        <td class="price-col">183.94</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-03 09:16</td>
@@ -1898,6 +2376,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Aalto Bodegas y Viñedos</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">38.00</td>
+                        <td class="price-col">38.83</td>
                     </tr>
                     <tr>
                         <td class="date">2024-07-02 09:30</td>
@@ -1906,6 +2386,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1200.00</td>
+                        <td class="price-col">1211.14</td>
                     </tr>
                     <tr>
                         <td class="date">2024-06-06 08:34</td>
@@ -1914,6 +2396,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Poujeaux</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">21.50</td>
+                        <td class="price-col">21.55</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-29 09:30</td>
@@ -1922,6 +2406,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Gazin</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">69.00</td>
+                        <td class="price-col">71.12</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-22 10:12</td>
@@ -1930,6 +2416,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">115.00</td>
+                        <td class="price-col">116.76</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-22 08:57</td>
@@ -1938,6 +2426,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">115.00</td>
+                        <td class="price-col">116.76</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-21 16:46</td>
@@ -1946,6 +2436,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">118.00</td>
+                        <td class="price-col">119.81</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-13 10:39</td>
@@ -1954,6 +2446,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Château Cheval Blanc</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">890.35</td>
+                        <td class="price-col">904.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-07 11:10</td>
@@ -1962,6 +2456,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Château Angélus</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">600.79</td>
+                        <td class="price-col">610.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-07 11:08</td>
@@ -1970,6 +2466,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Château Angélus</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">190.00</td>
+                        <td class="price-col">192.91</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-06 12:35</td>
@@ -1978,6 +2476,8 @@
                         <td class="vintage">2023</td>
                         <td class="producer">Château Mouton Rothschild</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">3078.80</td>
+                        <td class="price-col">3126.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-04 14:30</td>
@@ -1986,6 +2486,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Canon Chaigneau</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">10.00</td>
+                        <td class="price-col">10.57</td>
                     </tr>
                     <tr>
                         <td class="date">2024-05-02 09:30</td>
@@ -1994,6 +2496,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Cheval des Andes</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">70.00</td>
+                        <td class="price-col">72.15</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-30 09:30</td>
@@ -2002,6 +2506,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">57.00</td>
+                        <td class="price-col">58.88</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-27 09:30</td>
@@ -2010,6 +2516,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Bodegas Vega Sicilia</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">66.00</td>
+                        <td class="price-col">69.78</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-25 09:30</td>
@@ -2018,6 +2526,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Domaine de Ladoucette</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">66.00</td>
+                        <td class="price-col">69.78</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-23 14:30</td>
@@ -2026,6 +2536,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">170.00</td>
+                        <td class="price-col">175.22</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-23 10:00</td>
@@ -2034,6 +2546,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Fèlsina</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">21.00</td>
+                        <td class="price-col">21.73</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-09 13:36</td>
@@ -2042,14 +2556,18 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">86.00</td>
+                        <td class="price-col">88.64</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-09 12:23</td>
                         <td class="campaign-no">CM-24-00618</td>
                         <td class="wine-name">Bòggina Bianco</td>
-                        <td class="vintage">2021</td>
+                        <td class="vintage">2020</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">86.00</td>
+                        <td class="price-col">88.64</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-09 10:37</td>
@@ -2058,6 +2576,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">231.00</td>
+                        <td class="price-col">231.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-04-02 14:00</td>
@@ -2066,6 +2586,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">360.00</td>
+                        <td class="price-col">366.82</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-30 15:00</td>
@@ -2074,14 +2596,18 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Azienda Agricola Tua Rita</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">150.00</td>
+                        <td class="price-col">157.58</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-28 09:30</td>
                         <td class="campaign-no">CM-24-00467</td>
-                        <td class="wine-name">Luce</td>
-                        <td class="vintage">2018</td>
+                        <td class="wine-name">Lucente</td>
+                        <td class="vintage">2021</td>
                         <td class="producer">Luce della Vite</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">18.00</td>
+                        <td class="price-col">18.91</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-27 08:50</td>
@@ -2090,6 +2616,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Bibi Graetz</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">64.00</td>
+                        <td class="price-col">67.23</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-23 16:00</td>
@@ -2098,6 +2626,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">300.00</td>
+                        <td class="price-col">317.19</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-23 16:00</td>
@@ -2106,6 +2636,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1500.00</td>
+                        <td class="price-col">1575.80</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-21 14:51</td>
@@ -2114,6 +2646,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Château d'Yquem</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1160.00</td>
+                        <td class="price-col">1218.62</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-20 09:55</td>
@@ -2122,6 +2656,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Latour</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">N/A</td>
+                        <td class="price-col">N/A</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-19 12:33</td>
@@ -2130,6 +2666,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Latour</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">N/A</td>
+                        <td class="price-col">N/A</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-13 10:31</td>
@@ -2138,6 +2676,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">71.39</td>
+                        <td class="price-col">75.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-13 10:06</td>
@@ -2146,6 +2686,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">71.39</td>
+                        <td class="price-col">75.00</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-06 19:06</td>
@@ -2154,6 +2696,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Promontory</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">780.00</td>
+                        <td class="price-col">819.41</td>
                     </tr>
                     <tr>
                         <td class="date">2024-03-06 09:30</td>
@@ -2162,14 +2706,18 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Palmer</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">68.00</td>
+                        <td class="price-col">69.29</td>
                     </tr>
                     <tr>
                         <td class="date">2024-02-27 17:13</td>
                         <td class="campaign-no">CM-24-00328</td>
-                        <td class="wine-name">Lynch Bages</td>
+                        <td class="wine-name">Rauzan Ségla</td>
                         <td class="vintage">2021</td>
-                        <td class="producer">Château Lynch Bages</td>
+                        <td class="producer">Château Rauzan-Ségla</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">65.00</td>
+                        <td class="price-col">68.72</td>
                     </tr>
                     <tr>
                         <td class="date">2024-02-20 13:49</td>
@@ -2178,6 +2726,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Cardinale</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">149.00</td>
+                        <td class="price-col">157.54</td>
                     </tr>
                     <tr>
                         <td class="date">2024-02-18 09:30</td>
@@ -2186,6 +2736,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Cardinale</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">165.00</td>
+                        <td class="price-col">174.46</td>
                     </tr>
                     <tr>
                         <td class="date">2024-02-15 14:00</td>
@@ -2194,6 +2746,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Harlan Estate</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1100.00</td>
+                        <td class="price-col">1163.04</td>
                     </tr>
                     <tr>
                         <td class="date">2024-02-15 10:18</td>
@@ -2202,6 +2756,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Castello dei Rampolla</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">70.00</td>
+                        <td class="price-col">74.01</td>
                     </tr>
                     <tr>
                         <td class="date">2024-02-06 09:30</td>
@@ -2210,6 +2766,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Château Latour</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">2500.00</td>
+                        <td class="price-col">2643.26</td>
                     </tr>
                     <tr>
                         <td class="date">2024-01-25 09:30</td>
@@ -2218,6 +2776,8 @@
                         <td class="vintage">2016</td>
                         <td class="producer">Château Pavie</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">315.00</td>
+                        <td class="price-col">328.40</td>
                     </tr>
                     <tr>
                         <td class="date">2024-01-22 09:30</td>
@@ -2226,6 +2786,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Siran</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">28.00</td>
+                        <td class="price-col">29.19</td>
                     </tr>
                     <tr>
                         <td class="date">2024-01-19 10:44</td>
@@ -2234,6 +2796,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Poujeaux</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">21.50</td>
+                        <td class="price-col">21.55</td>
                     </tr>
                     <tr>
                         <td class="date">2024-01-15 09:30</td>
@@ -2242,6 +2806,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Giscours</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">59.00</td>
+                        <td class="price-col">61.51</td>
                     </tr>
                     <tr>
                         <td class="date">2023-12-14 11:37</td>
@@ -2250,6 +2816,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">600.00</td>
+                        <td class="price-col">618.17</td>
                     </tr>
                     <tr>
                         <td class="date">2023-11-30 14:15</td>
@@ -2258,6 +2826,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Lascombes</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">62.00</td>
+                        <td class="price-col">64.05</td>
                     </tr>
                     <tr>
                         <td class="date">2023-11-28 12:26</td>
@@ -2266,6 +2836,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">99.00</td>
+                        <td class="price-col">102.27</td>
                     </tr>
                     <tr>
                         <td class="date">2023-11-16 12:28</td>
@@ -2274,6 +2846,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Tenuta San Leonardo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">51.00</td>
+                        <td class="price-col">52.69</td>
                     </tr>
                     <tr>
                         <td class="date">2023-11-14 09:30</td>
@@ -2282,6 +2856,8 @@
                         <td class="vintage">1946</td>
                         <td class="producer">Toro Albalá</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">725.00</td>
+                        <td class="price-col">748.97</td>
                     </tr>
                     <tr>
                         <td class="date">2023-11-10 09:57</td>
@@ -2290,6 +2866,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">240.00</td>
+                        <td class="price-col">247.93</td>
                     </tr>
                     <tr>
                         <td class="date">2023-11-07 10:00</td>
@@ -2298,6 +2876,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Haut Brion</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">5275.60</td>
+                        <td class="price-col">5450.00</td>
                     </tr>
                     <tr>
                         <td class="date">2023-11-02 14:00</td>
@@ -2306,6 +2886,8 @@
                         <td class="vintage">2021</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">300.00</td>
+                        <td class="price-col">309.92</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-26 16:35</td>
@@ -2314,6 +2896,8 @@
                         <td class="vintage">2016</td>
                         <td class="producer">Damilano Azienda Agricola</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">2100.00</td>
+                        <td class="price-col">2172.79</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-26 09:30</td>
@@ -2322,22 +2906,28 @@
                         <td class="vintage">2016</td>
                         <td class="producer">Damilano Azienda Agricola</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">2100.00</td>
+                        <td class="price-col">2172.79</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-24 09:30</td>
                         <td class="campaign-no">CM-23-00951</td>
                         <td class="wine-name">Muga Prado Enea Gran Reserva</td>
-                        <td class="vintage">2011</td>
+                        <td class="vintage">2014</td>
                         <td class="producer">Bodegas Muga</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">52.00</td>
+                        <td class="price-col">53.80</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-20 09:30</td>
                         <td class="campaign-no">CM-23-00912</td>
-                        <td class="wine-name">Art</td>
+                        <td class="wine-name">Finca</td>
                         <td class="vintage">2021</td>
                         <td class="producer">Bodegas y Viñedos Luna Beberide</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">11.00</td>
+                        <td class="price-col">11.38</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-18 14:30</td>
@@ -2346,6 +2936,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Fontodi</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">199.00</td>
+                        <td class="price-col">205.90</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-16 14:00</td>
@@ -2354,6 +2946,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Meyney</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">23.00</td>
+                        <td class="price-col">23.80</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-13 14:00</td>
@@ -2362,6 +2956,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">68.00</td>
+                        <td class="price-col">70.36</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-11 09:30</td>
@@ -2370,6 +2966,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Giscours</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">52.00</td>
+                        <td class="price-col">53.80</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-04 10:00</td>
@@ -2378,6 +2976,8 @@
                         <td class="vintage">2013</td>
                         <td class="producer">Dom Pérignon</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">175.00</td>
+                        <td class="price-col">181.07</td>
                     </tr>
                     <tr>
                         <td class="date">2023-10-03 09:45</td>
@@ -2386,6 +2986,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Lafite Rothschild</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">670.00</td>
+                        <td class="price-col">692.08</td>
                     </tr>
                     <tr>
                         <td class="date">2023-09-22 09:30</td>
@@ -2394,6 +2996,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">170.00</td>
+                        <td class="price-col">173.22</td>
                     </tr>
                     <tr>
                         <td class="date">2023-09-20 09:30</td>
@@ -2402,6 +3006,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Domaine de Chevalier</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">66.00</td>
+                        <td class="price-col">68.17</td>
                     </tr>
                     <tr>
                         <td class="date">2023-09-15 10:00</td>
@@ -2410,6 +3016,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">155.00</td>
+                        <td class="price-col">160.11</td>
                     </tr>
                     <tr>
                         <td class="date">2023-09-11 09:30</td>
@@ -2418,6 +3026,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">695.00</td>
+                        <td class="price-col">717.90</td>
                     </tr>
                     <tr>
                         <td class="date">2023-09-08 09:30</td>
@@ -2426,6 +3036,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Lafite Rothschild</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">670.00</td>
+                        <td class="price-col">692.08</td>
                     </tr>
                     <tr>
                         <td class="date">2023-09-06 09:30</td>
@@ -2434,6 +3046,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Grand Puy Lacoste</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">62.00</td>
+                        <td class="price-col">64.04</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-31 14:14</td>
@@ -2442,6 +3056,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">695.00</td>
+                        <td class="price-col">708.17</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-31 09:30</td>
@@ -2450,6 +3066,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">20.00</td>
+                        <td class="price-col">20.38</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-30 10:00</td>
@@ -2458,6 +3076,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Palmer</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">71.00</td>
+                        <td class="price-col">72.35</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-25 10:00</td>
@@ -2466,6 +3086,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Beaulieu Vineyard</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">115.00</td>
+                        <td class="price-col">117.18</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-22 16:00</td>
@@ -2474,6 +3096,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Lynch Bages</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">170.00</td>
+                        <td class="price-col">173.22</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-17 10:00</td>
@@ -2482,6 +3106,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Fattoria Petrolo</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">110.00</td>
+                        <td class="price-col">112.08</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-09 14:00</td>
@@ -2490,6 +3116,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">70.00</td>
+                        <td class="price-col">71.33</td>
                     </tr>
                     <tr>
                         <td class="date">2023-08-09 13:48</td>
@@ -2498,6 +3126,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">70.00</td>
+                        <td class="price-col">71.33</td>
                     </tr>
                     <tr>
                         <td class="date">2023-06-27 09:30</td>
@@ -2506,6 +3136,8 @@
                         <td class="vintage">2009</td>
                         <td class="producer">Château Grand Puy Lacoste</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">85.00</td>
+                        <td class="price-col">86.06</td>
                     </tr>
                     <tr>
                         <td class="date">2023-06-16 09:00</td>
@@ -2514,6 +3146,8 @@
                         <td class="vintage">2018</td>
                         <td class="producer">Cheval des Andes</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">165.00</td>
+                        <td class="price-col">167.05</td>
                     </tr>
                     <tr>
                         <td class="date">2023-06-02 09:30</td>
@@ -2522,6 +3156,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Cos d'Estournel</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">1660.00</td>
+                        <td class="price-col">1680.67</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-26 10:30</td>
@@ -2530,6 +3166,8 @@
                         <td class="vintage">2015</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">85.00</td>
+                        <td class="price-col">85.20</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-24 09:30</td>
@@ -2538,6 +3176,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Malartic Lagravière</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">32.00</td>
+                        <td class="price-col">32.07</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-22 10:30</td>
@@ -2546,6 +3186,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Tenuta Sette Ponti</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">350.00</td>
+                        <td class="price-col">350.81</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-19 09:30</td>
@@ -2554,6 +3196,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Château Giscours</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">49.00</td>
+                        <td class="price-col">49.11</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-17 09:30</td>
@@ -2562,6 +3206,8 @@
                         <td class="vintage">2020</td>
                         <td class="producer">Marchesi Mazzei Castello di Fonterutoli</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">105.00</td>
+                        <td class="price-col">105.24</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-15 10:15</td>
@@ -2570,6 +3216,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Les Ormes de Pez</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">20.00</td>
+                        <td class="price-col">20.05</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-12 09:30</td>
@@ -2578,6 +3226,8 @@
                         <td class="vintage">2017</td>
                         <td class="producer">Château Rauzan-Ségla</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">62.00</td>
+                        <td class="price-col">62.14</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-10 15:30</td>
@@ -2586,6 +3236,8 @@
                         <td class="vintage">2019</td>
                         <td class="producer">Château Poujeaux</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">21.50</td>
+                        <td class="price-col">21.55</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-05 16:00</td>
@@ -2594,6 +3246,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">62.00</td>
+                        <td class="price-col">62.14</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-05 16:00</td>
@@ -2602,6 +3256,8 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">62.00</td>
+                        <td class="price-col">62.14</td>
                     </tr>
                     <tr>
                         <td class="date">2023-05-05 16:00</td>
@@ -2610,19 +3266,38 @@
                         <td class="vintage">2014</td>
                         <td class="producer">Château Pape Clément</td>
                         <td><span class="subtype normal">Normal</span></td>
+                        <td class="price-col">62.00</td>
+                        <td class="price-col">62.14</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="update-time">
-            Last updated: 2025-11-10 12:06:16
+            Last updated: 2025-11-10 13:48:13
+        </div>
+    </div>
+
+    <!-- Price Password Modal -->
+    <div id="priceModal" class="modal">
+        <div class="modal-content">
+            <h2>🔐 Enter Password for Prices</h2>
+            <input type="password" id="pricePassword" placeholder="Enter password">
+            <div class="error-msg" id="errorMsg">Incorrect password</div>
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn-submit" onclick="verifyPricePassword()">Submit</button>
+            </div>
         </div>
     </div>
 
     <script>
+        // Price password hash (SHA-256 of "vargiu")
+        const PRICE_PASSWORD_HASH = 'd3f458db594fc0d5565b0c5ac64b03dab10828d931b0d39899f31e1d340a4b32';
+
         // Simple table sorting
         let sortDirections = {};
+        let pricesVisible = false;
 
         function sortTable(columnIndex, type) {
             const table = document.getElementById('horecaTable');
@@ -2642,6 +3317,10 @@
 
                 if (type === 'date') {
                     comparison = new Date(aValue) - new Date(bValue);
+                } else if (type === 'number') {
+                    const aNum = parseFloat(aValue) || 0;
+                    const bNum = parseFloat(bValue) || 0;
+                    comparison = aNum - bNum;
                 } else {
                     comparison = aValue.localeCompare(bValue);
                 }
@@ -2652,6 +3331,77 @@
             // Clear and re-append sorted rows
             tbody.innerHTML = '';
             rows.forEach(row => tbody.appendChild(row));
+        }
+
+        // SHA-256 hashing function
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+
+        function togglePrices() {
+            if (pricesVisible) {
+                // Hide prices
+                hidePrices();
+            } else {
+                // Show modal to ask for password
+                document.getElementById('priceModal').style.display = 'block';
+                document.getElementById('pricePassword').focus();
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('priceModal').style.display = 'none';
+            document.getElementById('pricePassword').value = '';
+            document.getElementById('errorMsg').classList.remove('show');
+        }
+
+        async function verifyPricePassword() {
+            const password = document.getElementById('pricePassword').value;
+            const hash = await sha256(password);
+
+            if (hash === PRICE_PASSWORD_HASH) {
+                // Correct password - show prices
+                showPrices();
+                closeModal();
+            } else {
+                // Incorrect password
+                document.getElementById('errorMsg').classList.add('show');
+                document.getElementById('pricePassword').value = '';
+                document.getElementById('pricePassword').focus();
+            }
+        }
+
+        function showPrices() {
+            const priceCols = document.querySelectorAll('.price-col');
+            priceCols.forEach(col => col.classList.add('visible'));
+            pricesVisible = true;
+            document.querySelector('.price-toggle').textContent = '🔓 Hide Prices';
+        }
+
+        function hidePrices() {
+            const priceCols = document.querySelectorAll('.price-col');
+            priceCols.forEach(col => col.classList.remove('visible'));
+            pricesVisible = false;
+            document.querySelector('.price-toggle').textContent = '🔒 Show Prices';
+        }
+
+        // Handle Enter key in password modal
+        document.getElementById('pricePassword').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                verifyPricePassword();
+            }
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('priceModal');
+            if (event.target === modal) {
+                closeModal();
+            }
         }
     </script>
 </body>

@@ -480,7 +480,7 @@
                 <table id="leadsTable">
                     <thead>
                         <tr>
-                            <th class="sortable" onclick="sortTable(0)">Date</th>
+                            <th class="sortable" onclick="sortTable(0)">Sent Date</th>
                             <th class="sortable" onclick="sortTable(1)">Campaign No.</th>
                             <th class="sortable" onclick="sortTable(2)">Wine Name</th>
                             <th class="sortable" onclick="sortTable(3)">Vintage</th>
@@ -5969,167 +5969,19 @@
 
         <!-- Recommendations Section -->
         <div class="content-box">
-            <h2>Recommended LEADS Campaigns (Top 30)</h2>
+            <h2>Recommended LEADS Campaigns (Top 30 per Tier)</h2>
             <p style="color: #666; margin-bottom: 20px;">
-                Based on stock availability (>200 bottles), offer history, and price tier performance
+                <strong>Filter Rules:</strong><br>
+                1. Not offered in 30 months<br>
+                2. Stock > 200 bottles<br>
+                3. Vintage >= 2023<br>
+                4. Score-based ranking (Stock + Tier + Vintage scores)
             </p>
 
             <button id="unlockPricesBtn" class="unlock-btn" onclick="unlockPrices()">
                 🔒 Unlock Prices
             </button>
 
-            <div class="rec-tier-section">
-                <div class="rec-tier-header" style="border-left: 4px solid #9b59b6; padding-left: 15px;">
-                    <div class="rec-tier-title" style="color: #9b59b6;">Extra Luxury Tier Recommendations</div>
-                    <button class="toggle-dropdown" onclick="toggleRecTable('extraluxury')">
-                        Show 1 Recommendations
-                    </button>
-                </div>
-
-                <div id="rec-table-extraluxury" class="rec-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Wine Name</th>
-                                <th class="price-column">Price (CHF)</th>
-                                <th>Stock</th>
-                                <th>Score</th>
-                                <th>History</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Viñedo Chadwick</td>
-                                <td class="price-column price-locked">1730.00</td>
-                                <td>
-                                    <span class="stock-badge stock-pink"></span>
-                                    201
-                                </td>
-                                <td><strong>120</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="rec-tier-section">
-                <div class="rec-tier-header" style="border-left: 4px solid #f39c12; padding-left: 15px;">
-                    <div class="rec-tier-title" style="color: #f39c12;">Luxury Tier Recommendations</div>
-                    <button class="toggle-dropdown" onclick="toggleRecTable('luxury')">
-                        Show 3 Recommendations
-                    </button>
-                </div>
-
-                <div id="rec-table-luxury" class="rec-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Wine Name</th>
-                                <th class="price-column">Price (CHF)</th>
-                                <th>Stock</th>
-                                <th>Score</th>
-                                <th>History</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Overture</td>
-                                <td class="price-column price-locked">541.00</td>
-                                <td>
-                                    <span class="stock-badge stock-green"></span>
-                                    696
-                                </td>
-                                <td><strong>126</strong></td>
-                                <td>4 offers</td>
-                                <td><span class="tier-badge" style="background: #3498db;">Upgrade</span></td>
-                            </tr>
-                            <tr>
-                                <td>Axelle de Valandraud</td>
-                                <td class="price-column price-locked">310.00</td>
-                                <td>
-                                    <span class="stock-badge stock-pink"></span>
-                                    402
-                                </td>
-                                <td><strong>110</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Don PX Convento Selección</td>
-                                <td class="price-column price-locked">307.50</td>
-                                <td>
-                                    <span class="stock-badge stock-pink"></span>
-                                    351
-                                </td>
-                                <td><strong>110</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="rec-tier-section">
-                <div class="rec-tier-header" style="border-left: 4px solid #3498db; padding-left: 15px;">
-                    <div class="rec-tier-title" style="color: #3498db;">Premium Tier Recommendations</div>
-                    <button class="toggle-dropdown" onclick="toggleRecTable('premium')">
-                        Show 3 Recommendations
-                    </button>
-                </div>
-
-                <div id="rec-table-premium" class="rec-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Wine Name</th>
-                                <th class="price-column">Price (CHF)</th>
-                                <th>Stock</th>
-                                <th>Score</th>
-                                <th>History</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Vivaltus</td>
-                                <td class="price-column price-locked">255.20</td>
-                                <td>
-                                    <span class="stock-badge stock-green"></span>
-                                    768
-                                </td>
-                                <td><strong>90</strong></td>
-                                <td>2 offers</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Aalto</td>
-                                <td class="price-column price-locked">181.55</td>
-                                <td>
-                                    <span class="stock-badge stock-pink"></span>
-                                    222
-                                </td>
-                                <td><strong>80</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Champagne Extra Brut Grand Cru Le Mesnil</td>
-                                <td class="price-column price-locked">150.00</td>
-                                <td>
-                                    <span class="stock-badge stock-pink"></span>
-                                    282
-                                </td>
-                                <td><strong>80</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
             <div class="rec-tier-section">
                 <div class="rec-tier-header" style="border-left: 4px solid #e91e63; padding-left: 15px;">
                     <div class="rec-tier-title" style="color: #e91e63;">Mid-range Tier Recommendations</div>
@@ -6139,28 +5991,26 @@
                 </div>
 
                 <div id="rec-table-midrange" class="rec-table-container">
-                    <table>
+                    <table style="font-family: Calibri, sans-serif; font-size: 11pt;">
                         <thead>
                             <tr>
                                 <th>Wine Name</th>
+                                <th>Vintage</th>
                                 <th class="price-column">Price (CHF)</th>
                                 <th>Stock</th>
                                 <th>Score</th>
-                                <th>History</th>
-                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Marchese Antinori Riserva</td>
-                                <td class="price-column price-locked">95.02</td>
+                                <td>San Cayetano</td>
+                                <td>2023</td>
+                                <td class="price-column price-locked">60.00</td>
                                 <td>
                                     <span class="stock-badge stock-pink"></span>
-                                    360
+                                    216
                                 </td>
-                                <td><strong>70</strong></td>
-                                <td>8 offers</td>
-                                <td>-</td>
+                                <td><strong>60</strong></td>
                             </tr>
                         </tbody>
                     </table>
@@ -6170,66 +6020,51 @@
                 <div class="rec-tier-header" style="border-left: 4px solid #27ae60; padding-left: 15px;">
                     <div class="rec-tier-title" style="color: #27ae60;">Budget Tier Recommendations</div>
                     <button class="toggle-dropdown" onclick="toggleRecTable('budget')">
-                        Show 4 Recommendations
+                        Show 3 Recommendations
                     </button>
                 </div>
 
                 <div id="rec-table-budget" class="rec-table-container">
-                    <table>
+                    <table style="font-family: Calibri, sans-serif; font-size: 11pt;">
                         <thead>
                             <tr>
                                 <th>Wine Name</th>
+                                <th>Vintage</th>
                                 <th class="price-column">Price (CHF)</th>
                                 <th>Stock</th>
                                 <th>Score</th>
-                                <th>History</th>
-                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Lascombes</td>
+                                <td>Chardonnay Kalk</td>
+                                <td>2024</td>
+                                <td class="price-column price-locked">15.00</td>
+                                <td>
+                                    <span class="stock-badge stock-green"></span>
+                                    570
+                                </td>
+                                <td><strong>55</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Sauvignon Blanc Stein</td>
+                                <td>2023</td>
+                                <td class="price-column price-locked">16.00</td>
+                                <td>
+                                    <span class="stock-badge stock-pink"></span>
+                                    486
+                                </td>
+                                <td><strong>55</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Blanc de Lynch Bages</td>
+                                <td>2023</td>
                                 <td class="price-column price-locked">48.00</td>
                                 <td>
-                                    <span class="stock-badge stock-green"></span>
-                                    888
+                                    <span class="stock-badge stock-pink"></span>
+                                    246
                                 </td>
-                                <td><strong>72</strong></td>
-                                <td>4 offers</td>
-                                <td><span class="tier-badge" style="background: #3498db;">Upgrade</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lilian Ladouys</td>
-                                <td class="price-column price-locked">25.00</td>
-                                <td>
-                                    <span class="stock-badge stock-green"></span>
-                                    1824
-                                </td>
-                                <td><strong>60</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Mangot</td>
-                                <td class="price-column price-locked">25.00</td>
-                                <td>
-                                    <span class="stock-badge stock-green"></span>
-                                    1356
-                                </td>
-                                <td><strong>60</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Retout</td>
-                                <td class="price-column price-locked">9.00</td>
-                                <td>
-                                    <span class="stock-badge stock-green"></span>
-                                    966
-                                </td>
-                                <td><strong>60</strong></td>
-                                <td>1 offers</td>
-                                <td>-</td>
+                                <td><strong>50</strong></td>
                             </tr>
                         </tbody>
                     </table>
@@ -6306,6 +6141,14 @@
             rows.sort((a, b) => {
                 let aVal = a.cells[columnIndex].textContent.trim();
                 let bVal = b.cells[columnIndex].textContent.trim();
+
+                // Try to parse as dates (YYYY-MM-DD format)
+                const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+                if (dateRegex.test(aVal) && dateRegex.test(bVal)) {
+                    const aDate = new Date(aVal);
+                    const bDate = new Date(bVal);
+                    return newOrder === 'asc' ? aDate - bDate : bDate - aDate;
+                }
 
                 // Try to parse as numbers
                 const aNum = parseFloat(aVal.replace(/[^0-9.-]/g, ''));

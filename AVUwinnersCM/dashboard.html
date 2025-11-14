@@ -3,11 +3,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <meta name="version" content="20251114094618">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVU Top Campaigns Dashboard</title>
     <link rel="icon" type="image/x-icon" href="https://antagata.github.io/favicon.ico">
@@ -686,20 +681,6 @@
     </style>
 </head>
 <body>
-<!-- Password Protection -->
-<script>
-    // Check if user is authenticated
-    const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
-    const sessionAuth = sessionStorage.getItem('dashboardAuth');
-
-    if (sessionAuth !== REQUIRED_HASH) {
-        // Not authenticated, redirect to login
-        window.location.href = 'index.html';
-    }
-</script>
-<!-- End Password Protection -->
-
-
     <div class="dashboard-container">
         <div class="header">
             <!-- Chaser Lights - Top Left -->
@@ -718,7 +699,7 @@
             <img src="assets/avu_logo_white.png" alt="AVU Logo" class="logo">
             <h1>🏆 AVU TOP CAMPAIGNS</h1>
             <div class="subtitle">Wine Campaign Winners Dashboard</div>
-            <div class="timestamp">📅 Last Updated: November 14, 2025 at 09:45:01</div>
+            <div class="timestamp">📅 Last Updated: November 14, 2025 at 10:37:57</div>
             <div class="formula-explanation">
                 <strong>🧮 Winner Formula:</strong> Weighted Score = (60% × Conversion Rate) + (40% × Normalized Sales)
                 <br>
@@ -736,6 +717,44 @@
             <!-- Reason Display - Bottom Right -->
             <div class="reason-display">
                 Campaign Performance Analysis
+            </div>
+        </div>
+
+
+        <!-- Navigation Buttons -->
+        <div style="display: flex; justify-content: center; gap: 15px; margin: 30px 0; flex-wrap: wrap;">
+            <a href="dashboard.html" class="nav-btn" style="background: linear-gradient(135deg, #DAA520, #B8860B); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">🏆 Winners Dashboard</a>
+            <a href="leads.html" class="nav-btn" style="background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">📣 LEADS</a>
+            <a href="horeca.html" class="nav-btn" style="background: white; color: #27ae60; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">🏨 HORECA</a>
+            <a href="preferences.html" class="nav-btn" style="background: white; color: #764ba2; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">⚙️ Preferences</a>
+        </div>
+
+        <!-- Compact Legends - Top of Page -->
+        <div style="display: flex; justify-content: space-between; margin: 20px auto; max-width: 1400px; font-family: Calibri, sans-serif; font-size: 9pt;">
+            <!-- Price Tier Legend - Left -->
+            <div style="flex: 1; padding: 10px; background: #f8f9fa; border-radius: 8px; margin-right: 10px;">
+                <div style="font-weight: bold; margin-bottom: 5px; font-size: 10pt;">🎨 PRICE TIER LEGEND</div>
+                <div style="display: flex; flex-direction: column; gap: 3px;">
+                    <div style="font-size: 9pt;">🟣 Extra luxury (CHF 750+)</div>
+                    <div style="font-size: 9pt;">🟨 Luxury (CHF 300-750)</div>
+                    <div style="font-size: 9pt;">💎 Premium (CHF 100-300)</div>
+                    <div style="font-size: 9pt;">🩷 Mid-range (CHF 50-100)</div>
+                    <div style="font-size: 9pt;">🟢 Budget (≤CHF 50)</div>
+                    <div style="font-size: 9pt;">⚪ Unknown price</div>
+                </div>
+            </div>
+
+            <!-- Stock Status Legend - Right -->
+            <div style="flex: 1; padding: 10px; background: #f8f9fa; border-radius: 8px; margin-left: 10px;">
+                <div style="font-weight: bold; margin-bottom: 5px; font-size: 10pt;">📦 STOCK STATUS LEGEND</div>
+                <div style="display: flex; flex-direction: column; gap: 3px;">
+                    <div style="font-size: 9pt;">🟣 1-12 bottles</div>
+                    <div style="font-size: 9pt;">🟨 13-49 bottles</div>
+                    <div style="font-size: 9pt;">🟦 50-199 bottles</div>
+                    <div style="font-size: 9pt;">🩷 200-499 bottles</div>
+                    <div style="font-size: 9pt;">🟢 500+ bottles</div>
+                    <div style="font-size: 9pt;">⚪ Unknown stock</div>
+                </div>
             </div>
         </div>
 
@@ -802,30 +821,7 @@
         <div class="tables-container">
             <div class="tables-header">
                 <h2>📅 MULTI-PERIOD WINNERS ANALYSIS WITH STOCK AVAILABILITY</h2>
-                <div class="legend-section">
-                    <div class="legend-group">
-                        <h4>📦 STOCK STATUS LEGEND:</h4>
-                        <div class="legend-items">
-                            <span class="legend-item">🟣 Purple: 1-12 bottles</span>
-                            <span class="legend-item">🟨 Gold: 13-49 bottles</span>
-                            <span class="legend-item">🟦 Blue: 50-199 bottles</span>
-                            <span class="legend-item">🩷 Pink: 200-499 bottles</span>
-                            <span class="legend-item">🟢 Green: 500+ bottles</span>
-                            <span class="legend-item">⚪ White: Unknown/No stock</span>
-                        </div>
-                    </div>
-                    <div class="legend-group">
-                        <h4>🎨 PRICE TIER LEGEND:</h4>
-                        <div class="legend-items">
-                            <span class="legend-item">🟣 Purple: Extra luxury wines (CHF 750.01+)</span>
-                            <span class="legend-item">🟨 Gold: Luxury wines (CHF 300.01-750.00)</span>
-                            <span class="legend-item">💎 Blue: Premium wines (CHF 100.01-300.00)</span>
-                            <span class="legend-item">🩷 Pink: Mid-range wines (CHF 50.01-100.00)</span>
-                            <span class="legend-item">🟢 Green: Budget wines (MAX CHF 50)</span>
-                            <span class="legend-item">⚪ White: Unknown/No price</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
             </div>
 
             <!-- Generate Multi-Period Tables -->
@@ -851,7 +847,7 @@
                         <tr><th onclick="sortTable(this, 0)" data-type="number">Rank</th><th onclick="sortTable(this, 1)" data-type="text">Campaign</th><th onclick="sortTable(this, 2)" data-type="text">🎨</th><th onclick="sortTable(this, 3)" data-type="text">Wine</th><th onclick="sortTable(this, 4)" data-type="number">Vintage</th><th onclick="sortTable(this, 5)" data-type="text">Producer</th><th onclick="sortTable(this, 6)" data-type="date">Start Date</th><th onclick="sortTable(this, 7)" data-type="number">Buyers</th><th onclick="sortTable(this, 8)" data-type="number">Conv. %</th><th onclick="sortTable(this, 9)" data-type="number">Norm Sales</th><th onclick="sortTable(this, 10)" data-type="number">Score</th><th onclick="sortTable(this, 14)" data-type="text">Stock</th>
                         </tr>
                     </thead>
-                    <tbody><tr><td class="number-cell">1</td><td>CM-25-03118</td><td class="emoji-cell">🩷</td><td>Argentiera</td><td class="number-cell">2022</td><td>Tenuta Argentiera</td><td>2025-11-11</td><td class="number-cell">6</td><td class="number-cell">7.32</td><td class="number-cell">0.011</td><td class="number-cell">0.1216</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">2</td><td>CM-25-03087</td><td class="emoji-cell">🟨</td><td>Mouton Rothschild</td><td class="number-cell">2016</td><td>Château Mouton Rothschild</td><td>2025-11-08</td><td class="number-cell">17</td><td class="number-cell">1.65</td><td class="number-cell">0.182</td><td class="number-cell">0.0991</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">3</td><td>CM-25-03027</td><td class="emoji-cell">🟢</td><td>Champagne Brut Rosé (Edition 27)</td><td class="number-cell"></td><td>Krug</td><td>2025-11-03</td><td class="number-cell">31</td><td class="number-cell">2.41</td><td class="number-cell">0.13</td><td class="number-cell">0.0906</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr><tr><td class="number-cell">4</td><td>CM-25-02983</td><td class="emoji-cell">🟢</td><td>Phélan Ségur</td><td class="number-cell">2018</td><td>Château Phélan Ségur</td><td>2025-11-03</td><td class="number-cell">36</td><td class="number-cell">2.61</td><td class="number-cell">0.045</td><td class="number-cell">0.0596</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">5</td><td>CM-25-02991</td><td class="emoji-cell">🟣</td><td>DRC Assortment Case 12 Bottles (1RC, 3LT, 2RI, 2E, 3RSV, 1GE)</td><td class="number-cell">1996</td><td>Domaine de la Romanée Conti</td><td>2025-11-02</td><td class="number-cell">1</td><td class="number-cell">0.31</td><td class="number-cell">0.134</td><td class="number-cell">0.0587</td><td class="emoji-cell" style="text-align: center;">⚪</td></tr><tr><td class="number-cell">6</td><td>CM-25-03082</td><td class="emoji-cell">🟣</td><td>Barolo Monfortino Riserva</td><td class="number-cell">2013</td><td>Giacomo Conterno</td><td>2025-11-08</td><td class="number-cell">9</td><td class="number-cell">0.93</td><td class="number-cell">0.105</td><td class="number-cell">0.057</td><td class="emoji-cell" style="text-align: center;">🟨</td></tr><tr><td class="number-cell">7</td><td>CM-25-03109</td><td class="emoji-cell">🩷</td><td>Clos Apalta</td><td class="number-cell">2021</td><td>Lapostolle Winery</td><td>2025-11-10</td><td class="number-cell">39</td><td class="number-cell">1.22</td><td class="number-cell">0.087</td><td class="number-cell">0.0543</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">8</td><td>CM-25-03000</td><td class="emoji-cell">💎</td><td>Tignanello</td><td class="number-cell">2022</td><td>Antinori - Tenuta Tignanello</td><td>2025-10-31</td><td class="number-cell">27</td><td class="number-cell">1.18</td><td class="number-cell">0.079</td><td class="number-cell">0.0507</td><td class="emoji-cell" style="text-align: center;">🟣</td></tr><tr><td class="number-cell">9</td><td>CM-25-03130</td><td class="emoji-cell">🩷</td><td>Barolo Ginestra Vigna Casa Matè</td><td class="number-cell">2021</td><td>Azienda Agricola Elio Grasso</td><td>2025-11-12</td><td class="number-cell">8</td><td class="number-cell">2.68</td><td class="number-cell">0.018</td><td class="number-cell">0.05</td><td class="emoji-cell" style="text-align: center;">🟣</td></tr><tr><td class="number-cell">10</td><td>CM-25-03017</td><td class="emoji-cell">🩷</td><td>D'Issan</td><td class="number-cell">2022</td><td>Château D'Issan</td><td>2025-10-31</td><td class="number-cell">47</td><td class="number-cell">1.13</td><td class="number-cell">0.07</td><td class="number-cell">0.0459</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr>
+                    <tbody><tr><td class="number-cell">1</td><td>CM-25-03118</td><td class="emoji-cell">🩷</td><td>Argentiera</td><td class="number-cell">2022</td><td>Tenuta Argentiera</td><td>2025-11-11</td><td class="number-cell">6</td><td class="number-cell">7.32</td><td class="number-cell">0.011</td><td class="number-cell">0.1216</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">2</td><td>CM-25-03087</td><td class="emoji-cell">🟨</td><td>Mouton Rothschild</td><td class="number-cell">2016</td><td>Château Mouton Rothschild</td><td>2025-11-08</td><td class="number-cell">17</td><td class="number-cell">1.65</td><td class="number-cell">0.182</td><td class="number-cell">0.0991</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">3</td><td>CM-25-03027</td><td class="emoji-cell">🟢</td><td>Champagne Brut Rosé (Edition 27)</td><td class="number-cell"></td><td>Krug</td><td>2025-11-03</td><td class="number-cell">31</td><td class="number-cell">2.41</td><td class="number-cell">0.13</td><td class="number-cell">0.0906</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr><tr><td class="number-cell">4</td><td>CM-25-02983</td><td class="emoji-cell">🟢</td><td>Phélan Ségur</td><td class="number-cell">2018</td><td>Château Phélan Ségur</td><td>2025-11-03</td><td class="number-cell">36</td><td class="number-cell">2.61</td><td class="number-cell">0.045</td><td class="number-cell">0.0596</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">5</td><td>CM-25-02991</td><td class="emoji-cell">🟣</td><td>DRC Assortment Case 12 Bottles (1RC, 3LT, 2RI, 2E, 3RSV, 1GE)</td><td class="number-cell">1996</td><td>Domaine de la Romanée Conti</td><td>2025-11-02</td><td class="number-cell">1</td><td class="number-cell">0.31</td><td class="number-cell">0.134</td><td class="number-cell">0.0587</td><td class="emoji-cell" style="text-align: center;">⚪</td></tr><tr><td class="number-cell">6</td><td>CM-25-03082</td><td class="emoji-cell">🟣</td><td>Barolo Monfortino Riserva</td><td class="number-cell">2013</td><td>Giacomo Conterno</td><td>2025-11-08</td><td class="number-cell">9</td><td class="number-cell">0.93</td><td class="number-cell">0.105</td><td class="number-cell">0.057</td><td class="emoji-cell" style="text-align: center;">🟨</td></tr><tr><td class="number-cell">7</td><td>CM-25-03109</td><td class="emoji-cell">🩷</td><td>Clos Apalta</td><td class="number-cell">2021</td><td>Lapostolle Winery</td><td>2025-11-10</td><td class="number-cell">39</td><td class="number-cell">1.22</td><td class="number-cell">0.087</td><td class="number-cell">0.0543</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">8</td><td>CM-25-03130</td><td class="emoji-cell">🩷</td><td>Barolo Ginestra Vigna Casa Matè</td><td class="number-cell">2021</td><td>Azienda Agricola Elio Grasso</td><td>2025-11-12</td><td class="number-cell">8</td><td class="number-cell">2.68</td><td class="number-cell">0.018</td><td class="number-cell">0.05</td><td class="emoji-cell" style="text-align: center;">🟣</td></tr><tr><td class="number-cell">9</td><td>CM-25-03017</td><td class="emoji-cell">🩷</td><td>D'Issan</td><td class="number-cell">2022</td><td>Château D'Issan</td><td>2025-10-31</td><td class="number-cell">47</td><td class="number-cell">1.13</td><td class="number-cell">0.07</td><td class="number-cell">0.0459</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">10</td><td>CM-25-03003</td><td class="emoji-cell">🟨</td><td>Único</td><td class="number-cell">2014</td><td>Bodegas Vega Sicilia</td><td>2025-10-31</td><td class="number-cell">13</td><td class="number-cell">0.81</td><td class="number-cell">0.08</td><td class="number-cell">0.0448</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -904,7 +900,7 @@
                 </div>
             </div>
             <p>🍷 Wine Campaign Analysis Dashboard</p>
-            <p>🟨 Golden bars represent top-performing campaigns | Generated: November 14, 2025 at 09:45:01</p>
+            <p>🟨 Golden bars represent top-performing campaigns | Generated: November 14, 2025 at 10:37:57</p>
         </div>
 
         <!-- Race Chart GIF Section -->

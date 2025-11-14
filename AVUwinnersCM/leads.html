@@ -2,11 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <meta name="version" content="20251114094618">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEADS Campaigns - AVU Statistics</title>
     <style>
@@ -422,7 +417,7 @@
         <div class="header">
             <h1>📣 LEADS Campaigns</h1>
             <p>Private Lead Campaigns Analysis</p>
-            <p style="font-size: 0.9em; color: #999;">📅 Last Updated: November 14, 2025 at 09:46:17</p>
+            <p style="font-size: 0.9em; color: #999;">📅 Last Updated: November 14, 2025 at 14:09:04</p>
         </div>
 
         <div class="nav-buttons">
@@ -5802,17 +5797,19 @@
                 <table id="recommendationsTable" style="font-family: Calibri, sans-serif; font-size: 11pt;">
                     <thead>
                         <tr>
-                            <th>Wine Name</th>
-                            <th>Vintage</th>
-                            <th>Price Tier</th>
-                            <th class="price-column">Price (CHF)</th>
-                            <th>Stock</th>
-                            <th>Score</th>
+                            <th class="sortable" onclick="sortRecommendations(0)">Wine Name</th>
+                            <th class="sortable" onclick="sortRecommendations(1)">Producer</th>
+                            <th class="sortable" onclick="sortRecommendations(2)">Vintage</th>
+                            <th class="sortable" onclick="sortRecommendations(3)">Price Tier</th>
+                            <th class="sortable price-column" onclick="sortRecommendations(4)">Price (CHF)</th>
+                            <th class="sortable" onclick="sortRecommendations(5)">Stock</th>
+                            <th class="sortable" onclick="sortRecommendations(6)">Score</th>
                         </tr>
                     </thead>
                     <tbody id="recTableBody">
                         <tr data-tier="Extra Luxury">
                             <td>Cheval Blanc (Ex-Château)</td>
+                            <td>Château Cheval Blanc</td>
                             <td>2000</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
                             <td class="price-column price-locked">950</td>
@@ -5824,6 +5821,7 @@
                         </tr>
                         <tr data-tier="Extra Luxury">
                             <td>Latour (Ex-Château 2024)</td>
+                            <td>Château Latour</td>
                             <td>2009</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
                             <td class="price-column price-locked">999</td>
@@ -5835,6 +5833,7 @@
                         </tr>
                         <tr data-tier="Extra Luxury">
                             <td>Vérité Assortment 3 Bottles (1x La Muse, 1x La Joie, 1x Le Désir)</td>
+                            <td>Vérité</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
                             <td class="price-column price-locked">1200</td>
@@ -5846,6 +5845,7 @@
                         </tr>
                         <tr data-tier="Extra Luxury">
                             <td>Angélus Hommage à Elisabeth Bouchet</td>
+                            <td>Château Angélus</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
                             <td class="price-column price-locked">1400</td>
@@ -5857,6 +5857,7 @@
                         </tr>
                         <tr data-tier="Extra Luxury">
                             <td>Cabernet Sauvignon</td>
+                            <td>Harlan Estate</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
                             <td class="price-column price-locked">1450</td>
@@ -5867,6 +5868,7 @@
                             <td><strong>117</strong></td>
                         </tr>
                         <tr data-tier="Extra Luxury">
+                            <td>Promontory</td>
                             <td>Promontory</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
@@ -5879,6 +5881,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>Champagne Brut Cristal Rosé</td>
+                            <td>Louis Roederer</td>
                             <td>2014</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">390</td>
@@ -5890,6 +5893,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>Grange</td>
+                            <td>Penfolds</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">395</td>
@@ -5901,6 +5905,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>Carruades de Lafite Rothschild (2nd Vin)</td>
+                            <td>Château Lafite Rothschild</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">330</td>
@@ -5912,6 +5917,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>Barbaresco Asili Riserva</td>
+                            <td>Azienda Agricola Falletto di Bruno Giacosa</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">435</td>
@@ -5923,6 +5929,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>Pichon Longueville Comtesse Lalande</td>
+                            <td>Château Pichon-Longueville Comtesse de Lalande</td>
                             <td>2016</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">600</td>
@@ -5934,6 +5941,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>Grange</td>
+                            <td>Penfolds</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">475</td>
@@ -5945,6 +5953,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>IX Proprietary Red Estate</td>
+                            <td>Colgin Cellars</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">565</td>
@@ -5956,6 +5965,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>L'Eglise Clinet</td>
+                            <td>Château L'Eglise Clinet</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">303</td>
@@ -5967,6 +5977,7 @@
                         </tr>
                         <tr data-tier="Luxury">
                             <td>IX Proprietary Red Estate</td>
+                            <td>Colgin Cellars</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td class="price-column price-locked">580</td>
@@ -5978,6 +5989,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Vigna d'Alceo</td>
+                            <td>Castello dei Rampolla</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">110</td>
@@ -5989,6 +6001,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Guado al Tasso</td>
+                            <td>Antinori - Tenuta Guado al Tasso</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">107</td>
@@ -6000,6 +6013,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Calon Ségur</td>
+                            <td>Château Calon Ségur</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">105</td>
@@ -6011,6 +6025,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Suduiraut Creme de Tete</td>
+                            <td>Château Suduiraut</td>
                             <td>1989</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">115</td>
@@ -6022,6 +6037,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Champagne Brut Comtes de Champagne Blanc de Blancs</td>
+                            <td>Taittinger Champagne</td>
                             <td>2013</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">125</td>
@@ -6033,6 +6049,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Ducru Beaucaillou (Ex-Château)</td>
+                            <td>Château Ducru Beaucaillou</td>
                             <td>2009</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">260</td>
@@ -6044,6 +6061,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Palmer (Ex-Château)</td>
+                            <td>Château Palmer</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">279</td>
@@ -6055,6 +6073,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Pavillon Rouge de Margaux (2nd Vin)</td>
+                            <td>Château Margaux</td>
                             <td>2016</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">180</td>
@@ -6066,6 +6085,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Clos l'Église (Ex-Château)</td>
+                            <td>Clos l'Eglise</td>
                             <td>2009</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">105</td>
@@ -6076,6 +6096,7 @@
                             <td><strong>96</strong></td>
                         </tr>
                         <tr data-tier="Premium">
+                            <td>Vieux Château Certan</td>
                             <td>Vieux Château Certan</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
@@ -6088,6 +6109,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Le Désir</td>
+                            <td>Vérité</td>
                             <td>2014</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">220</td>
@@ -6099,6 +6121,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Clos Fourtet</td>
+                            <td>Château Clos Fourtet</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">100</td>
@@ -6110,6 +6133,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Champagne Brut Grande Année</td>
+                            <td>Bollinger</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">115</td>
@@ -6121,6 +6145,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Pavillon Rouge de Margaux (2nd Vin)</td>
+                            <td>Château Margaux</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">170</td>
@@ -6132,6 +6157,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Pavillon Rouge de Margaux (2nd Vin)</td>
+                            <td>Château Margaux</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">170</td>
@@ -6143,6 +6169,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Castillo Ygay Gran Reserva</td>
+                            <td>Marques de Murrieta</td>
                             <td>2011</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">180</td>
@@ -6154,6 +6181,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Le Petit Mouton Rothschild (2nd Vin)</td>
+                            <td>Château Mouton Rothschild</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">210</td>
@@ -6165,6 +6193,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Carruades de Lafite Rothschild (2nd Vin)</td>
+                            <td>Château Lafite Rothschild</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">250</td>
@@ -6176,6 +6205,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Carruades de Lafite Rothschild (2nd Vin)</td>
+                            <td>Château Lafite Rothschild</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">260</td>
@@ -6187,6 +6217,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Pontet Canet</td>
+                            <td>Château Pontet Canet</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">105</td>
@@ -6198,6 +6229,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Redigaffi</td>
+                            <td>Azienda Agricola Tua Rita</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">158</td>
@@ -6209,6 +6241,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Le Petit Mouton Rothschild (2nd Vin)</td>
+                            <td>Château Mouton Rothschild</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">210</td>
@@ -6220,6 +6253,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Pichon Longueville Comtesse Lalande</td>
+                            <td>Château Pichon-Longueville Comtesse de Lalande</td>
                             <td>2023</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">127</td>
@@ -6231,6 +6265,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Carruades de Lafite Rothschild (2nd Vin)</td>
+                            <td>Château Lafite Rothschild</td>
                             <td>2023</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">171</td>
@@ -6242,6 +6277,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Le Petit Mouton Rothschild (2nd Vin)</td>
+                            <td>Château Mouton Rothschild</td>
                             <td>2023</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">155</td>
@@ -6253,6 +6289,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Champagne Brut Cuvée Rare</td>
+                            <td>Piper-Heidsieck</td>
                             <td>2013</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">120</td>
@@ -6264,6 +6301,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Pichon Longueville Baron</td>
+                            <td>Château Pichon-Longueville Baron</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">135</td>
@@ -6275,6 +6313,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Carruades de Lafite Rothschild (2nd Vin)</td>
+                            <td>Château Lafite Rothschild</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">250</td>
@@ -6286,6 +6325,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>Cabernet Sauvignon Private Reserve</td>
+                            <td>Beaulieu Vineyard</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">135</td>
@@ -6297,6 +6337,7 @@
                         </tr>
                         <tr data-tier="Premium">
                             <td>La Joie</td>
+                            <td>Vérité</td>
                             <td>2014</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td class="price-column price-locked">160</td>
@@ -6308,6 +6349,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Argentiera</td>
+                            <td>Tenuta Argentiera</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">79</td>
@@ -6319,6 +6361,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>San Leonardo</td>
+                            <td>Tenuta San Leonardo</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">65</td>
@@ -6330,6 +6373,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>D'Issan</td>
+                            <td>Château D'Issan</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">60</td>
@@ -6341,6 +6385,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Calon Ségur</td>
+                            <td>Château Calon Ségur</td>
                             <td>2023</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">92</td>
@@ -6352,6 +6397,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>San Leonardo</td>
+                            <td>Tenuta San Leonardo</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">65</td>
@@ -6363,6 +6409,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Suduiraut</td>
+                            <td>Château Suduiraut</td>
                             <td>2009</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">75</td>
@@ -6373,18 +6420,8 @@
                             <td><strong>86</strong></td>
                         </tr>
                         <tr data-tier="Mid-range">
-                            <td>Luce</td>
-                            <td>2022</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">78</td>
-                            <td>
-                                <span class="stock-badge stock-pink"></span>
-                                210
-                            </td>
-                            <td><strong>83</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
                             <td>Léoville Poyferré</td>
+                            <td>Château Léoville Poyferré</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">72</td>
@@ -6396,6 +6433,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Grand Puy Lacoste</td>
+                            <td>Château Grand Puy Lacoste</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">60</td>
@@ -6406,18 +6444,8 @@
                             <td><strong>80</strong></td>
                         </tr>
                         <tr data-tier="Mid-range">
-                            <td>Talbot</td>
-                            <td>2016</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">64</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                576
-                            </td>
-                            <td><strong>79</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
                             <td>Duhart Milon</td>
+                            <td>Château Duhart Milon</td>
                             <td>2016</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">74</td>
@@ -6428,7 +6456,20 @@
                             <td><strong>79</strong></td>
                         </tr>
                         <tr data-tier="Mid-range">
+                            <td>Talbot</td>
+                            <td>Château Talbot</td>
+                            <td>2016</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">64</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                576
+                            </td>
+                            <td><strong>79</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
                             <td>Pontet Canet</td>
+                            <td>Château Pontet Canet</td>
                             <td>2017</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">68</td>
@@ -6440,6 +6481,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Malescot Saint-Exupéry</td>
+                            <td>Château Malescot Saint Exupéry</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">53</td>
@@ -6451,6 +6493,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Grand Puy Lacoste</td>
+                            <td>Château Grand Puy Lacoste</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">60</td>
@@ -6462,6 +6505,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Domaine de Chevalier Rouge</td>
+                            <td>Domaine de Chevalier</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">68</td>
@@ -6473,6 +6517,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Domaine de Chevalier Rouge</td>
+                            <td>Domaine de Chevalier</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">58</td>
@@ -6484,6 +6529,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Rauzan Ségla</td>
+                            <td>Château Rauzan-Ségla</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">85</td>
@@ -6495,6 +6541,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Chianti Classico Gran Selezione Vigna del Sorbo</td>
+                            <td>Fontodi</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">60</td>
@@ -6506,6 +6553,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Domaine de Chevalier Rouge</td>
+                            <td>Domaine de Chevalier</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">68</td>
@@ -6517,6 +6565,7 @@
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Rauzan Ségla</td>
+                            <td>Château Rauzan-Ségla</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">72</td>
@@ -6527,73 +6576,8 @@
                             <td><strong>74</strong></td>
                         </tr>
                         <tr data-tier="Mid-range">
-                            <td>Domaine de Chevalier Rouge</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">56</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                672
-                            </td>
-                            <td><strong>74</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
-                            <td>Pontet Canet</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">85</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                1170
-                            </td>
-                            <td><strong>74</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
-                            <td>Barbera d'Asti Bricco dell'Uccellone</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">51</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                1026
-                            </td>
-                            <td><strong>74</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
-                            <td>Clos Fourtet</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">90</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                900
-                            </td>
-                            <td><strong>74</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
-                            <td>Clerc Milon</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">70</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                1728
-                            </td>
-                            <td><strong>74</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
-                            <td>Les Carmes Haut Brion</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">95</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                1308
-                            </td>
-                            <td><strong>74</strong></td>
-                        </tr>
-                        <tr data-tier="Mid-range">
                             <td>Duhart Milon</td>
+                            <td>Château Duhart Milon</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">68</td>
@@ -6604,18 +6588,92 @@
                             <td><strong>74</strong></td>
                         </tr>
                         <tr data-tier="Mid-range">
-                            <td>Cepparello</td>
-                            <td>2022</td>
+                            <td>Domaine de Chevalier Rouge</td>
+                            <td>Domaine de Chevalier</td>
+                            <td>2021</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">75</td>
+                            <td class="price-column price-locked">56</td>
                             <td>
                                 <span class="stock-badge stock-green"></span>
-                                594
+                                672
+                            </td>
+                            <td><strong>74</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
+                            <td>Clos Fourtet</td>
+                            <td>Château Clos Fourtet</td>
+                            <td>2021</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">90</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                900
+                            </td>
+                            <td><strong>74</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
+                            <td>Barbera d'Asti Bricco dell'Uccellone</td>
+                            <td>Braida</td>
+                            <td>2021</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">51</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1026
+                            </td>
+                            <td><strong>74</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
+                            <td>Pontet Canet</td>
+                            <td>Château Pontet Canet</td>
+                            <td>2021</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">85</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1170
+                            </td>
+                            <td><strong>74</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
+                            <td>Les Carmes Haut Brion</td>
+                            <td>Château Les Carmes Haut-Brion</td>
+                            <td>2021</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">95</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1308
+                            </td>
+                            <td><strong>74</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
+                            <td>Clerc Milon</td>
+                            <td>Château Clerc Milon</td>
+                            <td>2021</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">70</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1728
+                            </td>
+                            <td><strong>74</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
+                            <td>Sette</td>
+                            <td>Tenuta Sette Ponti</td>
+                            <td>2022</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">95</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1749
                             </td>
                             <td><strong>73</strong></td>
                         </tr>
                         <tr data-tier="Mid-range">
                             <td>Beychevelle</td>
+                            <td>Château Beychevelle</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td class="price-column price-locked">78</td>
@@ -6626,18 +6684,32 @@
                             <td><strong>73</strong></td>
                         </tr>
                         <tr data-tier="Mid-range">
-                            <td>Sette</td>
+                            <td>Malescot Saint-Exupéry</td>
+                            <td>Château Malescot Saint Exupéry</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td class="price-column price-locked">95</td>
+                            <td class="price-column price-locked">54</td>
                             <td>
                                 <span class="stock-badge stock-green"></span>
-                                1749
+                                1194
+                            </td>
+                            <td><strong>73</strong></td>
+                        </tr>
+                        <tr data-tier="Mid-range">
+                            <td>Cepparello</td>
+                            <td>Isole e Olena</td>
+                            <td>2022</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td class="price-column price-locked">75</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                594
                             </td>
                             <td><strong>73</strong></td>
                         </tr>
                         <tr data-tier="Budget">
                             <td>Phélan Ségur</td>
+                            <td>Château Phélan Ségur</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">38</td>
@@ -6648,18 +6720,8 @@
                             <td><strong>77</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>Insoglio del Cinghiale</td>
-                            <td>2020</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">19</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                834
-                            </td>
-                            <td><strong>75</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
                             <td>Phélan Ségur</td>
+                            <td>Château Phélan Ségur</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">30</td>
@@ -6670,18 +6732,8 @@
                             <td><strong>74</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>Insoglio del Cinghiale</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">18</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                834
-                            </td>
-                            <td><strong>74</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
                             <td>Le Serre Nuove dell'Ornellaia</td>
+                            <td>Tenuta dell'Ornellaia</td>
                             <td>2021</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">45</td>
@@ -6693,6 +6745,7 @@
                         </tr>
                         <tr data-tier="Budget">
                             <td>Le Serre Nuove dell'Ornellaia</td>
+                            <td>Tenuta dell'Ornellaia</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">49</td>
@@ -6703,18 +6756,8 @@
                             <td><strong>73</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>Cont'Ugo</td>
-                            <td>2021</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">35</td>
-                            <td>
-                                <span class="stock-badge stock-pink"></span>
-                                348
-                            </td>
-                            <td><strong>69</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
                             <td>Nairac</td>
+                            <td>Château Nairac</td>
                             <td>2010</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">38</td>
@@ -6726,6 +6769,7 @@
                         </tr>
                         <tr data-tier="Budget">
                             <td>Phélan Ségur</td>
+                            <td>Château Phélan Ségur</td>
                             <td>2022</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">43</td>
@@ -6736,29 +6780,8 @@
                             <td><strong>63</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>Insoglio del Cinghiale</td>
-                            <td>2022</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">19</td>
-                            <td>
-                                <span class="stock-badge stock-pink"></span>
-                                240
-                            </td>
-                            <td><strong>63</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
                             <td>Guiraud</td>
-                            <td>2015</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">39</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                630
-                            </td>
-                            <td><strong>60</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
-                            <td>Guiraud</td>
+                            <td>Château Guiraud</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">21</td>
@@ -6769,7 +6792,20 @@
                             <td><strong>60</strong></td>
                         </tr>
                         <tr data-tier="Budget">
+                            <td>Guiraud</td>
+                            <td>Château Guiraud</td>
+                            <td>2015</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">39</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                630
+                            </td>
+                            <td><strong>60</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
                             <td>Du Tertre</td>
+                            <td>Château du Tertre</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">39</td>
@@ -6781,6 +6817,7 @@
                         </tr>
                         <tr data-tier="Budget">
                             <td>Marojallia</td>
+                            <td>Château Marojallia</td>
                             <td>2016</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">30</td>
@@ -6792,6 +6829,7 @@
                         </tr>
                         <tr data-tier="Budget">
                             <td>Meyney</td>
+                            <td>Château Meyney</td>
                             <td>2017</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">22</td>
@@ -6803,6 +6841,7 @@
                         </tr>
                         <tr data-tier="Budget">
                             <td>Potensac</td>
+                            <td>Château Potensac</td>
                             <td>2018</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">23</td>
@@ -6813,40 +6852,8 @@
                             <td><strong>57</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>I Sodi di San Niccolò</td>
-                            <td>2019</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">42</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                624
-                            </td>
-                            <td><strong>56</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
-                            <td>Malartic Lagravière Rouge</td>
-                            <td>2019</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">36</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                1470
-                            </td>
-                            <td><strong>56</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
-                            <td>Pédesclaux</td>
-                            <td>2019</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">34</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                834
-                            </td>
-                            <td><strong>56</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
                             <td>Goulée by Cos d'Estournel</td>
+                            <td>Château Cos d'Estournel</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">17</td>
@@ -6857,7 +6864,32 @@
                             <td><strong>56</strong></td>
                         </tr>
                         <tr data-tier="Budget">
+                            <td>Malartic Lagravière Rouge</td>
+                            <td>Château Malartic Lagravière</td>
+                            <td>2019</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">36</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1470
+                            </td>
+                            <td><strong>56</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>La Dame de Montrose (2nd Vin)</td>
+                            <td>Château Montrose</td>
+                            <td>2019</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">33</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1590
+                            </td>
+                            <td><strong>56</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
                             <td>Laroque</td>
+                            <td>Château Laroque</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">30</td>
@@ -6869,6 +6901,7 @@
                         </tr>
                         <tr data-tier="Budget">
                             <td>Fontalloro</td>
+                            <td>Fèlsina</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">39</td>
@@ -6879,18 +6912,8 @@
                             <td><strong>56</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>La Dame de Montrose (2nd Vin)</td>
-                            <td>2019</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">33</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                1590
-                            </td>
-                            <td><strong>56</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
                             <td>Haut Marbuzet</td>
+                            <td>Château Haut Marbuzet</td>
                             <td>2019</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">30</td>
@@ -6901,18 +6924,56 @@
                             <td><strong>56</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>La Dame de Montrose (2nd Vin)</td>
-                            <td>2020</td>
+                            <td>Pédesclaux</td>
+                            <td>Château Pédesclaux</td>
+                            <td>2019</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">32</td>
+                            <td class="price-column price-locked">34</td>
                             <td>
                                 <span class="stock-badge stock-green"></span>
-                                1152
+                                834
+                            </td>
+                            <td><strong>56</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>I Sodi di San Niccolò</td>
+                            <td>Domini Castellare di Castellina</td>
+                            <td>2019</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">42</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                624
+                            </td>
+                            <td><strong>56</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>Insoglio del Cinghiale</td>
+                            <td>Tenuta Campo di Sasso</td>
+                            <td>2020</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">19</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                834
+                            </td>
+                            <td><strong>55</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>Crianza</td>
+                            <td>Bodega Carmelo Rodero</td>
+                            <td>2020</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">27</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1548
                             </td>
                             <td><strong>55</strong></td>
                         </tr>
                         <tr data-tier="Budget">
                             <td>Chianti Classico</td>
+                            <td>Fontodi</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">25</td>
@@ -6923,29 +6984,8 @@
                             <td><strong>55</strong></td>
                         </tr>
                         <tr data-tier="Budget">
-                            <td>Goulée by Cos d'Estournel</td>
-                            <td>2020</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">16</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                942
-                            </td>
-                            <td><strong>55</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
-                            <td>Liu</td>
-                            <td>2020</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td class="price-column price-locked">40</td>
-                            <td>
-                                <span class="stock-badge stock-green"></span>
-                                588
-                            </td>
-                            <td><strong>55</strong></td>
-                        </tr>
-                        <tr data-tier="Budget">
                             <td>Marojallia</td>
+                            <td>Château Marojallia</td>
                             <td>2015</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">30</td>
@@ -6956,7 +6996,32 @@
                             <td><strong>55</strong></td>
                         </tr>
                         <tr data-tier="Budget">
+                            <td>Liu</td>
+                            <td>Castello dei Rampolla</td>
+                            <td>2020</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">40</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                588
+                            </td>
+                            <td><strong>55</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>La Dame de Montrose (2nd Vin)</td>
+                            <td>Château Montrose</td>
+                            <td>2020</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">32</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                1152
+                            </td>
+                            <td><strong>55</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
                             <td>Faugères</td>
+                            <td>Château Faugères</td>
                             <td>2020</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td class="price-column price-locked">31</td>
@@ -6965,6 +7030,42 @@
                                 828
                             </td>
                             <td><strong>55</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>Goulée by Cos d'Estournel</td>
+                            <td>Château Cos d'Estournel</td>
+                            <td>2020</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">16</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                942
+                            </td>
+                            <td><strong>55</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>Insoglio del Cinghiale</td>
+                            <td>Tenuta Campo di Sasso</td>
+                            <td>2021</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">18</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                834
+                            </td>
+                            <td><strong>54</strong></td>
+                        </tr>
+                        <tr data-tier="Budget">
+                            <td>Baronarques Blanc</td>
+                            <td>Domaine de Baronarques</td>
+                            <td>2021</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td class="price-column price-locked">35</td>
+                            <td>
+                                <span class="stock-badge stock-green"></span>
+                                2166
+                            </td>
+                            <td><strong>54</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -7072,16 +7173,106 @@
             const select = document.getElementById('tierFilter');
             const selectedTier = select.value;
             const tbody = document.getElementById('recTableBody');
-            const rows = tbody.querySelectorAll('tr');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
 
-            rows.forEach(row => {
-                if (selectedTier === 'all') {
-                    row.style.display = '';
-                } else {
-                    const tier = row.getAttribute('data-tier');
-                    row.style.display = tier === selectedTier ? '' : 'none';
+            // For "All Tiers", show mixed proportions: 60% Extra Luxury, 10% Luxury, 20% Premium, 5% Mid-range, 5% Budget
+            if (selectedTier === 'all') {
+                // Get all rows by tier
+                const tierRows = {
+                    'Extra Luxury': rows.filter(r => r.getAttribute('data-tier') === 'Extra Luxury'),
+                    'Luxury': rows.filter(r => r.getAttribute('data-tier') === 'Luxury'),
+                    'Premium': rows.filter(r => r.getAttribute('data-tier') === 'Premium'),
+                    'Mid-range': rows.filter(r => r.getAttribute('data-tier') === 'Mid-range'),
+                    'Budget': rows.filter(r => r.getAttribute('data-tier') === 'Budget')
+                };
+
+                // Calculate mix (total 30 wines)
+                const mix = {
+                    'Extra Luxury': Math.floor(30 * 0.60),  // 18 wines
+                    'Luxury': Math.floor(30 * 0.10),        // 3 wines
+                    'Premium': Math.floor(30 * 0.20),       // 6 wines
+                    'Mid-range': Math.floor(30 * 0.05),     // 1 wine
+                    'Budget': Math.floor(30 * 0.05)         // 1 wine (total 29, will show 1 more from Extra Luxury)
+                };
+
+                // Hide all rows first
+                rows.forEach(row => row.style.display = 'none');
+
+                // Show selected number from each tier
+                Object.keys(tierRows).forEach(tier => {
+                    const count = mix[tier] || 0;
+                    tierRows[tier].slice(0, count).forEach(row => row.style.display = '');
+                });
+
+                // Fill remaining to reach 30 (extra from Extra Luxury)
+                const showing = rows.filter(r => r.style.display !== 'none').length;
+                if (showing < 30 && tierRows['Extra Luxury'].length > mix['Extra Luxury']) {
+                    tierRows['Extra Luxury'].slice(mix['Extra Luxury'], mix['Extra Luxury'] + (30 - showing))
+                        .forEach(row => row.style.display = '');
                 }
+            } else {
+                // Show only selected tier (top 30)
+                let count = 0;
+                rows.forEach(row => {
+                    const tier = row.getAttribute('data-tier');
+                    if (tier === selectedTier && count < 30) {
+                        row.style.display = '';
+                        count++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        // Sort recommendations table
+        let recSortOrder = {};
+        function sortRecommendations(columnIndex) {
+            const table = document.getElementById('recommendationsTable');
+            const tbody = document.getElementById('recTableBody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            const th = table.querySelectorAll('th')[columnIndex];
+
+            // Determine sort order
+            const currentOrder = recSortOrder[columnIndex] || 'asc';
+            const newOrder = currentOrder === 'asc' ? 'desc' : 'asc';
+            recSortOrder[columnIndex] = newOrder;
+
+            // Clear all sort indicators
+            table.querySelectorAll('th').forEach(header => {
+                header.classList.remove('asc', 'desc');
             });
+
+            // Set current sort indicator
+            th.classList.add(newOrder);
+
+            // Sort rows
+            rows.sort((a, b) => {
+                const aCell = a.cells[columnIndex];
+                const bCell = b.cells[columnIndex];
+
+                let aVal = aCell.textContent.trim();
+                let bVal = bCell.textContent.trim();
+
+                // Try to parse as numbers
+                const aNum = parseFloat(aVal.replace(/[^0-9.-]/g, ''));
+                const bNum = parseFloat(bVal.replace(/[^0-9.-]/g, ''));
+
+                if (!isNaN(aNum) && !isNaN(bNum)) {
+                    return newOrder === 'asc' ? aNum - bNum : bNum - aNum;
+                }
+
+                // String comparison
+                return newOrder === 'asc'
+                    ? aVal.localeCompare(bVal)
+                    : bVal.localeCompare(aVal);
+            });
+
+            // Rebuild table
+            rows.forEach(row => tbody.appendChild(row));
+
+            // Reapply tier filter if active
+            filterByTier();
         }
 
         // Unlock prices

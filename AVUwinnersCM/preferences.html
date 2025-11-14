@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Preferences - AVU Statistics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #f5576c;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: white;
+            color: #f5576c;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .content-box {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .placeholder-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+
+        .construction-text {
+            font-size: 1.5em;
+            color: #f5576c;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .sub-text {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Customer Preferences</h1>
+            <p>AI-Powered Customer Insights & Recommendations</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="dashboard.html" class="nav-btn">🏆 Winners Dashboard</a>
+            <a href="leads.html" class="nav-btn">📣 LEADS</a>
+            <a href="horeca.html" class="nav-btn">🏨 HORECA</a>
+            <a href="preferences.html" class="nav-btn" style="background: #f5576c; color: white;">⚡ Preferences</a>
+        </div>
+
+        <div class="content-box">
+            <img src="assets/Frame 1.jpg" alt="Customer Preferences Preview" class="placeholder-image" onerror="this.style.display='none'">
+
+            <div class="construction-text">🚧 Under Construction 🚧</div>
+            <div class="sub-text">
+                This feature is currently being developed.<br>
+                Customer preference analytics and AI-powered recommendations coming soon!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check authentication
+        const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
+        const sessionAuth = sessionStorage.getItem('dashboardAuth');
+        if (sessionAuth !== REQUIRED_HASH) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

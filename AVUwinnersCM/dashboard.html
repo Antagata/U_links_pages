@@ -3,6 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20251114083042">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVU Top Campaigns Dashboard</title>
     <link rel="icon" type="image/x-icon" href="https://antagata.github.io/favicon.ico">
@@ -681,6 +686,20 @@
     </style>
 </head>
 <body>
+<!-- Password Protection -->
+<script>
+    // Check if user is authenticated
+    const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
+    const sessionAuth = sessionStorage.getItem('dashboardAuth');
+
+    if (sessionAuth !== REQUIRED_HASH) {
+        // Not authenticated, redirect to login
+        window.location.href = 'index.html';
+    }
+</script>
+<!-- End Password Protection -->
+
+
     <div class="dashboard-container">
         <div class="header">
             <!-- Chaser Lights - Top Left -->
@@ -699,7 +718,7 @@
             <img src="assets/avu_logo_white.png" alt="AVU Logo" class="logo">
             <h1>🏆 AVU TOP CAMPAIGNS</h1>
             <div class="subtitle">Wine Campaign Winners Dashboard</div>
-            <div class="timestamp">📅 Last Updated: November 13, 2025 at 16:06:06</div>
+            <div class="timestamp">📅 Last Updated: November 14, 2025 at 08:29:24</div>
             <div class="formula-explanation">
                 <strong>🧮 Winner Formula:</strong> Weighted Score = (60% × Conversion Rate) + (40% × Normalized Sales)
                 <br>
@@ -718,14 +737,6 @@
             <div class="reason-display">
                 Campaign Performance Analysis
             </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div style="display: flex; justify-content: center; gap: 15px; margin: 30px 0; flex-wrap: wrap;">
-            <a href="dashboard.html" class="nav-btn" style="background: linear-gradient(135deg, #DAA520, #B8860B); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">🏆 Winners Dashboard</a>
-            <a href="leads.html" class="nav-btn" style="background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">📣 LEADS</a>
-            <a href="horeca.html" class="nav-btn" style="background: white; color: #27ae60; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">🏨 HORECA</a>
-            <a href="preferences.html" class="nav-btn" style="background: white; color: #764ba2; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">⚙️ Preferences</a>
         </div>
 
         <!-- Top 25 Winners Table Section -->
@@ -893,7 +904,7 @@
                 </div>
             </div>
             <p>🍷 Wine Campaign Analysis Dashboard</p>
-            <p>🟨 Golden bars represent top-performing campaigns | Generated: November 13, 2025 at 16:06:06</p>
+            <p>🟨 Golden bars represent top-performing campaigns | Generated: November 14, 2025 at 08:29:24</p>
         </div>
 
         <!-- Race Chart GIF Section -->

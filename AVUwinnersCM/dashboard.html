@@ -763,14 +763,17 @@
                 </div>
             </div>
 
-            <!-- Stock Status Legend - Right -->
-            <div style="flex: 1; padding: 10px; background: #f8f9fa; border-radius: 8px; margin-left: 10px;">
-                <div style="font-weight: bold; margin-bottom: 5px; font-size: 10pt;">📦 STOCK STATUS LEGEND</div>
-                <div style="display: flex; flex-direction: column; gap: 3px;">
+            <!-- Stock Status Legend - Right with Toggle -->
+            <div style="flex: 1; padding: 10px; background: #f8f9fa; border-radius: 8px; margin-left: 10px; text-align: right;">
+                <div style="font-weight: bold; margin-bottom: 5px; font-size: 10pt; cursor: pointer; user-select: none;" onclick="toggleStockLegend()">
+                    <span id="stockLegendToggle" style="font-size: 9pt; color: #000;">▼</span>
+                    📦 STOCK STATUS LEGEND
+                </div>
+                <div id="stockLegendContent" style="display: flex; flex-direction: column; gap: 3px;">
                     <div style="font-size: 9pt;">🟣 1-12 bottles</div>
                     <div style="font-size: 9pt;">🟨 13-49 bottles</div>
                     <div style="font-size: 9pt;">🟦 50-199 bottles</div>
-                    <div style="font-size: 9pt;">🩷 200-499 bottles</div>
+                    <div style="font-size: 9pt;">🟩 200-499 bottles</div>
                     <div style="font-size: 9pt;">🟢 500+ bottles</div>
                     <div style="font-size: 9pt;">⚪ Unknown stock</div>
                 </div>
@@ -1349,6 +1352,20 @@
         function resetRaceChart() { return; } // Disabled - static chart only
 
         function updateSpeed() { return; } // Disabled - static chart only
+
+        // Stock legend toggle functionality
+        function toggleStockLegend() {
+            const content = document.getElementById('stockLegendContent');
+            const toggle = document.getElementById('stockLegendToggle');
+
+            if (content.style.display === 'none') {
+                content.style.display = 'flex';
+                toggle.textContent = '▼';  // Down arrow when expanded
+            } else {
+                content.style.display = 'none';
+                toggle.textContent = '▶';  // Right arrow when collapsed
+            }
+        }
 
         // Initialize race chart when page loads
         document.addEventListener('DOMContentLoaded', function() {

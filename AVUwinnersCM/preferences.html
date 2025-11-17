@@ -124,6 +124,17 @@
         <div class="content-box">
             <img src="assets/Frame 1.jpg" alt="Customer Preferences Preview" class="placeholder-image" onerror="this.style.display='none'">
 
+            <!-- Stock Distribution Donut Chart -->
+            <div style="max-width: 500px; margin: 30px auto;">
+                <h3 style="text-align: center; color: #C8B080; margin-bottom: 20px;">
+                    📊 Stock Distribution by Price Tier
+                </h3>
+                <canvas id="stockDonutChart"></canvas>
+                <p style="text-align: center; color: #C8B080; font-size: 0.9em; margin-top: 15px;">
+                    Total wines in stock: 4,807
+                </p>
+            </div>
+
             <div class="construction-text">🚧 Under Construction 🚧</div>
             <div class="sub-text">
                 This feature is currently being developed.<br>
@@ -132,6 +143,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script>
         // Check authentication
         const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
@@ -139,6 +151,95 @@
         if (sessionAuth !== REQUIRED_HASH) {
             window.location.href = 'index.html';
         }
+
+        // Stock Distribution Donut Chart
+        (function() {
+            const ctx = document.getElementById('stockDonutChart');
+            if (!ctx) return;
+
+            const data = {
+                "labels": [
+                    "Extra Luxury (750+ CHF)",
+                    "Luxury (300-750 CHF)",
+                    "Premium (100-300 CHF)",
+                    "Mid-range (50-100 CHF)",
+                    "Budget (<50 CHF)"
+                ],
+                "datasets": [
+                    {
+                        "data": [
+                            1477,
+                            909,
+                            1207,
+                            682,
+                            532
+                        ],
+                        "backgroundColor": [
+                            "rgba(235, 202, 144, 0.8)",
+                            "rgba(208, 179, 127, 0.8)",
+                            "rgba(181, 156, 111, 0.8)",
+                            "rgba(153, 132, 94, 0.8)",
+                            "rgba(126, 109, 77, 0.8)"
+                        ],
+                        "borderColor": [
+                            "rgba(255, 255, 255, 1)",
+                            "rgba(255, 255, 255, 1)",
+                            "rgba(255, 255, 255, 1)",
+                            "rgba(255, 255, 255, 1)",
+                            "rgba(255, 255, 255, 1)"
+                        ],
+                        "borderWidth": 2
+                    }
+                ]
+            };
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#C8B080',
+                                font: {
+                                    size: 11,
+                                    family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                                },
+                                padding: 15,
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                            titleColor: '#333',
+                            bodyColor: '#666',
+                            borderColor: '#C8B080',
+                            borderWidth: 1,
+                            padding: 12,
+                            displayColors: true,
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return label + ': ' + value.toLocaleString() + ' wines (' + percentage + '%)';
+                                }
+                            }
+                        }
+                    },
+                    cutout: '65%',
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true
+                    }
+                }
+            });
+        })();
     </script>
 </body>
 </html>

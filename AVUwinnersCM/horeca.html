@@ -470,7 +470,7 @@
         <div class="header">
             <h1>🏨 HORECA Campaigns</h1>
             <p>Hotel, Restaurant & Catering Campaigns Analysis</p>
-            <p style="font-size: 0.9em; color: #999;">📅 Last Updated: November 17, 2025 at 10:01:27</p>
+            <p style="font-size: 0.9em; color: #999;">📅 Last Updated: November 17, 2025 at 10:21:06</p>
         </div>
 
         <div class="nav-buttons">
@@ -506,7 +506,7 @@
                 🔒 Unlock Prices
             </button>
 
-            <div class="table-container">
+            <div id="tableView" class="table-container">
                 <table>
                     <thead>
                         <tr>
@@ -3464,6 +3464,12 @@
                     </tbody>
                 </table>
             </div>
+
+            <div id="gridView" class="grid-container" style="display: none;">
+                <p style="text-align: center; padding: 40px; color: #666;">
+                    Grid view is under development. Please use Table View for now.
+                </p>
+            </div>
         </div>
 
         <!-- Recommendations Section -->
@@ -5454,17 +5460,17 @@
             }
         }
 
+        // Initialize tier filter on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            filterByTier();
+        });
+
         // Check authentication
         const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
         const sessionAuth = sessionStorage.getItem('dashboardAuth');
         if (sessionAuth !== REQUIRED_HASH) {
             window.location.href = 'index.html';
         }
-
-        // Initialize tier filter on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            filterByTier();
-        });
     </script>
 </body>
 </html>

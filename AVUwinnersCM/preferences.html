@@ -15,6 +15,7 @@
         :root {
             --black: #000000;
             --white: #FFFFFF;
+            --gold: #8B7347;
             --gray-light: #F5F5F5;
             --gray-mid: #CCCCCC;
             --gray-dark: #333333;
@@ -24,7 +25,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-weight: 300;
             background: var(--white);
-            color: var(--black);
+            color: var(--gold);
             line-height: 1.6;
         }
 
@@ -43,6 +44,7 @@
             line-height: 1.1;
             margin-bottom: 20px;
             text-transform: uppercase;
+            color: var(--black);
         }
 
         h2 {
@@ -242,7 +244,7 @@
         <div class="header">
             <h1>Campaign<br>Analytics</h1>
             <p class="subtitle">Weekly Insights & Distribution</p>
-            <p class="timestamp">Last Updated: December 01, 2025 — 17:12</p>
+            <p class="timestamp">Last Updated: December 02, 2025 — 10:43</p>
         </div>
 
         <!-- Week Selector -->
@@ -7462,11 +7464,11 @@
         // Chart instances
         let regionsChart, typesChart, priceTiersChart, dailyPricesChart, stockChart;
 
-        // Chart.js defaults - Minimal Black & White
+        // Chart.js defaults - Minimal Black & White with Gold accents
         Chart.defaults.font.family = "'Inter', sans-serif";
         Chart.defaults.font.size = 12;
         Chart.defaults.font.weight = '300';
-        Chart.defaults.color = '#000000';
+        Chart.defaults.color = '#8B7347';
         Chart.defaults.borderColor = '#CCCCCC';
         Chart.defaults.plugins.legend.labels.usePointStyle = true;
         Chart.defaults.plugins.legend.labels.padding = 20;
@@ -7501,19 +7503,19 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    plugins: {{
-                        legend: {{ display: false }}
-                    }},
-                    scales: {{
-                        y: {{
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
                             beginAtZero: true,
-                            grid: {{ color: '#F5F5F5' }}
-                        }},
-                        x: {{
-                            grid: {{ display: false }}
-                        }}
-                    }}
-                }}
+                            grid: { color: '#F5F5F5' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
             });
 
             // Types Chart - Doughnut
@@ -7528,17 +7530,17 @@
                         borderColor: '#FFFFFF'
                     }]
                 },
-                options: {{
+                options: {
                     responsive: true,
                     maintainAspectRatio: true,
                     cutout: '65%',
-                    plugins: {{
-                        legend: {{
+                    plugins: {
+                        legend: {
                             position: 'bottom',
-                            labels: {{ padding: 15 }}
-                        }}
-                    }}
-                }}
+                            labels: { padding: 15 }
+                        }
+                    }
+                }
             });
 
             // Price Tiers Chart - Pie
@@ -7553,16 +7555,16 @@
                         borderColor: '#FFFFFF'
                     }]
                 },
-                options: {{
+                options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    plugins: {{
-                        legend: {{
+                    plugins: {
+                        legend: {
                             position: 'bottom',
-                            labels: {{ padding: 15 }}
-                        }}
-                    }}
-                }}
+                            labels: { padding: 15 }
+                        }
+                    }
+                }
             });
 
             // Daily Prices Chart - Line
@@ -7574,12 +7576,12 @@
                         label: 'Avg Price (CHF)',
                         data: [],
                         borderColor: '#000000',
-                        backgroundColor: (context) => {{
+                        backgroundColor: (context) => {
                             const chart = context.chart;
-                            const {{ctx, chartArea}} = chart;
+                            const {ctx, chartArea} = chart;
                             if (!chartArea) return null;
                             return monoGradient(ctx, chartArea);
-                        }},
+                        },
                         fill: true,
                         tension: 0.4,
                         borderWidth: 2,
@@ -7589,22 +7591,22 @@
                         pointBorderWidth: 2
                     }]
                 },
-                options: {{
+                options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    plugins: {{
-                        legend: {{ display: false }}
-                    }},
-                    scales: {{
-                        y: {{
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
                             beginAtZero: true,
-                            grid: {{ color: '#F5F5F5' }}
-                        }},
-                        x: {{
-                            grid: {{ display: false }}
-                        }}
-                    }}
-                }}
+                            grid: { color: '#F5F5F5' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
             });
 
             // Stock Distribution Chart
@@ -7622,28 +7624,28 @@
                         borderColor: '#FFFFFF'
                     }]
                 },
-                options: {{
+                options: {
                     responsive: true,
                     maintainAspectRatio: true,
                     cutout: '60%',
-                    plugins: {{
-                        legend: {{
+                    plugins: {
+                        legend: {
                             position: 'bottom',
-                            labels: {{ padding: 20 }}
-                        }},
-                        tooltip: {{
-                            callbacks: {{
-                                label: function(context) {{
+                            labels: { padding: 20 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
                                     return context.label + ': ' + context.parsed.toLocaleString() + ' bottles';
-                                }}
-                            }}
-                        }}
-                    }}
-                }}
+                                }
+                            }
+                        }
+                    }
+                }
             });
-        }}
+        }
 
-        function updateCharts() {{
+        function updateCharts() {
             const selectedWeek = document.getElementById('weekSelect').value;
             const weekData = weeklyData.find(w => w.week_year === selectedWeek);
 
@@ -7652,23 +7654,23 @@
             // Update summary stats
             document.getElementById('statsSummary').innerHTML = `
                 <div class="stat-card">
-                    <div class="value">${{weekData.avg_vintage || 'N/A'}}</div>
+                    <div class="value">${weekData.avg_vintage || 'N/A'}</div>
                     <div class="label">Avg Vintage</div>
                 </div>
                 <div class="stat-card">
-                    <div class="value">${{weekData.top_region}}</div>
+                    <div class="value">${weekData.top_region}</div>
                     <div class="label">Top Region</div>
                 </div>
                 <div class="stat-card">
-                    <div class="value">${{weekData.total_unique_campaigns}}</div>
+                    <div class="value">${weekData.total_unique_campaigns}</div>
                     <div class="label">Unique Campaigns</div>
                 </div>
                 <div class="stat-card">
-                    <div class="value">${{weekData.horeca_count}}</div>
+                    <div class="value">${weekData.horeca_count}</div>
                     <div class="label">HORECA Wines</div>
                 </div>
                 <div class="stat-card">
-                    <div class="value">${{weekData.leads_count}}</div>
+                    <div class="value">${weekData.leads_count}</div>
                     <div class="label">LEADS Wines</div>
                 </div>
             `;
@@ -7697,14 +7699,14 @@
             dailyPricesChart.data.labels = dailyLabels;
             dailyPricesChart.data.datasets[0].data = dailyValues;
             dailyPricesChart.update();
-        }}
+        }
 
         // Authentication check
         const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
         const sessionAuth = sessionStorage.getItem('dashboardAuth');
-        if (sessionAuth !== REQUIRED_HASH) {{
+        if (sessionAuth !== REQUIRED_HASH) {
             window.location.href = 'index.html';
-        }}
+        }
     </script>
 </body>
 </html>

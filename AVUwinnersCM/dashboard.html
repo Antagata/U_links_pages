@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="version" content="20251203134212">
+    <meta name="version" content="20251203151920">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVU Top Campaigns Dashboard</title>
@@ -30,7 +30,7 @@
         }
 
         .header {
-            background: url('C:\\Users\\Marco.Africani\\Pictures\\AVU Notion\\Lidar background.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/ep-home-2.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -136,10 +136,6 @@
             font-weight: bold;
             color: #FFFFFF;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5);
-            background: #B59C6F;
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 10px;
         }
 
         .logo {
@@ -350,14 +346,10 @@
         }
 
         .tables-header h2 {
-            color: #FFFFFF;
+            color: #333;
             font-size: 1.8em;
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            background: #B59C6F;
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 8px;
         }
 
         .legend-section {
@@ -403,7 +395,7 @@
         }
 
         .period-title {
-            background: #B59C6F;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
             color: white;
             text-align: center;
             padding: 15px;
@@ -505,14 +497,10 @@
         }
 
         .top25-header h2 {
-            color: #FFFFFF;
+            color: #333;
             font-size: 1.8em;
             margin-bottom: 5px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            background: #B59C6F;
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 8px;
         }
 
         .top25-subtitle {
@@ -610,14 +598,10 @@
         }
 
         .race-gif-header h2 {
-            color: #FFFFFF;
+            color: #FFD700;
             font-size: 1.8em;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            background: #B59C6F;
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 8px;
         }
 
         .race-controls {
@@ -699,115 +683,6 @@
             border-radius: 12px;
             border: 1px solid #ddd;
         }
-
-        /* Sticky Navigation Header */
-        .sticky-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            background: #FFFFFF;
-            border-bottom: 1px solid #E5E5E5;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            z-index: 1000;
-            padding: 0 40px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-brand {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #8B7347;
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-menu a {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 11px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #8B7347;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-            color: #000000;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-
-        .hamburger span {
-            width: 20px;
-            height: 2px;
-            background: #8B7347;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-
-        @media (max-width: 768px) {
-            .sticky-nav {
-                padding: 0 20px;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-menu {
-                position: fixed;
-                top: 50px;
-                left: -100%;
-                width: 100%;
-                background: #FFFFFF;
-                flex-direction: column;
-                padding: 30px 20px;
-                gap: 20px;
-                border-bottom: 1px solid #E5E5E5;
-                transition: left 0.3s ease;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-        }
-
-        /* Adjust body padding for fixed header */
-        body {
-            padding-top: 70px;
-        }
     </style>
 </head>
 <body>
@@ -824,21 +699,6 @@
 </script>
 <!-- End Password Protection -->
 
-    <!-- Sticky Navigation -->
-    <nav class="sticky-nav">
-        <a href="https://avu.wine/" class="nav-brand">AVU</a>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="preferences.html">Campaign Analytics</a></li>
-            <li><a href="horeca.html">HORECA</a></li>
-            <li><a href="leads.html">Leads</a></li>
-            <li><a href="dashboard.html">Top Campaigns</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
     <div class="dashboard-container">
         <div class="header">
@@ -858,7 +718,7 @@
             <img src="assets/avu_logo_white.png" alt="AVU Logo" class="logo">
             <h1>🏆 AVU TOP CAMPAIGNS</h1>
             <div class="subtitle">Wine Campaign Winners Dashboard</div>
-            <div class="timestamp">📅 Last Updated: December 03, 2025 at 13:40:31</div>
+            <div class="timestamp">📅 Last Updated: December 03, 2025 at 15:17:43</div>
             <div class="formula-explanation">
                 <strong>🧮 Winner Formula:</strong> Weighted Score = (60% × Conversion Rate) + (40% × Normalized Sales)
                 <br>
@@ -1006,7 +866,7 @@
                         <tr><th onclick="sortTable(this, 0)" data-type="number">Rank</th><th onclick="sortTable(this, 1)" data-type="text">Campaign</th><th onclick="sortTable(this, 2)" data-type="text">🎨</th><th onclick="sortTable(this, 3)" data-type="text">Wine</th><th onclick="sortTable(this, 4)" data-type="number">Vintage</th><th onclick="sortTable(this, 5)" data-type="text">Producer</th><th onclick="sortTable(this, 6)" data-type="date">Start Date</th><th onclick="sortTable(this, 7)" data-type="number">Buyers</th><th onclick="sortTable(this, 8)" data-type="number">Conv. %</th><th onclick="sortTable(this, 9)" data-type="number">Norm Sales</th><th onclick="sortTable(this, 10)" data-type="number">Score</th><th onclick="sortTable(this, 14)" data-type="text">Stock</th>
                         </tr>
                     </thead>
-                    <tbody><tr><td class="number-cell">1</td><td>CM-25-03279</td><td class="emoji-cell">🟢</td><td>Retout</td><td class="number-cell">2016</td><td>Château du Retout</td><td>2025-11-27</td><td class="number-cell">22</td><td class="number-cell">14.77</td><td class="number-cell">0.013</td><td class="number-cell">0.2415</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">2</td><td>CM-25-03231</td><td class="emoji-cell">💎</td><td>Pavie</td><td class="number-cell">2016</td><td>Château Pavie</td><td>2025-11-21</td><td class="number-cell">73</td><td class="number-cell">2.85</td><td class="number-cell">0.405</td><td class="number-cell">0.2075</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">3</td><td>CM-25-03301</td><td class="emoji-cell">🩷</td><td>Galatrona</td><td class="number-cell">2020</td><td>Fattoria Petrolo</td><td>2025-11-28</td><td class="number-cell">139</td><td class="number-cell">4.83</td><td class="number-cell">0.181</td><td class="number-cell">0.1495</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">4</td><td>CM-25-03208</td><td class="emoji-cell">🩷</td><td>Châteauneuf du Pape</td><td class="number-cell">2023</td><td>Clos des Papes</td><td>2025-11-19</td><td class="number-cell">108</td><td class="number-cell">2.12</td><td class="number-cell">0.159</td><td class="number-cell">0.0974</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">5</td><td>CM-25-03276</td><td class="emoji-cell">💎</td><td>Chardonnay</td><td class="number-cell">2023</td><td>Giaconda</td><td>2025-11-26</td><td class="number-cell">4</td><td class="number-cell">5.26</td><td class="number-cell">0.012</td><td class="number-cell">0.089</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">6</td><td>CM-25-03254</td><td class="emoji-cell">🩷</td><td>Campo Lusso</td><td class="number-cell">2023</td><td>Fattoria Petrolo</td><td>2025-11-25</td><td class="number-cell">65</td><td class="number-cell">2.85</td><td class="number-cell">0.094</td><td class="number-cell">0.0831</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr><tr><td class="number-cell">7</td><td>CM-25-03310</td><td class="emoji-cell">💎</td><td>Sassicaia</td><td class="number-cell">2019</td><td>Tenuta San Guido</td><td>2025-11-29</td><td class="number-cell">15</td><td class="number-cell">3.46</td><td class="number-cell">0.058</td><td class="number-cell">0.0786</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr><tr><td class="number-cell">8</td><td>CM-25-03240</td><td class="emoji-cell">🩷</td><td>Larcis Ducasse</td><td class="number-cell">2022</td><td>Château Larcis Ducasse</td><td>2025-11-21</td><td class="number-cell">8</td><td class="number-cell">3.27</td><td class="number-cell">0.02</td><td class="number-cell">0.0602</td><td class="emoji-cell" style="text-align: center;">🟨</td></tr><tr><td class="number-cell">9</td><td>CM-25-03224</td><td class="emoji-cell">🟣</td><td>Haut Brion</td><td class="number-cell">2005</td><td>Château Haut Brion</td><td>2025-11-21</td><td class="number-cell">15</td><td class="number-cell">0.56</td><td class="number-cell">0.127</td><td class="number-cell">0.0597</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">10</td><td>CM-25-03225</td><td class="emoji-cell">💎</td><td>Lynch Bages</td><td class="number-cell">2000</td><td>Château Lynch Bages</td><td>2025-11-20</td><td class="number-cell">12</td><td class="number-cell">0.71</td><td class="number-cell">0.12</td><td class="number-cell">0.0594</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr>
+                    <tbody><tr><td class="number-cell">1</td><td>CM-25-03279</td><td class="emoji-cell">🟢</td><td>Retout</td><td class="number-cell">2016</td><td>Château du Retout</td><td>2025-11-27</td><td class="number-cell">22</td><td class="number-cell">14.77</td><td class="number-cell">0.013</td><td class="number-cell">0.2415</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">2</td><td>CM-25-03231</td><td class="emoji-cell">💎</td><td>Pavie</td><td class="number-cell">2016</td><td>Château Pavie</td><td>2025-11-21</td><td class="number-cell">73</td><td class="number-cell">2.85</td><td class="number-cell">0.405</td><td class="number-cell">0.2075</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">3</td><td>CM-25-03301</td><td class="emoji-cell">🩷</td><td>Galatrona</td><td class="number-cell">2020</td><td>Fattoria Petrolo</td><td>2025-11-28</td><td class="number-cell">139</td><td class="number-cell">4.83</td><td class="number-cell">0.181</td><td class="number-cell">0.1495</td><td class="emoji-cell" style="text-align: center;">🟢</td></tr><tr><td class="number-cell">4</td><td>CM-25-03276</td><td class="emoji-cell">💎</td><td>Chardonnay</td><td class="number-cell">2023</td><td>Giaconda</td><td>2025-11-26</td><td class="number-cell">4</td><td class="number-cell">5.26</td><td class="number-cell">0.012</td><td class="number-cell">0.089</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">5</td><td>CM-25-03254</td><td class="emoji-cell">🩷</td><td>Campo Lusso</td><td class="number-cell">2023</td><td>Fattoria Petrolo</td><td>2025-11-25</td><td class="number-cell">65</td><td class="number-cell">2.85</td><td class="number-cell">0.094</td><td class="number-cell">0.0831</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr><tr><td class="number-cell">6</td><td>CM-25-03310</td><td class="emoji-cell">💎</td><td>Sassicaia</td><td class="number-cell">2019</td><td>Tenuta San Guido</td><td>2025-11-29</td><td class="number-cell">15</td><td class="number-cell">3.46</td><td class="number-cell">0.058</td><td class="number-cell">0.0786</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr><tr><td class="number-cell">7</td><td>CM-25-03240</td><td class="emoji-cell">🩷</td><td>Larcis Ducasse</td><td class="number-cell">2022</td><td>Château Larcis Ducasse</td><td>2025-11-21</td><td class="number-cell">8</td><td class="number-cell">3.27</td><td class="number-cell">0.02</td><td class="number-cell">0.0602</td><td class="emoji-cell" style="text-align: center;">🟨</td></tr><tr><td class="number-cell">8</td><td>CM-25-03224</td><td class="emoji-cell">🟣</td><td>Haut Brion</td><td class="number-cell">2005</td><td>Château Haut Brion</td><td>2025-11-21</td><td class="number-cell">15</td><td class="number-cell">0.56</td><td class="number-cell">0.127</td><td class="number-cell">0.0597</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr><tr><td class="number-cell">9</td><td>CM-25-03225</td><td class="emoji-cell">💎</td><td>Lynch Bages</td><td class="number-cell">2000</td><td>Château Lynch Bages</td><td>2025-11-20</td><td class="number-cell">12</td><td class="number-cell">0.71</td><td class="number-cell">0.12</td><td class="number-cell">0.0594</td><td class="emoji-cell" style="text-align: center;">🩷</td></tr><tr><td class="number-cell">10</td><td>CM-25-03216</td><td class="emoji-cell">🟨</td><td>Champagne Brut Cristal</td><td class="number-cell">2012</td><td>Louis Roederer</td><td>2025-11-20</td><td class="number-cell">28</td><td class="number-cell">1.13</td><td class="number-cell">0.085</td><td class="number-cell">0.0523</td><td class="emoji-cell" style="text-align: center;">🟦</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1059,7 +919,7 @@
                 </div>
             </div>
             <p>🍷 Wine Campaign Analysis Dashboard</p>
-            <p>🟨 Golden bars represent top-performing campaigns | Generated: December 03, 2025 at 13:40:31</p>
+            <p>🟨 Golden bars represent top-performing campaigns | Generated: December 03, 2025 at 15:17:43</p>
         </div>
 
         <!-- Race Chart GIF Section -->
@@ -1494,25 +1354,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(initializeRaceChart, 500); // Wait for canvas to be ready
         });
-
-        // Hamburger menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }
-            });
-        }
     </script>
 </body>
 </html>

@@ -30,7 +30,7 @@
         }
 
         .header {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/ep-home-2.webp');
+            background: url('C:\\Users\\Marco.Africani\\Pictures\\AVU Notion\\Lidar background.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -136,6 +136,10 @@
             font-weight: bold;
             color: #FFFFFF;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5);
+            background: #B59C6F;
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 10px;
         }
 
         .logo {
@@ -346,10 +350,14 @@
         }
 
         .tables-header h2 {
-            color: #333;
+            color: #FFFFFF;
             font-size: 1.8em;
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            background: #B59C6F;
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
         }
 
         .legend-section {
@@ -395,7 +403,7 @@
         }
 
         .period-title {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
+            background: #B59C6F;
             color: white;
             text-align: center;
             padding: 15px;
@@ -497,10 +505,14 @@
         }
 
         .top25-header h2 {
-            color: #333;
+            color: #FFFFFF;
             font-size: 1.8em;
             margin-bottom: 5px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            background: #B59C6F;
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
         }
 
         .top25-subtitle {
@@ -598,10 +610,14 @@
         }
 
         .race-gif-header h2 {
-            color: #FFD700;
+            color: #FFFFFF;
             font-size: 1.8em;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: #B59C6F;
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
         }
 
         .race-controls {
@@ -683,6 +699,115 @@
             border-radius: 12px;
             border: 1px solid #ddd;
         }
+
+        /* Sticky Navigation Header */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            z-index: 1000;
+            padding: 0 40px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #8B7347;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #8B7347;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #000000;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 20px;
+            height: 2px;
+            background: #8B7347;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .sticky-nav {
+                padding: 0 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 50px;
+                left: -100%;
+                width: 100%;
+                background: #FFFFFF;
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 20px;
+                border-bottom: 1px solid #E5E5E5;
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+        }
+
+        /* Adjust body padding for fixed header */
+        body {
+            padding-top: 70px;
+        }
     </style>
 </head>
 <body>
@@ -699,6 +824,21 @@
 </script>
 <!-- End Password Protection -->
 
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <a href="https://avu.wine/" class="nav-brand">AVU</a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="preferences.html">Campaign Analytics</a></li>
+            <li><a href="horeca.html">HORECA</a></li>
+            <li><a href="leads.html">Leads</a></li>
+            <li><a href="dashboard.html">Top Campaigns</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
     <div class="dashboard-container">
         <div class="header">
@@ -1354,6 +1494,25 @@
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(initializeRaceChart, 500); // Wait for canvas to be ready
         });
+
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 </html>

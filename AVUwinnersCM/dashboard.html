@@ -15,7 +15,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 70px 20px 20px 20px;
             background: white;
             min-height: 100vh;
         }
@@ -683,6 +683,108 @@
             border-radius: 12px;
             border: 1px solid #ddd;
         }
+
+        /* Sticky Navigation Header */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            z-index: 1000;
+            padding: 0 40px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #8B7347;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #8B7347;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #000000;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 20px;
+            height: 2px;
+            background: #8B7347;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .sticky-nav {
+                padding: 0 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 50px;
+                left: -100%;
+                width: 100%;
+                background: #FFFFFF;
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 20px;
+                border-bottom: 1px solid #E5E5E5;
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -699,6 +801,21 @@
 </script>
 <!-- End Password Protection -->
 
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <a href="https://avu.wine/" class="nav-brand">AVU</a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="preferences.html">Campaign Analytics</a></li>
+            <li><a href="horeca.html">HORECA</a></li>
+            <li><a href="leads.html">Leads</a></li>
+            <li><a href="dashboard.html">Top Campaigns</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
     <div class="dashboard-container">
         <div class="header">
@@ -737,15 +854,6 @@
             <div class="reason-display">
                 Campaign Performance Analysis
             </div>
-        </div>
-
-
-        <!-- Navigation Buttons -->
-        <div style="display: flex; justify-content: center; gap: 15px; margin: 30px 0; flex-wrap: wrap;">
-            <a href="dashboard.html" class="nav-btn" style="background: linear-gradient(135deg, #DAA520, #B8860B); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">🏆 Winners Dashboard</a>
-            <a href="leads.html" class="nav-btn" style="background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">📣 LEADS</a>
-            <a href="horeca.html" class="nav-btn" style="background: white; color: #27ae60; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">🏨 HORECA</a>
-            <a href="preferences.html" class="nav-btn" style="background: white; color: #764ba2; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-size: 1em; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s; font-weight: 600;">⚙️ Preferences</a>
         </div>
 
         <!-- Compact Legends - Top of Page -->

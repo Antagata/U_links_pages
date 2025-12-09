@@ -9120,37 +9120,58 @@
             console.log('Total rows:', rows.length);
 
             if (selectedTier === 'all') {
-                // All Tiers: 75% around 123 CHF, 25% far from 123 CHF
-                const targetPrice = 123;
-                const tolerance = 20; // within 103-143 CHF
+                // All Tiers: Alternate Budget → Mid-range → Premium → Luxury → Extra Luxury → repeat
+                const tierRows = {
+                    'Budget': rows.filter(r => r.getAttribute('data-tier') === 'Budget'),
+                    'Mid-range': rows.filter(r => r.getAttribute('data-tier') === 'Mid-range'),
+                    'Premium': rows.filter(r => r.getAttribute('data-tier') === 'Premium'),
+                    'Luxury': rows.filter(r => r.getAttribute('data-tier') === 'Luxury'),
+                    'Extra Luxury': rows.filter(r => r.getAttribute('data-tier') === 'Extra Luxury')
+                };
 
-                const nearPrice = rows.filter(r => {
-                    const price = parseFloat(r.getAttribute('data-price'));
-                    return Math.abs(price - targetPrice) <= tolerance;
-                });
+                // Tier rotation order (Budget to Extra Luxury)
+                const tierOrder = ['Budget', 'Mid-range', 'Premium', 'Luxury', 'Extra Luxury'];
 
-                const farPrice = rows.filter(r => {
-                    const price = parseFloat(r.getAttribute('data-price'));
-                    return Math.abs(price - targetPrice) > tolerance;
-                });
+                // Track current index for each tier
+                const tierIndexes = {
+                    'Budget': 0,
+                    'Mid-range': 0,
+                    'Premium': 0,
+                    'Luxury': 0,
+                    'Extra Luxury': 0
+                };
 
-                console.log('Near price wines:', nearPrice.length);
-                console.log('Far price wines:', farPrice.length);
-
-                // Calculate mix: 75% near (23 wines), 25% far (7 wines)
-                const nearCount = Math.floor(30 * 0.75);  // 22-23 wines
-                const farCount = 30 - nearCount;           // 7-8 wines
-
-                // Hide all first
+                // Hide all rows first
                 rows.forEach(row => row.style.display = 'none');
 
-                // Show selected near price
-                nearPrice.slice(0, nearCount).forEach(row => row.style.display = '');
+                // Alternate between tiers to show 30 items
+                const displayed = [];
+                let currentTierIdx = 0;
 
-                // Show selected far price
-                farPrice.slice(0, farCount).forEach(row => row.style.display = '');
+                while (displayed.length < 30) {
+                    const tier = tierOrder[currentTierIdx];
+                    const tierList = tierRows[tier];
+                    const currentIdx = tierIndexes[tier];
 
-                console.log('Showing', nearCount, 'near +', farCount, 'far =', nearCount + farCount);
+                    // If this tier has more wines, take the next one
+                    if (currentIdx < tierList.length) {
+                        displayed.push(tierList[currentIdx]);
+                        tierIndexes[tier]++;
+                    }
+
+                    // Move to next tier in rotation
+                    currentTierIdx = (currentTierIdx + 1) % tierOrder.length;
+
+                    // Safety check: if all tiers exhausted, break
+                    if (Object.values(tierIndexes).every((idx, i) => idx >= tierRows[tierOrder[i]].length)) {
+                        break;
+                    }
+                }
+
+                // Show the alternated rows
+                displayed.forEach(row => row.style.display = '');
+
+                console.log('Showing', displayed.length, 'wines alternating through tiers');
 
             } else {
                 // Show only selected tier (top 30)

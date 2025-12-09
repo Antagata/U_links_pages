@@ -6842,7 +6842,7 @@
             const tbody = document.getElementById('recTableBody');
             const rows = Array.from(tbody.querySelectorAll('tr'));
 
-            // For "All Tiers", show mixed proportions: 60% Extra Luxury, 10% Luxury, 20% Premium, 5% Mid-range, 5% Budget
+            // For "All Tiers", alternate between tiers: Extra Luxury → Luxury → Premium → Mid-range → Budget → repeat
             if (selectedTier === 'all') {
                 // Get all rows by tier
                 const tierRows = {
@@ -6853,30 +6853,47 @@
                     'Budget': rows.filter(r => r.getAttribute('data-tier') === 'Budget')
                 };
 
-                // Calculate mix (total 30 wines)
-                const mix = {
-                    'Extra Luxury': Math.floor(30 * 0.60),  // 18 wines
-                    'Luxury': Math.floor(30 * 0.10),        // 3 wines
-                    'Premium': Math.floor(30 * 0.20),       // 6 wines
-                    'Mid-range': Math.floor(30 * 0.05),     // 1 wine
-                    'Budget': Math.floor(30 * 0.05)         // 1 wine (total 29, will show 1 more from Extra Luxury)
+                // Tier rotation order
+                const tierOrder = ['Extra Luxury', 'Luxury', 'Premium', 'Mid-range', 'Budget'];
+
+                // Track current index for each tier
+                const tierIndexes = {
+                    'Extra Luxury': 0,
+                    'Luxury': 0,
+                    'Premium': 0,
+                    'Mid-range': 0,
+                    'Budget': 0
                 };
 
                 // Hide all rows first
                 rows.forEach(row => row.style.display = 'none');
 
-                // Show selected number from each tier
-                Object.keys(tierRows).forEach(tier => {
-                    const count = mix[tier] || 0;
-                    tierRows[tier].slice(0, count).forEach(row => row.style.display = '');
-                });
+                // Alternate between tiers to show 30 items
+                const displayed = [];
+                let currentTierIdx = 0;
 
-                // Fill remaining to reach 30 (extra from Extra Luxury)
-                const showing = rows.filter(r => r.style.display !== 'none').length;
-                if (showing < 30 && tierRows['Extra Luxury'].length > mix['Extra Luxury']) {
-                    tierRows['Extra Luxury'].slice(mix['Extra Luxury'], mix['Extra Luxury'] + (30 - showing))
-                        .forEach(row => row.style.display = '');
+                while (displayed.length < 30) {
+                    const tier = tierOrder[currentTierIdx];
+                    const tierList = tierRows[tier];
+                    const currentIdx = tierIndexes[tier];
+
+                    // If this tier has more wines, take the next one
+                    if (currentIdx < tierList.length) {
+                        displayed.push(tierList[currentIdx]);
+                        tierIndexes[tier]++;
+                    }
+
+                    // Move to next tier in rotation
+                    currentTierIdx = (currentTierIdx + 1) % tierOrder.length;
+
+                    // Safety check: if all tiers exhausted, break
+                    if (Object.values(tierIndexes).every((idx, i) => idx >= tierRows[tierOrder[i]].length)) {
+                        break;
+                    }
                 }
+
+                // Show the alternated rows
+                displayed.forEach(row => row.style.display = '');
             } else {
                 // Show only selected tier (top 30)
                 let count = 0;

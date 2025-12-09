@@ -370,13 +370,14 @@
         <div class="header">
             <h1>Campaign<br>Analytics</h1>
             <p class="subtitle">Weekly Insights & Distribution</p>
-            <p class="timestamp">Last Updated: December 04, 2025 — 08:50</p>
+            <p class="timestamp">Last Updated: December 09, 2025 — 08:41</p>
         </div>
 
         <!-- Week Selector -->
         <div class="week-selector">
             <label for="weekSelect">Select Week</label>
             <select id="weekSelect" onchange="updateCharts()">
+                <option value="2025-W50">Week 50, 2025</option>
                 <option value="2025-W49">Week 49, 2025</option>
                 <option value="2025-W48">Week 48, 2025</option>
                 <option value="2025-W47">Week 47, 2025</option>
@@ -561,36 +562,78 @@
         // Data
         const weeklyData = [
         {
-                "week_year": "2025-W49",
-                "week_label": "Week 49, 2025",
-                "avg_vintage": 2015,
+                "week_year": "2025-W50",
+                "week_label": "Week 50, 2025",
+                "avg_vintage": 2021,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 21,
-                        "CHAMPAGNE": 9,
+                        "BORDEAUX": 7,
+                        "LANGUEDOC & ROUSSILL": 2
+                },
+                "types": {
+                        "ST. EMILION": 3,
+                        "MARGAUX": 2
+                },
+                "price_tiers": {
+                        "Premium": 5,
+                        "Budget": 2,
+                        "Extra Luxury": 2
+                },
+                "daily_avg_prices": {
+                        "2025-12-08": 120.71
+                },
+                "horeca_count": 1,
+                "leads_count": 1,
+                "total_unique_campaigns": 7,
+                "total_unique_items": 17
+        },
+        {
+                "week_year": "2025-W49",
+                "week_label": "Week 49, 2025",
+                "avg_vintage": 2020,
+                "top_region": "BORDEAUX",
+                "regions": {
+                        "BORDEAUX": 54,
+                        "CHAMPAGNE": 15,
+                        "CASTILLA Y\u00a0LEON": 11,
+                        "TUSCANY": 5,
+                        "CALIFORNIA": 2,
                         "RHONE": 1
                 },
                 "types": {
-                        "CHAMPAGNE": 9,
-                        "PAUILLAC": 9,
-                        "ST. EMILION": 6,
-                        "ST. ESTEPHE": 6,
+                        "PAUILLAC": 17,
+                        "CHAMPAGNE": 15,
+                        "SARDON DE DUERO": 11,
+                        "ST. ESTEPHE": 10,
+                        "ST. EMILION": 10,
+                        "POMEROL": 9,
+                        "BOLGHERI": 5,
+                        "BORDEAUX BLANC": 4,
+                        "MARGAUX": 2,
+                        "GRAVES, PESSAC-L\u00c9OGN": 2,
+                        "NAPA VALLEY": 2,
                         "HERMITAGE": 1
                 },
                 "price_tiers": {
-                        "Premium": 15,
-                        "Luxury": 10,
-                        "Budget": 6
+                        "Premium": 31,
+                        "Extra Luxury": 19,
+                        "Luxury": 17,
+                        "Budget": 13,
+                        "Mid-range": 8
                 },
                 "daily_avg_prices": {
                         "2025-12-01": 387.5,
                         "2025-12-02": 154.67,
-                        "2025-12-03": 203.43
+                        "2025-12-03": 203.43,
+                        "2025-12-04": 428.9,
+                        "2025-12-05": 1047.11,
+                        "2025-12-06": 387.75,
+                        "2025-12-07": 1338.0
                 },
                 "horeca_count": 1,
-                "leads_count": 1,
-                "total_unique_campaigns": 16,
-                "total_unique_items": 15
+                "leads_count": 3,
+                "total_unique_campaigns": 58,
+                "total_unique_items": 74
         },
         {
                 "week_year": "2025-W48",
@@ -598,7 +641,7 @@
                 "avg_vintage": 2021,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 42,
+                        "BORDEAUX": 40,
                         "TUSCANY": 22,
                         "CHAMPAGNE": 20,
                         "CASTILLA Y\u00a0LEON": 19,
@@ -613,8 +656,8 @@
                 },
                 "types": {
                         "RIBERA DEL DUERO": 17,
-                        "ST. EMILION": 14,
                         "CHAMPAGNE": 13,
+                        "ST. EMILION": 12,
                         "MARGAUX": 8,
                         "C\u00d4TE DE NUITS": 6,
                         "VALDARNO": 6,
@@ -640,7 +683,7 @@
                         "SUVERETO": 1
                 },
                 "price_tiers": {
-                        "Premium": 47,
+                        "Premium": 45,
                         "Mid-range": 30,
                         "Budget": 26,
                         "Extra Luxury": 9,
@@ -648,16 +691,16 @@
                 },
                 "daily_avg_prices": {
                         "2025-11-24": 141.67,
-                        "2025-11-25": 178.09,
+                        "2025-11-25": 161.0,
                         "2025-11-26": 225.0,
                         "2025-11-27": 234.32,
                         "2025-11-28": 188.97,
                         "2025-11-29": 252.5,
                         "2025-11-30": 2848.67
                 },
-                "horeca_count": 5,
+                "horeca_count": 6,
                 "leads_count": 64,
-                "total_unique_campaigns": 150,
+                "total_unique_campaigns": 151,
                 "total_unique_items": 117
         },
         {
@@ -844,7 +887,7 @@
                 "top_region": "TUSCANY",
                 "regions": {
                         "TUSCANY": 33,
-                        "BORDEAUX": 33,
+                        "BORDEAUX": 31,
                         "CASTILLA Y\u00a0LEON": 24,
                         "SOUTH AUSTRALIA": 12,
                         "PIEDMONT": 10,
@@ -859,9 +902,9 @@
                         "BOLGHERI": 24,
                         "RIBERA DEL DUERO": 23,
                         "BAROSSA VALLEY": 12,
-                        "ST. ESTEPHE": 11,
                         "ST. EMILION": 11,
                         "BAROLO": 10,
+                        "ST. ESTEPHE": 9,
                         "GRAVES, PESSAC-L\u00c9OGN": 8,
                         "TUSCANY": 7,
                         "OPORTO": 4,
@@ -875,8 +918,8 @@
                         "BIERZO": 1
                 },
                 "price_tiers": {
-                        "Premium": 34,
-                        "Mid-range": 31,
+                        "Premium": 33,
+                        "Mid-range": 30,
                         "Luxury": 28,
                         "Budget": 28,
                         "Extra Luxury": 6
@@ -884,13 +927,13 @@
                 "daily_avg_prices": {
                         "2025-10-27": 75.0,
                         "2025-10-28": 185.86,
-                        "2025-10-29": 220.67,
+                        "2025-10-29": 231.64,
                         "2025-10-30": 340.82,
                         "2025-10-31": 114.69,
                         "2025-11-01": 305.4,
                         "2025-11-02": 101.5
                 },
-                "horeca_count": 4,
+                "horeca_count": 5,
                 "leads_count": 9,
                 "total_unique_campaigns": 53,
                 "total_unique_items": 80
@@ -958,17 +1001,17 @@
                 "avg_vintage": 2011,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 24,
+                        "BORDEAUX": 23,
                         "CASTILLA Y\u00a0LEON": 21,
                         "TUSCANY": 15,
-                        "CALIFORNIA": 14,
+                        "CALIFORNIA": 12,
                         "BURGUNDY": 10,
                         "TRENTINO/ALTO ADIGE": 7,
                         "CHAMPAGNE": 4
                 },
                 "types": {
                         "RIBERA DEL DUERO": 21,
-                        "NAPA VALLEY": 14,
+                        "NAPA VALLEY": 12,
                         "S\u00dcDTIROL ALTO ADIGE": 7,
                         "PAUILLAC": 6,
                         "VALDARNO": 6,
@@ -981,14 +1024,14 @@
                         "MARGAUX": 4,
                         "CHIANTI CLASSICO": 2,
                         "TUSCANY": 2,
-                        "GRAVES, PESSAC-L\u00c9OGN": 2,
                         "COTES DE FRANCS": 2,
-                        "SUVERETO": 1
+                        "SUVERETO": 1,
+                        "GRAVES, PESSAC-L\u00c9OGN": 1
                 },
                 "price_tiers": {
                         "Budget": 34,
-                        "Premium": 23,
-                        "Extra Luxury": 19,
+                        "Premium": 21,
+                        "Extra Luxury": 18,
                         "Mid-range": 12,
                         "Luxury": 7
                 },
@@ -998,12 +1041,12 @@
                         "2025-10-15": 6690.19,
                         "2025-10-16": 241.27,
                         "2025-10-17": 130.06,
-                        "2025-10-18": 269.7,
+                        "2025-10-18": 275.25,
                         "2025-10-19": 101.5
                 },
-                "horeca_count": 1,
+                "horeca_count": 3,
                 "leads_count": 12,
-                "total_unique_campaigns": 51,
+                "total_unique_campaigns": 53,
                 "total_unique_items": 78
         },
         {
@@ -1012,7 +1055,7 @@
                 "avg_vintage": null,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 36,
+                        "BORDEAUX": 33,
                         "TUSCANY": 8,
                         "CATALONIA": 6,
                         "CALIFORNIA": 5,
@@ -1021,13 +1064,13 @@
                 },
                 "types": {
                         "ST. JULIEN": 13,
-                        "SAUTERNES": 8,
                         "ST. EMILION": 6,
                         "PRIORAT": 6,
+                        "SAUTERNES": 6,
                         "NAPA VALLEY": 5,
                         "MAREMMA": 5,
-                        "GRAVES, PESSAC-L\u00c9OGN": 4,
                         "TUSCANY": 3,
+                        "GRAVES, PESSAC-L\u00c9OGN": 3,
                         "C\u00d4TE DE NUITS": 2,
                         "ST. ESTEPHE": 2,
                         "PAUILLAC": 2,
@@ -1035,8 +1078,8 @@
                         "VIN DE TABLE ROUGE": 1
                 },
                 "price_tiers": {
-                        "Extra Luxury": 23,
-                        "Budget": 17,
+                        "Extra Luxury": 22,
+                        "Budget": 15,
                         "Mid-range": 10,
                         "Premium": 7,
                         "Luxury": 2
@@ -1046,13 +1089,13 @@
                         "2025-10-07": 339.73,
                         "2025-10-08": 184.0,
                         "2025-10-09": 119.5,
-                        "2025-10-10": 71.43,
+                        "2025-10-10": 82.4,
                         "2025-10-11": 4256.33,
                         "2025-10-12": 1324.0
                 },
-                "horeca_count": 3,
+                "horeca_count": 5,
                 "leads_count": 8,
-                "total_unique_campaigns": 32,
+                "total_unique_campaigns": 34,
                 "total_unique_items": 55
         },
         {
@@ -1061,7 +1104,7 @@
                 "avg_vintage": 2017,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 41,
+                        "BORDEAUX": 37,
                         "CHAMPAGNE": 15,
                         "MADRID": 13,
                         "RHONE": 9,
@@ -1072,7 +1115,7 @@
                         "MOSEL": 1
                 },
                 "types": {
-                        "ST. EMILION": 24,
+                        "ST. EMILION": 20,
                         "CHAMPAGNE": 15,
                         "MADRID": 13,
                         "POMEROL": 8,
@@ -1089,23 +1132,23 @@
                         "MOSEL": 1
                 },
                 "price_tiers": {
-                        "Premium": 53,
+                        "Premium": 49,
                         "Luxury": 26,
                         "Extra Luxury": 13,
                         "Budget": 2
                 },
                 "daily_avg_prices": {
                         "2025-09-29": 179.0,
-                        "2025-09-30": 197.6,
+                        "2025-09-30": 210.0,
                         "2025-10-01": 464.0,
                         "2025-10-02": 246.96,
-                        "2025-10-03": 152.62,
+                        "2025-10-03": 147.82,
                         "2025-10-04": 730.0,
                         "2025-10-05": 517.5
                 },
-                "horeca_count": 1,
+                "horeca_count": 2,
                 "leads_count": 3,
-                "total_unique_campaigns": 49,
+                "total_unique_campaigns": 51,
                 "total_unique_items": 89
         },
         {
@@ -1114,7 +1157,7 @@
                 "avg_vintage": 2012,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 41,
+                        "BORDEAUX": 40,
                         "CHAMPAGNE": 16,
                         "TUSCANY": 11,
                         "CALIFORNIA": 6,
@@ -1125,7 +1168,7 @@
                         "PAUILLAC": 13,
                         "CHAMPAGNE": 12,
                         "TUSCANY": 11,
-                        "MARGAUX": 10,
+                        "MARGAUX": 9,
                         "SAUTERNES": 8,
                         "NAPA VALLEY": 6,
                         "C\u00d4TE DE BEAUNE": 5,
@@ -1142,20 +1185,20 @@
                         "Luxury": 16,
                         "Premium": 15,
                         "Budget": 12,
-                        "Mid-range": 8
+                        "Mid-range": 7
                 },
                 "daily_avg_prices": {
                         "2025-09-22": 191.44,
                         "2025-09-23": 599.24,
                         "2025-09-24": 44.0,
-                        "2025-09-25": 537.5,
+                        "2025-09-25": 590.33,
                         "2025-09-26": 1376.43,
                         "2025-09-27": 4865.0,
                         "2025-09-28": 1550.0
                 },
-                "horeca_count": 126,
+                "horeca_count": 127,
                 "leads_count": 9,
-                "total_unique_campaigns": 167,
+                "total_unique_campaigns": 168,
                 "total_unique_items": 205
         },
         {
@@ -1168,13 +1211,11 @@
                         "BORDEAUX": 55,
                         "TUSCANY": 20,
                         "CASTILLA Y\u00a0LEON": 14,
-                        "CHAMPAGNE": 12,
+                        "CHAMPAGNE": 11,
                         "BURGUNDY": 9,
                         "PIEDMONT": 7,
                         "CALIFORNIA": 6,
-                        "RIOJA": 4,
-                        "COLCHAGUA VALLEY": 1,
-                        "CENTRAL VALLEY": 1
+                        "RIOJA": 4
                 },
                 "types": {
                         "MENDOZA": 75,
@@ -1187,36 +1228,35 @@
                         "BARBARESCO": 7,
                         "RIOJA": 7,
                         "MONTAGNE DE REIMS": 6,
-                        "CHAMPAGNE": 5,
+                        "CHAMPAGNE": 4,
                         "PAUILLAC": 4,
                         "NAPA VALLEY": 4,
                         "MARGAUX": 3,
                         "GRAVES, PESSAC-L\u00c9OGN": 3,
                         "HAUT M\u00c9DOC": 2,
-                        "COLCHAGUA VALLEY": 2,
                         "CENTRAL COAST": 2,
                         "ST. JULIEN": 1,
                         "C\u00d4TE DES BLANCS": 1
                 },
                 "price_tiers": {
-                        "Premium": 94,
-                        "Mid-range": 52,
+                        "Premium": 93,
+                        "Mid-range": 51,
                         "Luxury": 37,
-                        "Budget": 11,
-                        "Extra Luxury": 10
+                        "Extra Luxury": 10,
+                        "Budget": 10
                 },
                 "daily_avg_prices": {
                         "2025-09-15": 2460.42,
                         "2025-09-16": 94.54,
                         "2025-09-17": 4162.0,
-                        "2025-09-18": 684.36,
-                        "2025-09-19": 170.35,
+                        "2025-09-18": 738.39,
+                        "2025-09-19": 170.63,
                         "2025-09-20": 450.0,
                         "2025-09-21": 196.75
                 },
-                "horeca_count": 4,
+                "horeca_count": 7,
                 "leads_count": 14,
-                "total_unique_campaigns": 68,
+                "total_unique_campaigns": 69,
                 "total_unique_items": 122
         },
         {
@@ -1225,7 +1265,7 @@
                 "avg_vintage": null,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 73,
+                        "BORDEAUX": 70,
                         "SOUTH AUSTRALIA": 60,
                         "TUSCANY": 29,
                         "CHAMPAGNE": 4,
@@ -1235,7 +1275,7 @@
                 },
                 "types": {
                         "BAROSSA VALLEY": 60,
-                        "HAUT M\u00c9DOC": 34,
+                        "HAUT M\u00c9DOC": 31,
                         "TUSCANY": 23,
                         "PAUILLAC": 21,
                         "ST. EMILION": 8,
@@ -1250,23 +1290,23 @@
                 },
                 "price_tiers": {
                         "Luxury": 69,
-                        "Budget": 57,
+                        "Budget": 54,
                         "Extra Luxury": 20,
                         "Premium": 14,
                         "Mid-range": 12
                 },
                 "daily_avg_prices": {
                         "2025-09-08": 377.22,
-                        "2025-09-09": 155.72,
+                        "2025-09-09": 184.87,
                         "2025-09-10": 157.43,
                         "2025-09-11": 112.8,
                         "2025-09-12": 338.88,
                         "2025-09-13": 1560.0,
                         "2025-09-14": 1884.86
                 },
-                "horeca_count": 1,
+                "horeca_count": 2,
                 "leads_count": 6,
-                "total_unique_campaigns": 32,
+                "total_unique_campaigns": 33,
                 "total_unique_items": 75
         },
         {
@@ -1275,8 +1315,8 @@
                 "avg_vintage": 2020,
                 "top_region": "TUSCANY",
                 "regions": {
-                        "TUSCANY": 98,
-                        "BORDEAUX": 43,
+                        "TUSCANY": 93,
+                        "BORDEAUX": 38,
                         "CHAMPAGNE": 18,
                         "MAIPO VALLEY": 15,
                         "CALIFORNIA": 11,
@@ -1288,45 +1328,45 @@
                 },
                 "types": {
                         "TUSCANY": 38,
-                        "BOLGHERI": 34,
-                        "VALDARNO": 26,
+                        "BOLGHERI": 31,
+                        "VALDARNO": 24,
                         "CHAMPAGNE": 18,
                         "PUENTE ALTO": 15,
                         "BORDEAUX": 15,
                         "NAPA VALLEY": 11,
                         "ACONCAGUA VALLEY": 10,
                         "ST. EMILION": 10,
-                        "MARGAUX": 6,
                         "MARGARET RIVER": 5,
                         "BARBARESCO": 4,
                         "GRAVES, PESSAC-L\u00c9OGN": 4,
-                        "ST. ESTEPHE": 4,
+                        "MARGAUX": 3,
                         "PAUILLAC": 3,
                         "BAROLO": 2,
+                        "ST. ESTEPHE": 2,
                         "C\u00d4TE DE BEAUNE": 1,
                         "C\u00d4TE DE NUITS": 1,
                         "POMEROL": 1,
                         "BIERZO": 1
                 },
                 "price_tiers": {
-                        "Premium": 72,
-                        "Mid-range": 52,
+                        "Premium": 69,
+                        "Mid-range": 45,
                         "Luxury": 43,
                         "Extra Luxury": 37,
                         "Budget": 5
                 },
                 "daily_avg_prices": {
                         "2025-09-01": 926.83,
-                        "2025-09-02": 246.56,
-                        "2025-09-03": 471.77,
-                        "2025-09-04": 366.41,
+                        "2025-09-02": 264.67,
+                        "2025-09-03": 497.41,
+                        "2025-09-04": 383.25,
                         "2025-09-05": 113.8,
-                        "2025-09-06": 255.06,
+                        "2025-09-06": 281.71,
                         "2025-09-07": 635.0
                 },
-                "horeca_count": 0,
+                "horeca_count": 4,
                 "leads_count": 6,
-                "total_unique_campaigns": 50,
+                "total_unique_campaigns": 52,
                 "total_unique_items": 105
         },
         {
@@ -1382,7 +1422,7 @@
                 "regions": {
                         "BORDEAUX": 31,
                         "CASTILLA Y\u00a0LEON": 28,
-                        "TUSCANY": 11,
+                        "TUSCANY": 9,
                         "CHAMPAGNE": 8,
                         "TICINO": 7,
                         "SICILY": 6,
@@ -1396,27 +1436,26 @@
                         "POMEROL": 14,
                         "BIERZO": 12,
                         "ST. EMILION": 8,
-                        "MENDRISIOTTO": 7,
                         "CHAMPAGNE": 7,
+                        "MENDRISIOTTO": 7,
                         "NOTO": 6,
                         "TUSCANY": 4,
+                        "C\u00d4TE DE NUITS": 3,
                         "HAUT M\u00c9DOC": 3,
                         "BAROLO": 3,
-                        "C\u00d4TE DE NUITS": 3,
                         "BORDEAUX BLANC": 2,
                         "BOLGHERI": 2,
                         "GRAVES, PESSAC-L\u00c9OGN": 2,
                         "HERMITAGE": 2,
-                        "VALDARNO": 2,
                         "NAPA VALLEY": 2,
                         "CHATEAUNEUF-DU-PAPE": 2,
                         "CHIANTI CLASSICO GRA": 2,
                         "PAUILLAC": 1,
-                        "C\u00d4TE DES BLANCS": 1,
-                        "CHIANTI CLASSICO": 1
+                        "CHIANTI CLASSICO": 1,
+                        "C\u00d4TE DES BLANCS": 1
                 },
                 "price_tiers": {
-                        "Budget": 48,
+                        "Budget": 46,
                         "Extra Luxury": 15,
                         "Luxury": 15,
                         "Premium": 14,
@@ -1424,14 +1463,14 @@
                 },
                 "daily_avg_prices": {
                         "2025-08-18": 313.9,
-                        "2025-08-19": 157.59,
+                        "2025-08-19": 172.67,
                         "2025-08-20": 245.93,
                         "2025-08-21": 370.14,
                         "2025-08-22": 245.82,
                         "2025-08-23": 224.62,
                         "2025-08-24": 2158.75
                 },
-                "horeca_count": 0,
+                "horeca_count": 1,
                 "leads_count": 6,
                 "total_unique_campaigns": 41,
                 "total_unique_items": 74
@@ -1444,15 +1483,15 @@
                 "regions": {
                         "TUSCANY": 29,
                         "BORDEAUX": 25,
-                        "CASTILLA Y\u00a0LEON": 22,
+                        "CASTILLA Y\u00a0LEON": 20,
                         "CHAMPAGNE": 13,
                         "PIEDMONT": 5
                 },
                 "types": {
                         "TUSCANY": 15,
                         "BIERZO": 12,
-                        "RIBERA DEL DUERO": 10,
                         "MAREMMA TOSCANA": 9,
+                        "RIBERA DEL DUERO": 8,
                         "VALL\u00c9E DE LA MARNE": 7,
                         "ST. EMILION": 7,
                         "MARGAUX": 6,
@@ -1468,13 +1507,13 @@
                 },
                 "price_tiers": {
                         "Budget": 38,
-                        "Premium": 26,
+                        "Premium": 24,
                         "Mid-range": 12,
                         "Extra Luxury": 10,
                         "Luxury": 8
                 },
                 "daily_avg_prices": {
-                        "2025-08-11": 71.5,
+                        "2025-08-11": 56.17,
                         "2025-08-12": 26.55,
                         "2025-08-13": 131.0,
                         "2025-08-14": 143.93,
@@ -1482,9 +1521,9 @@
                         "2025-08-16": 249.86,
                         "2025-08-17": 1552.14
                 },
-                "horeca_count": 0,
+                "horeca_count": 1,
                 "leads_count": 4,
-                "total_unique_campaigns": 33,
+                "total_unique_campaigns": 34,
                 "total_unique_items": 66
         },
         {
@@ -1496,7 +1535,7 @@
                         "BORDEAUX": 24,
                         "BURGUNDY": 17,
                         "TUSCANY": 17,
-                        "CASTILLA Y\u00a0LEON": 14,
+                        "CASTILLA Y\u00a0LEON": 12,
                         "CHAMPAGNE": 4,
                         "PIEDMONT": 2,
                         "CALIFORNIA": 1,
@@ -1505,7 +1544,7 @@
                 "types": {
                         "GRAVES, PESSAC-L\u00c9OGN": 14,
                         "C\u00d4TE DE BEAUNE": 13,
-                        "RIBERA DEL DUERO": 10,
+                        "RIBERA DEL DUERO": 8,
                         "TUSCANY": 5,
                         "ST. EMILION": 4,
                         "BOLGHERI": 4,
@@ -1524,8 +1563,8 @@
                 "price_tiers": {
                         "Mid-range": 25,
                         "Premium": 20,
-                        "Luxury": 14,
                         "Budget": 13,
+                        "Luxury": 12,
                         "Extra Luxury": 8
                 },
                 "daily_avg_prices": {
@@ -1534,12 +1573,12 @@
                         "2025-08-06": 83.08,
                         "2025-08-07": 507.06,
                         "2025-08-08": 69.71,
-                        "2025-08-09": 118.24,
+                        "2025-08-09": 93.33,
                         "2025-08-10": 200.0
                 },
-                "horeca_count": 2,
+                "horeca_count": 3,
                 "leads_count": 3,
-                "total_unique_campaigns": 48,
+                "total_unique_campaigns": 49,
                 "total_unique_items": 87
         },
         {
@@ -1548,7 +1587,7 @@
                 "avg_vintage": 2015,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 39,
+                        "BORDEAUX": 35,
                         "CHAMPAGNE": 19,
                         "TUSCANY": 18,
                         "TICINO": 4,
@@ -1561,11 +1600,11 @@
                         "CALIFORNIA": 1
                 },
                 "types": {
-                        "HAUT M\u00c9DOC": 12,
                         "CHAMPAGNE": 10,
                         "VALDARNO": 10,
                         "REIMS": 9,
                         "ST. EMILION": 8,
+                        "HAUT M\u00c9DOC": 8,
                         "MARGAUX": 6,
                         "UMBRIA": 4,
                         "PAUILLAC": 4,
@@ -1585,7 +1624,7 @@
                 },
                 "price_tiers": {
                         "Mid-range": 31,
-                        "Budget": 28,
+                        "Budget": 24,
                         "Premium": 14,
                         "Extra Luxury": 12,
                         "Luxury": 9
@@ -1594,14 +1633,14 @@
                         "2025-07-28": 110.29,
                         "2025-07-29": 162.56,
                         "2025-07-30": 197.24,
-                        "2025-07-31": 74.56,
+                        "2025-07-31": 87.14,
                         "2025-08-01": 173.56,
                         "2025-08-02": 508.6,
                         "2025-08-03": 956.25
                 },
-                "horeca_count": 0,
+                "horeca_count": 1,
                 "leads_count": 7,
-                "total_unique_campaigns": 49,
+                "total_unique_campaigns": 50,
                 "total_unique_items": 83
         },
         {
@@ -1610,7 +1649,7 @@
                 "avg_vintage": null,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 46,
+                        "BORDEAUX": 44,
                         "TUSCANY": 23,
                         "CHAMPAGNE": 18,
                         "LOMBARDY": 8,
@@ -1626,12 +1665,12 @@
                         "CHIANTI": 9,
                         "FRANCIACORTA": 8,
                         "VALL\u00c9E DE LA MARNE": 6,
-                        "POMEROL": 4,
                         "SAUTERNES": 4,
                         "C\u00d4TES DE PROVENCE": 4,
                         "NAPA VALLEY": 3,
                         "TUSCANY": 3,
                         "C\u00d4TE DE NUITS": 2,
+                        "POMEROL": 2,
                         "ST. ESTEPHE": 2,
                         "ST. JULIEN": 1
                 },
@@ -1640,20 +1679,20 @@
                         "Premium": 26,
                         "Mid-range": 25,
                         "Luxury": 17,
-                        "Extra Luxury": 7
+                        "Extra Luxury": 5
                 },
                 "daily_avg_prices": {
                         "2025-07-21": 291.12,
                         "2025-07-22": 374.8,
                         "2025-07-23": 440.17,
                         "2025-07-24": 205.91,
-                        "2025-07-25": 569.33,
+                        "2025-07-25": 50.7,
                         "2025-07-26": 208.57,
                         "2025-07-27": 2991.67
                 },
-                "horeca_count": 0,
+                "horeca_count": 1,
                 "leads_count": 4,
-                "total_unique_campaigns": 40,
+                "total_unique_campaigns": 41,
                 "total_unique_items": 69
         },
         {
@@ -1663,7 +1702,7 @@
                 "top_region": "BORDEAUX",
                 "regions": {
                         "BORDEAUX": 33,
-                        "TUSCANY": 26,
+                        "TUSCANY": 24,
                         "CHAMPAGNE": 21,
                         "MENDOZA": 16,
                         "CASTILLA Y\u00a0LEON": 12,
@@ -1674,7 +1713,7 @@
                         "BURGUNDY": 3
                 },
                 "types": {
-                        "BOLGHERI": 23,
+                        "BOLGHERI": 21,
                         "CHAMPAGNE": 18,
                         "MENDOZA": 16,
                         "RIBERA DEL DUERO": 12,
@@ -1698,20 +1737,20 @@
                         "Premium": 39,
                         "Extra Luxury": 19,
                         "Budget": 18,
-                        "Luxury": 9
+                        "Luxury": 7
                 },
                 "daily_avg_prices": {
                         "2025-07-14": 471.42,
-                        "2025-07-15": 187.94,
+                        "2025-07-15": 171.0,
                         "2025-07-16": 491.0,
                         "2025-07-17": 110.06,
                         "2025-07-18": 56.08,
                         "2025-07-19": 105.47,
                         "2025-07-20": 446.71
                 },
-                "horeca_count": 0,
+                "horeca_count": 1,
                 "leads_count": 4,
-                "total_unique_campaigns": 46,
+                "total_unique_campaigns": 47,
                 "total_unique_items": 79
         },
         {
@@ -1773,18 +1812,19 @@
                 "avg_vintage": 2006,
                 "top_region": "TUSCANY",
                 "regions": {
-                        "TUSCANY": 40,
+                        "TUSCANY": 37,
+                        "BORDEAUX": 16,
                         "CHAMPAGNE": 12,
-                        "BORDEAUX": 10,
                         "BURGUNDY": 5,
                         "TICINO": 4,
                         "CALIFORNIA": 3,
                         "CASTILLA Y\u00a0LEON": 3
                 },
                 "types": {
-                        "TUSCANY": 18,
                         "BOLGHERI": 16,
+                        "TUSCANY": 15,
                         "CHAMPAGNE": 10,
+                        "ST. EMILION": 6,
                         "MARGAUX": 6,
                         "MAREMMA": 6,
                         "MENDRISIOTTO": 4,
@@ -1799,24 +1839,24 @@
                         "POMEROL": 1
                 },
                 "price_tiers": {
-                        "Budget": 18,
+                        "Luxury": 20,
                         "Mid-range": 16,
+                        "Budget": 15,
                         "Extra Luxury": 15,
-                        "Premium": 14,
-                        "Luxury": 14
+                        "Premium": 14
                 },
                 "daily_avg_prices": {
                         "2025-06-30": 56.82,
                         "2025-07-01": 406.7,
                         "2025-07-02": 338.74,
                         "2025-07-03": 1140.91,
-                        "2025-07-04": 196.0,
-                        "2025-07-05": 617.14,
+                        "2025-07-04": 292.46,
+                        "2025-07-05": 1065.75,
                         "2025-07-06": 345.0
                 },
-                "horeca_count": 1,
+                "horeca_count": 2,
                 "leads_count": 6,
-                "total_unique_campaigns": 39,
+                "total_unique_campaigns": 38,
                 "total_unique_items": 59
         },
         {
@@ -1828,7 +1868,7 @@
                         "TUSCANY": 30,
                         "CASTILLA Y\u00a0LEON": 12,
                         "BORDEAUX": 11,
-                        "CHAMPAGNE": 11,
+                        "CHAMPAGNE": 10,
                         "RUEDA": 6,
                         "BURGUNDY": 5,
                         "MARLBOROUGH": 4,
@@ -1841,25 +1881,24 @@
                         "CHIANTI": 8,
                         "RUEDA": 6,
                         "MAREMMA": 6,
-                        "VALL\u00c9E DE LA MARNE": 5,
                         "C\u00d4TE DE NUITS": 5,
+                        "VALL\u00c9E DE LA MARNE": 5,
                         "C\u00d4TE DES BLANCS": 5,
-                        "PAUILLAC": 4,
                         "WAIRAU VALLEY": 4,
+                        "PAUILLAC": 4,
                         "MORELLINO DI SCANSAN": 3,
                         "POMEROL": 3,
                         "BAROLO": 3,
                         "ST. EMILION": 2,
                         "AREZZO": 2,
                         "MONTAGNE-SAINT-EMILI": 1,
-                        "CHAMPAGNE": 1,
                         "GRAVES, PESSAC-L\u00c9OGN": 1,
                         "CHATEAUNEUF-DU-PAPE": 1
                 },
                 "price_tiers": {
                         "Extra Luxury": 26,
                         "Mid-range": 21,
-                        "Budget": 18,
+                        "Budget": 17,
                         "Luxury": 12,
                         "Premium": 6
                 },
@@ -1868,11 +1907,11 @@
                         "2025-06-24": 894.68,
                         "2025-06-25": 572.44,
                         "2025-06-26": 339.93,
-                        "2025-06-27": 1066.0,
+                        "2025-06-27": 1321.0,
                         "2025-06-28": 662.33,
                         "2025-06-29": 257.0
                 },
-                "horeca_count": 0,
+                "horeca_count": 1,
                 "leads_count": 3,
                 "total_unique_campaigns": 39,
                 "total_unique_items": 65
@@ -1885,7 +1924,7 @@
                 "regions": {
                         "TUSCANY": 18,
                         "CHAMPAGNE": 15,
-                        "BORDEAUX": 12,
+                        "BORDEAUX": 15,
                         "CASTILLA Y\u00a0LEON": 8,
                         "COLCHAGUA VALLEY": 8,
                         "TICINO": 6,
@@ -1897,9 +1936,9 @@
                 },
                 "types": {
                         "BOLGHERI": 12,
+                        "PAUILLAC": 9,
                         "RIBERA DEL DUERO": 8,
                         "COLCHAGUA VALLEY": 8,
-                        "PAUILLAC": 6,
                         "TRE VALLI": 6,
                         "MONTAGNE DE REIMS": 6,
                         "NAPA VALLEY": 5,
@@ -1916,8 +1955,8 @@
                 },
                 "price_tiers": {
                         "Premium": 31,
-                        "Mid-range": 20,
-                        "Budget": 12,
+                        "Mid-range": 21,
+                        "Budget": 14,
                         "Luxury": 11,
                         "Extra Luxury": 7
                 },
@@ -1927,10 +1966,10 @@
                         "2025-06-18": 235.7,
                         "2025-06-19": 172.57,
                         "2025-06-20": 2192.29,
-                        "2025-06-21": 170.0,
+                        "2025-06-21": 124.75,
                         "2025-06-22": 224.8
                 },
-                "horeca_count": 3,
+                "horeca_count": 2,
                 "leads_count": 7,
                 "total_unique_campaigns": 44,
                 "total_unique_items": 82
@@ -1939,10 +1978,10 @@
                 "week_year": "2025-W24",
                 "week_label": "Week 24, 2025",
                 "avg_vintage": 2018,
-                "top_region": "BORDEAUX",
+                "top_region": "TUSCANY",
                 "regions": {
-                        "BORDEAUX": 42,
                         "TUSCANY": 40,
+                        "BORDEAUX": 37,
                         "CHAMPAGNE": 19,
                         "CASTILLA Y\u00a0LEON": 11,
                         "PROVENCE": 8,
@@ -1961,41 +2000,41 @@
                         "SARDON DE DUERO": 11,
                         "C\u00d4TES DE PROVENCE": 8,
                         "BORDEAUX BLANC": 8,
-                        "PAUILLAC": 7,
                         "VIGNETI DELLE DOLOMI": 6,
-                        "MARGAUX": 5,
                         "NAPA VALLEY": 5,
+                        "PAUILLAC": 5,
                         "POMEROL": 4,
                         "UMBRIA": 4,
                         "RIOJA": 4,
-                        "GRAVES, PESSAC-L\u00c9OGN": 3,
                         "ST. ESTEPHE": 3,
                         "LANGHE": 3,
+                        "GRAVES, PESSAC-L\u00c9OGN": 3,
                         "C\u00d4TE DES BLANCS": 3,
                         "C\u00d4TE DE NUITS": 2,
                         "CHIANTI CLASSICO": 2,
+                        "MARGAUX": 2,
                         "BLANCS/REIMS": 1,
                         "C\u00d4TE DE BEAUNE": 1
                 },
                 "price_tiers": {
                         "Extra Luxury": 37,
                         "Mid-range": 30,
-                        "Budget": 29,
-                        "Premium": 26,
+                        "Budget": 26,
+                        "Premium": 24,
                         "Luxury": 23
                 },
                 "daily_avg_prices": {
                         "2025-06-09": 153.16,
                         "2025-06-10": 1119.08,
-                        "2025-06-11": 351.18,
+                        "2025-06-11": 375.47,
                         "2025-06-12": 214.9,
-                        "2025-06-13": 748.15,
+                        "2025-06-13": 875.94,
                         "2025-06-14": 428.37,
                         "2025-06-15": 613.42
                 },
-                "horeca_count": 0,
+                "horeca_count": 2,
                 "leads_count": 2,
-                "total_unique_campaigns": 52,
+                "total_unique_campaigns": 53,
                 "total_unique_items": 84
         },
         {
@@ -2371,7 +2410,7 @@
                 "avg_vintage": 2019,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 32,
+                        "BORDEAUX": 34,
                         "CASTILLA Y\u00a0LEON": 31,
                         "CHAMPAGNE": 16,
                         "TUSCANY": 16,
@@ -2389,10 +2428,11 @@
                         "ST. EMILION": 6,
                         "ST. ESTEPHE": 4,
                         "VALL\u00c9E DE LA MARNE": 3,
-                        "JUMILLA": 2
+                        "JUMILLA": 2,
+                        "ST. JULIEN": 2
                 },
                 "price_tiers": {
-                        "Budget": 28,
+                        "Budget": 30,
                         "Premium": 24,
                         "Extra Luxury": 22,
                         "Luxury": 16,
@@ -2400,14 +2440,14 @@
                 },
                 "daily_avg_prices": {
                         "2025-04-14": 520.5,
-                        "2025-04-15": 2786.08,
+                        "2025-04-15": 2419.2,
                         "2025-04-16": 262.67,
                         "2025-04-17": 415.77,
                         "2025-04-18": 212.64,
                         "2025-04-19": 2962.92,
                         "2025-04-20": 212.81
                 },
-                "horeca_count": 6,
+                "horeca_count": 5,
                 "leads_count": 5,
                 "total_unique_campaigns": 49,
                 "total_unique_items": 87
@@ -3248,18 +3288,17 @@
                         "BURGUNDY": 19,
                         "TUSCANY": 18,
                         "CHAMPAGNE": 16,
-                        "PIEDMONT": 16,
+                        "PIEDMONT": 8,
                         "CALIFORNIA": 2,
                         "CASTILLA Y\u00a0LEON": 2
                 },
                 "types": {
                         "C\u00d4TE DE NUITS": 18,
                         "CHAMPAGNE": 16,
-                        "BARBARESCO": 12,
                         "VALDARNO": 10,
                         "ST. EMILION": 8,
+                        "BARBARESCO": 6,
                         "BOLGHERI": 5,
-                        "BAROLO": 4,
                         "SAUTERNES": 4,
                         "GRAVES, PESSAC-L\u00c9OGN": 3,
                         "TUSCANY": 3,
@@ -3267,13 +3306,14 @@
                         "NAPA VALLEY": 2,
                         "RIBERA DEL DUERO": 2,
                         "ST. ESTEPHE": 2,
+                        "BAROLO": 2,
                         "POMEROL": 1,
                         "C\u00d4TE DE BEAUNE": 1
                 },
                 "price_tiers": {
                         "Extra Luxury": 31,
-                        "Premium": 23,
-                        "Luxury": 20,
+                        "Luxury": 19,
+                        "Premium": 16,
                         "Mid-range": 12,
                         "Budget": 7
                 },
@@ -3281,14 +3321,14 @@
                         "2024-12-09": 641.5,
                         "2024-12-10": 209.61,
                         "2024-12-11": 6396.22,
-                        "2024-12-12": 222.34,
+                        "2024-12-12": 205.91,
                         "2024-12-13": 54.21,
                         "2024-12-14": 439.28,
                         "2024-12-15": 2329.99
                 },
-                "horeca_count": 2,
+                "horeca_count": 10,
                 "leads_count": 21,
-                "total_unique_campaigns": 82,
+                "total_unique_campaigns": 90,
                 "total_unique_items": 94
         },
         {
@@ -3297,9 +3337,9 @@
                 "avg_vintage": 2016,
                 "top_region": "CALIFORNIA",
                 "regions": {
-                        "CALIFORNIA": 53,
-                        "BORDEAUX": 37,
+                        "CALIFORNIA": 51,
                         "TUSCANY": 36,
+                        "BORDEAUX": 36,
                         "CHAMPAGNE": 30,
                         "CASTILLA Y\u00a0LEON": 10,
                         "CATALONIA": 4,
@@ -3316,7 +3356,7 @@
                         "TRENTINO/ALTO ADIGE": 1
                 },
                 "types": {
-                        "NAPA VALLEY": 53,
+                        "NAPA VALLEY": 51,
                         "CHAMPAGNE": 23,
                         "TUSCANY": 13,
                         "ST. EMILION": 12,
@@ -3325,55 +3365,55 @@
                         "PAUILLAC": 7,
                         "BOLGHERI": 6,
                         "GRAVES, PESSAC-L\u00c9OGN": 6,
-                        "MARGAUX": 5,
                         "PRIORAT": 4,
+                        "MARGAUX": 4,
+                        "ST. ESTEPHE": 3,
+                        "BAROLO": 3,
                         "C\u00d4TE DES BLANCS": 3,
                         "CHIANTI CLASSICO": 3,
-                        "BAROLO": 3,
-                        "ST. ESTEPHE": 3,
                         "RIBEIRA SACRA": 2,
-                        "CHIANTI": 2,
-                        "NOTO": 2,
                         "SAUTERNES": 2,
                         "RIOJA": 2,
+                        "NOTO": 2,
+                        "CHIANTI": 2,
                         "JUMILLA": 1,
                         "BLANCS/REIMS": 1,
-                        "FRANCIACORTA": 1,
                         "VALL\u00c9E DE LA MARNE": 1,
                         "MONTAGNE DE REIMS": 1,
                         "REIMS": 1,
                         "RIOJA ALTA": 1,
+                        "FRANCIACORTA": 1,
                         "ST. JULIEN": 1,
                         "TORO": 1,
                         "C\u00d4TE DE NUITS": 1,
                         "HAUT M\u00c9DOC": 1,
-                        "MONTALCINO": 1,
                         "PRIMITIVO DI MANDURI": 1,
                         "VENETO": 1,
                         "VIGNETI DELLE DOLOMI": 1,
                         "AREZZO": 1,
                         "SUVERETO": 1,
+                        "MONTALCINO": 1,
                         "CHIANTI CLASSICO GRA": 1
                 },
                 "price_tiers": {
-                        "Luxury": 63,
+                        "Luxury": 61,
                         "Budget": 45,
                         "Mid-range": 37,
                         "Extra Luxury": 24,
-                        "Premium": 21
+                        "Premium": 20
                 },
                 "daily_avg_prices": {
                         "2024-12-02": 147.84,
                         "2024-12-03": 751.67,
-                        "2024-12-04": 176.88,
+                        "2024-12-04": 150.63,
                         "2024-12-05": 170.49,
                         "2024-12-06": 1592.19,
-                        "2024-12-07": 366.66,
+                        "2024-12-07": 343.19,
                         "2024-12-08": 641.5
                 },
-                "horeca_count": 9,
+                "horeca_count": 11,
                 "leads_count": 85,
-                "total_unique_campaigns": 482,
+                "total_unique_campaigns": 484,
                 "total_unique_items": 168
         },
         {
@@ -6874,11 +6914,11 @@
         }
 ];
         const stockData = {
-        "Budget (<50)": 156462,
-        "Extra Luxury (750+)": 12365,
-        "Luxury (300-750)": 63379,
-        "Mid-range (50-100)": 137372,
-        "Premium (100-300)": 112668,
+        "Budget (<50)": 160237,
+        "Extra Luxury (750+)": 12859,
+        "Luxury (300-750)": 58049,
+        "Mid-range (50-100)": 135389,
+        "Premium (100-300)": 104547,
         "Unknown": 455
 };
 

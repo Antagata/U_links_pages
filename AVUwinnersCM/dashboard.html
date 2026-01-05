@@ -3,16 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="20260105104901">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVU Top Campaigns Dashboard</title>
     <link rel="icon" type="image/x-icon" href="https://antagata.github.io/favicon.ico">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, 'Inter', Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #1A252F 100%);
+            padding: 70px 20px 20px 20px;
+            background: #ffffff;
             min-height: 100vh;
+            color: #000000;
+            font-size: 16px;
+            line-height: 1.6;
         }
         
         .dashboard-container {
@@ -25,42 +33,23 @@
         }
         
         .header {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/ep-home-2.webp');
+            background: url('assets/Lidar background.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 30px;
+            padding: 80px 30px;
             text-align: center;
-            color: #FFFFFF;
+            color: #000000;
             position: relative;
-            border-bottom: 3px solid #FFD700;
-            min-height: 120px;
+            border-bottom: 1px solid #e0e0e0;
+            min-height: 200px;
         }
         
-        .chaser-lights {
-            position: absolute;
-            top: 20px;
-            left: 30px;
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
         
-        .chaser-light {
-            width: 12px;
-            height: 12px;
-            background: #FFD700;
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-        }
         
-        @keyframes pulse {
-            0%, 100% { 
-                transform: scale(0.8); 
-                opacity: 0.4;
-                box-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
-            }
+        
+        
+        
             50% { 
                 transform: scale(1.2); 
                 opacity: 1;
@@ -68,69 +57,21 @@
             }
         }
         
-        .time-display {
-            position: absolute;
-            top: 15px;
-            right: 30px;
-            background: linear-gradient(135deg, #DAA520, #B8860B);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 25px;
-            font-size: 1.6em;
-            font-weight: bold;
-            font-family: 'Digital-7', monospace;
-            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
-            border: 2px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(10px);
-            text-shadow: 0 0 10px rgba(255,255,255,0.5);
-            min-width: 200px;
-            text-align: center;
-        }
         
-        .reason-display {
-            position: absolute;
-            bottom: 15px;
-            right: 30px;
-            background: rgba(255, 215, 0, 0.3);
-            color: #FFFFFF;
-            padding: 8px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            font-weight: 600;
-            border: 2px solid #FFD700;
-            backdrop-filter: blur(5px);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-        }
         
-        .tag-icons {
-            position: absolute;
-            bottom: 15px;
-            left: 30px;
-            display: flex;
-            gap: 10px;
-        }
         
-        .tag-icon {
-            width: 25px;
-            height: 25px;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-            color: white;
-            box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
+        
+        
+        
+        
         
         .header h1 {
             margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #FFFFFF;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5);
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
         }
         
         .logo {
@@ -146,47 +87,61 @@
         }
         
         .header .subtitle {
-            margin: 10px 0 0 0;
-            font-size: 1.2em;
-            color: #FFFFFF;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-            opacity: 0.95;
+            margin: 15px 0 0 0;
+            font-size: 1.1em;
+            color: #333333;
+            font-weight: 400;
+            line-height: 1.5;
         }
         
         .header .timestamp {
-            margin: 15px 0 0 0;
-            font-size: 1em;
-            background: rgba(255,255,255,0.3);
+            margin: 20px 0 0 0;
+            font-size: 0.95em;
+            color: #666666;
+            background: rgba(255,255,255,0.85);
             padding: 8px 16px;
-            border-radius: 20px;
+            border-radius: 4px;
             display: inline-block;
-            z-index: 100;
+            border: 1px solid #e0e0e0;
         }
         
         .formula-explanation {
-            margin: 10px 0;
+            margin: 20px auto 0;
             font-size: 0.9em;
-            background: rgba(255, 215, 0, 0.2);
-            padding: 10px 15px;
-            border-radius: 15px;
-            border: 2px solid rgba(255, 215, 0, 0.5);
-            backdrop-filter: blur(5px);
-            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            color: #333333;
             text-align: center;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            max-width: 700px;
+            line-height: 1.7;
         }
 
-        .formula-explanation strong {
-            color: #FFFFFF;
-            font-weight: bold;
+        .formula-explanation {
+            margin: 20px auto 0;
+            font-size: 0.9em;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            color: #333333;
+            text-align: center;
+            max-width: 700px;
+            line-height: 1.7;
         }
 
-        .formula-explanation small {
-            color: #FFFFFF;
-            opacity: 0.95;
+        .formula-explanation {
+            margin: 20px auto 0;
+            font-size: 0.9em;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            color: #333333;
+            text-align: center;
+            max-width: 700px;
+            line-height: 1.7;
         }
         
         .rotate-button {
@@ -285,7 +240,7 @@
         .stat-number {
             font-size: 1.5em;
             font-weight: bold;
-            color: #FFD700;
+            color: #6B0011;
         }
         
         .stat-label {
@@ -304,8 +259,13 @@
             }
             
             .header h1 {
-                font-size: 2em;
-            }
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
             
             .logo {
                 position: static;
@@ -390,14 +350,13 @@
         }
         
         .period-title {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
+            background: #6B0011;
             color: white;
             text-align: center;
             padding: 15px;
             margin: 0;
             font-size: 1.2em;
-            font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-weight: 600;
         }
         
         .table-wrapper {
@@ -465,7 +424,7 @@
         .rank-cell {
             text-align: center;
             font-weight: bold;
-            color: #FFD700;
+            color: #6B0011;
         }
         
         .number-cell {
@@ -593,7 +552,7 @@
         }
         
         .race-gif-header h2 {
-            color: #FFD700;
+            color: #6B0011;
             font-size: 1.8em;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -626,7 +585,7 @@
         }
         
         .race-speed {
-            color: #FFD700;
+            color: #6B0011;
             font-weight: bold;
         }
         
@@ -681,6 +640,20 @@
     </style>
 </head>
 <body>
+<!-- Password Protection -->
+<script>
+    // Check if user is authenticated
+    const REQUIRED_HASH = 'e5e64a57749fa919d423d0044da636d34b64c00fe580e338fcad56c9b105314f';
+    const sessionAuth = sessionStorage.getItem('dashboardAuth');
+
+    if (sessionAuth !== REQUIRED_HASH) {
+        // Not authenticated, redirect to login
+        window.location.href = 'index.html';
+    }
+</script>
+<!-- End Password Protection -->
+
+
     <div class="dashboard-container">
     <!-- Sticky Top Navigation -->
     <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; padding: 15px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0e0e0;">
@@ -701,18 +674,13 @@
     
 
             <!-- Tag Icons - Bottom Left -->
-            <div class="tag-icons">
-                <div class="tag-icon" title="Wine">🍷</div>
-                <div class="tag-icon" title="Campaign">📊</div>
-                <div class="tag-icon" title="Winner">🏆</div>
-                <div class="tag-icon" title="Performance">⚡</div>
+            
+                
+                
             </div>
             
             <!-- Reason Display - Bottom Right -->
-            <div class="reason-display">
-                Campaign Performance Analysis
             </div>
-        </div>
         
 
 
@@ -748,8 +716,8 @@
         <!-- Top 25 Winners Table Section -->
         <div class="top25-container">
             <div class="top25-header">
-                <h2>🏆 TOP 25 WINE CAMPAIGN WINNERS</h2>
-                <div class="top25-subtitle">🎨 COLOR-CODED BY WINE PRICE</div>
+                <h2>TOP 25 WINE CAMPAIGN WINNERS</h2>
+                <div class="top25-subtitle">COLOR-CODED BY WINE PRICE</div>
             </div>
             <div class="table-wrapper">
                 <table class="top25-table">
@@ -807,7 +775,7 @@
         <!-- Multi-Period Analysis Tables Section -->
         <div class="tables-container">
             <div class="tables-header">
-                <h2>📅 MULTI-PERIOD WINNERS ANALYSIS WITH STOCK AVAILABILITY</h2>
+                <h2>MULTI-PERIOD WINNERS ANALYSIS WITH STOCK AVAILABILITY</h2>
             </div>
             </div>
             
@@ -827,7 +795,7 @@
             </div>
         </div>
         <div class="period-table">
-            <h3 class="period-title">📅 LAST 14 DAYS</h3>
+            <h3 class="period-title">LAST 14 DAYS</h3>
             <div class="table-wrapper">
                 <table class="winners-table">
                     <thead>

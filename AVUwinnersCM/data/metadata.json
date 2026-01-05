@@ -1,0 +1,46 @@
+{
+  "api_version": "1.0.0",
+  "generated_at": "2026-01-05T14:09:29.151348",
+  "endpoints": {
+    "winners": {
+      "url": "/data/winners.json",
+      "description": "Dashboard winners data - top performing campaigns",
+      "schema": {
+        "generated_at": "ISO 8601 timestamp",
+        "data_type": "string",
+        "winners": "array of campaign objects"
+      }
+    },
+    "leads": {
+      "url": "/data/leads.json",
+      "description": "LEADS campaigns data",
+      "schema": {
+        "generated_at": "ISO 8601 timestamp",
+        "data_type": "string",
+        "total_campaigns": "number",
+        "campaigns": "array of campaign objects"
+      }
+    },
+    "horeca": {
+      "url": "/data/horeca.json",
+      "description": "HORECA campaigns data",
+      "schema": {
+        "generated_at": "ISO 8601 timestamp",
+        "data_type": "string",
+        "total_campaigns": "number",
+        "campaigns": "array of campaign objects"
+      }
+    },
+    "analytics": {
+      "url": "/data/analytics.json",
+      "description": "Campaign analytics and statistics",
+      "schema": {
+        "generated_at": "ISO 8601 timestamp",
+        "data_type": "string",
+        "summary": "object with aggregate stats",
+        "weekly_stats": "array of weekly statistics",
+        "stock_distribution": "array of stock data"
+      }
+    }
+  }
+}

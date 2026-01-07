@@ -459,13 +459,14 @@
         <div class="header">
             <h1>Campaign<br>Analytics</h1>
             <p class="subtitle">Weekly Insights & Distribution</p>
-            <p class="timestamp">Last Updated: January 05, 2026 — 09:59</p>
+            <p class="timestamp">Last Updated: January 07, 2026 — 08:42</p>
         </div>
 
         <!-- Week Selector -->
         <div class="week-selector">
             <label for="weekSelect">Select Week</label>
             <select id="weekSelect" onchange="updateCharts()">
+                <option value="2026-W02">Week 2, 2026</option>
                 <option value="2026-W01">Week 1, 2026</option>
                 <option value="2025-W52">Week 52, 2025</option>
                 <option value="2025-W51">Week 51, 2025</option>
@@ -661,44 +662,44 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td class="stock-cell">0</td>
+                                    <td>75cl</td>
+                                    <td>Champagne Brut Dom Pérignon P2</td>
+                                    <td>Dom Pérignon</td>
+                                    <td>2008</td>
+                                    <td class="item-no-cell">66110</td>
+                                </tr>
+                                <tr>
+                                    <td class="stock-cell">180</td>
+                                    <td>75cl</td>
+                                    <td>Grands Echézeaux</td>
+                                    <td>Mugneret Mongeard</td>
+                                    <td>2022</td>
+                                    <td class="item-no-cell">63191</td>
+                                </tr>
+                                <tr>
+                                    <td class="stock-cell">366</td>
+                                    <td>75cl</td>
+                                    <td>Grange</td>
+                                    <td>Penfolds</td>
+                                    <td>2019</td>
+                                    <td class="item-no-cell">59604</td>
+                                </tr>
+                                <tr>
                                     <td class="stock-cell">12</td>
                                     <td>75cl</td>
-                                    <td>Corton Charlemagne</td>
-                                    <td>Domaine Leroy</td>
-                                    <td>2009</td>
-                                    <td class="item-no-cell">13886</td>
-                                </tr>
-                                <tr>
-                                    <td class="stock-cell">0</td>
-                                    <td>75cl</td>
-                                    <td>DRC Romanée Conti</td>
-                                    <td>Domaine de la Romanée Conti</td>
-                                    <td>2019</td>
-                                    <td class="item-no-cell">56402</td>
-                                </tr>
-                                <tr>
-                                    <td class="stock-cell">36</td>
-                                    <td>75cl</td>
-                                    <td>Lafleur</td>
-                                    <td>Château Lafleur</td>
-                                    <td>2018</td>
-                                    <td class="item-no-cell">48965</td>
-                                </tr>
-                                <tr>
-                                    <td class="stock-cell">0</td>
-                                    <td>75cl</td>
-                                    <td>Latour</td>
-                                    <td>Château Latour</td>
-                                    <td>2005</td>
-                                    <td class="item-no-cell">2705</td>
-                                </tr>
-                                <tr>
-                                    <td class="stock-cell">24</td>
-                                    <td>75cl</td>
-                                    <td>Le Pin</td>
-                                    <td>Château Le Pin</td>
+                                    <td>Margaux</td>
+                                    <td>Château Margaux</td>
                                     <td>1990</td>
-                                    <td class="item-no-cell">8474</td>
+                                    <td class="item-no-cell">11026</td>
+                                </tr>
+                                <tr>
+                                    <td class="stock-cell">0</td>
+                                    <td>75cl</td>
+                                    <td>Pétrus</td>
+                                    <td>Château Pétrus</td>
+                                    <td>1982</td>
+                                    <td class="item-no-cell">4116</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -717,6 +718,33 @@
     <script>
         // Data
         const weeklyData = [
+        {
+                "week_year": "2026-W02",
+                "week_label": "Week 2, 2026",
+                "avg_vintage": 2008,
+                "top_region": "CHAMPAGNE",
+                "regions": {
+                        "CHAMPAGNE": 4,
+                        "BORDEAUX": 3
+                },
+                "types": {
+                        "CHAMPAGNE": 4,
+                        "MARGAUX": 2,
+                        "POMEROL": 1
+                },
+                "price_tiers": {
+                        "Luxury": 4,
+                        "Extra Luxury": 3
+                },
+                "daily_avg_prices": {
+                        "2026-01-05": 735.83,
+                        "2026-01-06": 5950.0
+                },
+                "horeca_count": 0,
+                "leads_count": 0,
+                "total_unique_campaigns": 3,
+                "total_unique_items": 4
+        },
         {
                 "week_year": "2026-W01",
                 "week_label": "Week 1, 2026",
@@ -755,7 +783,7 @@
                 "avg_vintage": null,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 14,
+                        "BORDEAUX": 15,
                         "TUSCANY": 6,
                         "BURGUNDY": 3,
                         "CHAMPAGNE": 3
@@ -763,7 +791,7 @@
                 "types": {
                         "PAUILLAC": 6,
                         "TUSCANY": 6,
-                        "POMEROL": 4,
+                        "POMEROL": 5,
                         "C\u00d4TE DE NUITS": 3,
                         "CHAMPAGNE": 3,
                         "MARGAUX": 2,
@@ -772,7 +800,7 @@
                 },
                 "price_tiers": {
                         "Mid-range": 11,
-                        "Extra Luxury": 7,
+                        "Extra Luxury": 8,
                         "Luxury": 6,
                         "Premium": 2
                 },
@@ -785,8 +813,8 @@
                 },
                 "horeca_count": 2,
                 "leads_count": 2,
-                "total_unique_campaigns": 17,
-                "total_unique_items": 25
+                "total_unique_campaigns": 18,
+                "total_unique_items": 26
         },
         {
                 "week_year": "2025-W51",
@@ -1093,7 +1121,7 @@
                 "avg_vintage": 2022,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 16,
+                        "BORDEAUX": 18,
                         "TUSCANY": 16,
                         "CALIFORNIA": 6,
                         "COLCHAGUA VALLEY": 6,
@@ -1112,6 +1140,7 @@
                         "ST. ESTEPHE": 4,
                         "POMEROL": 3,
                         "C\u00d4TE DE NUITS": 3,
+                        "MARGAUX": 2,
                         "PAUILLAC": 2,
                         "RIBERA DEL DUERO": 2,
                         "ST. JULIEN": 2,
@@ -1119,7 +1148,7 @@
                         "ALTAMIRA": 1
                 },
                 "price_tiers": {
-                        "Mid-range": 23,
+                        "Mid-range": 25,
                         "Premium": 20,
                         "Extra Luxury": 10,
                         "Luxury": 3
@@ -1129,13 +1158,13 @@
                         "2025-11-11": 297.71,
                         "2025-11-12": 283.69,
                         "2025-11-13": 316.17,
-                        "2025-11-14": 210.0,
+                        "2025-11-14": 135.75,
                         "2025-11-15": 370.5,
                         "2025-11-16": 1458.71
                 },
                 "horeca_count": 6,
                 "leads_count": 12,
-                "total_unique_campaigns": 41,
+                "total_unique_campaigns": 42,
                 "total_unique_items": 81
         },
         {
@@ -7230,11 +7259,11 @@
         }
 ];
         const stockData = {
-        "Budget (<50)": 159685,
-        "Extra Luxury (750+)": 12736,
-        "Luxury (300-750)": 57843,
-        "Mid-range (50-100)": 136043,
-        "Premium (100-300)": 103936,
+        "Budget (<50)": 153472,
+        "Extra Luxury (750+)": 12782,
+        "Luxury (300-750)": 58058,
+        "Mid-range (50-100)": 135431,
+        "Premium (100-300)": 106482,
         "Unknown": 455
 };
 

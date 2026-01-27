@@ -309,6 +309,137 @@
             color: #333333;
         }
 
+        /* Offering Balance Section */
+        .offering-balance-section {
+            margin-bottom: 80px;
+            padding: 40px;
+            background: var(--gray-light);
+            border: 2px solid var(--black);
+        }
+
+        .offering-balance-section h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--gray-mid);
+            text-align: center;
+        }
+
+        .offering-balance-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .balance-summary {
+            background: var(--white);
+            border: 1px solid var(--gray-mid);
+            padding: 25px;
+        }
+
+        .balance-summary h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .balance-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+
+        .balance-table th {
+            padding: 10px 6px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            background: var(--black);
+            color: var(--white);
+            border: 1px solid var(--black);
+        }
+
+        .balance-table td {
+            padding: 8px 6px;
+            border: 1px solid var(--gray-mid);
+            text-align: center;
+        }
+
+        .balance-table .gap-positive {
+            color: #2E7D32;
+            font-weight: 600;
+        }
+
+        .balance-table .gap-negative {
+            color: #C62828;
+            font-weight: 600;
+        }
+
+        .campaigns-list {
+            background: var(--white);
+            border: 1px solid var(--gray-mid);
+        }
+
+        .campaigns-list h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+            padding: 15px 20px;
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .campaigns-table-container {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .campaigns-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+
+        .campaigns-table th {
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            background: var(--gray-light);
+            border-bottom: 2px solid var(--black);
+            position: sticky;
+            top: 0;
+        }
+
+        .campaigns-table td {
+            padding: 8px;
+            border-bottom: 1px solid var(--gray-mid);
+        }
+
+        .campaigns-table tr:hover {
+            background: var(--gray-light);
+        }
+
+        @media (max-width: 1024px) {
+            .offering-balance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .stock-container {
             padding: 60px;
             border: 2px solid var(--black);
@@ -498,7 +629,417 @@
         <div class="header">
             <h1>Campaign<br>Analytics</h1>
             <p class="subtitle">Weekly Insights & Distribution</p>
-            <p class="timestamp">Last Updated: January 27, 2026 — 12:12</p>
+            <p class="timestamp">Last Updated: January 27, 2026 — 12:22</p>
+        </div>
+
+        <!-- Offering Balance Section -->
+        <div class="offering-balance-section">
+            <h2>Active PRIVATE Campaigns - Tier Balance</h2>
+            <div class="offering-balance-grid">
+                <!-- Tier Balance Summary -->
+                <div class="balance-summary">
+                    <h3>Client vs Offer Distribution</h3>
+                    <table class="balance-table">
+                        <thead>
+                            <tr>
+                                <th>Tier</th>
+                                <th>Clients</th>
+                                <th>Offers</th>
+                                <th>Gap</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="tier-badge tier-budget">Budget</span></td>
+                                <td>43.4%</td>
+                                <td>4.8%</td>
+                                <td class="gap-negative">-38.6%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                <td>31.4%</td>
+                                <td>45.2%</td>
+                                <td class="gap-positive">+13.9%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-premium">Premium</span></td>
+                                <td>16.5%</td>
+                                <td>21.4%</td>
+                                <td class="gap-positive">+4.9%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                <td>7.0%</td>
+                                <td>26.2%</td>
+                                <td class="gap-positive">+19.2%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-ultra-luxury">Ultra-Luxury</span></td>
+                                <td>1.7%</td>
+                                <td>2.4%</td>
+                                <td class="gap-positive">+0.7%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Active Campaigns List -->
+                <div class="campaigns-list">
+                    <h3>Scheduled PRIVATE Campaigns</h3>
+                    <div class="campaigns-table-container">
+                        <table class="campaigns-table">
+                            <thead>
+                                <tr>
+                                    <th>Schedule</th>
+                                    <th>Wine</th>
+                                    <th>Producer</th>
+                                    <th>Price (EUR)</th>
+                                    <th>Tier</th>
+                                    <th>Emails</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2026-01-18 16:00</td>
+                                    <td>Margaux</td>
+                                    <td>Château Margaux</td>
+                                    <td>€10,700</td>
+                                    <td><span class="tier-badge tier-ultra-luxury">Ultra-Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,042</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-18 14:00</td>
+                                    <td>Pavie</td>
+                                    <td>Château Pavie</td>
+                                    <td>€9,675</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,445</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-18 11:00</td>
+                                    <td>Clos l'Église</td>
+                                    <td>Clos l'Eglise</td>
+                                    <td>€157</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">2,657</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-17 17:00</td>
+                                    <td>Ausone</td>
+                                    <td>Château Ausone</td>
+                                    <td>€855</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,453</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-17 15:00</td>
+                                    <td>Sette</td>
+                                    <td>Tenuta Sette Ponti</td>
+                                    <td>€500</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,890</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-17 10:00</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">910</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-17 10:00</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">191</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-17 10:00</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">375</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-17 10:00</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">178</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-17 10:00</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">94</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-16 15:03</td>
+                                    <td>Sloan Red</td>
+                                    <td>Sloan</td>
+                                    <td>€3,135</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">21</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-16 15:03</td>
+                                    <td>Sloan Red</td>
+                                    <td>Sloan</td>
+                                    <td>€3,135</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">282</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-16 15:03</td>
+                                    <td>Sloan Red</td>
+                                    <td>Sloan</td>
+                                    <td>€3,135</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">14</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-16 11:40</td>
+                                    <td>Cos d'Estournel</td>
+                                    <td>Château Cos d'Estournel</td>
+                                    <td>€3,135</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">3,075</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-16 11:15</td>
+                                    <td>Sassicaia</td>
+                                    <td>Tenuta San Guido</td>
+                                    <td>€4,540</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">303</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-16 11:15</td>
+                                    <td>Sassicaia</td>
+                                    <td>Tenuta San Guido</td>
+                                    <td>€4,540</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">172</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-16 10:30</td>
+                                    <td>Nairac</td>
+                                    <td>Château Nairac</td>
+                                    <td>€36</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,526</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-15 17:45</td>
+                                    <td>Montrose (Ex-Château)</td>
+                                    <td>Château Montrose</td>
+                                    <td>€1,460</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">33</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-15 16:15</td>
+                                    <td>D'Armailhac</td>
+                                    <td>Château d’Armailhac</td>
+                                    <td>€508</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">2,232</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-15 14:48</td>
+                                    <td>Cheval Blanc</td>
+                                    <td>Château Cheval Blanc</td>
+                                    <td>€3,945</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">2,242</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-15 14:17</td>
+                                    <td>Cheval Blanc</td>
+                                    <td>Château Cheval Blanc</td>
+                                    <td>€3,945</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">959</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-15 14:02</td>
+                                    <td>Cheval Blanc</td>
+                                    <td>Château Cheval Blanc</td>
+                                    <td>€3,945</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">401</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-15 10:30</td>
+                                    <td>Dolio</td>
+                                    <td>Algueira</td>
+                                    <td>€61</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td style="text-align: right; font-weight: 600;">511</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-14 10:42</td>
+                                    <td>Montrose (Ex-Château)</td>
+                                    <td>Château Montrose</td>
+                                    <td>€1,460</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">2,738</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-14 10:18</td>
+                                    <td>Montrose (Ex-Château)</td>
+                                    <td>Château Montrose</td>
+                                    <td>€1,460</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">291</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-14 10:03</td>
+                                    <td>Montrose (Ex-Château)</td>
+                                    <td>Château Montrose</td>
+                                    <td>€1,460</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">897</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-14 08:24</td>
+                                    <td>Montrose (Ex-Château)</td>
+                                    <td>Château Montrose</td>
+                                    <td>€1,460</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">24</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 14:46</td>
+                                    <td>Châteauneuf du Pape Deus Ex Machina</td>
+                                    <td>Clos Saint Jean</td>
+                                    <td>€380</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">3,263</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 14:46</td>
+                                    <td>Châteauneuf du Pape Deus Ex Machina</td>
+                                    <td>Clos Saint Jean</td>
+                                    <td>€800</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">280</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 13:35</td>
+                                    <td>Champagne Brut Dom Pérignon</td>
+                                    <td>Dom Pérignon</td>
+                                    <td>€154</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">116</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 13:33</td>
+                                    <td>Champagne Brut Dom Pérignon</td>
+                                    <td>Dom Pérignon</td>
+                                    <td>€154</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">62</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 12:25</td>
+                                    <td>Champagne Brut Dom Pérignon</td>
+                                    <td>Dom Pérignon</td>
+                                    <td>€154</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">31</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 11:10</td>
+                                    <td>Champagne Brut Dom Pérignon</td>
+                                    <td>Dom Pérignon</td>
+                                    <td>€154</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,405</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 10:50</td>
+                                    <td>Champagne Brut Dom Pérignon</td>
+                                    <td>Dom Pérignon</td>
+                                    <td>€154</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">451</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 10:47</td>
+                                    <td>Champagne Brut Dom Pérignon</td>
+                                    <td>Dom Pérignon</td>
+                                    <td>€154</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">651</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-13 10:00</td>
+                                    <td>Champagne Extra Brut Les Cintres</td>
+                                    <td>Philipponnat</td>
+                                    <td>€375</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">79</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-12 17:24</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,138</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-12 16:56</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">216</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-12 16:36</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">435</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-12 16:05</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">208</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-12 15:28</td>
+                                    <td>Único</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€320</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">144</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-12 10:33</td>
+                                    <td>Coffret Décennie Angélus 6x75cl (1x 2012, 1x 2014, 1x 2016, 1x 2018, 1x 2020, 1x 2022)</td>
+                                    <td>Château Angélus</td>
+                                    <td>€2,000</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">890</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Week Selector -->

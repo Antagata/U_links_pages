@@ -440,6 +440,173 @@
             }
         }
 
+        /* Campaign Intelligence Section */
+        .intelligence-section {
+            margin-bottom: 80px;
+            padding: 40px;
+            background: var(--white);
+            border: 2px solid var(--black);
+        }
+
+        .intelligence-section h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--black);
+            text-align: center;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .kpi-card {
+            background: var(--gray-light);
+            padding: 25px 15px;
+            text-align: center;
+            border: 1px solid var(--gray-mid);
+        }
+
+        .kpi-card .kpi-value {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .kpi-card .kpi-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .intelligence-charts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .intelligence-chart-box {
+            background: var(--gray-light);
+            padding: 25px;
+            border: 1px solid var(--gray-mid);
+        }
+
+        .intelligence-chart-box h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+
+        .heatmap-container {
+            margin-top: 40px;
+            background: var(--gray-light);
+            padding: 25px;
+            border: 1px solid var(--gray-mid);
+        }
+
+        .heatmap-container h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+
+        .heatmap-grid {
+            display: grid;
+            grid-template-columns: 80px repeat(24, 1fr);
+            gap: 2px;
+            font-size: 0.7rem;
+        }
+
+        .heatmap-header {
+            background: var(--black);
+            color: var(--white);
+            padding: 5px 2px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .heatmap-row-label {
+            background: var(--black);
+            color: var(--white);
+            padding: 8px 5px;
+            text-align: right;
+            font-weight: 500;
+            font-size: 0.65rem;
+        }
+
+        .heatmap-cell {
+            padding: 8px 2px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .heatmap-cell:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            position: relative;
+        }
+
+        .timing-insights {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            padding: 15px;
+            background: var(--white);
+            border: 1px solid var(--gray-mid);
+        }
+
+        .timing-insight {
+            text-align: center;
+        }
+
+        .timing-insight .insight-value {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .timing-insight .insight-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--gold);
+        }
+
+        @media (max-width: 1024px) {
+            .kpi-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .intelligence-charts {
+                grid-template-columns: 1fr;
+            }
+            .heatmap-grid {
+                font-size: 0.6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         .stock-container {
             padding: 60px;
             border: 2px solid var(--black);
@@ -629,7 +796,7 @@
         <div class="header">
             <h1>Campaign<br>Analytics</h1>
             <p class="subtitle">Weekly Insights & Distribution</p>
-            <p class="timestamp">Last Updated: January 29, 2026 — 12:34</p>
+            <p class="timestamp">Last Updated: January 30, 2026 — 13:56</p>
         </div>
 
         <!-- Offering Balance Section -->
@@ -652,32 +819,32 @@
                             <tr>
                                 <td><span class="tier-badge tier-budget">Budget</span></td>
                                 <td>43.4%</td>
-                                <td>3.3%</td>
-                                <td class="gap-negative">-40.1%</td>
+                                <td>4.8%</td>
+                                <td class="gap-negative">-38.6%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
                                 <td>31.4%</td>
-                                <td>40.0%</td>
-                                <td class="gap-positive">+8.6%</td>
+                                <td>38.1%</td>
+                                <td class="gap-positive">+6.7%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-premium">Premium</span></td>
                                 <td>16.5%</td>
-                                <td>23.3%</td>
-                                <td class="gap-positive">+6.8%</td>
+                                <td>23.8%</td>
+                                <td class="gap-positive">+7.3%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-luxury">Luxury</span></td>
                                 <td>7.0%</td>
-                                <td>33.3%</td>
-                                <td class="gap-positive">+26.3%</td>
+                                <td>31.0%</td>
+                                <td class="gap-positive">+24.0%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-ultra-luxury">Ultra-Luxury</span></td>
                                 <td>1.7%</td>
-                                <td>0.0%</td>
-                                <td class="gap-negative">-1.7%</td>
+                                <td>2.4%</td>
+                                <td class="gap-positive">+0.7%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -699,6 +866,86 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>2026-01-30 11:00</td>
+                                    <td>Léoville Las Cases</td>
+                                    <td>Château Léoville Las Cases</td>
+                                    <td>€810</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">84</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-30 11:00</td>
+                                    <td>Léoville Las Cases</td>
+                                    <td>Château Léoville Las Cases</td>
+                                    <td>€810</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">386</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-30 11:00</td>
+                                    <td>Léoville Las Cases</td>
+                                    <td>Château Léoville Las Cases</td>
+                                    <td>€810</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td style="text-align: right; font-weight: 600;">518</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29 18:05</td>
+                                    <td>Sassicaia</td>
+                                    <td>Tenuta San Guido</td>
+                                    <td>€2,055</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">3,860</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29 17:30</td>
+                                    <td>DRC Assortment Case 15 Bottles (1RC, 3LT, 2RI, 3RSV, 3GE, 3EC)</td>
+                                    <td>Domaine de la Romanée Conti</td>
+                                    <td>€81,000</td>
+                                    <td><span class="tier-badge tier-ultra-luxury">Ultra-Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">256</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29 14:59</td>
+                                    <td>Tertre Roteboeuf</td>
+                                    <td>Château Tertre Roteboeuf</td>
+                                    <td>€158</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">2,000</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29 11:30</td>
+                                    <td>Ornus dell'Ornellaia</td>
+                                    <td>Tenuta dell'Ornellaia</td>
+                                    <td>€124</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">61</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29 11:30</td>
+                                    <td>Valbuena 5</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€280</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">1,360</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29 11:30</td>
+                                    <td>Valbuena 5</td>
+                                    <td>Bodegas Vega Sicilia</td>
+                                    <td>€280</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
+                                    <td style="text-align: right; font-weight: 600;">262</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29 10:00</td>
+                                    <td>Rieussec</td>
+                                    <td>Château Rieussec</td>
+                                    <td>€51</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td style="text-align: right; font-weight: 600;">2,934</td>
+                                </tr>
                                 <tr>
                                     <td>2026-01-28 17:00</td>
                                     <td>Barolo Monfortino Riserva</td>
@@ -732,12 +979,36 @@
                                     <td style="text-align: right; font-weight: 600;">1,408</td>
                                 </tr>
                                 <tr>
+                                    <td>2026-01-28 15:00</td>
+                                    <td>Galatrona</td>
+                                    <td>Fattoria Petrolo</td>
+                                    <td>€2,810</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">674</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-28 15:00</td>
+                                    <td>Galatrona</td>
+                                    <td>Fattoria Petrolo</td>
+                                    <td>€2,810</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">187</td>
+                                </tr>
+                                <tr>
                                     <td>2026-01-28 12:00</td>
                                     <td>Don PX Convento Selección</td>
                                     <td>Toro Albalá</td>
                                     <td>€120</td>
                                     <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
                                     <td style="text-align: right; font-weight: 600;">1,750</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-28 11:00</td>
+                                    <td>La Conseillante</td>
+                                    <td>Château La Conseillante</td>
+                                    <td>€2,150</td>
+                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                    <td style="text-align: right; font-weight: 600;">38</td>
                                 </tr>
                                 <tr>
                                     <td>2026-01-28 11:00</td>
@@ -762,14 +1033,6 @@
                                     <td>€2,150</td>
                                     <td><span class="tier-badge tier-luxury">Luxury</span></td>
                                     <td style="text-align: right; font-weight: 600;">720</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-01-28 11:00</td>
-                                    <td>La Conseillante</td>
-                                    <td>Château La Conseillante</td>
-                                    <td>€2,150</td>
-                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                                    <td style="text-align: right; font-weight: 600;">38</td>
                                 </tr>
                                 <tr>
                                     <td>2026-01-27 17:57</td>
@@ -941,6 +1204,270 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Intelligence Section -->
+        <div class="intelligence-section">
+            <h2>Campaign Intelligence</h2>
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-value">5,481</div>
+                    <div class="kpi-label">Total Campaigns</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">1004</div>
+                    <div class="kpi-label">Active Days</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">3,163,414</div>
+                    <div class="kpi-label">Total Emails</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">577</div>
+                    <div class="kpi-label">Avg Campaign Size</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">306</div>
+                    <div class="kpi-label">Median Size</div>
+                </div>
+            </div>
+
+            <!-- Strategy Charts -->
+            <div class="intelligence-charts">
+                <!-- Targeting Strategy Chart -->
+                <div class="intelligence-chart-box">
+                    <h3>Targeting Strategy</h3>
+                    <canvas id="targetingChart"></canvas>
+                </div>
+
+                <!-- Bundle Strategy Chart -->
+                <div class="intelligence-chart-box">
+                    <h3>Bundle Strategy</h3>
+                    <canvas id="bundleChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Timing Heatmap -->
+            <div class="heatmap-container">
+                <h3>Campaign Timing Heatmap (Weekday x Hour)</h3>
+                <div class="heatmap-grid" id="timingHeatmap">
+                    <!-- Header row with hours -->
+                    <div class="heatmap-header"></div>
+                    <div class="heatmap-header">0</div>
+                    <div class="heatmap-header">1</div>
+                    <div class="heatmap-header">2</div>
+                    <div class="heatmap-header">3</div>
+                    <div class="heatmap-header">4</div>
+                    <div class="heatmap-header">5</div>
+                    <div class="heatmap-header">6</div>
+                    <div class="heatmap-header">7</div>
+                    <div class="heatmap-header">8</div>
+                    <div class="heatmap-header">9</div>
+                    <div class="heatmap-header">10</div>
+                    <div class="heatmap-header">11</div>
+                    <div class="heatmap-header">12</div>
+                    <div class="heatmap-header">13</div>
+                    <div class="heatmap-header">14</div>
+                    <div class="heatmap-header">15</div>
+                    <div class="heatmap-header">16</div>
+                    <div class="heatmap-header">17</div>
+                    <div class="heatmap-header">18</div>
+                    <div class="heatmap-header">19</div>
+                    <div class="heatmap-header">20</div>
+                    <div class="heatmap-header">21</div>
+                    <div class="heatmap-header">22</div>
+                    <div class="heatmap-header">23</div>
+                    <div class="heatmap-row-label">Mon</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Monday 0:00 - 3 campaigns">3</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 1:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 2:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 3:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 4:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 5:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 6:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 7:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(135, 111, 68); color: #333333;" title="Monday 8:00 - 12 campaigns">12</div>
+                    <div class="heatmap-cell" style="background: rgb(130, 106, 65); color: #333333;" title="Monday 9:00 - 29 campaigns">29</div>
+                    <div class="heatmap-cell" style="background: rgb(122, 98, 61); color: #FFFFFF;" title="Monday 10:00 - 54 campaigns">54</div>
+                    <div class="heatmap-cell" style="background: rgb(108, 84, 52); color: #FFFFFF;" title="Monday 11:00 - 103 campaigns">103</div>
+                    <div class="heatmap-cell" style="background: rgb(128, 104, 64); color: #333333;" title="Monday 12:00 - 36 campaigns">36</div>
+                    <div class="heatmap-cell" style="background: rgb(131, 107, 66); color: #333333;" title="Monday 13:00 - 25 campaigns">25</div>
+                    <div class="heatmap-cell" style="background: rgb(108, 84, 52); color: #FFFFFF;" title="Monday 14:00 - 103 campaigns">103</div>
+                    <div class="heatmap-cell" style="background: rgb(103, 79, 49); color: #FFFFFF;" title="Monday 15:00 - 117 campaigns">117</div>
+                    <div class="heatmap-cell" style="background: rgb(106, 82, 51); color: #FFFFFF;" title="Monday 16:00 - 107 campaigns">107</div>
+                    <div class="heatmap-cell" style="background: rgb(106, 82, 51); color: #FFFFFF;" title="Monday 17:00 - 108 campaigns">108</div>
+                    <div class="heatmap-cell" style="background: rgb(132, 108, 67); color: #333333;" title="Monday 18:00 - 22 campaigns">22</div>
+                    <div class="heatmap-cell" style="background: rgb(137, 113, 69); color: #333333;" title="Monday 19:00 - 6 campaigns">6</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 20:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 21:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Monday 22:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Monday 23:00 - 0 campaigns"></div>
+                    <div class="heatmap-row-label">Tue</div>
+                    <div class="heatmap-cell" style="background: rgb(137, 113, 69); color: #333333;" title="Tuesday 0:00 - 6 campaigns">6</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 1:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 2:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 3:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 4:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 5:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 6:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Tuesday 7:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: rgb(126, 102, 63); color: #333333;" title="Tuesday 8:00 - 43 campaigns">43</div>
+                    <div class="heatmap-cell" style="background: rgb(123, 99, 61); color: #FFFFFF;" title="Tuesday 9:00 - 51 campaigns">51</div>
+                    <div class="heatmap-cell" style="background: rgb(108, 84, 52); color: #FFFFFF;" title="Tuesday 10:00 - 101 campaigns">101</div>
+                    <div class="heatmap-cell" style="background: rgb(89, 65, 41); color: #FFFFFF;" title="Tuesday 11:00 - 167 campaigns">167</div>
+                    <div class="heatmap-cell" style="background: rgb(124, 100, 62); color: #333333;" title="Tuesday 12:00 - 49 campaigns">49</div>
+                    <div class="heatmap-cell" style="background: rgb(131, 107, 66); color: #333333;" title="Tuesday 13:00 - 24 campaigns">24</div>
+                    <div class="heatmap-cell" style="background: rgb(110, 86, 54); color: #FFFFFF;" title="Tuesday 14:00 - 94 campaigns">94</div>
+                    <div class="heatmap-cell" style="background: rgb(100, 76, 47); color: #FFFFFF;" title="Tuesday 15:00 - 129 campaigns">129</div>
+                    <div class="heatmap-cell" style="background: rgb(94, 70, 44); color: #FFFFFF;" title="Tuesday 16:00 - 149 campaigns">149</div>
+                    <div class="heatmap-cell" style="background: rgb(95, 71, 44); color: #FFFFFF;" title="Tuesday 17:00 - 146 campaigns">146</div>
+                    <div class="heatmap-cell" style="background: rgb(131, 107, 66); color: #333333;" title="Tuesday 18:00 - 24 campaigns">24</div>
+                    <div class="heatmap-cell" style="background: rgb(134, 110, 68); color: #333333;" title="Tuesday 19:00 - 14 campaigns">14</div>
+                    <div class="heatmap-cell" style="background: rgb(135, 111, 68); color: #333333;" title="Tuesday 20:00 - 12 campaigns">12</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Tuesday 21:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 22:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Tuesday 23:00 - 0 campaigns"></div>
+                    <div class="heatmap-row-label">Wed</div>
+                    <div class="heatmap-cell" style="background: rgb(136, 112, 69); color: #333333;" title="Wednesday 0:00 - 7 campaigns">7</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 1:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 2:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 3:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 4:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 5:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 6:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 7:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(131, 107, 66); color: #333333;" title="Wednesday 8:00 - 26 campaigns">26</div>
+                    <div class="heatmap-cell" style="background: rgb(115, 91, 56); color: #FFFFFF;" title="Wednesday 9:00 - 78 campaigns">78</div>
+                    <div class="heatmap-cell" style="background: rgb(109, 85, 53); color: #FFFFFF;" title="Wednesday 10:00 - 100 campaigns">100</div>
+                    <div class="heatmap-cell" style="background: rgb(91, 67, 42); color: #FFFFFF;" title="Wednesday 11:00 - 158 campaigns">158</div>
+                    <div class="heatmap-cell" style="background: rgb(126, 102, 63); color: #333333;" title="Wednesday 12:00 - 43 campaigns">43</div>
+                    <div class="heatmap-cell" style="background: rgb(128, 104, 64); color: #333333;" title="Wednesday 13:00 - 36 campaigns">36</div>
+                    <div class="heatmap-cell" style="background: rgb(107, 83, 51); color: #FFFFFF;" title="Wednesday 14:00 - 106 campaigns">106</div>
+                    <div class="heatmap-cell" style="background: rgb(99, 75, 47); color: #FFFFFF;" title="Wednesday 15:00 - 132 campaigns">132</div>
+                    <div class="heatmap-cell" style="background: rgb(96, 72, 45); color: #FFFFFF;" title="Wednesday 16:00 - 142 campaigns">142</div>
+                    <div class="heatmap-cell" style="background: rgb(102, 78, 48); color: #FFFFFF;" title="Wednesday 17:00 - 123 campaigns">123</div>
+                    <div class="heatmap-cell" style="background: rgb(130, 106, 65); color: #333333;" title="Wednesday 18:00 - 30 campaigns">30</div>
+                    <div class="heatmap-cell" style="background: rgb(136, 112, 69); color: #333333;" title="Wednesday 19:00 - 10 campaigns">10</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Wednesday 20:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Wednesday 21:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Wednesday 22:00 - 1 campaigns">1</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Wednesday 23:00 - 0 campaigns"></div>
+                    <div class="heatmap-row-label">Thu</div>
+                    <div class="heatmap-cell" style="background: rgb(136, 112, 69); color: #333333;" title="Thursday 0:00 - 9 campaigns">9</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 1:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 2:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 3:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 4:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 5:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 6:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 7:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(129, 105, 65); color: #333333;" title="Thursday 8:00 - 32 campaigns">32</div>
+                    <div class="heatmap-cell" style="background: rgb(118, 94, 58); color: #FFFFFF;" title="Thursday 9:00 - 70 campaigns">70</div>
+                    <div class="heatmap-cell" style="background: rgb(110, 86, 53); color: #FFFFFF;" title="Thursday 10:00 - 96 campaigns">96</div>
+                    <div class="heatmap-cell" style="background: rgb(90, 66, 42); color: #FFFFFF;" title="Thursday 11:00 - 161 campaigns">161</div>
+                    <div class="heatmap-cell" style="background: rgb(126, 102, 63); color: #333333;" title="Thursday 12:00 - 43 campaigns">43</div>
+                    <div class="heatmap-cell" style="background: rgb(133, 109, 67); color: #333333;" title="Thursday 13:00 - 20 campaigns">20</div>
+                    <div class="heatmap-cell" style="background: rgb(107, 83, 52); color: #FFFFFF;" title="Thursday 14:00 - 104 campaigns">104</div>
+                    <div class="heatmap-cell" style="background: rgb(108, 84, 52); color: #FFFFFF;" title="Thursday 15:00 - 101 campaigns">101</div>
+                    <div class="heatmap-cell" style="background: rgb(89, 65, 41); color: #FFFFFF;" title="Thursday 16:00 - 167 campaigns">167</div>
+                    <div class="heatmap-cell" style="background: rgb(101, 77, 48); color: #FFFFFF;" title="Thursday 17:00 - 124 campaigns">124</div>
+                    <div class="heatmap-cell" style="background: rgb(129, 105, 65); color: #333333;" title="Thursday 18:00 - 31 campaigns">31</div>
+                    <div class="heatmap-cell" style="background: rgb(135, 111, 69); color: #333333;" title="Thursday 19:00 - 11 campaigns">11</div>
+                    <div class="heatmap-cell" style="background: rgb(137, 113, 70); color: #333333;" title="Thursday 20:00 - 4 campaigns">4</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Thursday 21:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Thursday 22:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Thursday 23:00 - 1 campaigns">1</div>
+                    <div class="heatmap-row-label">Fri</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Friday 0:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Friday 1:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Friday 2:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Friday 3:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Friday 4:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Friday 5:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Friday 6:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Friday 7:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: rgb(133, 109, 67); color: #333333;" title="Friday 8:00 - 18 campaigns">18</div>
+                    <div class="heatmap-cell" style="background: rgb(123, 99, 61); color: #FFFFFF;" title="Friday 9:00 - 53 campaigns">53</div>
+                    <div class="heatmap-cell" style="background: rgb(110, 86, 54); color: #FFFFFF;" title="Friday 10:00 - 94 campaigns">94</div>
+                    <div class="heatmap-cell" style="background: rgb(96, 72, 45); color: #FFFFFF;" title="Friday 11:00 - 141 campaigns">141</div>
+                    <div class="heatmap-cell" style="background: rgb(125, 101, 63); color: #333333;" title="Friday 12:00 - 44 campaigns">44</div>
+                    <div class="heatmap-cell" style="background: rgb(131, 107, 66); color: #333333;" title="Friday 13:00 - 26 campaigns">26</div>
+                    <div class="heatmap-cell" style="background: rgb(117, 93, 57); color: #FFFFFF;" title="Friday 14:00 - 73 campaigns">73</div>
+                    <div class="heatmap-cell" style="background: rgb(106, 82, 51); color: #FFFFFF;" title="Friday 15:00 - 110 campaigns">110</div>
+                    <div class="heatmap-cell" style="background: rgb(116, 92, 57); color: #FFFFFF;" title="Friday 16:00 - 76 campaigns">76</div>
+                    <div class="heatmap-cell" style="background: rgb(103, 79, 49); color: #FFFFFF;" title="Friday 17:00 - 118 campaigns">118</div>
+                    <div class="heatmap-cell" style="background: rgb(133, 109, 67); color: #333333;" title="Friday 18:00 - 19 campaigns">19</div>
+                    <div class="heatmap-cell" style="background: rgb(135, 111, 68); color: #333333;" title="Friday 19:00 - 12 campaigns">12</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Friday 20:00 - 1 campaigns">1</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Friday 21:00 - 1 campaigns">1</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Friday 22:00 - 1 campaigns">1</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Friday 23:00 - 1 campaigns">1</div>
+                    <div class="heatmap-row-label">Sat</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 0:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 1:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 2:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 3:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 4:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 5:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 6:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 7:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 8:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Saturday 9:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: rgb(121, 97, 60); color: #FFFFFF;" title="Saturday 10:00 - 60 campaigns">60</div>
+                    <div class="heatmap-cell" style="background: rgb(95, 71, 44); color: #FFFFFF;" title="Saturday 11:00 - 146 campaigns">146</div>
+                    <div class="heatmap-cell" style="background: rgb(131, 107, 66); color: #333333;" title="Saturday 12:00 - 25 campaigns">25</div>
+                    <div class="heatmap-cell" style="background: rgb(136, 112, 69); color: #333333;" title="Saturday 13:00 - 10 campaigns">10</div>
+                    <div class="heatmap-cell" style="background: rgb(124, 100, 62); color: #333333;" title="Saturday 14:00 - 48 campaigns">48</div>
+                    <div class="heatmap-cell" style="background: rgb(107, 83, 52); color: #FFFFFF;" title="Saturday 15:00 - 105 campaigns">105</div>
+                    <div class="heatmap-cell" style="background: rgb(116, 92, 57); color: #FFFFFF;" title="Saturday 16:00 - 75 campaigns">75</div>
+                    <div class="heatmap-cell" style="background: rgb(124, 100, 62); color: #333333;" title="Saturday 17:00 - 50 campaigns">50</div>
+                    <div class="heatmap-cell" style="background: rgb(136, 112, 69); color: #333333;" title="Saturday 18:00 - 10 campaigns">10</div>
+                    <div class="heatmap-cell" style="background: rgb(137, 113, 70); color: #333333;" title="Saturday 19:00 - 4 campaigns">4</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Saturday 20:00 - 3 campaigns">3</div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Saturday 21:00 - 1 campaigns">1</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 22:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Saturday 23:00 - 0 campaigns"></div>
+                    <div class="heatmap-row-label">Sun</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 0:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 1:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 2:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 3:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 4:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 5:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 6:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 7:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 8:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Sunday 9:00 - 2 campaigns">2</div>
+                    <div class="heatmap-cell" style="background: rgb(126, 102, 63); color: #333333;" title="Sunday 10:00 - 41 campaigns">41</div>
+                    <div class="heatmap-cell" style="background: rgb(107, 83, 52); color: #FFFFFF;" title="Sunday 11:00 - 105 campaigns">105</div>
+                    <div class="heatmap-cell" style="background: rgb(126, 102, 63); color: #333333;" title="Sunday 12:00 - 43 campaigns">43</div>
+                    <div class="heatmap-cell" style="background: rgb(135, 111, 68); color: #333333;" title="Sunday 13:00 - 13 campaigns">13</div>
+                    <div class="heatmap-cell" style="background: rgb(130, 106, 65); color: #333333;" title="Sunday 14:00 - 30 campaigns">30</div>
+                    <div class="heatmap-cell" style="background: rgb(122, 98, 60); color: #FFFFFF;" title="Sunday 15:00 - 56 campaigns">56</div>
+                    <div class="heatmap-cell" style="background: rgb(118, 94, 58); color: #FFFFFF;" title="Sunday 16:00 - 69 campaigns">69</div>
+                    <div class="heatmap-cell" style="background: rgb(123, 99, 61); color: #FFFFFF;" title="Sunday 17:00 - 51 campaigns">51</div>
+                    <div class="heatmap-cell" style="background: rgb(134, 110, 68); color: #333333;" title="Sunday 18:00 - 15 campaigns">15</div>
+                    <div class="heatmap-cell" style="background: rgb(137, 113, 69); color: #333333;" title="Sunday 19:00 - 6 campaigns">6</div>
+                    <div class="heatmap-cell" style="background: rgb(137, 113, 70); color: #333333;" title="Sunday 20:00 - 4 campaigns">4</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 21:00 - 0 campaigns"></div>
+                    <div class="heatmap-cell" style="background: rgb(138, 114, 70); color: #333333;" title="Sunday 22:00 - 3 campaigns">3</div>
+                    <div class="heatmap-cell" style="background: #F5F5F5; color: #CCCCCC;" title="Sunday 23:00 - 0 campaigns"></div>
+                </div>
+
+                <!-- Timing Insights -->
+                <div class="timing-insights">
+                    <div class="timing-insight">
+                        <div class="insight-value">Tuesday</div>
+                        <div class="insight-label">Peak Day</div>
+                    </div>
+                    <div class="timing-insight">
+                        <div class="insight-value">11:00</div>
+                        <div class="insight-label">Peak Hour</div>
                     </div>
                 </div>
             </div>
@@ -1150,22 +1677,6 @@
                             <tbody>
                                 <tr>
                                     <td>2026-01-26</td>
-                                    <td>Pichon Longueville Comtesse Lalande</td>
-                                    <td>2016</td>
-                                    <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td class="emails-cell">2,319</td>
-                                    <td class="item-no-cell">40198</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-01-26</td>
-                                    <td>Ventaglio</td>
-                                    <td>2018</td>
-                                    <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td class="emails-cell">2,331</td>
-                                    <td class="item-no-cell">61554</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-01-26</td>
                                     <td>Argentiera</td>
                                     <td>2021</td>
                                     <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
@@ -1181,20 +1692,20 @@
                                     <td class="item-no-cell">63223</td>
                                 </tr>
                                 <tr>
-                                    <td>2026-01-27</td>
-                                    <td>Montrose</td>
-                                    <td>2023</td>
+                                    <td>2026-01-26</td>
+                                    <td>Ventaglio</td>
+                                    <td>2018</td>
                                     <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td class="emails-cell">1,981</td>
-                                    <td class="item-no-cell">60806</td>
+                                    <td class="emails-cell">2,331</td>
+                                    <td class="item-no-cell">61554</td>
                                 </tr>
                                 <tr>
-                                    <td>2026-01-27</td>
-                                    <td>Proprietary Red</td>
-                                    <td>2014</td>
+                                    <td>2026-01-26</td>
+                                    <td>Pichon Longueville Comtesse Lalande</td>
+                                    <td>2016</td>
                                     <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td class="emails-cell">674</td>
-                                    <td class="item-no-cell">56651</td>
+                                    <td class="emails-cell">2,319</td>
+                                    <td class="item-no-cell">40198</td>
                                 </tr>
                                 <tr>
                                     <td>2026-01-27</td>
@@ -1206,11 +1717,51 @@
                                 </tr>
                                 <tr>
                                     <td>2026-01-27</td>
+                                    <td>Montrose</td>
+                                    <td>2023</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">1,981</td>
+                                    <td class="item-no-cell">60806</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-27</td>
                                     <td>Lynch Bages</td>
                                     <td>2023</td>
                                     <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
                                     <td class="emails-cell">4,736</td>
                                     <td class="item-no-cell">60735</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-27</td>
+                                    <td>Proprietary Red</td>
+                                    <td>2014</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">674</td>
+                                    <td class="item-no-cell">56651</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-28</td>
+                                    <td>Marojallia</td>
+                                    <td>2016</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">866</td>
+                                    <td class="item-no-cell">65330</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-28</td>
+                                    <td>Galatrona</td>
+                                    <td>2022</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                    <td class="emails-cell">2,330</td>
+                                    <td class="item-no-cell">62049</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-28</td>
+                                    <td>Don PX Convento Selección</td>
+                                    <td>1964</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">2,710</td>
+                                    <td class="item-no-cell">59403</td>
                                 </tr>
                                 <tr>
                                     <td>2026-01-28</td>
@@ -1219,6 +1770,14 @@
                                     <td><span class="tier-badge tier-extra-luxury">Extra luxury</span></td>
                                     <td class="emails-cell">62</td>
                                     <td class="item-no-cell">43770</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-28</td>
+                                    <td>La Conseillante</td>
+                                    <td>2020</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">1,835</td>
+                                    <td class="item-no-cell">53961</td>
                                 </tr>
                                 <tr>
                                     <td>2026-01-28</td>
@@ -1237,43 +1796,323 @@
                                     <td class="item-no-cell">51868</td>
                                 </tr>
                                 <tr>
-                                    <td>2026-01-28</td>
-                                    <td>Don PX Convento Selección</td>
-                                    <td>1964</td>
-                                    <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td class="emails-cell">2,710</td>
-                                    <td class="item-no-cell">59403</td>
+                                    <td>2026-01-29</td>
+                                    <td>Ornellaia</td>
+                                    <td>2014</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">44413</td>
                                 </tr>
                                 <tr>
-                                    <td>2026-01-28</td>
-                                    <td>La Conseillante</td>
-                                    <td>2020</td>
-                                    <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td class="emails-cell">1,835</td>
-                                    <td class="item-no-cell">53961</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-01-28</td>
-                                    <td>Galatrona</td>
-                                    <td>2022</td>
+                                    <td>2026-01-29</td>
+                                    <td>Barbaresco</td>
+                                    <td>2013</td>
                                     <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
-                                    <td class="emails-cell">1,408</td>
-                                    <td class="item-no-cell">62049</td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">38947</td>
                                 </tr>
                                 <tr>
-                                    <td>2026-01-28</td>
-                                    <td>Marojallia</td>
+                                    <td>2026-01-29</td>
+                                    <td>Guidalberto (2nd Vin)</td>
+                                    <td>2023</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">62856</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Guidalberto (2nd Vin)</td>
+                                    <td>2022</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">59577</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Sassicaia</td>
+                                    <td>2019</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">55092</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Chianti Classico</td>
+                                    <td>2020</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">56989</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Concerto</td>
+                                    <td>2021</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">59305</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Siepi</td>
+                                    <td>2019</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">54636</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Guidalberto (2nd Vin)</td>
+                                    <td>2020</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">55096</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Concerto</td>
+                                    <td>2022</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">61994</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Concerto</td>
+                                    <td>2023</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">65416</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Galatrona</td>
+                                    <td>2020</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">55758</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Guidalberto (2nd Vin)</td>
+                                    <td>2018</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">65552</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Guidalberto (2nd Vin)</td>
+                                    <td>2013</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">32405</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Galatrona</td>
+                                    <td>2023</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">65435</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Ornellaia</td>
                                     <td>2016</td>
                                     <td><span class="tier-badge tier-budget">Budget</span></td>
-                                    <td class="emails-cell">866</td>
-                                    <td class="item-no-cell">65330</td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">51020</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Ornellaia</td>
+                                    <td>2020</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">62734</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Rieussec</td>
+                                    <td>2019</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                    <td class="emails-cell">2,934</td>
+                                    <td class="item-no-cell">54824</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>DRC Assortment Case 13 Bottles (1RC, 3LT, 2RI, 2RSV, 2GE, 2EC, 1CO)</td>
+                                    <td>2009</td>
+                                    <td><span class="tier-badge tier-extra-luxury">Extra luxury</span></td>
+                                    <td class="emails-cell">256</td>
+                                    <td class="item-no-cell">66289</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>DRC Assortment Case 15 Bottles (1RC, 3LT, 2RI, 3RSV, 3GE, 3EC)</td>
+                                    <td>2010</td>
+                                    <td><span class="tier-badge tier-extra-luxury">Extra luxury</span></td>
+                                    <td class="emails-cell">256</td>
+                                    <td class="item-no-cell">66290</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Sassicaia</td>
+                                    <td>2020</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">56744</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Ornellaia</td>
+                                    <td>2021</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">62777</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Il Pino di Biserno</td>
+                                    <td>2023</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">65944</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Ornus dell'Ornellaia</td>
+                                    <td>2015</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">49725</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Guidalberto (2nd Vin)</td>
+                                    <td>2009</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">65553</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Sassicaia</td>
+                                    <td>2021</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">59572</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Ornellaia</td>
+                                    <td>2022</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">62953</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Gaia & Rey Chardonnay</td>
+                                    <td>2023</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">66112</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Sassicaia</td>
+                                    <td>2022</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">62851</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Sassicaia</td>
+                                    <td>2023</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">3,921</td>
+                                    <td class="item-no-cell">66156</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Tertre Roteboeuf</td>
+                                    <td>2018</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">2,000</td>
+                                    <td class="item-no-cell">49138</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Valbuena 5</td>
+                                    <td>2021</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">1,622</td>
+                                    <td class="item-no-cell">65404</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Barbaresco</td>
+                                    <td>2019</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">58071</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Ornellaia</td>
+                                    <td>2018</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">53684</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>San Leonardo</td>
+                                    <td>2019</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">62088</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>San Leonardo</td>
+                                    <td>2018</td>
+                                    <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">57291</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Gaia & Rey Chardonnay</td>
+                                    <td>2022</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">62439</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-29</td>
+                                    <td>Sassicaia</td>
+                                    <td>2018</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">61</td>
+                                    <td class="item-no-cell">52543</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-30</td>
+                                    <td>Léoville Las Cases</td>
+                                    <td>2021</td>
+                                    <td><span class="tier-badge tier-premium">Premium</span></td>
+                                    <td class="emails-cell">988</td>
+                                    <td class="item-no-cell">55444</td>
                                 </tr>
                                 <tr>
                                     <td>N/A</td>
                                     <td>nan</td>
                                     <td>Total</td>
                                     <td><span class="tier-badge tier-unknown">Unknown</span></td>
-                                    <td class="emails-cell">24,993</td>
+                                    <td class="emails-cell">39,844</td>
                                     <td class="item-no-cell">N/A</td>
                                 </tr>
                             </tbody>
@@ -1299,39 +2138,54 @@
                 "avg_vintage": 2023,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 56,
-                        "TUSCANY": 8,
+                        "BORDEAUX": 66,
+                        "TUSCANY": 40,
                         "ANDALUCIA": 8,
+                        "PIEDMONT": 7,
+                        "CASTILLA Y\u00a0LEON": 4,
                         "CALIFORNIA": 4,
-                        "PIEDMONT": 3
+                        "BURGUNDY": 2,
+                        "TRENTINO/ALTO ADIGE": 2
                 },
                 "types": {
                         "PAUILLAC": 28,
                         "POMEROL": 22,
+                        "BOLGHERI": 21,
+                        "TUSCANY": 10,
                         "MONTILLA-MORILES": 8,
-                        "BOLGHERI": 6,
+                        "VALDARNO": 8,
+                        "ST. JULIEN": 6,
                         "ST. ESTEPHE": 4,
+                        "RIBERA DEL DUERO": 4,
                         "NAPA VALLEY": 4,
                         "BAROLO": 3,
-                        "VALDARNO": 2,
-                        "MARGAUX": 2
+                        "SAUTERNES": 2,
+                        "BARBARESCO": 2,
+                        "VIGNETI DELLE DOLOMI": 2,
+                        "LANGHE": 2,
+                        "MARGAUX": 2,
+                        "ST. EMILION": 2,
+                        "CHIANTI CLASSICO": 1,
+                        "C\u00d4TE DE NUITS": 1
                 },
                 "price_tiers": {
-                        "Premium": 44,
-                        "Mid-range": 18,
+                        "Premium": 69,
+                        "Mid-range": 29,
+                        "Budget": 18,
                         "Luxury": 12,
-                        "Extra Luxury": 3,
-                        "Budget": 2
+                        "Extra Luxury": 5
                 },
                 "daily_avg_prices": {
                         "2026-01-26": 167.55,
                         "2026-01-27": 142.64,
-                        "2026-01-28": 361.67
+                        "2026-01-28": 303.21,
+                        "2026-01-29": 141.6,
+                        "2026-01-30": 137.5
                 },
-                "horeca_count": 4,
-                "leads_count": 4,
-                "total_unique_campaigns": 28,
-                "total_unique_items": 54
+                "horeca_count": 5,
+                "leads_count": 7,
+                "total_unique_campaigns": 72,
+                "total_unique_items": 98
         },
         {
                 "week_year": "2026-W04",
@@ -2558,7 +3412,7 @@
                         "BORDEAUX": 25,
                         "CASTILLA Y\u00a0LEON": 20,
                         "CHAMPAGNE": 13,
-                        "PIEDMONT": 5
+                        "PIEDMONT": 2
                 },
                 "types": {
                         "TUSCANY": 15,
@@ -2570,8 +3424,8 @@
                         "MARGAUX": 6,
                         "POMEROL": 6,
                         "CHAMPAGNE": 6,
-                        "LANGHE": 5,
                         "PAUILLAC": 4,
+                        "LANGHE": 2,
                         "MONTALCINO": 2,
                         "SUVERETO": 2,
                         "ST. ESTEPHE": 1,
@@ -2580,10 +3434,10 @@
                 },
                 "price_tiers": {
                         "Budget": 38,
-                        "Premium": 24,
+                        "Premium": 22,
                         "Mid-range": 12,
                         "Extra Luxury": 10,
-                        "Luxury": 8
+                        "Luxury": 7
                 },
                 "daily_avg_prices": {
                         "2025-08-11": 56.17,
@@ -2591,13 +3445,13 @@
                         "2025-08-13": 131.0,
                         "2025-08-14": 143.93,
                         "2025-08-15": 120.5,
-                        "2025-08-16": 249.86,
+                        "2025-08-16": 253.33,
                         "2025-08-17": 1552.14
                 },
                 "horeca_count": 1,
                 "leads_count": 4,
-                "total_unique_campaigns": 34,
-                "total_unique_items": 66
+                "total_unique_campaigns": 33,
+                "total_unique_items": 65
         },
         {
                 "week_year": "2025-W32",
@@ -4731,7 +5585,7 @@
                         "BORDEAUX": 77,
                         "BURGUNDY": 63,
                         "TUSCANY": 21,
-                        "PIEDMONT": 10,
+                        "PIEDMONT": 13,
                         "CHAMPAGNE": 10,
                         "CASTILLA Y\u00a0LEON": 4,
                         "LOMBARDY": 3,
@@ -4740,8 +5594,8 @@
                 "types": {
                         "C\u00d4TE DE NUITS": 58,
                         "ST. EMILION": 55,
+                        "LANGHE": 13,
                         "BOLGHERI": 12,
-                        "LANGHE": 10,
                         "CHAMPAGNE": 10,
                         "PAUILLAC": 8,
                         "VALDARNO": 6,
@@ -4757,14 +5611,14 @@
                 },
                 "price_tiers": {
                         "Extra Luxury": 85,
-                        "Premium": 41,
-                        "Luxury": 29,
+                        "Premium": 43,
+                        "Luxury": 30,
                         "Mid-range": 20,
                         "Budget": 15
                 },
                 "daily_avg_prices": {
                         "2024-10-28": 193.62,
-                        "2024-10-29": 191.58,
+                        "2024-10-29": 197.48,
                         "2024-10-30": 617.52,
                         "2024-10-31": 114.57,
                         "2024-11-01": 2572.17,
@@ -7992,9 +8846,17 @@
         "Premium (100-300)": 114747,
         "Unknown": 468
 };
+        const targetingData = {
+        "Generic / Broad": 5017,
+        "Recall": 464
+};
+        const bundleData = {
+        "Bundled Campaign": 4402,
+        "Single Campaign": 1079
+};
 
         // Chart instances
-        let regionsChart, typesChart, priceTiersChart, dailyPricesChart, stockChart;
+        let regionsChart, typesChart, priceTiersChart, dailyPricesChart, stockChart, targetingChart, bundleChart;
 
         // Chart.js defaults - Minimal Black & White with Gold accents
         Chart.defaults.font.family = "'Inter', sans-serif";
@@ -8169,6 +9031,80 @@
                             callbacks: {
                                 label: function(context) {
                                     return context.label + ': ' + context.parsed.toLocaleString() + ' bottles';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Targeting Strategy Chart
+            const targetingLabels = Object.keys(targetingData);
+            const targetingValues = Object.values(targetingData);
+            const targetingTotal = targetingValues.reduce((a, b) => a + b, 0);
+
+            targetingChart = new Chart(document.getElementById('targetingChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: targetingLabels,
+                    datasets: [{
+                        data: targetingValues,
+                        backgroundColor: ['#5A4A2F', '#8B7347', '#BFA976'],
+                        borderWidth: 3,
+                        borderColor: '#FFFFFF'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    cutout: '55%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 15 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const pct = targetingTotal > 0 ? ((context.parsed / targetingTotal) * 100).toFixed(1) : 0;
+                                    return context.label + ': ' + context.parsed.toLocaleString() + ' (' + pct + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Bundle Strategy Chart
+            const bundleLabels = Object.keys(bundleData);
+            const bundleValues = Object.values(bundleData);
+            const bundleTotal = bundleValues.reduce((a, b) => a + b, 0);
+
+            bundleChart = new Chart(document.getElementById('bundleChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: bundleLabels,
+                    datasets: [{
+                        data: bundleValues,
+                        backgroundColor: ['#6B5839', '#A68F5F'],
+                        borderWidth: 3,
+                        borderColor: '#FFFFFF'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    cutout: '55%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 15 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const pct = bundleTotal > 0 ? ((context.parsed / bundleTotal) * 100).toFixed(1) : 0;
+                                    return context.label + ': ' + context.parsed.toLocaleString() + ' (' + pct + '%)';
                                 }
                             }
                         }

@@ -1,6 +1,6 @@
 {
   "api_version": "1.0.0",
-  "generated_at": "2026-02-08T12:10:22.127068",
+  "generated_at": "2026-02-08T14:49:47.572313",
   "endpoints": {
     "winners": {
       "url": "/data/winners.json",

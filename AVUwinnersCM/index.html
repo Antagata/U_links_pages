@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVU Statistics - Login</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * {
@@ -62,6 +64,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -158,9 +161,19 @@
         }
 
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            75% { transform: translateX(10px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
         }
 
         .error-message.show {
@@ -189,11 +202,17 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Video Background -->
     <video autoplay muted loop playsinline class="video-background">
@@ -211,14 +230,8 @@
         <form id="loginForm">
             <div class="form-group">
                 <label for="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    required
-                    autocomplete="current-password"
-                >
+                <input type="password" id="password" name="password" placeholder="Enter your password" required
+                    autocomplete="current-password">
             </div>
 
             <button type="submit" class="btn-login">
@@ -250,7 +263,7 @@
         }
 
         // Handle form submission
-        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
             e.preventDefault();
 
             const passwordInput = document.getElementById('password');
@@ -299,4 +312,5 @@
         }
     </script>
 </body>
+
 </html>

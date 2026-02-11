@@ -330,9 +330,10 @@
 
         .offering-balance-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: start;
+            margin-top: 30px;
         }
 
         .balance-summary {
@@ -797,199 +798,204 @@
         <div class="header">
             <h1>Campaign<br>Analytics</h1>
             <p class="subtitle">Weekly Insights & Distribution</p>
-            <p class="timestamp">Last Updated: February 11, 2026 — 09:54</p>
+            <p class="timestamp">Last Updated: February 11, 2026 — 17:18</p>
         </div>
 
-        <!-- Offering Balance Section -->
+        <!-- Tier Balance Section -->
         <div class="offering-balance-section">
-            <h2>Active PRIVATE Campaigns - Tier Balance</h2>
+            <h2>Active PRIVATE Campaigns — Tier Balance</h2>
+            <!-- Scheduled PRIVATE Campaigns Table -->
+            <div class="campaigns-list" style="margin-bottom: 30px;">
+                <h3>Scheduled PRIVATE Campaigns</h3>
+                <div class="campaigns-table-container">
+                    <table class="campaigns-table" id="privateCampaignsTable">
+                        <thead>
+                            <tr>
+                                <th>Wine Name</th>
+                                <th>Vintage</th>
+                                <th>Price Tier</th>
+                                <th>Schedule Date</th>
+                                <th>Emails Sent</th>
+                                <th>Price CHF</th>
+                                <th>Price EUR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cheval Blanc</td>
+                                <td>2016</td>
+                                <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                                <td>2026-02-09</td>
+                                <td style="text-align: right; font-weight: 600;">784</td>
+                                <td style="text-align: right;">CHF 650</td>
+                                <td style="text-align: right;">€705</td>
+                            </tr>
+                            <tr>
+                                <td>Cabernet Franc G de la Gaffelière</td>
+                                <td>2022</td>
+                                <td><span class="tier-badge tier-premium">Premium</span></td>
+                                <td>2026-02-09</td>
+                                <td style="text-align: right; font-weight: 600;">2,441</td>
+                                <td style="text-align: right;">CHF 195</td>
+                                <td style="text-align: right;">€210</td>
+                            </tr>
+                            <tr>
+                                <td>Vinha Maria Teresa</td>
+                                <td>2019</td>
+                                <td><span class="tier-badge tier-premium">Premium</span></td>
+                                <td>2026-02-09</td>
+                                <td style="text-align: right; font-weight: 600;">303</td>
+                                <td style="text-align: right;">CHF 175</td>
+                                <td style="text-align: right;">€190</td>
+                            </tr>
+                            <tr>
+                                <td>D'Issan</td>
+                                <td>2022</td>
+                                <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                <td>2026-02-09</td>
+                                <td style="text-align: right; font-weight: 600;">2,323</td>
+                                <td style="text-align: right;">CHF 59</td>
+                                <td style="text-align: right;">€64</td>
+                            </tr>
+                            <tr>
+                                <td>Haut Brion</td>
+                                <td>1989</td>
+                                <td><span class="tier-badge tier-extra-luxury">Extra luxury</span></td>
+                                <td>2026-02-10</td>
+                                <td style="text-align: right; font-weight: 600;">432</td>
+                                <td style="text-align: right;">CHF 2,450</td>
+                                <td style="text-align: right;">€2,650</td>
+                            </tr>
+                            <tr>
+                                <td>Pavie</td>
+                                <td>2021</td>
+                                <td><span class="tier-badge tier-premium">Premium</span></td>
+                                <td>2026-02-10</td>
+                                <td style="text-align: right; font-weight: 600;">2,707</td>
+                                <td style="text-align: right;">CHF 149</td>
+                                <td style="text-align: right;">€161</td>
+                            </tr>
+                            <tr>
+                                <td>Vinha da Ponte</td>
+                                <td>2018</td>
+                                <td><span class="tier-badge tier-premium">Premium</span></td>
+                                <td>2026-02-10</td>
+                                <td style="text-align: right; font-weight: 600;">180</td>
+                                <td style="text-align: right;">CHF 200</td>
+                                <td style="text-align: right;">€220</td>
+                            </tr>
+                            <tr>
+                                <td>Saffredi</td>
+                                <td>2023</td>
+                                <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                <td>2026-02-10</td>
+                                <td style="text-align: right; font-weight: 600;">448</td>
+                                <td style="text-align: right;">CHF 68</td>
+                                <td style="text-align: right;">€74</td>
+                            </tr>
+                            <tr>
+                                <td>Le Serre Nuove dell'Ornellaia</td>
+                                <td>2021</td>
+                                <td><span class="tier-badge tier-budget">Budget</span></td>
+                                <td>2026-02-10</td>
+                                <td style="text-align: right; font-weight: 600;">3,562</td>
+                                <td style="text-align: right;">CHF 42</td>
+                                <td style="text-align: right;">€45</td>
+                            </tr>
+                            <tr>
+                                <td>Giscours</td>
+                                <td>2019</td>
+                                <td><span class="tier-badge tier-budget">Budget</span></td>
+                                <td>2026-02-11</td>
+                                <td style="text-align: right; font-weight: 600;">1,936</td>
+                                <td style="text-align: right;">CHF 44</td>
+                                <td style="text-align: right;">€48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Client vs Offer Distribution Grid -->
             <div class="offering-balance-grid">
-                <!-- Tier Balance Summary -->
+                <!-- Bar Chart -->
                 <div class="balance-summary">
-                    <h3>Client vs Offer Distribution</h3>
+                    <h3>Client % vs Offer %</h3>
+                    <canvas id="tierBalanceChart" height="260"></canvas>
+                </div>
+
+                <!-- Tier Balance Summary Table -->
+                <div class="balance-summary">
+                    <h3>Tier Balance Summary</h3>
                     <table class="balance-table">
                         <thead>
                             <tr>
                                 <th>Tier</th>
                                 <th>Clients</th>
+                                <th>Client %</th>
                                 <th>Offers</th>
+                                <th>Offer %</th>
+                                <th>Emails</th>
+                                <th>Email %</th>
                                 <th>Gap</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="tier-badge tier-budget">Budget</span></td>
-                                <td>43.4%</td>
-                                <td>13.3%</td>
-                                <td class="gap-negative">-30.1%</td>
-                            </tr>
-                            <tr>
-                                <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
-                                <td>31.4%</td>
-                                <td>40.0%</td>
-                                <td class="gap-positive">+8.6%</td>
-                            </tr>
-                            <tr>
-                                <td><span class="tier-badge tier-premium">Premium</span></td>
-                                <td>16.5%</td>
-                                <td>20.0%</td>
-                                <td class="gap-positive">+3.5%</td>
+                                <td><span class="tier-badge tier-extra-luxury">Extra luxury</span></td>
+                                <td style="text-align: center;">64</td>
+                                <td style="text-align: center;">1.7%</td>
+                                <td style="text-align: center;">1</td>
+                                <td style="text-align: center;">10.0%</td>
+                                <td style="text-align: right;">432</td>
+                                <td style="text-align: center;">2.9%</td>
+                                <td class="gap-positive">+8.3%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                                <td>7.0%</td>
-                                <td>26.7%</td>
-                                <td class="gap-positive">+19.7%</td>
+                                <td style="text-align: center;">259</td>
+                                <td style="text-align: center;">7.0%</td>
+                                <td style="text-align: center;">1</td>
+                                <td style="text-align: center;">10.0%</td>
+                                <td style="text-align: right;">784</td>
+                                <td style="text-align: center;">5.2%</td>
+                                <td class="gap-positive">+3.0%</td>
                             </tr>
                             <tr>
-                                <td><span class="tier-badge tier-ultra-luxury">Ultra-Luxury</span></td>
-                                <td>1.7%</td>
-                                <td>0.0%</td>
-                                <td class="gap-negative">-1.7%</td>
+                                <td><span class="tier-badge tier-premium">Premium</span></td>
+                                <td style="text-align: center;">611</td>
+                                <td style="text-align: center;">16.5%</td>
+                                <td style="text-align: center;">4</td>
+                                <td style="text-align: center;">40.0%</td>
+                                <td style="text-align: right;">5,631</td>
+                                <td style="text-align: center;">37.3%</td>
+                                <td class="gap-positive">+23.5%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
+                                <td style="text-align: center;">1,162</td>
+                                <td style="text-align: center;">31.4%</td>
+                                <td style="text-align: center;">2</td>
+                                <td style="text-align: center;">20.0%</td>
+                                <td style="text-align: right;">2,771</td>
+                                <td style="text-align: center;">18.3%</td>
+                                <td class="gap-negative">-11.4%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-budget">Budget</span></td>
+                                <td style="text-align: center;">1,607</td>
+                                <td style="text-align: center;">43.4%</td>
+                                <td style="text-align: center;">2</td>
+                                <td style="text-align: center;">20.0%</td>
+                                <td style="text-align: right;">5,498</td>
+                                <td style="text-align: center;">36.4%</td>
+                                <td class="gap-negative">-23.4%</td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-
-                <!-- Active Campaigns List -->
-                <div class="campaigns-list">
-                    <h3>Scheduled PRIVATE Campaigns</h3>
-                    <div class="campaigns-table-container">
-                        <table class="campaigns-table">
-                            <thead>
-                                <tr>
-                                    <th>Schedule</th>
-                                    <th>Wine</th>
-                                    <th>Producer</th>
-                                    <th>Price (EUR)</th>
-                                    <th>Tier</th>
-                                    <th>Emails</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2026-02-10 17:15</td>
-                                    <td>Haut Brion</td>
-                                    <td>Château Haut Brion</td>
-                                    <td>€2,650</td>
-                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                                    <td style="text-align: right; font-weight: 600;">432</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 16:30</td>
-                                    <td>Saffredi</td>
-                                    <td>Fattoria le Pupille</td>
-                                    <td>€2,270</td>
-                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                                    <td style="text-align: right; font-weight: 600;">448</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 16:00</td>
-                                    <td>Vinha da Ponte</td>
-                                    <td>Quinta do Crasto</td>
-                                    <td>€870</td>
-                                    <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td style="text-align: right; font-weight: 600;">180</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 15:30</td>
-                                    <td>Le Serre Nuove dell'Ornellaia</td>
-                                    <td>Tenuta dell'Ornellaia</td>
-                                    <td>€44</td>
-                                    <td><span class="tier-badge tier-budget">Budget</span></td>
-                                    <td style="text-align: right; font-weight: 600;">827</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 15:30</td>
-                                    <td>Le Serre Nuove dell'Ornellaia</td>
-                                    <td>Tenuta dell'Ornellaia</td>
-                                    <td>€44</td>
-                                    <td><span class="tier-badge tier-budget">Budget</span></td>
-                                    <td style="text-align: right; font-weight: 600;">2,735</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 15:00</td>
-                                    <td>Pavie</td>
-                                    <td>Château Pavie</td>
-                                    <td>€157</td>
-                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
-                                    <td style="text-align: right; font-weight: 600;">32</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 14:14</td>
-                                    <td>Pavie</td>
-                                    <td>Château Pavie</td>
-                                    <td>€157</td>
-                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
-                                    <td style="text-align: right; font-weight: 600;">19</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 12:36</td>
-                                    <td>Pavie</td>
-                                    <td>Château Pavie</td>
-                                    <td>€157</td>
-                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
-                                    <td style="text-align: right; font-weight: 600;">357</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-10 11:00</td>
-                                    <td>Pavie</td>
-                                    <td>Château Pavie</td>
-                                    <td>€157</td>
-                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
-                                    <td style="text-align: right; font-weight: 600;">2,299</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-09 17:30</td>
-                                    <td>Cheval Blanc</td>
-                                    <td>Château Cheval Blanc</td>
-                                    <td>€695</td>
-                                    <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td style="text-align: right; font-weight: 600;">15</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-09 17:30</td>
-                                    <td>Cheval Blanc</td>
-                                    <td>Château Cheval Blanc</td>
-                                    <td>€6,380</td>
-                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                                    <td style="text-align: right; font-weight: 600;">33</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-09 17:30</td>
-                                    <td>Cheval Blanc</td>
-                                    <td>Château Cheval Blanc</td>
-                                    <td>€6,380</td>
-                                    <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                                    <td style="text-align: right; font-weight: 600;">736</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-09 17:00</td>
-                                    <td>Cabernet Franc G de la Gaffelière</td>
-                                    <td>Château La Gaffelière</td>
-                                    <td>€487</td>
-                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
-                                    <td style="text-align: right; font-weight: 600;">2,441</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-09 15:57</td>
-                                    <td>Vinha Maria Teresa</td>
-                                    <td>Quinta do Crasto</td>
-                                    <td>€190</td>
-                                    <td><span class="tier-badge tier-mid-range">Mid-Range</span></td>
-                                    <td style="text-align: right; font-weight: 600;">303</td>
-                                </tr>
-                                <tr>
-                                    <td>2026-02-09 14:00</td>
-                                    <td>D'Issan</td>
-                                    <td>Château D'Issan</td>
-                                    <td>€615</td>
-                                    <td><span class="tier-badge tier-premium">Premium</span></td>
-                                    <td style="text-align: right; font-weight: 600;">2,323</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <p style="font-size: 0.7rem; color: #888; margin-top: 12px; text-align: center;">
+                        3,703 active clients &middot; 10 offers this week &middot; 15,116 emails sent
+                    </p>
                 </div>
             </div>
         </div>
@@ -1001,15 +1007,15 @@
             <!-- KPI Cards -->
             <div class="kpi-grid">
                 <div class="kpi-card">
-                    <div class="kpi-value">5,553</div>
+                    <div class="kpi-value">5,554</div>
                     <div class="kpi-label">Total Campaigns</div>
                 </div>
                 <div class="kpi-card">
-                    <div class="kpi-value">1015</div>
+                    <div class="kpi-value">1016</div>
                     <div class="kpi-label">Active Days</div>
                 </div>
                 <div class="kpi-card">
-                    <div class="kpi-value">3,227,607</div>
+                    <div class="kpi-value">3,229,543</div>
                     <div class="kpi-label">Total Emails</div>
                 </div>
                 <div class="kpi-card">
@@ -1132,7 +1138,7 @@
                     <div class="heatmap-cell" style="background: rgb(91, 67, 42); color: #FFFFFF;" title="Wednesday 11:00 - 159 campaigns">159</div>
                     <div class="heatmap-cell" style="background: rgb(126, 102, 63); color: #333333;" title="Wednesday 12:00 - 43 campaigns">43</div>
                     <div class="heatmap-cell" style="background: rgb(128, 104, 64); color: #333333;" title="Wednesday 13:00 - 36 campaigns">36</div>
-                    <div class="heatmap-cell" style="background: rgb(106, 82, 51); color: #FFFFFF;" title="Wednesday 14:00 - 109 campaigns">109</div>
+                    <div class="heatmap-cell" style="background: rgb(106, 82, 51); color: #FFFFFF;" title="Wednesday 14:00 - 110 campaigns">110</div>
                     <div class="heatmap-cell" style="background: rgb(99, 75, 47); color: #FFFFFF;" title="Wednesday 15:00 - 132 campaigns">132</div>
                     <div class="heatmap-cell" style="background: rgb(96, 72, 45); color: #FFFFFF;" title="Wednesday 16:00 - 144 campaigns">144</div>
                     <div class="heatmap-cell" style="background: rgb(101, 77, 48); color: #FFFFFF;" title="Wednesday 17:00 - 125 campaigns">125</div>
@@ -1535,12 +1541,12 @@
                                     <td class="item-no-cell">59413</td>
                                 </tr>
                                 <tr>
-                                    <td>N/A</td>
-                                    <td>nan</td>
-                                    <td>Total</td>
-                                    <td><span class="tier-badge tier-unknown">Unknown</span></td>
-                                    <td class="emails-cell">13,180</td>
-                                    <td class="item-no-cell">N/A</td>
+                                    <td>2026-02-11</td>
+                                    <td>Giscours</td>
+                                    <td>2019</td>
+                                    <td><span class="tier-badge tier-budget">Budget</span></td>
+                                    <td class="emails-cell">1,936</td>
+                                    <td class="item-no-cell">51507</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1565,33 +1571,34 @@
                 "avg_vintage": null,
                 "top_region": "BORDEAUX",
                 "regions": {
-                        "BORDEAUX": 16,
+                        "BORDEAUX": 19,
                         "TUSCANY": 8,
                         "DOURO": 2
                 },
                 "types": {
                         "ST. EMILION": 13,
+                        "MARGAUX": 5,
                         "MAREMMA": 4,
                         "BOLGHERI": 4,
                         "DOURO": 2,
-                        "MARGAUX": 2,
                         "GRAVES, PESSAC-L\u00c9OGN": 1
                 },
                 "price_tiers": {
                         "Premium": 11,
+                        "Budget": 7,
                         "Mid-range": 6,
-                        "Budget": 4,
                         "Luxury": 4,
                         "Extra Luxury": 1
                 },
                 "daily_avg_prices": {
                         "2026-02-09": 415.88,
-                        "2026-02-10": 256.44
+                        "2026-02-10": 256.44,
+                        "2026-02-11": 47.0
                 },
                 "horeca_count": 2,
-                "leads_count": 3,
-                "total_unique_campaigns": 14,
-                "total_unique_items": 27
+                "leads_count": 4,
+                "total_unique_campaigns": 16,
+                "total_unique_items": 32
         },
         {
                 "week_year": "2026-W06",
@@ -8365,16 +8372,39 @@
         "Unknown": 29
 };
         const targetingData = {
-        "Generic / Broad": 5084,
+        "Generic / Broad": 5085,
         "Recall": 469
 };
         const bundleData = {
-        "Bundled Campaign": 4467,
+        "Bundled Campaign": 4468,
         "Single Campaign": 1086
+};
+        const tierBalanceData = {
+        "labels": [
+                "Extra luxury",
+                "Luxury",
+                "Premium",
+                "Mid-range",
+                "Budget"
+        ],
+        "client_pct": [
+                1.7,
+                7.0,
+                16.5,
+                31.4,
+                43.4
+        ],
+        "offer_pct": [
+                10.0,
+                10.0,
+                40.0,
+                20.0,
+                20.0
+        ]
 };
 
         // Chart instances
-        let regionsChart, typesChart, priceTiersChart, dailyPricesChart, stockChart, targetingChart, bundleChart;
+        let regionsChart, typesChart, priceTiersChart, dailyPricesChart, stockChart, targetingChart, bundleChart, tierBalanceChart;
 
         // Chart.js defaults - Minimal Black & White with Gold accents
         Chart.defaults.font.family = "'Inter', sans-serif";
@@ -8623,6 +8653,63 @@
                                 label: function(context) {
                                     const pct = bundleTotal > 0 ? ((context.parsed / bundleTotal) * 100).toFixed(1) : 0;
                                     return context.label + ': ' + context.parsed.toLocaleString() + ' (' + pct + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Tier Balance Bar Chart (Client % vs Offer %)
+        if (document.getElementById('tierBalanceChart') && tierBalanceData.labels.length > 0) {
+            tierBalanceChart = new Chart(document.getElementById('tierBalanceChart'), {
+                type: 'bar',
+                data: {
+                    labels: tierBalanceData.labels,
+                    datasets: [
+                        {
+                            label: 'Client %',
+                            data: tierBalanceData.client_pct,
+                            backgroundColor: 'rgba(139, 115, 71, 0.7)',
+                            borderColor: '#8B7347',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Offer %',
+                            data: tierBalanceData.offer_pct,
+                            backgroundColor: 'rgba(107, 88, 57, 0.4)',
+                            borderColor: '#6B5839',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(v) { return v + '%'; }
+                            },
+                            grid: { color: '#E0E0E0' }
+                        },
+                        y: {
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: { padding: 12, font: { size: 11 } }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.x.toFixed(1) + '%';
                                 }
                             }
                         }

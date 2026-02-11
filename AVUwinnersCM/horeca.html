@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="version" content="20260211095458">
+    <meta name="version" content="20260211171853">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HORECA Campaigns - AVU Statistics</title>
@@ -754,7 +754,7 @@
         <div class="header">
             <h1>HORECA Campaigns</h1>
             <p>Hotel, Restaurant & Catering Campaigns Analysis</p>
-            <p style="font-size: 0.9em; color: #999;">Last Updated: February 11, 2026 at 09:54:41</p>
+            <p style="font-size: 0.9em; color: #999;">Last Updated: February 11, 2026 at 17:18:42</p>
             <p style="font-size: 0.85em; color: #e74c3c; margin-top: 5px;">V10: Using OMT 75cl prices for campaigns</p>
         </div>
 
@@ -8287,7 +8287,7 @@
                 <details>
                     <summary>
                         <span class="slot-title">Wednesday — Everyone</span> — Don PX Convento Selección 1964 (Toro Albalá)
-                        <div class="slot-meta">Tier: Premium | CHF 180 | Stock: 341 | Source: PRIVATE (14 days)</div>
+                        <div class="slot-meta">Tier: Premium | CHF 180 | Stock: 341 | Source: PRIVATE (30 days)</div>
                     </summary>
                     <div class="why">
                         <strong>Why</strong>
@@ -9749,6 +9749,10 @@
             Filtered for Campaign Type = HORECA, Campaign Sub-Type = Normal.
         </p>
 
+        <button id="unlockTop25Btn" class="unlock-btn" onclick="unlockPrices()" style="margin-bottom: 15px;">
+            🔒 Unlock Sales
+        </button>
+
         <div class="rec-table-container">
             <table id="top25Table" style="font-family: Calibri, sans-serif; font-size: 11pt;">
                 <thead>
@@ -9761,7 +9765,7 @@
                         <th>Producer</th>
                         <th>Start Date</th>
                         <th>Emails Sent</th>
-                        <th>Total Sales (CHF)</th>
+                        <th class="price-column">Total Sales (CHF)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -9774,7 +9778,7 @@
                         <td>Château Meyney</td>
                         <td>2025-09-26 13:37</td>
                         <td>285</td>
-                        <td><strong>105'243.04</strong></td>
+                        <td class="price-column price-locked"><strong>106'402.06</strong></td>
                     </tr>
                     <tr>
                         <td><strong>2</strong></td>
@@ -9785,7 +9789,7 @@
                         <td>Château Troplong Mondot</td>
                         <td>2025-03-07 10:53</td>
                         <td>227</td>
-                        <td><strong>60'634.40</strong></td>
+                        <td class="price-column price-locked"><strong>60'634.40</strong></td>
                     </tr>
                     <tr>
                         <td><strong>3</strong></td>
@@ -9796,7 +9800,7 @@
                         <td>Château Lynch Bages</td>
                         <td>2023-08-22 16:00</td>
                         <td>188</td>
-                        <td><strong>55'264.05</strong></td>
+                        <td class="price-column price-locked"><strong>55'264.05</strong></td>
                     </tr>
                     <tr>
                         <td><strong>4</strong></td>
@@ -9807,7 +9811,7 @@
                         <td>Château Latour</td>
                         <td>2025-03-17 10:36</td>
                         <td>256</td>
-                        <td><strong>50'826.52</strong></td>
+                        <td class="price-column price-locked"><strong>50'826.52</strong></td>
                     </tr>
                     <tr>
                         <td><strong>5</strong></td>
@@ -9818,7 +9822,7 @@
                         <td>Fontodi</td>
                         <td>2023-10-18 14:30</td>
                         <td>205</td>
-                        <td><strong>38'977.01</strong></td>
+                        <td class="price-column price-locked"><strong>38'977.01</strong></td>
                     </tr>
                     <tr>
                         <td><strong>6</strong></td>
@@ -9829,7 +9833,7 @@
                         <td>Château Figeac</td>
                         <td>2025-09-18 15:55</td>
                         <td>263</td>
-                        <td><strong>30'688.45</strong></td>
+                        <td class="price-column price-locked"><strong>33'388.45</strong></td>
                     </tr>
                     <tr>
                         <td><strong>7</strong></td>
@@ -9840,7 +9844,7 @@
                         <td>Château Lynch Bages</td>
                         <td>2025-06-11 10:10</td>
                         <td>209</td>
-                        <td><strong>29'385.53</strong></td>
+                        <td class="price-column price-locked"><strong>29'385.53</strong></td>
                     </tr>
                     <tr>
                         <td><strong>8</strong></td>
@@ -9851,65 +9855,10 @@
                         <td>Antinori - Tenuta Tignanello</td>
                         <td>2024-11-29 10:01</td>
                         <td>203</td>
-                        <td><strong>27'257.27</strong></td>
+                        <td class="price-column price-locked"><strong>27'257.27</strong></td>
                     </tr>
                     <tr>
                         <td><strong>9</strong></td>
-                        <td>CM-24-00870</td>
-                        <td>60340</td>
-                        <td>Cheval Blanc</td>
-                        <td>2023</td>
-                        <td>Château Cheval Blanc</td>
-                        <td>2024-05-13 10:39</td>
-                        <td>186</td>
-                        <td><strong>25'586.39</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>10</strong></td>
-                        <td>CM-25-02876</td>
-                        <td>64959</td>
-                        <td>Multi</td>
-                        <td>2021</td>
-                        <td>Tenuta di Biserno</td>
-                        <td>2025-10-22 10:03</td>
-                        <td>296</td>
-                        <td><strong>25'305.68</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>11</strong></td>
-                        <td>CM-23-00113</td>
-                        <td>51454</td>
-                        <td>Poujeaux</td>
-                        <td>2019</td>
-                        <td>Château Poujeaux</td>
-                        <td>2023-05-10 15:30</td>
-                        <td>187</td>
-                        <td><strong>24'820.29</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>12</strong></td>
-                        <td>CM-24-01372</td>
-                        <td>57050</td>
-                        <td>Multi</td>
-                        <td>2021</td>
-                        <td>Aalto Bodegas y Viñedos</td>
-                        <td>2024-07-03 09:16</td>
-                        <td>190</td>
-                        <td><strong>24'560.16</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>13</strong></td>
-                        <td>CM-24-00263</td>
-                        <td>59601</td>
-                        <td>Cabernet Sauvignon</td>
-                        <td>2020</td>
-                        <td>Harlan Estate</td>
-                        <td>2024-02-15 14:00</td>
-                        <td>204</td>
-                        <td><strong>24'072.77</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>14</strong></td>
                         <td>CM-25-02287</td>
                         <td>55625</td>
                         <td>Cos d'Estournel</td>
@@ -9917,7 +9866,62 @@
                         <td>Château Cos d'Estournel</td>
                         <td>2025-09-03 16:29</td>
                         <td>288</td>
-                        <td><strong>23'881.25</strong></td>
+                        <td class="price-column price-locked"><strong>26'743.25</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>10</strong></td>
+                        <td>CM-24-00870</td>
+                        <td>60340</td>
+                        <td>Cheval Blanc</td>
+                        <td>2023</td>
+                        <td>Château Cheval Blanc</td>
+                        <td>2024-05-13 10:39</td>
+                        <td>186</td>
+                        <td class="price-column price-locked"><strong>25'586.39</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>11</strong></td>
+                        <td>CM-25-02876</td>
+                        <td>64959</td>
+                        <td>Multi</td>
+                        <td>2021</td>
+                        <td>Tenuta di Biserno</td>
+                        <td>2025-10-22 10:03</td>
+                        <td>296</td>
+                        <td class="price-column price-locked"><strong>25'305.68</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>12</strong></td>
+                        <td>CM-23-00113</td>
+                        <td>51454</td>
+                        <td>Poujeaux</td>
+                        <td>2019</td>
+                        <td>Château Poujeaux</td>
+                        <td>2023-05-10 15:30</td>
+                        <td>187</td>
+                        <td class="price-column price-locked"><strong>24'820.29</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>13</strong></td>
+                        <td>CM-24-01372</td>
+                        <td>57050</td>
+                        <td>Multi</td>
+                        <td>2021</td>
+                        <td>Aalto Bodegas y Viñedos</td>
+                        <td>2024-07-03 09:16</td>
+                        <td>190</td>
+                        <td class="price-column price-locked"><strong>24'560.16</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>14</strong></td>
+                        <td>CM-24-00263</td>
+                        <td>59601</td>
+                        <td>Cabernet Sauvignon</td>
+                        <td>2020</td>
+                        <td>Harlan Estate</td>
+                        <td>2024-02-15 14:00</td>
+                        <td>204</td>
+                        <td class="price-column price-locked"><strong>24'072.77</strong></td>
                     </tr>
                     <tr>
                         <td><strong>15</strong></td>
@@ -9928,7 +9932,7 @@
                         <td>Dominus Estate</td>
                         <td>2025-10-18 11:01</td>
                         <td>302</td>
-                        <td><strong>22'663.08</strong></td>
+                        <td class="price-column price-locked"><strong>22'663.08</strong></td>
                     </tr>
                     <tr>
                         <td><strong>16</strong></td>
@@ -9939,7 +9943,7 @@
                         <td>Maison Salon</td>
                         <td>2024-08-10 09:00</td>
                         <td>201</td>
-                        <td><strong>21'547.50</strong></td>
+                        <td class="price-column price-locked"><strong>21'547.50</strong></td>
                     </tr>
                     <tr>
                         <td><strong>17</strong></td>
@@ -9950,7 +9954,7 @@
                         <td>Promontory</td>
                         <td>2024-03-06 19:06</td>
                         <td>181</td>
-                        <td><strong>21'541.44</strong></td>
+                        <td class="price-column price-locked"><strong>21'541.44</strong></td>
                     </tr>
                     <tr>
                         <td><strong>18</strong></td>
@@ -9961,7 +9965,7 @@
                         <td>Bodegas Vega Sicilia</td>
                         <td>2024-08-17 09:00</td>
                         <td>222</td>
-                        <td><strong>21'514.29</strong></td>
+                        <td class="price-column price-locked"><strong>21'514.29</strong></td>
                     </tr>
                     <tr>
                         <td><strong>19</strong></td>
@@ -9972,7 +9976,7 @@
                         <td>Louis Roederer</td>
                         <td>2024-11-28 09:30</td>
                         <td>244</td>
-                        <td><strong>21'339.45</strong></td>
+                        <td class="price-column price-locked"><strong>21'339.45</strong></td>
                     </tr>
                     <tr>
                         <td><strong>20</strong></td>
@@ -9983,7 +9987,7 @@
                         <td>Château La Mission Haut Brion</td>
                         <td>2026-01-12 16:14</td>
                         <td>327</td>
-                        <td><strong>20'744.03</strong></td>
+                        <td class="price-column price-locked"><strong>20'744.03</strong></td>
                     </tr>
                     <tr>
                         <td><strong>21</strong></td>
@@ -9994,7 +9998,7 @@
                         <td>Bodegas Vega Sicilia</td>
                         <td>2025-01-23 16:02</td>
                         <td>247</td>
-                        <td><strong>20'730.07</strong></td>
+                        <td class="price-column price-locked"><strong>20'730.07</strong></td>
                     </tr>
                     <tr>
                         <td><strong>22</strong></td>
@@ -10005,7 +10009,7 @@
                         <td>Château Giscours</td>
                         <td>2025-11-15 10:33</td>
                         <td>357</td>
-                        <td><strong>20'041.56</strong></td>
+                        <td class="price-column price-locked"><strong>20'041.56</strong></td>
                     </tr>
                     <tr>
                         <td><strong>23</strong></td>
@@ -10016,7 +10020,7 @@
                         <td>Château Cheval Blanc</td>
                         <td>2025-03-05 16:02</td>
                         <td>254</td>
-                        <td><strong>19'994.97</strong></td>
+                        <td class="price-column price-locked"><strong>19'994.97</strong></td>
                     </tr>
                     <tr>
                         <td><strong>24</strong></td>
@@ -10027,7 +10031,7 @@
                         <td>Château Lafite Rothschild</td>
                         <td>2025-04-29 13:55</td>
                         <td>248</td>
-                        <td><strong>19'533.19</strong></td>
+                        <td class="price-column price-locked"><strong>19'533.19</strong></td>
                     </tr>
                     <tr>
                         <td><strong>25</strong></td>
@@ -10038,7 +10042,7 @@
                         <td>Château Palmer</td>
                         <td>2024-10-15 14:00</td>
                         <td>220</td>
-                        <td><strong>17'248.37</strong></td>
+                        <td class="price-column price-locked"><strong>17'248.37</strong></td>
                     </tr>
                 </tbody>
             </table>
@@ -10165,6 +10169,8 @@
                         document.getElementById('unlockPricesBtn').classList.add('hidden');
                         const recBtn = document.getElementById('unlockRecPricesBtn');
                         if (recBtn) recBtn.classList.add('hidden');
+                        const top25Btn = document.getElementById('unlockTop25Btn');
+                        if (top25Btn) top25Btn.classList.add('hidden');
 
                         alert('Prices unlocked successfully!');
                     } else {

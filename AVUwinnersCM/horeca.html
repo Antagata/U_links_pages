@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="version" content="20260210121737">
+    <meta name="version" content="20260211095458">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HORECA Campaigns - AVU Statistics</title>
@@ -196,6 +196,100 @@
 
         .hidden {
             display: none;
+        }
+
+        /* Weekly Schedule Recommendations */
+        .weekly-schedule {
+            border: 1px solid #CCCCCC;
+            background: #FAFAFA;
+            padding: 16px;
+            margin: 0 0 18px 0;
+            position: relative;
+            min-height: 100px;
+        }
+
+        .weekly-schedule h3 {
+            font-family: 'Bodoni Moda', 'Didot', serif;
+            font-weight: 700;
+            color: #8B7347;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            letter-spacing: -0.01em;
+        }
+
+        .weekly-schedule details {
+            background: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            margin: 10px 0;
+            padding: 10px 12px;
+        }
+
+        .weekly-schedule summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #8B7347;
+        }
+
+        .weekly-schedule .slot-title {
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .weekly-schedule .slot-meta {
+            margin-top: 6px;
+            color: #8B7347;
+            font-weight: 300;
+            font-size: 0.95em;
+        }
+
+        .weekly-schedule .why {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #DDD;
+            color: #8B7347;
+            font-size: 0.95em;
+        }
+
+        .mascot-container {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .mascot-bubble {
+            background: #F5F0E8;
+            border: 1px solid #D4C5A9;
+            border-radius: 12px;
+            padding: 8px 12px;
+            font-size: 0.82em;
+            color: #8B7347;
+            max-width: 180px;
+            font-style: italic;
+            line-height: 1.3;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .mascot-bubble::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: -8px;
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 8px solid #D4C5A9;
+        }
+
+        .mascot-img {
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #D4C5A9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         /* Recommendations Section */
@@ -647,7 +741,7 @@
             <li><a href="horeca.html">HORECA</a></li>
             <li><a href="leads.html">Leads</a></li>
             <li><a href="dashboard.html">Top Campaigns</a></li>
-            <li><a href="#recommendations">Recommendations</a></li>
+            <li><a href="#weeklySchedule">Recommendations</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -660,7 +754,7 @@
         <div class="header">
             <h1>HORECA Campaigns</h1>
             <p>Hotel, Restaurant & Catering Campaigns Analysis</p>
-            <p style="font-size: 0.9em; color: #999;">Last Updated: February 10, 2026 at 12:17:17</p>
+            <p style="font-size: 0.9em; color: #999;">Last Updated: February 11, 2026 at 09:54:41</p>
             <p style="font-size: 0.85em; color: #e74c3c; margin-top: 5px;">V10: Using OMT 75cl prices for campaigns</p>
         </div>
 
@@ -669,11 +763,11 @@
 
             <div class="stats">
                 <div class="stat-card">
-                    <div class="number">388</div>
+                    <div class="number">389</div>
                     <div class="label">Total Campaigns</div>
                 </div>
                 <div class="stat-card">
-                    <div class="number">285</div>
+                    <div class="number">286</div>
                     <div class="label">Normal Campaigns</div>
                 </div>
                 <div class="stat-card">
@@ -706,6 +800,26 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td>2026-02-10 15:01</td>
+                            <td>CM-26-00436</td>
+                            <td>Pavie</td>
+                            <td>2021</td>
+                            <td>Château Pavie</td>
+                            <td><span class="subtype lead">Lead</span></td>
+                            <td class="price-column price-locked">145.00</td>
+                            <td class="price-column price-locked">157.00</td>
+                        </tr>
+                        <tr>
+                            <td>2026-02-10 15:01</td>
+                            <td>CM-26-00433</td>
+                            <td>Pavie</td>
+                            <td>2021</td>
+                            <td>Château Pavie</td>
+                            <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">145.00</td>
+                            <td class="price-column price-locked">157.00</td>
+                        </tr>
                         <tr>
                             <td>2026-02-09 17:05</td>
                             <td>CM-26-00417</td>
@@ -748,16 +862,6 @@
                         </tr>
                         <tr>
                             <td>2026-02-02 16:33</td>
-                            <td>CM-26-00322</td>
-                            <td>Sito Moresco</td>
-                            <td>2022</td>
-                            <td>Gaja</td>
-                            <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">32.00</td>
-                            <td class="price-column price-locked">35.00</td>
-                        </tr>
-                        <tr>
-                            <td>2026-02-02 16:33</td>
                             <td>CM-26-00324</td>
                             <td>Sito Moresco</td>
                             <td>2022</td>
@@ -767,14 +871,14 @@
                             <td class="price-column price-locked">35.00</td>
                         </tr>
                         <tr>
-                            <td>2026-02-01 15:00</td>
-                            <td>CM-26-00313</td>
-                            <td>Grange</td>
-                            <td>2019</td>
-                            <td>Penfolds</td>
-                            <td><span class="subtype lead">Lead</span></td>
-                            <td class="price-column price-locked">350.00</td>
-                            <td class="price-column price-locked">380.00</td>
+                            <td>2026-02-02 16:33</td>
+                            <td>CM-26-00322</td>
+                            <td>Sito Moresco</td>
+                            <td>2022</td>
+                            <td>Gaja</td>
+                            <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">32.00</td>
+                            <td class="price-column price-locked">35.00</td>
                         </tr>
                         <tr>
                             <td>2026-02-01 15:00</td>
@@ -787,9 +891,19 @@
                             <td class="price-column price-locked">380.00</td>
                         </tr>
                         <tr>
+                            <td>2026-02-01 15:00</td>
+                            <td>CM-26-00313</td>
+                            <td>Grange</td>
+                            <td>2019</td>
+                            <td>Penfolds</td>
+                            <td><span class="subtype lead">Lead</span></td>
+                            <td class="price-column price-locked">350.00</td>
+                            <td class="price-column price-locked">380.00</td>
+                        </tr>
+                        <tr>
                             <td>2026-01-31 15:00</td>
                             <td>CM-26-00300</td>
-                            <td>Biserno</td>
+                            <td>Il Pino di Biserno</td>
                             <td>2022</td>
                             <td>Tenuta di Biserno</td>
                             <td><span class="subtype normal">Normal</span></td>
@@ -799,18 +913,8 @@
                         <tr>
                             <td>2026-01-31 15:00</td>
                             <td>CM-26-00308</td>
-                            <td>Il Pino di Biserno</td>
+                            <td>Biserno</td>
                             <td>2022</td>
-                            <td>Tenuta di Biserno</td>
-                            <td><span class="subtype lead">Lead</span></td>
-                            <td class="price-column price-locked">295.00</td>
-                            <td class="price-column price-locked">320.00</td>
-                        </tr>
-                        <tr>
-                            <td>2026-01-31 15:00</td>
-                            <td>CM-26-00312</td>
-                            <td>Lodovico</td>
-                            <td>2019</td>
                             <td>Tenuta di Biserno</td>
                             <td><span class="subtype lead">Lead</span></td>
                             <td class="price-column price-locked">295.00</td>
@@ -846,7 +950,7 @@
                             <td class="price-column price-locked">47.00</td>
                             <td class="price-column price-locked">51.00</td>
                         </tr>
-                        <tr>
+                        <tr class="hidden-row">
                             <td>2026-01-30 16:00</td>
                             <td>CM-26-00295</td>
                             <td>Rieussec</td>
@@ -889,8 +993,8 @@
                         <tr class="hidden-row">
                             <td>2026-01-28 17:09</td>
                             <td>CM-26-00267</td>
-                            <td>G d'Estournel</td>
-                            <td>2020</td>
+                            <td>Cos d'Estournel</td>
+                            <td>2021</td>
                             <td>Château Cos d'Estournel</td>
                             <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">15.00</td>
@@ -958,21 +1062,21 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2026-01-21 16:05</td>
-                            <td>CM-26-00152</td>
-                            <td>Haut Brion</td>
-                            <td>2021</td>
-                            <td>Château Haut Brion</td>
-                            <td><span class="subtype lead">Lead</span></td>
-                            <td class="price-column price-locked">285.00</td>
-                            <td class="price-column price-locked">285.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2026-01-21 16:05</td>
                             <td>CM-26-00149</td>
                             <td>Haut Brion</td>
                             <td>2021</td>
                             <td>Château Haut Brion</td>
                             <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">285.00</td>
+                            <td class="price-column price-locked">285.00</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>2026-01-21 16:05</td>
+                            <td>CM-26-00152</td>
+                            <td>Haut Brion</td>
+                            <td>2021</td>
+                            <td>Château Haut Brion</td>
+                            <td><span class="subtype lead">Lead</span></td>
                             <td class="price-column price-locked">285.00</td>
                             <td class="price-column price-locked">285.00</td>
                         </tr>
@@ -998,16 +1102,6 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2026-01-19 16:00</td>
-                            <td>CM-26-00113</td>
-                            <td>Cos d'Estournel</td>
-                            <td>2019</td>
-                            <td>Château Cos d'Estournel</td>
-                            <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">115.00</td>
-                            <td class="price-column price-locked">125.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2026-01-19 16:00</td>
                             <td>CM-26-00116</td>
                             <td>Cos d'Estournel</td>
                             <td>2019</td>
@@ -1017,14 +1111,14 @@
                             <td class="price-column price-locked">125.00</td>
                         </tr>
                         <tr class="hidden-row">
-                            <td>2026-01-16 15:00</td>
-                            <td>CM-26-00097</td>
-                            <td>Nairac</td>
-                            <td>2010</td>
-                            <td>Château Nairac</td>
-                            <td><span class="subtype lead">Lead</span></td>
-                            <td class="price-column price-locked">31.00</td>
-                            <td class="price-column price-locked">34.00</td>
+                            <td>2026-01-19 16:00</td>
+                            <td>CM-26-00113</td>
+                            <td>Cos d'Estournel</td>
+                            <td>2019</td>
+                            <td>Château Cos d'Estournel</td>
+                            <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">115.00</td>
+                            <td class="price-column price-locked">125.00</td>
                         </tr>
                         <tr class="hidden-row">
                             <td>2026-01-16 15:00</td>
@@ -1037,14 +1131,14 @@
                             <td class="price-column price-locked">34.00</td>
                         </tr>
                         <tr class="hidden-row">
-                            <td>2026-01-15 16:00</td>
-                            <td>CM-26-00077</td>
-                            <td>Montrose (Ex-Château)</td>
-                            <td>2009</td>
-                            <td>Château Montrose</td>
-                            <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">240.00</td>
-                            <td class="price-column price-locked">260.00</td>
+                            <td>2026-01-16 15:00</td>
+                            <td>CM-26-00097</td>
+                            <td>Nairac</td>
+                            <td>2010</td>
+                            <td>Château Nairac</td>
+                            <td><span class="subtype lead">Lead</span></td>
+                            <td class="price-column price-locked">31.00</td>
+                            <td class="price-column price-locked">34.00</td>
                         </tr>
                         <tr class="hidden-row">
                             <td>2026-01-15 16:00</td>
@@ -1053,6 +1147,16 @@
                             <td>2009</td>
                             <td>Château Montrose</td>
                             <td><span class="subtype lead">Lead</span></td>
+                            <td class="price-column price-locked">240.00</td>
+                            <td class="price-column price-locked">260.00</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>2026-01-15 16:00</td>
+                            <td>CM-26-00077</td>
+                            <td>Montrose (Ex-Château)</td>
+                            <td>2009</td>
+                            <td>Château Montrose</td>
+                            <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">240.00</td>
                             <td class="price-column price-locked">260.00</td>
                         </tr>
@@ -1209,7 +1313,7 @@
                         <tr class="hidden-row">
                             <td>2025-12-19 16:30</td>
                             <td>CM-25-03527</td>
-                            <td>Péby Faugeres</td>
+                            <td>Faugères</td>
                             <td>2020</td>
                             <td>Château Péby Faugères</td>
                             <td><span class="subtype lead">Lead</span></td>
@@ -1279,8 +1383,8 @@
                         <tr class="hidden-row">
                             <td>2025-12-16 11:57</td>
                             <td>CM-25-03455</td>
-                            <td>Lucente</td>
-                            <td>2021</td>
+                            <td>Luce</td>
+                            <td>2022</td>
                             <td>Luce della Vite</td>
                             <td><span class="subtype lead">Lead</span></td>
                             <td class="price-column price-locked">16.00</td>
@@ -1289,8 +1393,8 @@
                         <tr class="hidden-row">
                             <td>2025-12-16 10:25</td>
                             <td>CM-25-03451</td>
-                            <td>Luce</td>
-                            <td>2022</td>
+                            <td>Lucente</td>
+                            <td>2021</td>
                             <td>Luce della Vite</td>
                             <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">16.00</td>
@@ -1358,21 +1462,21 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-12-08 15:30</td>
-                            <td>CM-25-03374</td>
-                            <td>Baronarques Blanc</td>
-                            <td>2021</td>
-                            <td>Domaine de Baronarques</td>
-                            <td><span class="subtype lead">Lead</span></td>
-                            <td class="price-column price-locked">28.00</td>
-                            <td class="price-column price-locked">31.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2025-12-08 15:30</td>
                             <td>CM-25-03371</td>
                             <td>Baronarques Blanc</td>
                             <td>2021</td>
                             <td>Domaine de Baronarques</td>
                             <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">28.00</td>
+                            <td class="price-column price-locked">31.00</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>2025-12-08 15:30</td>
+                            <td>CM-25-03374</td>
+                            <td>Baronarques Blanc</td>
+                            <td>2021</td>
+                            <td>Domaine de Baronarques</td>
+                            <td><span class="subtype lead">Lead</span></td>
                             <td class="price-column price-locked">28.00</td>
                             <td class="price-column price-locked">31.00</td>
                         </tr>
@@ -1418,21 +1522,21 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-11-26 16:02</td>
-                            <td>CM-25-03272</td>
-                            <td>Poujeaux</td>
-                            <td>2019</td>
-                            <td>Château Poujeaux</td>
-                            <td><span class="subtype lead">Lead</span></td>
-                            <td class="price-column price-locked">21.00</td>
-                            <td class="price-column price-locked">23.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2025-11-26 16:02</td>
                             <td>CM-25-03264</td>
                             <td>Poujeaux</td>
                             <td>2019</td>
                             <td>Château Poujeaux</td>
                             <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">21.00</td>
+                            <td class="price-column price-locked">23.00</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>2025-11-26 16:02</td>
+                            <td>CM-25-03272</td>
+                            <td>Poujeaux</td>
+                            <td>2019</td>
+                            <td>Château Poujeaux</td>
+                            <td><span class="subtype lead">Lead</span></td>
                             <td class="price-column price-locked">21.00</td>
                             <td class="price-column price-locked">23.00</td>
                         </tr>
@@ -1548,21 +1652,21 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-11-18 16:02</td>
-                            <td>CM-25-03182</td>
-                            <td>Grange</td>
-                            <td>2019</td>
-                            <td>Penfolds</td>
-                            <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">340.00</td>
-                            <td class="price-column price-locked">368.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2025-11-18 16:02</td>
                             <td>CM-25-03184</td>
                             <td>Grange</td>
                             <td>2019</td>
                             <td>Penfolds</td>
                             <td><span class="subtype lead">Lead</span></td>
+                            <td class="price-column price-locked">340.00</td>
+                            <td class="price-column price-locked">368.00</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>2025-11-18 16:02</td>
+                            <td>CM-25-03182</td>
+                            <td>Grange</td>
+                            <td>2019</td>
+                            <td>Penfolds</td>
+                            <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">340.00</td>
                             <td class="price-column price-locked">368.00</td>
                         </tr>
@@ -1578,16 +1682,6 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-11-14 16:02</td>
-                            <td>CM-25-03153</td>
-                            <td>Champagne Extra Brut R.D.</td>
-                            <td>2008</td>
-                            <td>Bollinger</td>
-                            <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">230.00</td>
-                            <td class="price-column price-locked">250.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2025-11-14 16:02</td>
                             <td>CM-25-03168</td>
                             <td>Champagne Extra Brut R.D.</td>
                             <td>2008</td>
@@ -1597,10 +1691,20 @@
                             <td class="price-column price-locked">250.00</td>
                         </tr>
                         <tr class="hidden-row">
+                            <td>2025-11-14 16:02</td>
+                            <td>CM-25-03153</td>
+                            <td>Champagne Extra Brut R.D.</td>
+                            <td>2008</td>
+                            <td>Bollinger</td>
+                            <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">230.00</td>
+                            <td class="price-column price-locked">250.00</td>
+                        </tr>
+                        <tr class="hidden-row">
                             <td>2025-11-13 16:02</td>
                             <td>CM-25-03143</td>
-                            <td>Ventaglio</td>
-                            <td>2018</td>
+                            <td>Argentiera</td>
+                            <td>2021</td>
                             <td>Tenuta Argentiera</td>
                             <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">245.00</td>
@@ -1648,6 +1752,16 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-11-08 15:02</td>
+                            <td>CM-25-03084</td>
+                            <td>Testamatta</td>
+                            <td>2021</td>
+                            <td>Bibi Graetz</td>
+                            <td><span class="subtype normal">Normal</span></td>
+                            <td class="price-column price-locked">40.00</td>
+                            <td class="price-column price-locked">44.00</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>2025-11-08 15:02</td>
                             <td>CM-25-03099</td>
                             <td>Colore</td>
                             <td>2021</td>
@@ -1657,14 +1771,14 @@
                             <td class="price-column price-locked">44.00</td>
                         </tr>
                         <tr class="hidden-row">
-                            <td>2025-11-08 15:02</td>
-                            <td>CM-25-03084</td>
-                            <td>Colore</td>
-                            <td>2021</td>
-                            <td>Bibi Graetz</td>
-                            <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">40.00</td>
-                            <td class="price-column price-locked">44.00</td>
+                            <td>2025-11-07 10:33</td>
+                            <td>CM-25-03080</td>
+                            <td>Croix de Labrie</td>
+                            <td>2022</td>
+                            <td>Château Croix de Labrie</td>
+                            <td><span class="subtype lead">Lead</span></td>
+                            <td class="price-column price-locked">64.00</td>
+                            <td class="price-column price-locked">70.00</td>
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-11-07 10:33</td>
@@ -1673,16 +1787,6 @@
                             <td>2022</td>
                             <td>Château Croix de Labrie</td>
                             <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">64.00</td>
-                            <td class="price-column price-locked">70.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2025-11-07 10:33</td>
-                            <td>CM-25-03080</td>
-                            <td>Croix de Labrie</td>
-                            <td>2022</td>
-                            <td>Château Croix de Labrie</td>
-                            <td><span class="subtype lead">Lead</span></td>
                             <td class="price-column price-locked">64.00</td>
                             <td class="price-column price-locked">70.00</td>
                         </tr>
@@ -1749,8 +1853,8 @@
                         <tr class="hidden-row">
                             <td>2025-10-29 16:30</td>
                             <td>CM-25-02988</td>
-                            <td>G d'Estournel</td>
-                            <td>2020</td>
+                            <td>Cos d'Estournel</td>
+                            <td>2021</td>
                             <td>Château Cos d'Estournel</td>
                             <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">14.00</td>
@@ -1798,21 +1902,21 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-10-24 15:03</td>
-                            <td>CM-25-02913</td>
-                            <td>Cantenac Brown</td>
-                            <td>2021</td>
-                            <td>Château Cantenac-Brown</td>
-                            <td><span class="subtype normal">Normal</span></td>
-                            <td class="price-column price-locked">25.00</td>
-                            <td class="price-column price-locked">27.00</td>
-                        </tr>
-                        <tr class="hidden-row">
-                            <td>2025-10-24 15:03</td>
                             <td>CM-25-02922</td>
                             <td>Cantenac Brown</td>
                             <td>2021</td>
                             <td>Château Cantenac-Brown</td>
                             <td><span class="subtype lead">Lead</span></td>
+                            <td class="price-column price-locked">25.00</td>
+                            <td class="price-column price-locked">27.00</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>2025-10-24 15:03</td>
+                            <td>CM-25-02913</td>
+                            <td>Cantenac Brown</td>
+                            <td>2021</td>
+                            <td>Château Cantenac-Brown</td>
+                            <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">25.00</td>
                             <td class="price-column price-locked">27.00</td>
                         </tr>
@@ -1959,8 +2063,8 @@
                         <tr class="hidden-row">
                             <td>2025-10-07 16:32</td>
                             <td>CM-25-02686</td>
-                            <td>Colore</td>
-                            <td>2021</td>
+                            <td>Testamatta</td>
+                            <td>2020</td>
                             <td>Bibi Graetz</td>
                             <td><span class="subtype lead">Lead</span></td>
                             <td class="price-column price-locked">99.00</td>
@@ -1978,7 +2082,7 @@
                         </tr>
                         <tr class="hidden-row">
                             <td>2025-10-04 10:45</td>
-                            <td>CM-25-02660</td>
+                            <td>CM-25-02659</td>
                             <td>Concerto</td>
                             <td>2023</td>
                             <td>Marchesi Mazzei Castello di Fonterutoli</td>
@@ -2039,8 +2143,8 @@
                         <tr class="hidden-row">
                             <td>2025-09-26 13:37</td>
                             <td>CM-25-02592</td>
-                            <td>La Dame de Bouard</td>
-                            <td>2019</td>
+                            <td>Rouget</td>
+                            <td>2022</td>
                             <td>Château Meyney</td>
                             <td><span class="subtype normal">Normal</span></td>
                             <td class="price-column price-locked">20.00</td>
@@ -2559,7 +2663,7 @@
                         <tr class="hidden-row">
                             <td>2025-06-04 13:30</td>
                             <td>CM-25-01356</td>
-                            <td>Overture</td>
+                            <td>Opus One</td>
                             <td>2021</td>
                             <td>Opus One Winery</td>
                             <td><span class="subtype lead">Lead</span></td>
@@ -2639,7 +2743,7 @@
                         <tr class="hidden-row">
                             <td>2025-05-13 14:29</td>
                             <td>CM-25-01083</td>
-                            <td>Clerc Milon</td>
+                            <td>Le Petit Mouton Rothschild (2nd Vin)</td>
                             <td>2024</td>
                             <td>Château Mouton Rothschild</td>
                             <td><span class="subtype normal">Normal</span></td>
@@ -4746,15 +4850,6 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-26-00313</div>
-                            <div class="wine-name">Grange</div>
-                            <div class="vintage">2019</div>
-                            <div class="producer">Penfolds</div>
-                            <div class="price-chf price-column price-locked">350.00</div>
-                            <div class="price-eur price-column price-locked">380.00</div>
-                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-26-00311</div>
                             <div class="wine-name">Grange</div>
                             <div class="vintage">2019</div>
@@ -4762,6 +4857,15 @@
                             <div class="price-chf price-column price-locked">350.00</div>
                             <div class="price-eur price-column price-locked">380.00</div>
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-26-00313</div>
+                            <div class="wine-name">Grange</div>
+                            <div class="vintage">2019</div>
+                            <div class="producer">Penfolds</div>
+                            <div class="price-chf price-column price-locked">350.00</div>
+                            <div class="price-eur price-column price-locked">380.00</div>
+                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00239</div>
@@ -4800,15 +4904,6 @@
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-25-03182</div>
-                            <div class="wine-name">Grange</div>
-                            <div class="vintage">2019</div>
-                            <div class="producer">Penfolds</div>
-                            <div class="price-chf price-column price-locked">340.00</div>
-                            <div class="price-eur price-column price-locked">368.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-25-03184</div>
                             <div class="wine-name">Grange</div>
                             <div class="vintage">2019</div>
@@ -4816,6 +4911,15 @@
                             <div class="price-chf price-column price-locked">340.00</div>
                             <div class="price-eur price-column price-locked">368.00</div>
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-25-03182</div>
+                            <div class="wine-name">Grange</div>
+                            <div class="vintage">2019</div>
+                            <div class="producer">Penfolds</div>
+                            <div class="price-chf price-column price-locked">340.00</div>
+                            <div class="price-eur price-column price-locked">368.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-02900</div>
@@ -5093,9 +5197,27 @@
                 <div class="tier-group">
                     <div class="tier-group-header">
                         <span class="tier-group-title">Premium</span>
-                        <span class="tier-group-count">110 campaigns</span>
+                        <span class="tier-group-count">111 campaigns</span>
                     </div>
                     <div class="tier-group-content">
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-26-00436</div>
+                            <div class="wine-name">Pavie</div>
+                            <div class="vintage">2021</div>
+                            <div class="producer">Château Pavie</div>
+                            <div class="price-chf price-column price-locked">145.00</div>
+                            <div class="price-eur price-column price-locked">157.00</div>
+                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-26-00433</div>
+                            <div class="wine-name">Pavie</div>
+                            <div class="vintage">2021</div>
+                            <div class="producer">Château Pavie</div>
+                            <div class="price-chf price-column price-locked">145.00</div>
+                            <div class="price-eur price-column price-locked">157.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
+                        </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00407</div>
                             <div class="wine-name">Dominus</div>
@@ -5116,7 +5238,7 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00300</div>
-                            <div class="wine-name">Biserno</div>
+                            <div class="wine-name">Il Pino di Biserno</div>
                             <div class="vintage">2022</div>
                             <div class="producer">Tenuta di Biserno</div>
                             <div class="price-chf price-column price-locked">295.00</div>
@@ -5125,17 +5247,8 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00308</div>
-                            <div class="wine-name">Il Pino di Biserno</div>
+                            <div class="wine-name">Biserno</div>
                             <div class="vintage">2022</div>
-                            <div class="producer">Tenuta di Biserno</div>
-                            <div class="price-chf price-column price-locked">295.00</div>
-                            <div class="price-eur price-column price-locked">320.00</div>
-                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
-                        </div>
-                        <div class="campaign-item">
-                            <div class="campaign-no">CM-26-00312</div>
-                            <div class="wine-name">Lodovico</div>
-                            <div class="vintage">2019</div>
                             <div class="producer">Tenuta di Biserno</div>
                             <div class="price-chf price-column price-locked">295.00</div>
                             <div class="price-eur price-column price-locked">320.00</div>
@@ -5160,15 +5273,6 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-26-00152</div>
-                            <div class="wine-name">Haut Brion</div>
-                            <div class="vintage">2021</div>
-                            <div class="producer">Château Haut Brion</div>
-                            <div class="price-chf price-column price-locked">285.00</div>
-                            <div class="price-eur price-column price-locked">285.00</div>
-                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-26-00149</div>
                             <div class="wine-name">Haut Brion</div>
                             <div class="vintage">2021</div>
@@ -5178,13 +5282,13 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-26-00113</div>
-                            <div class="wine-name">Cos d'Estournel</div>
-                            <div class="vintage">2019</div>
-                            <div class="producer">Château Cos d'Estournel</div>
-                            <div class="price-chf price-column price-locked">115.00</div>
-                            <div class="price-eur price-column price-locked">125.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
+                            <div class="campaign-no">CM-26-00152</div>
+                            <div class="wine-name">Haut Brion</div>
+                            <div class="vintage">2021</div>
+                            <div class="producer">Château Haut Brion</div>
+                            <div class="price-chf price-column price-locked">285.00</div>
+                            <div class="price-eur price-column price-locked">285.00</div>
+                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00116</div>
@@ -5196,12 +5300,12 @@
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-26-00077</div>
-                            <div class="wine-name">Montrose (Ex-Château)</div>
-                            <div class="vintage">2009</div>
-                            <div class="producer">Château Montrose</div>
-                            <div class="price-chf price-column price-locked">240.00</div>
-                            <div class="price-eur price-column price-locked">260.00</div>
+                            <div class="campaign-no">CM-26-00113</div>
+                            <div class="wine-name">Cos d'Estournel</div>
+                            <div class="vintage">2019</div>
+                            <div class="producer">Château Cos d'Estournel</div>
+                            <div class="price-chf price-column price-locked">115.00</div>
+                            <div class="price-eur price-column price-locked">125.00</div>
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
@@ -5212,6 +5316,15 @@
                             <div class="price-chf price-column price-locked">240.00</div>
                             <div class="price-eur price-column price-locked">260.00</div>
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-26-00077</div>
+                            <div class="wine-name">Montrose (Ex-Château)</div>
+                            <div class="vintage">2009</div>
+                            <div class="producer">Château Montrose</div>
+                            <div class="price-chf price-column price-locked">240.00</div>
+                            <div class="price-eur price-column price-locked">260.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00051</div>
@@ -5394,15 +5507,6 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-25-03153</div>
-                            <div class="wine-name">Champagne Extra Brut R.D.</div>
-                            <div class="vintage">2008</div>
-                            <div class="producer">Bollinger</div>
-                            <div class="price-chf price-column price-locked">230.00</div>
-                            <div class="price-eur price-column price-locked">250.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-25-03168</div>
                             <div class="wine-name">Champagne Extra Brut R.D.</div>
                             <div class="vintage">2008</div>
@@ -5412,9 +5516,18 @@
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
+                            <div class="campaign-no">CM-25-03153</div>
+                            <div class="wine-name">Champagne Extra Brut R.D.</div>
+                            <div class="vintage">2008</div>
+                            <div class="producer">Bollinger</div>
+                            <div class="price-chf price-column price-locked">230.00</div>
+                            <div class="price-eur price-column price-locked">250.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
+                        </div>
+                        <div class="campaign-item">
                             <div class="campaign-no">CM-25-03143</div>
-                            <div class="wine-name">Ventaglio</div>
-                            <div class="vintage">2018</div>
+                            <div class="wine-name">Argentiera</div>
+                            <div class="vintage">2021</div>
                             <div class="producer">Tenuta Argentiera</div>
                             <div class="price-chf price-column price-locked">245.00</div>
                             <div class="price-eur price-column price-locked">265.00</div>
@@ -5620,7 +5733,7 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-01356</div>
-                            <div class="wine-name">Overture</div>
+                            <div class="wine-name">Opus One</div>
                             <div class="vintage">2021</div>
                             <div class="producer">Opus One Winery</div>
                             <div class="price-chf price-column price-locked">135.00</div>
@@ -5647,7 +5760,7 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-01083</div>
-                            <div class="wine-name">Clerc Milon</div>
+                            <div class="wine-name">Le Petit Mouton Rothschild (2nd Vin)</div>
                             <div class="vintage">2024</div>
                             <div class="producer">Château Mouton Rothschild</div>
                             <div class="price-chf price-column price-locked">280.00</div>
@@ -6232,7 +6345,7 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-03527</div>
-                            <div class="wine-name">Péby Faugeres</div>
+                            <div class="wine-name">Faugères</div>
                             <div class="vintage">2020</div>
                             <div class="producer">Château Péby Faugères</div>
                             <div class="price-chf price-column price-locked">90.00</div>
@@ -6276,15 +6389,6 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-25-03075</div>
-                            <div class="wine-name">Croix de Labrie</div>
-                            <div class="vintage">2022</div>
-                            <div class="producer">Château Croix de Labrie</div>
-                            <div class="price-chf price-column price-locked">64.00</div>
-                            <div class="price-eur price-column price-locked">70.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-25-03080</div>
                             <div class="wine-name">Croix de Labrie</div>
                             <div class="vintage">2022</div>
@@ -6292,6 +6396,15 @@
                             <div class="price-chf price-column price-locked">64.00</div>
                             <div class="price-eur price-column price-locked">70.00</div>
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-25-03075</div>
+                            <div class="wine-name">Croix de Labrie</div>
+                            <div class="vintage">2022</div>
+                            <div class="producer">Château Croix de Labrie</div>
+                            <div class="price-chf price-column price-locked">64.00</div>
+                            <div class="price-eur price-column price-locked">70.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-03014</div>
@@ -6394,8 +6507,8 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-02686</div>
-                            <div class="wine-name">Colore</div>
-                            <div class="vintage">2021</div>
+                            <div class="wine-name">Testamatta</div>
+                            <div class="vintage">2020</div>
                             <div class="producer">Bibi Graetz</div>
                             <div class="price-chf price-column price-locked">99.00</div>
                             <div class="price-eur price-column price-locked">105.00</div>
@@ -7077,15 +7190,6 @@
                     </div>
                     <div class="tier-group-content">
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-26-00322</div>
-                            <div class="wine-name">Sito Moresco</div>
-                            <div class="vintage">2022</div>
-                            <div class="producer">Gaja</div>
-                            <div class="price-chf price-column price-locked">32.00</div>
-                            <div class="price-eur price-column price-locked">35.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-26-00324</div>
                             <div class="wine-name">Sito Moresco</div>
                             <div class="vintage">2022</div>
@@ -7093,6 +7197,15 @@
                             <div class="price-chf price-column price-locked">32.00</div>
                             <div class="price-eur price-column price-locked">35.00</div>
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-26-00322</div>
+                            <div class="wine-name">Sito Moresco</div>
+                            <div class="vintage">2022</div>
+                            <div class="producer">Gaja</div>
+                            <div class="price-chf price-column price-locked">32.00</div>
+                            <div class="price-eur price-column price-locked">35.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00292</div>
@@ -7123,11 +7236,20 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00267</div>
-                            <div class="wine-name">G d'Estournel</div>
-                            <div class="vintage">2020</div>
+                            <div class="wine-name">Cos d'Estournel</div>
+                            <div class="vintage">2021</div>
                             <div class="producer">Château Cos d'Estournel</div>
                             <div class="price-chf price-column price-locked">15.00</div>
                             <div class="price-eur price-column price-locked">17.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-26-00088</div>
+                            <div class="wine-name">Nairac</div>
+                            <div class="vintage">2010</div>
+                            <div class="producer">Château Nairac</div>
+                            <div class="price-chf price-column price-locked">31.00</div>
+                            <div class="price-eur price-column price-locked">34.00</div>
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
@@ -7138,15 +7260,6 @@
                             <div class="price-chf price-column price-locked">31.00</div>
                             <div class="price-eur price-column price-locked">34.00</div>
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
-                        </div>
-                        <div class="campaign-item">
-                            <div class="campaign-no">CM-26-00088</div>
-                            <div class="wine-name">Nairac</div>
-                            <div class="vintage">2010</div>
-                            <div class="producer">Château Nairac</div>
-                            <div class="price-chf price-column price-locked">31.00</div>
-                            <div class="price-eur price-column price-locked">34.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-26-00011</div>
@@ -7186,8 +7299,8 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-03455</div>
-                            <div class="wine-name">Lucente</div>
-                            <div class="vintage">2021</div>
+                            <div class="wine-name">Luce</div>
+                            <div class="vintage">2022</div>
                             <div class="producer">Luce della Vite</div>
                             <div class="price-chf price-column price-locked">16.00</div>
                             <div class="price-eur price-column price-locked">17.00</div>
@@ -7195,8 +7308,8 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-03451</div>
-                            <div class="wine-name">Luce</div>
-                            <div class="vintage">2022</div>
+                            <div class="wine-name">Lucente</div>
+                            <div class="vintage">2021</div>
                             <div class="producer">Luce della Vite</div>
                             <div class="price-chf price-column price-locked">16.00</div>
                             <div class="price-eur price-column price-locked">17.00</div>
@@ -7221,15 +7334,6 @@
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-25-03374</div>
-                            <div class="wine-name">Baronarques Blanc</div>
-                            <div class="vintage">2021</div>
-                            <div class="producer">Domaine de Baronarques</div>
-                            <div class="price-chf price-column price-locked">28.00</div>
-                            <div class="price-eur price-column price-locked">31.00</div>
-                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-25-03371</div>
                             <div class="wine-name">Baronarques Blanc</div>
                             <div class="vintage">2021</div>
@@ -7239,12 +7343,12 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-25-03272</div>
-                            <div class="wine-name">Poujeaux</div>
-                            <div class="vintage">2019</div>
-                            <div class="producer">Château Poujeaux</div>
-                            <div class="price-chf price-column price-locked">21.00</div>
-                            <div class="price-eur price-column price-locked">23.00</div>
+                            <div class="campaign-no">CM-25-03374</div>
+                            <div class="wine-name">Baronarques Blanc</div>
+                            <div class="vintage">2021</div>
+                            <div class="producer">Domaine de Baronarques</div>
+                            <div class="price-chf price-column price-locked">28.00</div>
+                            <div class="price-eur price-column price-locked">31.00</div>
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
@@ -7255,6 +7359,15 @@
                             <div class="price-chf price-column price-locked">21.00</div>
                             <div class="price-eur price-column price-locked">23.00</div>
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-25-03272</div>
+                            <div class="wine-name">Poujeaux</div>
+                            <div class="vintage">2019</div>
+                            <div class="producer">Château Poujeaux</div>
+                            <div class="price-chf price-column price-locked">21.00</div>
+                            <div class="price-eur price-column price-locked">23.00</div>
+                            <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-03209</div>
@@ -7311,6 +7424,15 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
+                            <div class="campaign-no">CM-25-03084</div>
+                            <div class="wine-name">Testamatta</div>
+                            <div class="vintage">2021</div>
+                            <div class="producer">Bibi Graetz</div>
+                            <div class="price-chf price-column price-locked">40.00</div>
+                            <div class="price-eur price-column price-locked">44.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
+                        </div>
+                        <div class="campaign-item">
                             <div class="campaign-no">CM-25-03099</div>
                             <div class="wine-name">Colore</div>
                             <div class="vintage">2021</div>
@@ -7320,30 +7442,12 @@
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-25-03084</div>
-                            <div class="wine-name">Colore</div>
-                            <div class="vintage">2021</div>
-                            <div class="producer">Bibi Graetz</div>
-                            <div class="price-chf price-column price-locked">40.00</div>
-                            <div class="price-eur price-column price-locked">44.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
-                        </div>
-                        <div class="campaign-item">
                             <div class="campaign-no">CM-25-02988</div>
-                            <div class="wine-name">G d'Estournel</div>
-                            <div class="vintage">2020</div>
+                            <div class="wine-name">Cos d'Estournel</div>
+                            <div class="vintage">2021</div>
                             <div class="producer">Château Cos d'Estournel</div>
                             <div class="price-chf price-column price-locked">14.00</div>
                             <div class="price-eur price-column price-locked">16.00</div>
-                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
-                        </div>
-                        <div class="campaign-item">
-                            <div class="campaign-no">CM-25-02913</div>
-                            <div class="wine-name">Cantenac Brown</div>
-                            <div class="vintage">2021</div>
-                            <div class="producer">Château Cantenac-Brown</div>
-                            <div class="price-chf price-column price-locked">25.00</div>
-                            <div class="price-eur price-column price-locked">27.00</div>
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
@@ -7354,6 +7458,15 @@
                             <div class="price-chf price-column price-locked">25.00</div>
                             <div class="price-eur price-column price-locked">27.00</div>
                             <div class="grid-subtype"><span class="subtype lead">Lead</span></div>
+                        </div>
+                        <div class="campaign-item">
+                            <div class="campaign-no">CM-25-02913</div>
+                            <div class="wine-name">Cantenac Brown</div>
+                            <div class="vintage">2021</div>
+                            <div class="producer">Château Cantenac-Brown</div>
+                            <div class="price-chf price-column price-locked">25.00</div>
+                            <div class="price-eur price-column price-locked">27.00</div>
+                            <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-02837</div>
@@ -7392,7 +7505,7 @@
                             <div class="grid-subtype"><span class="subtype normal">Normal</span></div>
                         </div>
                         <div class="campaign-item">
-                            <div class="campaign-no">CM-25-02660</div>
+                            <div class="campaign-no">CM-25-02659</div>
                             <div class="wine-name">Concerto</div>
                             <div class="vintage">2023</div>
                             <div class="producer">Marchesi Mazzei Castello di Fonterutoli</div>
@@ -7411,8 +7524,8 @@
                         </div>
                         <div class="campaign-item">
                             <div class="campaign-no">CM-25-02592</div>
-                            <div class="wine-name">La Dame de Bouard</div>
-                            <div class="vintage">2019</div>
+                            <div class="wine-name">Rouget</div>
+                            <div class="vintage">2022</div>
                             <div class="producer">Château Meyney</div>
                             <div class="price-chf price-column price-locked">20.00</div>
                             <div class="price-eur price-column price-locked">21.00</div>
@@ -8125,17 +8238,142 @@
             </div>
         </div>
 
-        <!-- Recommendations Section -->
-        <div class="content-box" id="recommendations">
-            <h2>Recommended HORECA Campaigns (Top 30 per Tier)</h2>
-            <p style="color: #8B7347; margin-bottom: 20px;">
+        <!-- Weekly Schedule Recommendations Section -->
+        <div class="content-box" id="weeklySchedule">
+            <h2>Recommended HORECA Campaigns</h2>
+            <div class="weekly-schedule">
+                <div class="mascot-container">
+                    <div class="mascot-bubble">Hi, these are my recommendations for your restaurant!</div>
+                    <img src="assets/VargiuAI.png" alt="VargiuAI" class="mascot-img">
+                </div>
+                <h3>Weekly Schedule Recommendations</h3>
+                <p style="margin-bottom: 10px; color: #8B7347;">Click a recommendation to reveal the reason why.</p>
+                <details>
+                    <summary>
+                        <span class="slot-title">Monday — Everyone</span> — Châteauneuf du Pape 2016 (Clos des Papes)
+                        <div class="slot-meta">Tier: Premium | CHF 211 | Stock: 228 | Source: PRIVATE (7 days)</div>
+                    </summary>
+                    <div class="why">
+                        <strong>Why</strong>
+                        <ul>
+                            <li><strong>Score:</strong> 40</li>
+                            <li><strong>Winner Bonus:</strong> 0</li>
+                            <li><strong>Stock Bonus:</strong> 25 (stock: 228)</li>
+                            <li><strong>New to HORECA:</strong> 0</li>
+                            <li><strong>Price Bonus:</strong> 0 (x2 = 0)</li>
+                            <li><strong>Tier Bonus:</strong> 15</li>
+                            <li><strong>Region suitability:</strong> CH,EU,World</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        <span class="slot-title">Tuesday — Everyone</span> — Montrose (Ex-Château) 2009 (Château Montrose)
+                        <div class="slot-meta">Tier: Premium | CHF 245 | Stock: 263 | Source: PRIVATE (30 days)</div>
+                    </summary>
+                    <div class="why">
+                        <strong>Why</strong>
+                        <ul>
+                            <li><strong>Score:</strong> 40</li>
+                            <li><strong>Winner Bonus:</strong> 0</li>
+                            <li><strong>Stock Bonus:</strong> 25 (stock: 263)</li>
+                            <li><strong>New to HORECA:</strong> 0</li>
+                            <li><strong>Price Bonus:</strong> 0 (x2 = 0)</li>
+                            <li><strong>Tier Bonus:</strong> 15</li>
+                            <li><strong>Region suitability:</strong> CH,EU,World</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        <span class="slot-title">Wednesday — Everyone</span> — Don PX Convento Selección 1964 (Toro Albalá)
+                        <div class="slot-meta">Tier: Premium | CHF 180 | Stock: 341 | Source: PRIVATE (14 days)</div>
+                    </summary>
+                    <div class="why">
+                        <strong>Why</strong>
+                        <ul>
+                            <li><strong>Score:</strong> 30</li>
+                            <li><strong>Winner Bonus:</strong> 0</li>
+                            <li><strong>Stock Bonus:</strong> 15 (stock: 341)</li>
+                            <li><strong>New to HORECA:</strong> 0</li>
+                            <li><strong>Price Bonus:</strong> 0 (x2 = 0)</li>
+                            <li><strong>Tier Bonus:</strong> 15</li>
+                            <li><strong>Region suitability:</strong> CH,EU,World</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        <span class="slot-title">Thursday — Everyone</span> — Champagne Brut Special Cuvée NV (Bollinger)
+                        <div class="slot-meta">Tier: Budget | CHF 42 | Stock: 723 | Source: PRIVATE (30 days)</div>
+                    </summary>
+                    <div class="why">
+                        <strong>Why</strong>
+                        <ul>
+                            <li><strong>Score:</strong> 125</li>
+                            <li><strong>Winner Bonus:</strong> 0</li>
+                            <li><strong>Stock Bonus:</strong> 10 (stock: 723)</li>
+                            <li><strong>New to HORECA:</strong> 30</li>
+                            <li><strong>Price Bonus:</strong> 30 (x2 = 60)</li>
+                            <li><strong>Tier Bonus:</strong> 25</li>
+                            <li><strong>Region suitability:</strong> CH</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        <span class="slot-title">Friday — Everyone</span> — Pinot Bianco Sirmian 2022 (Nals Margreid)
+                        <div class="slot-meta">Tier: Budget | CHF 25 | Stock: 2881 | Source: PRIVATE (30 days)</div>
+                    </summary>
+                    <div class="why">
+                        <strong>Why</strong>
+                        <ul>
+                            <li><strong>Score:</strong> 125</li>
+                            <li><strong>Winner Bonus:</strong> 0</li>
+                            <li><strong>Stock Bonus:</strong> 10 (stock: 2881)</li>
+                            <li><strong>New to HORECA:</strong> 30</li>
+                            <li><strong>Price Bonus:</strong> 30 (x2 = 60)</li>
+                            <li><strong>Tier Bonus:</strong> 25</li>
+                            <li><strong>Region suitability:</strong> CH</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        <span class="slot-title">Saturday — CH only 🇨🇭</span> — Le Coeur Clos de Bouard 2022 (Château Clos du Bouard)
+                        <div class="slot-meta">Tier: Mid-range | CHF 60 | Stock: 210 | Source: PRIVATE (30 days)</div>
+                    </summary>
+                    <div class="why">
+                        <strong>Why</strong>
+                        <ul>
+                            <li><strong>Score:</strong> 105</li>
+                            <li><strong>Winner Bonus:</strong> 0</li>
+                            <li><strong>Stock Bonus:</strong> 25 (stock: 210)</li>
+                            <li><strong>New to HORECA:</strong> 0</li>
+                            <li><strong>Price Bonus:</strong> 30 (x2 = 60)</li>
+                            <li><strong>Tier Bonus:</strong> 20</li>
+                            <li><strong>Region suitability:</strong> CH</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <p style="color: #8B7347; margin-bottom: 20px; margin-top: 24px;">
                 <strong>Scoring System (Prioritizes wines near 123 CHF):</strong><br>
+                <strong>Regional Suitability:</strong>
+                <span>🇨🇭</span> Switzerland (all prices) |
+                <span>🇪🇺</span> Europe  <span>🌍</span> World (&gt;100 CHF)<br>
                 • Winner Bonus: 50pts (0-7 days), 40pts (8-14 days), 30pts (15-21 days), 20pts (22-30 days)<br>
                 • Stock Bonus: 25pts (200-299 - clearance priority), 15pts (300-499), 10pts (500+)<br>
                 • New to HORECA: 30pts bonus<br>
                 • Price Bonus: 30pts if ≤ 123 CHF (doubled weight)<br>
                 • Tier Bonus (reversed): Mid-range 20pts, Premium 15pts, Luxury 10pts, Extra Luxury 5pts
             </p>
+        </div>
+
+        <!-- Full Recommendations Table Section -->
+        <div class="content-box" id="recommendations">
+            <h2>Full Recommendations (Top 30 per Tier)</h2>
 
             <div class="rec-controls">
                 <button id="unlockRecPricesBtn" class="unlock-btn" onclick="unlockPrices()">
@@ -8167,16 +8405,6 @@
                         </tr>
                     </thead>
                     <tbody id="recTableBody">
-                        <tr data-tier="Extra Luxury" data-price="2086.00">
-                            <td>La Violette</td>
-                            <td>Château La Violette</td>
-                            <td>2021</td>
-                            <td class="price-column price-locked">2086.00</td>
-                            <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
-                            <td>213</td>
-                            <td><strong>60</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
                         <tr data-tier="Extra Luxury" data-price="790.00">
                             <td>Ausone</td>
                             <td>Château Ausone</td>
@@ -8184,6 +8412,16 @@
                             <td class="price-column price-locked">790.00</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
                             <td>247</td>
+                            <td><strong>60</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Extra Luxury" data-price="2086.00">
+                            <td>La Violette</td>
+                            <td>Château La Violette</td>
+                            <td>2021</td>
+                            <td class="price-column price-locked">2086.00</td>
+                            <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
+                            <td>213</td>
                             <td><strong>60</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
@@ -8217,6 +8455,16 @@
                             <td><strong>45</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
+                        <tr data-tier="Extra Luxury" data-price="1400.00">
+                            <td>Lafite Rothschild</td>
+                            <td>Château Lafite Rothschild</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">1400.00</td>
+                            <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
+                            <td>274</td>
+                            <td><strong>30</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
                         <tr data-tier="Extra Luxury" data-price="5087.60">
                             <td>Beau-Séjour Bécot</td>
                             <td>Château Beau-Séjour Bécot</td>
@@ -8234,16 +8482,6 @@
                             <td class="price-column price-locked">4350.00</td>
                             <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
                             <td>288</td>
-                            <td><strong>30</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Extra Luxury" data-price="1400.00">
-                            <td>Lafite Rothschild</td>
-                            <td>Château Lafite Rothschild</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">1400.00</td>
-                            <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
-                            <td>274</td>
                             <td><strong>30</strong></td>
                             <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
@@ -8277,16 +8515,6 @@
                             <td><strong>20</strong></td>
                             <td>-</td>
                         </tr>
-                        <tr data-tier="Extra Luxury" data-price="790.00">
-                            <td>Lafite Rothschild</td>
-                            <td>Château Lafite Rothschild</td>
-                            <td>2010</td>
-                            <td class="price-column price-locked">790.00</td>
-                            <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
-                            <td>481</td>
-                            <td><strong>20</strong></td>
-                            <td>-</td>
-                        </tr>
                         <tr data-tier="Extra Luxury" data-price="5300.00">
                             <td>Lafite Rothschild</td>
                             <td>Château Lafite Rothschild</td>
@@ -8297,15 +8525,15 @@
                             <td><strong>20</strong></td>
                             <td>-</td>
                         </tr>
-                        <tr data-tier="Luxury" data-price="435.00">
-                            <td>Barbaresco Asili Riserva</td>
-                            <td>Azienda Agricola Falletto di Bruno Giacosa</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">435.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>275</td>
-                            <td><strong>65</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        <tr data-tier="Extra Luxury" data-price="790.00">
+                            <td>Lafite Rothschild</td>
+                            <td>Château Lafite Rothschild</td>
+                            <td>2010</td>
+                            <td class="price-column price-locked">790.00</td>
+                            <td><span class="tier-badge tier-extraluxury">Extra Luxury</span></td>
+                            <td>481</td>
+                            <td><strong>20</strong></td>
+                            <td>-</td>
                         </tr>
                         <tr data-tier="Luxury" data-price="330.00">
                             <td>Carruades de Lafite Rothschild (2nd Vin)</td>
@@ -8317,13 +8545,13 @@
                             <td><strong>65</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
-                        <tr data-tier="Luxury" data-price="395.00">
-                            <td>Único Reserva Especial Venta 2025 (2011+2012+2013)</td>
-                            <td>Bodegas Vega Sicilia</td>
-                            <td>NV</td>
-                            <td class="price-column price-locked">395.00</td>
+                        <tr data-tier="Luxury" data-price="435.00">
+                            <td>Barbaresco Asili Riserva</td>
+                            <td>Azienda Agricola Falletto di Bruno Giacosa</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">435.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>270</td>
+                            <td>275</td>
                             <td><strong>65</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
@@ -8337,15 +8565,35 @@
                             <td><strong>65</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
+                        <tr data-tier="Luxury" data-price="395.00">
+                            <td>Único Reserva Especial Venta 2025 (2011+2012+2013)</td>
+                            <td>Bodegas Vega Sicilia</td>
+                            <td>NV</td>
+                            <td class="price-column price-locked">395.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>270</td>
+                            <td><strong>65</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
                         <tr data-tier="Luxury" data-price="330.00">
                             <td>Trotanoy</td>
                             <td>Château Trotanoy</td>
                             <td>2015</td>
                             <td class="price-column price-locked">330.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>339</td>
-                            <td><strong>55</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                            <td>225</td>
+                            <td><strong>65</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="385.00">
+                            <td>Angélus</td>
+                            <td>Château Angélus</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">385.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>222</td>
+                            <td><strong>35</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Luxury" data-price="625.00">
                             <td>Mouton Rothschild</td>
@@ -8357,46 +8605,6 @@
                             <td><strong>35</strong></td>
                             <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
-                        <tr data-tier="Luxury" data-price="335.00">
-                            <td>Cos d'Estournel</td>
-                            <td>Château Cos d'Estournel</td>
-                            <td>2009</td>
-                            <td class="price-column price-locked">335.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>228</td>
-                            <td><strong>35</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="470.00">
-                            <td>Champagne Brut Cristal</td>
-                            <td>Louis Roederer</td>
-                            <td>2013</td>
-                            <td class="price-column price-locked">470.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>254</td>
-                            <td><strong>35</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="580.00">
-                            <td>Aalto</td>
-                            <td>Aalto Bodegas y Viñedos</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">580.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>213</td>
-                            <td><strong>35</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="350.00">
-                            <td>Grange</td>
-                            <td>Penfolds</td>
-                            <td>2019</td>
-                            <td class="price-column price-locked">350.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>215</td>
-                            <td><strong>35</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
                         <tr data-tier="Luxury" data-price="438.00">
                             <td>Les Carmes Haut Brion</td>
                             <td>Château Les Carmes Haut-Brion</td>
@@ -8404,16 +8612,6 @@
                             <td class="price-column price-locked">438.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td>204</td>
-                            <td><strong>35</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="385.00">
-                            <td>Angélus</td>
-                            <td>Château Angélus</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">385.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>222</td>
                             <td><strong>35</strong></td>
                             <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
@@ -8437,23 +8635,73 @@
                             <td><strong>35</strong></td>
                             <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
+                        <tr data-tier="Luxury" data-price="350.00">
+                            <td>Grange</td>
+                            <td>Penfolds</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">350.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>209</td>
+                            <td><strong>35</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
                         <tr data-tier="Luxury" data-price="600.00">
                             <td>Mouton Rothschild</td>
                             <td>Château Mouton Rothschild</td>
                             <td>2016</td>
                             <td class="price-column price-locked">600.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>250</td>
+                            <td>204</td>
                             <td><strong>35</strong></td>
                             <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
-                        <tr data-tier="Luxury" data-price="650.00">
-                            <td>Lafite Rothschild</td>
-                            <td>Château Lafite Rothschild</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">650.00</td>
+                        <tr data-tier="Luxury" data-price="335.00">
+                            <td>Cos d'Estournel</td>
+                            <td>Château Cos d'Estournel</td>
+                            <td>2009</td>
+                            <td class="price-column price-locked">335.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>356</td>
+                            <td>228</td>
+                            <td><strong>35</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="580.00">
+                            <td>Aalto</td>
+                            <td>Aalto Bodegas y Viñedos</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">580.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>213</td>
+                            <td><strong>35</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="470.00">
+                            <td>Champagne Brut Cristal</td>
+                            <td>Louis Roederer</td>
+                            <td>2013</td>
+                            <td class="price-column price-locked">470.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>245</td>
+                            <td><strong>35</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="508.00">
+                            <td>D'Armailhac</td>
+                            <td>Château d’Armailhac</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">508.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>419</td>
+                            <td><strong>25</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="345.00">
+                            <td>Pavie</td>
+                            <td>Château Pavie</td>
+                            <td>2009</td>
+                            <td class="price-column price-locked">345.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>300</td>
                             <td><strong>25</strong></td>
                             <td>-</td>
                         </tr>
@@ -8477,33 +8725,13 @@
                             <td><strong>25</strong></td>
                             <td>-</td>
                         </tr>
-                        <tr data-tier="Luxury" data-price="345.00">
-                            <td>Pavie</td>
-                            <td>Château Pavie</td>
-                            <td>2009</td>
-                            <td class="price-column price-locked">345.00</td>
+                        <tr data-tier="Luxury" data-price="650.00">
+                            <td>Cheval Blanc</td>
+                            <td>Château Cheval Blanc</td>
+                            <td>2016</td>
+                            <td class="price-column price-locked">650.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>300</td>
-                            <td><strong>25</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="508.00">
-                            <td>D'Armailhac</td>
-                            <td>Château d’Armailhac</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">508.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>419</td>
-                            <td><strong>25</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="415.00">
-                            <td>Margaux</td>
-                            <td>Château Margaux</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">415.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>366</td>
+                            <td>315</td>
                             <td><strong>25</strong></td>
                             <td>-</td>
                         </tr>
@@ -8517,14 +8745,64 @@
                             <td><strong>25</strong></td>
                             <td>-</td>
                         </tr>
+                        <tr data-tier="Luxury" data-price="650.00">
+                            <td>Lafite Rothschild</td>
+                            <td>Château Lafite Rothschild</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">650.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>356</td>
+                            <td><strong>25</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="415.00">
+                            <td>Margaux</td>
+                            <td>Château Margaux</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">415.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>366</td>
+                            <td><strong>25</strong></td>
+                            <td>-</td>
+                        </tr>
                         <tr data-tier="Luxury" data-price="660.00">
                             <td>Cheval Blanc</td>
                             <td>Château Cheval Blanc</td>
                             <td>2018</td>
                             <td class="price-column price-locked">660.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>363</td>
+                            <td>357</td>
                             <td><strong>25</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="620.00">
+                            <td>Cheval Blanc</td>
+                            <td>Château Cheval Blanc</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">620.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>509</td>
+                            <td><strong>20</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="315.00">
+                            <td>Único</td>
+                            <td>Bodegas Vega Sicilia</td>
+                            <td>2014</td>
+                            <td class="price-column price-locked">315.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>938</td>
+                            <td><strong>20</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Luxury" data-price="340.00">
+                            <td>Palmer</td>
+                            <td>Château Palmer</td>
+                            <td>2010</td>
+                            <td class="price-column price-locked">340.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>531</td>
+                            <td><strong>20</strong></td>
                             <td>-</td>
                         </tr>
                         <tr data-tier="Luxury" data-price="450.00">
@@ -8534,56 +8812,6 @@
                             <td class="price-column price-locked">450.00</td>
                             <td><span class="tier-badge tier-luxury">Luxury</span></td>
                             <td>3195</td>
-                            <td><strong>20</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="490.00">
-                            <td>Haut Brion</td>
-                            <td>Château Haut Brion</td>
-                            <td>2019</td>
-                            <td class="price-column price-locked">490.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>905</td>
-                            <td><strong>20</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="405.50">
-                            <td>Haut Brion</td>
-                            <td>Château Haut Brion</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">405.50</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>534</td>
-                            <td><strong>20</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="579.00">
-                            <td>Latour (Ex-Château)</td>
-                            <td>Château Latour</td>
-                            <td>2016</td>
-                            <td class="price-column price-locked">579.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>1659</td>
-                            <td><strong>20</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="499.60">
-                            <td>Clerc Milon</td>
-                            <td>Château Clerc Milon</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">499.60</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>2776</td>
-                            <td><strong>20</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Luxury" data-price="625.00">
-                            <td>Latour (Ex-Château)</td>
-                            <td>Château Latour</td>
-                            <td>2015</td>
-                            <td class="price-column price-locked">625.00</td>
-                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                            <td>901</td>
                             <td><strong>20</strong></td>
                             <td>-</td>
                         </tr>
@@ -8597,6 +8825,16 @@
                             <td><strong>20</strong></td>
                             <td>-</td>
                         </tr>
+                        <tr data-tier="Luxury" data-price="480.00">
+                            <td>Cheval Blanc</td>
+                            <td>Château Cheval Blanc</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">480.00</td>
+                            <td><span class="tier-badge tier-luxury">Luxury</span></td>
+                            <td>797</td>
+                            <td><strong>20</strong></td>
+                            <td>-</td>
+                        </tr>
                         <tr data-tier="Premium" data-price="120.00">
                             <td>Champagne Brut Comtes de Champagne Blanc de Blancs</td>
                             <td>Taittinger Champagne</td>
@@ -8604,7 +8842,7 @@
                             <td class="price-column price-locked">120.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td>264</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Premium" data-price="122.00">
@@ -8614,7 +8852,7 @@
                             <td class="price-column price-locked">122.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td>227</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Premium" data-price="116.00">
@@ -8624,7 +8862,7 @@
                             <td class="price-column price-locked">116.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td>222</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Premium" data-price="110.00">
@@ -8634,7 +8872,7 @@
                             <td class="price-column price-locked">110.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td>725</td>
-                            <td><strong>85</strong></td>
+                            <td><strong>115</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Premium" data-price="120.00">
@@ -8643,29 +8881,9 @@
                             <td>2013</td>
                             <td class="price-column price-locked">120.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>539</td>
-                            <td><strong>85</strong></td>
+                            <td>538</td>
+                            <td><strong>115</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="170.00">
-                            <td>Pavillon Rouge de Margaux (2nd Vin)</td>
-                            <td>Château Margaux</td>
-                            <td>2019</td>
-                            <td class="price-column price-locked">170.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>288</td>
-                            <td><strong>70</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="195.00">
-                            <td>Cabernet Franc G de la Gaffelière</td>
-                            <td>Château La Gaffelière</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">195.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>213</td>
-                            <td><strong>70</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Premium" data-price="114.00">
                             <td>Les Carmes Haut Brion</td>
@@ -8674,7 +8892,27 @@
                             <td class="price-column price-locked">114.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td>257</td>
-                            <td><strong>70</strong></td>
+                            <td><strong>100</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="120.00">
+                            <td>Péby Faugeres</td>
+                            <td>Château Péby Faugères</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">120.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>210</td>
+                            <td><strong>100</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="122.00">
+                            <td>Giscours</td>
+                            <td>Château Giscours</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">122.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>263</td>
+                            <td><strong>100</strong></td>
                             <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Premium" data-price="121.00">
@@ -8684,8 +8922,148 @@
                             <td class="price-column price-locked">121.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td>274</td>
-                            <td><strong>70</strong></td>
+                            <td><strong>100</strong></td>
                             <td><span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="105.00">
+                            <td>Le Clarence de Haut Brion (2nd Vin)</td>
+                            <td>Château Haut Brion</td>
+                            <td>2015</td>
+                            <td class="price-column price-locked">105.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>391</td>
+                            <td><strong>90</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="115.00">
+                            <td>Colore</td>
+                            <td>Bibi Graetz</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">115.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>381</td>
+                            <td><strong>90</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="108.00">
+                            <td>Les Carmes Haut Brion</td>
+                            <td>Château Les Carmes Haut-Brion</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">108.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>391</td>
+                            <td><strong>90</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="120.00">
+                            <td>Lynch Bages</td>
+                            <td>Château Lynch Bages</td>
+                            <td>2018</td>
+                            <td class="price-column price-locked">120.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>353</td>
+                            <td><strong>90</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="108.00">
+                            <td>Lynch Bages</td>
+                            <td>Château Lynch Bages</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">108.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>2198</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="110.00">
+                            <td>Lynch Bages</td>
+                            <td>Château Lynch Bages</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">110.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>630</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="119.00">
+                            <td>Cos d'Estournel</td>
+                            <td>Château Cos d'Estournel</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">119.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>1105</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="120.00">
+                            <td>L'Évangile</td>
+                            <td>Château L'Évangile</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">120.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>540</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="105.00">
+                            <td>Pontet Canet</td>
+                            <td>Château Pontet Canet</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">105.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>853</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="100.00">
+                            <td>Clos Fourtet</td>
+                            <td>Château Clos Fourtet</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">100.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>702</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="105.00">
+                            <td>Canon</td>
+                            <td>Château Canon</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">105.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>666</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="105.00">
+                            <td>Canon</td>
+                            <td>Château Canon</td>
+                            <td>2021</td>
+                            <td class="price-column price-locked">105.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>594</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="108.00">
+                            <td>Lynch Bages</td>
+                            <td>Château Lynch Bages</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">108.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>1803</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="118.00">
+                            <td>Troplong Mondot</td>
+                            <td>Château Troplong Mondot</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">118.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>2145</td>
+                            <td><strong>85</strong></td>
+                            <td>-</td>
                         </tr>
                         <tr data-tier="Premium" data-price="147.00">
                             <td>Rosso del Ticino</td>
@@ -8694,6 +9072,16 @@
                             <td class="price-column price-locked">147.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
                             <td>258</td>
+                            <td><strong>70</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="170.00">
+                            <td>Pavillon Rouge de Margaux (2nd Vin)</td>
+                            <td>Château Margaux</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">170.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>288</td>
                             <td><strong>70</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
@@ -8707,16 +9095,6 @@
                             <td><strong>70</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
-                        <tr data-tier="Premium" data-price="122.00">
-                            <td>Giscours</td>
-                            <td>Château Giscours</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">122.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>263</td>
-                            <td><strong>70</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
                         <tr data-tier="Premium" data-price="210.00">
                             <td>Finca Piedra Infinita Gravascal</td>
                             <td>Familia Zuccardi</td>
@@ -8726,106 +9104,6 @@
                             <td>258</td>
                             <td><strong>70</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="120.00">
-                            <td>Péby Faugeres</td>
-                            <td>Château Péby Faugères</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">120.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>210</td>
-                            <td><strong>70</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="115.00">
-                            <td>Colore</td>
-                            <td>Bibi Graetz</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">115.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>381</td>
-                            <td><strong>60</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="108.00">
-                            <td>Les Carmes Haut Brion</td>
-                            <td>Château Les Carmes Haut-Brion</td>
-                            <td>2019</td>
-                            <td class="price-column price-locked">108.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>391</td>
-                            <td><strong>60</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="218.00">
-                            <td>Le Désir</td>
-                            <td>Vérité</td>
-                            <td>2014</td>
-                            <td class="price-column price-locked">218.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>321</td>
-                            <td><strong>60</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="105.00">
-                            <td>Le Clarence de Haut Brion (2nd Vin)</td>
-                            <td>Château Haut Brion</td>
-                            <td>2015</td>
-                            <td class="price-column price-locked">105.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>391</td>
-                            <td><strong>60</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="195.00">
-                            <td>Chardonnay</td>
-                            <td>Damilano Azienda Agricola</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">195.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>342</td>
-                            <td><strong>60</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="170.00">
-                            <td>Pavillon Rouge de Margaux (2nd Vin)</td>
-                            <td>Château Margaux</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">170.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>460</td>
-                            <td><strong>60</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="135.00">
-                            <td>Ygrec de Ch. d'Yquem</td>
-                            <td>Château d'Yquem</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">135.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>435</td>
-                            <td><strong>60</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="120.00">
-                            <td>Lynch Bages</td>
-                            <td>Château Lynch Bages</td>
-                            <td>2018</td>
-                            <td class="price-column price-locked">120.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>353</td>
-                            <td><strong>60</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="250.00">
-                            <td>Carruades de Lafite Rothschild (2nd Vin)</td>
-                            <td>Château Lafite Rothschild</td>
-                            <td>2019</td>
-                            <td class="price-column price-locked">250.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>330</td>
-                            <td><strong>60</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Premium" data-price="255.00">
                             <td>Solaia</td>
@@ -8837,84 +9115,34 @@
                             <td><strong>60</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
-                        <tr data-tier="Premium" data-price="135.00">
+                        <tr data-tier="Premium" data-price="195.00">
+                            <td>Chardonnay</td>
+                            <td>Damilano Azienda Agricola</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">195.00</td>
+                            <td><span class="tier-badge tier-premium">Premium</span></td>
+                            <td>348</td>
+                            <td><strong>60</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Premium" data-price="250.00">
                             <td>Carruades de Lafite Rothschild (2nd Vin)</td>
                             <td>Château Lafite Rothschild</td>
-                            <td>2024</td>
-                            <td class="price-column price-locked">135.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>1596</td>
-                            <td><strong>55</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="100.00">
-                            <td>Clos Fourtet</td>
-                            <td>Château Clos Fourtet</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">100.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>702</td>
-                            <td><strong>55</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="170.00">
-                            <td>Pavillon Rouge de Margaux (2nd Vin)</td>
-                            <td>Château Margaux</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">170.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>1659</td>
-                            <td><strong>55</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="170.00">
-                            <td>Pavillon Rouge de Margaux (2nd Vin)</td>
-                            <td>Château Margaux</td>
-                            <td>2021</td>
-                            <td class="price-column price-locked">170.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>673</td>
-                            <td><strong>55</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Premium" data-price="119.00">
-                            <td>Cos d'Estournel</td>
-                            <td>Château Cos d'Estournel</td>
                             <td>2019</td>
-                            <td class="price-column price-locked">119.00</td>
+                            <td class="price-column price-locked">250.00</td>
                             <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>1105</td>
-                            <td><strong>55</strong></td>
-                            <td>-</td>
+                            <td>330</td>
+                            <td><strong>60</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
-                        <tr data-tier="Premium" data-price="120.00">
-                            <td>L'Évangile</td>
-                            <td>Château L'Évangile</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">120.00</td>
-                            <td><span class="tier-badge tier-premium">Premium</span></td>
-                            <td>540</td>
-                            <td><strong>55</strong></td>
-                            <td>-</td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="62.00">
-                            <td>Belvedere</td>
-                            <td>Castello Luigi</td>
+                        <tr data-tier="Mid-range" data-price="66.00">
+                            <td>Barolo Ginestra Vigna Casa Matè</td>
+                            <td>Azienda Agricola Elio Grasso</td>
                             <td>2021</td>
-                            <td class="price-column price-locked">62.00</td>
+                            <td class="price-column price-locked">66.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>227</td>
-                            <td><strong>105</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="52.00">
-                            <td>Hacienda Monasterio Reserva</td>
-                            <td>Hacienda Monasterio</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">52.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>262</td>
-                            <td><strong>105</strong></td>
+                            <td>239</td>
+                            <td><strong>135</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="95.00">
@@ -8924,17 +9152,7 @@
                             <td class="price-column price-locked">95.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>240</td>
-                            <td><strong>105</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="65.00">
-                            <td>Chardonnay Selva della Tesa</td>
-                            <td>Ca' del Bosco</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">65.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>231</td>
-                            <td><strong>105</strong></td>
+                            <td><strong>135</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="59.00">
@@ -8944,7 +9162,27 @@
                             <td class="price-column price-locked">59.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>204</td>
-                            <td><strong>105</strong></td>
+                            <td><strong>135</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="65.00">
+                            <td>Chardonnay Selva della Tesa</td>
+                            <td>Ca' del Bosco</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">65.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>231</td>
+                            <td><strong>135</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="52.00">
+                            <td>Hacienda Monasterio Reserva</td>
+                            <td>Hacienda Monasterio</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">52.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>262</td>
+                            <td><strong>135</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="95.50">
@@ -8954,48 +9192,18 @@
                             <td class="price-column price-locked">95.50</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>280</td>
-                            <td><strong>105</strong></td>
+                            <td><strong>135</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
-                        <tr data-tier="Mid-range" data-price="66.00">
-                            <td>Barolo Ginestra Vigna Casa Matè</td>
-                            <td>Azienda Agricola Elio Grasso</td>
+                        <tr data-tier="Mid-range" data-price="62.00">
+                            <td>Belvedere</td>
+                            <td>Castello Luigi</td>
                             <td>2021</td>
-                            <td class="price-column price-locked">66.00</td>
+                            <td class="price-column price-locked">62.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>239</td>
-                            <td><strong>105</strong></td>
+                            <td>227</td>
+                            <td><strong>135</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="98.00">
-                            <td>Beauséjour Duffau Lagarrosse</td>
-                            <td>Château Beauséjour</td>
-                            <td>2021</td>
-                            <td class="price-column price-locked">98.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>312</td>
-                            <td><strong>95</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="98.00">
-                            <td>Suduiraut Creme de Tete</td>
-                            <td>Château Suduiraut</td>
-                            <td>1989</td>
-                            <td class="price-column price-locked">98.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>336</td>
-                            <td><strong>95</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="95.00">
-                            <td>Guado al Tasso</td>
-                            <td>Antinori - Tenuta Guado al Tasso</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">95.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>372</td>
-                            <td><strong>95</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="54.00">
                             <td>Belvedere</td>
@@ -9004,27 +9212,7 @@
                             <td class="price-column price-locked">54.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>318</td>
-                            <td><strong>95</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="56.00">
-                            <td>Châteauneuf-du-Pape Cuvée de mon Aïeul</td>
-                            <td>Domaine Pierre Usseglio & Fils</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">56.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>300</td>
-                            <td><strong>95</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="52.00">
-                            <td>Pouilly-Fuissé Cuvée Tête de Cru Clos des Prouges</td>
-                            <td>J.A. Ferret</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">52.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>360</td>
-                            <td><strong>95</strong></td>
+                            <td><strong>125</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="58.00">
@@ -9034,67 +9222,57 @@
                             <td class="price-column price-locked">58.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>444</td>
-                            <td><strong>95</strong></td>
+                            <td><strong>125</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="56.00">
-                            <td>Matallana</td>
-                            <td>Telmo Rodríguez</td>
+                            <td>Châteauneuf-du-Pape Cuvée de mon Aïeul</td>
+                            <td>Domaine Pierre Usseglio & Fils</td>
                             <td>2022</td>
                             <td class="price-column price-locked">56.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>546</td>
-                            <td><strong>90</strong></td>
+                            <td>300</td>
+                            <td><strong>125</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
-                        <tr data-tier="Mid-range" data-price="70.16">
-                            <td>Duhart Milon</td>
-                            <td>Château Duhart Milon</td>
+                        <tr data-tier="Mid-range" data-price="52.00">
+                            <td>Pouilly-Fuissé Cuvée Tête de Cru Clos des Prouges</td>
+                            <td>J.A. Ferret</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">52.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>360</td>
+                            <td><strong>125</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="95.00">
+                            <td>Guado al Tasso</td>
+                            <td>Antinori - Tenuta Guado al Tasso</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">95.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>372</td>
+                            <td><strong>125</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="98.00">
+                            <td>Suduiraut Creme de Tete</td>
+                            <td>Château Suduiraut</td>
+                            <td>1989</td>
+                            <td class="price-column price-locked">98.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>336</td>
+                            <td><strong>125</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="98.00">
+                            <td>Beauséjour Duffau Lagarrosse</td>
+                            <td>Château Beauséjour</td>
                             <td>2021</td>
-                            <td class="price-column price-locked">70.16</td>
+                            <td class="price-column price-locked">98.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>1821</td>
-                            <td><strong>90</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="69.00">
-                            <td>Alma Assemblage Extra Brut</td>
-                            <td>Bellavista</td>
-                            <td>NV</td>
-                            <td class="price-column price-locked">69.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>1001</td>
-                            <td><strong>90</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="59.50">
-                            <td>Vivaltus</td>
-                            <td>Bodega Vivaltus</td>
-                            <td>2018</td>
-                            <td class="price-column price-locked">59.50</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>761</td>
-                            <td><strong>90</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="59.00">
-                            <td>D'Issan</td>
-                            <td>Château D'Issan</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">59.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>1364</td>
-                            <td><strong>90</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="55.00">
-                            <td>Hacienda Monasterio Cosecha</td>
-                            <td>Hacienda Monasterio</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">55.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>633</td>
-                            <td><strong>90</strong></td>
+                            <td>312</td>
+                            <td><strong>125</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="56.00">
@@ -9104,27 +9282,27 @@
                             <td class="price-column price-locked">56.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>2998</td>
-                            <td><strong>90</strong></td>
+                            <td><strong>120</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="70.16">
                             <td>Duhart Milon</td>
                             <td>Château Duhart Milon</td>
-                            <td>2016</td>
+                            <td>2021</td>
                             <td class="price-column price-locked">70.16</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>612</td>
-                            <td><strong>90</strong></td>
+                            <td>1821</td>
+                            <td><strong>120</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
-                        <tr data-tier="Mid-range" data-price="88.00">
-                            <td>Calon Ségur</td>
-                            <td>Château Calon Ségur</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">88.00</td>
+                        <tr data-tier="Mid-range" data-price="56.00">
+                            <td>Matallana</td>
+                            <td>Telmo Rodríguez</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">56.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>1812</td>
-                            <td><strong>90</strong></td>
+                            <td>546</td>
+                            <td><strong>120</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="79.67">
@@ -9134,37 +9312,7 @@
                             <td class="price-column price-locked">79.67</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>828</td>
-                            <td><strong>90</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="70.16">
-                            <td>Duhart Milon</td>
-                            <td>Château Duhart Milon</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">70.16</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>1623</td>
-                            <td><strong>90</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="70.00">
-                            <td>Beychevelle</td>
-                            <td>Château Beychevelle</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">70.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>3630</td>
-                            <td><strong>90</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Mid-range" data-price="66.00">
-                            <td>Beychevelle</td>
-                            <td>Château Beychevelle</td>
-                            <td>2024</td>
-                            <td class="price-column price-locked">66.00</td>
-                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>563</td>
-                            <td><strong>90</strong></td>
+                            <td><strong>120</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="70.16">
@@ -9174,7 +9322,27 @@
                             <td class="price-column price-locked">70.16</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>552</td>
-                            <td><strong>90</strong></td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="70.16">
+                            <td>Duhart Milon</td>
+                            <td>Château Duhart Milon</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">70.16</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>1623</td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="59.00">
+                            <td>D'Issan</td>
+                            <td>Château D'Issan</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">59.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>1088</td>
+                            <td><strong>120</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="70.00">
@@ -9184,48 +9352,88 @@
                             <td class="price-column price-locked">70.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
                             <td>1515</td>
-                            <td><strong>90</strong></td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="55.00">
+                            <td>Hacienda Monasterio Cosecha</td>
+                            <td>Hacienda Monasterio</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">55.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>627</td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="70.16">
+                            <td>Duhart Milon</td>
+                            <td>Château Duhart Milon</td>
+                            <td>2016</td>
+                            <td class="price-column price-locked">70.16</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>612</td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="69.00">
+                            <td>Alma Assemblage Extra Brut</td>
+                            <td>Bellavista</td>
+                            <td>NV</td>
+                            <td class="price-column price-locked">69.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>1001</td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="88.00">
+                            <td>Calon Ségur</td>
+                            <td>Château Calon Ségur</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">88.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>1812</td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="70.00">
+                            <td>Beychevelle</td>
+                            <td>Château Beychevelle</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">70.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>3630</td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="59.50">
+                            <td>Vivaltus</td>
+                            <td>Bodega Vivaltus</td>
+                            <td>2018</td>
+                            <td class="price-column price-locked">59.50</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>761</td>
+                            <td><strong>120</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Mid-range" data-price="66.00">
+                            <td>Beychevelle</td>
+                            <td>Château Beychevelle</td>
+                            <td>2024</td>
+                            <td class="price-column price-locked">66.00</td>
+                            <td><span class="tier-badge tier-midrange">Mid-range</span></td>
+                            <td>563</td>
+                            <td><strong>120</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Mid-range" data-price="89.00">
-                            <td>Lynch Bages</td>
-                            <td>Château Lynch Bages</td>
-                            <td>2021</td>
+                            <td>Le Clarence de Haut Brion (2nd Vin)</td>
+                            <td>Château Haut Brion</td>
+                            <td>2019</td>
                             <td class="price-column price-locked">89.00</td>
                             <td><span class="tier-badge tier-midrange">Mid-range</span></td>
-                            <td>292</td>
-                            <td><strong>75</strong></td>
-                            <td><span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="36.00">
-                            <td>Barolo Lecinquevigne</td>
-                            <td>Damilano Azienda Agricola</td>
-                            <td>2021</td>
-                            <td class="price-column price-locked">36.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>288</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="38.00">
-                            <td>Paixar Viña de Vaca</td>
-                            <td>Bodegas y Viñedos Luna Beberide</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">38.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>252</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="45.00">
-                            <td>Ryan</td>
-                            <td>Calera</td>
-                            <td>2016</td>
-                            <td class="price-column price-locked">45.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>290</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                            <td><strong>105</strong></td>
+                            <td><span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Budget" data-price="49.00">
                             <td>Roc de Cambes</td>
@@ -9234,67 +9442,7 @@
                             <td class="price-column price-locked">49.00</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>228</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="13.00">
-                            <td>Terre</td>
-                            <td>Tenuta San Leonardo</td>
-                            <td>2022</td>
-                            <td class="price-column price-locked">13.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>228</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="35.00">
-                            <td>Viña Tondonia Reserva</td>
-                            <td>Bodegas López de Heredia Viña Tondonia</td>
-                            <td>2013</td>
-                            <td class="price-column price-locked">35.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>240</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="42.00">
-                            <td>Numanthia</td>
-                            <td>Bodega Numanthia</td>
-                            <td>2018</td>
-                            <td class="price-column price-locked">42.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>201</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="49.00">
-                            <td>San Cayetano</td>
-                            <td>M. Ant. De la Riva</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">49.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>222</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="40.70">
-                            <td>Chardonnay Graubünden</td>
-                            <td>Weingut Familie Hansruedi Adank</td>
-                            <td>2024</td>
-                            <td class="price-column price-locked">40.70</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>240</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="44.00">
-                            <td>Champagne Brut Collection 246 (Gift Box)</td>
-                            <td>Louis Roederer</td>
-                            <td>NV</td>
-                            <td class="price-column price-locked">44.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>212</td>
-                            <td><strong>110</strong></td>
+                            <td><strong>140</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Budget" data-price="45.00">
@@ -9304,57 +9452,7 @@
                             <td class="price-column price-locked">45.00</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>207</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="34.00">
-                            <td>Brut Satèn</td>
-                            <td>Bellavista</td>
-                            <td>2019</td>
-                            <td class="price-column price-locked">34.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>281</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="39.00">
-                            <td>Poggio alle Gazze dell'Ornellaia</td>
-                            <td>Tenuta dell'Ornellaia</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">39.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>279</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="30.50">
-                            <td>Cont'Ugo</td>
-                            <td>Antinori - Tenuta Guado al Tasso</td>
-                            <td>2021</td>
-                            <td class="price-column price-locked">30.50</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>250</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="36.00">
-                            <td>Grand Mayne</td>
-                            <td>Château Grand Mayne</td>
-                            <td>2018</td>
-                            <td class="price-column price-locked">36.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>234</td>
-                            <td><strong>110</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="26.00">
-                            <td>Clos de l'Oratoire</td>
-                            <td>Clos de l'Oratoire</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">26.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>210</td>
-                            <td><strong>110</strong></td>
+                            <td><strong>140</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
                         <tr data-tier="Budget" data-price="12.00">
@@ -9364,77 +9462,147 @@
                             <td class="price-column price-locked">12.00</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>216</td>
-                            <td><strong>110</strong></td>
+                            <td><strong>140</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
                         </tr>
-                        <tr data-tier="Budget" data-price="21.00">
-                            <td>Guiraud</td>
-                            <td>Château Guiraud</td>
-                            <td>2015</td>
-                            <td class="price-column price-locked">21.00</td>
+                        <tr data-tier="Budget" data-price="40.70">
+                            <td>Chardonnay Graubünden</td>
+                            <td>Weingut Familie Hansruedi Adank</td>
+                            <td>2024</td>
+                            <td class="price-column price-locked">40.70</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>240</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="26.00">
+                            <td>Clos de l'Oratoire</td>
+                            <td>Clos de l'Oratoire</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">26.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>210</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="36.00">
+                            <td>Grand Mayne</td>
+                            <td>Château Grand Mayne</td>
+                            <td>2018</td>
+                            <td class="price-column price-locked">36.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>234</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="49.00">
+                            <td>San Cayetano</td>
+                            <td>M. Ant. De la Riva</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">49.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>222</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="13.00">
+                            <td>Terre</td>
+                            <td>Tenuta San Leonardo</td>
+                            <td>2022</td>
+                            <td class="price-column price-locked">13.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>228</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="30.50">
+                            <td>Cont'Ugo</td>
+                            <td>Antinori - Tenuta Guado al Tasso</td>
+                            <td>2021</td>
+                            <td class="price-column price-locked">30.50</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>250</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="39.00">
+                            <td>Poggio alle Gazze dell'Ornellaia</td>
+                            <td>Tenuta dell'Ornellaia</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">39.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>279</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="34.00">
+                            <td>Brut Satèn</td>
+                            <td>Bellavista</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">34.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>281</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="42.00">
+                            <td>Numanthia</td>
+                            <td>Bodega Numanthia</td>
+                            <td>2018</td>
+                            <td class="price-column price-locked">42.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>201</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="45.00">
+                            <td>Ryan</td>
+                            <td>Calera</td>
+                            <td>2016</td>
+                            <td class="price-column price-locked">45.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>290</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="36.00">
+                            <td>Barolo Lecinquevigne</td>
+                            <td>Damilano Azienda Agricola</td>
+                            <td>2021</td>
+                            <td class="price-column price-locked">36.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>288</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="38.00">
+                            <td>Paixar Viña de Vaca</td>
+                            <td>Bodegas y Viñedos Luna Beberide</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">38.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>252</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="35.00">
+                            <td>Viña Tondonia Reserva</td>
+                            <td>Bodegas López de Heredia Viña Tondonia</td>
+                            <td>2013</td>
+                            <td class="price-column price-locked">35.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>240</td>
+                            <td><strong>140</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span> <span class="status-badge status-clearance">Clearance</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="34.00">
+                            <td>Family and Friends Firraru</td>
+                            <td>Feudo Maccari</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">34.00</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>456</td>
-                            <td><strong>100</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="21.00">
-                            <td>L'Hêtre</td>
-                            <td>Château L'Hêtre</td>
-                            <td>2020</td>
-                            <td class="price-column price-locked">21.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>498</td>
-                            <td><strong>100</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="33.00">
-                            <td>Todeschini Distique 13</td>
-                            <td>Château Mangot</td>
-                            <td>2018</td>
-                            <td class="price-column price-locked">33.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>307</td>
-                            <td><strong>100</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="39.00">
-                            <td>Guiraud</td>
-                            <td>Château Guiraud</td>
-                            <td>2015</td>
-                            <td class="price-column price-locked">39.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>468</td>
-                            <td><strong>100</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="18.91">
-                            <td>Coutet</td>
-                            <td>Château Coutet</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">18.91</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>354</td>
-                            <td><strong>100</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="39.00">
-                            <td>Du Tertre</td>
-                            <td>Château du Tertre</td>
-                            <td>2015</td>
-                            <td class="price-column price-locked">39.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>498</td>
-                            <td><strong>100</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="49.46">
-                            <td>Roc de Cambes</td>
-                            <td>Château Roc de Cambes</td>
-                            <td>2018</td>
-                            <td class="price-column price-locked">49.46</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>306</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Budget" data-price="18.91">
@@ -9444,7 +9612,17 @@
                             <td class="price-column price-locked">18.91</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>456</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="21.00">
+                            <td>L'Hêtre</td>
+                            <td>Château L'Hêtre</td>
+                            <td>2020</td>
+                            <td class="price-column price-locked">21.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>492</td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Budget" data-price="12.00">
@@ -9454,27 +9632,17 @@
                             <td class="price-column price-locked">12.00</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>335</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
-                        <tr data-tier="Budget" data-price="34.00">
-                            <td>Family and Friends Firraru</td>
-                            <td>Feudo Maccari</td>
-                            <td>2023</td>
-                            <td class="price-column price-locked">34.00</td>
+                        <tr data-tier="Budget" data-price="49.46">
+                            <td>Roc de Cambes</td>
+                            <td>Château Roc de Cambes</td>
+                            <td>2018</td>
+                            <td class="price-column price-locked">49.46</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>456</td>
-                            <td><strong>100</strong></td>
-                            <td><span class="status-badge status-new">New to HORECA</span></td>
-                        </tr>
-                        <tr data-tier="Budget" data-price="26.00">
-                            <td>Etna Rosso Contrada Santo Spirito</td>
-                            <td>Animardente</td>
-                            <td>2021</td>
-                            <td class="price-column price-locked">26.00</td>
-                            <td><span class="tier-badge tier-budget">Budget</span></td>
-                            <td>324</td>
-                            <td><strong>100</strong></td>
+                            <td>306</td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Budget" data-price="33.00">
@@ -9484,7 +9652,67 @@
                             <td class="price-column price-locked">33.00</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>468</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="33.00">
+                            <td>Todeschini Distique 13</td>
+                            <td>Château Mangot</td>
+                            <td>2018</td>
+                            <td class="price-column price-locked">33.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>307</td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="39.00">
+                            <td>Guiraud</td>
+                            <td>Château Guiraud</td>
+                            <td>2015</td>
+                            <td class="price-column price-locked">39.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>468</td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="21.00">
+                            <td>Guiraud</td>
+                            <td>Château Guiraud</td>
+                            <td>2015</td>
+                            <td class="price-column price-locked">21.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>456</td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="39.00">
+                            <td>Du Tertre</td>
+                            <td>Château du Tertre</td>
+                            <td>2015</td>
+                            <td class="price-column price-locked">39.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>498</td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="18.91">
+                            <td>Coutet</td>
+                            <td>Château Coutet</td>
+                            <td>2023</td>
+                            <td class="price-column price-locked">18.91</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>354</td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="26.00">
+                            <td>Etna Rosso Contrada Santo Spirito</td>
+                            <td>Animardente</td>
+                            <td>2021</td>
+                            <td class="price-column price-locked">26.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>324</td>
+                            <td><strong>130</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                         <tr data-tier="Budget" data-price="16.00">
@@ -9494,7 +9722,17 @@
                             <td class="price-column price-locked">16.00</td>
                             <td><span class="tier-badge tier-budget">Budget</span></td>
                             <td>300</td>
-                            <td><strong>100</strong></td>
+                            <td><strong>130</strong></td>
+                            <td><span class="status-badge status-new">New to HORECA</span></td>
+                        </tr>
+                        <tr data-tier="Budget" data-price="30.00">
+                            <td>Haut Marbuzet</td>
+                            <td>Château Haut Marbuzet</td>
+                            <td>2019</td>
+                            <td class="price-column price-locked">30.00</td>
+                            <td><span class="tier-badge tier-budget">Budget</span></td>
+                            <td>3120</td>
+                            <td><strong>125</strong></td>
                             <td><span class="status-badge status-new">New to HORECA</span></td>
                         </tr>
                     </tbody>

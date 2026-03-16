@@ -798,7 +798,7 @@
         <div class="header">
             <h1>Campaign<br>Analytics</h1>
             <p class="subtitle">Weekly Insights & Distribution</p>
-            <p class="timestamp">Last Updated: March 16, 2026 — 08:40</p>
+            <p class="timestamp">Last Updated: March 16, 2026 — 13:41</p>
         </div>
 
         <!-- Tier Balance Section -->
@@ -1241,48 +1241,48 @@
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-luxury">Luxury</span></td>
-                                <td style="text-align: center;">319</td>
-                                <td style="text-align: center;">5.8%</td>
+                                <td style="text-align: center;">332</td>
+                                <td style="text-align: center;">5.9%</td>
                                 <td style="text-align: center;">4</td>
                                 <td style="text-align: center;">9.5%</td>
                                 <td style="text-align: right;">2,424</td>
                                 <td style="text-align: center;">9.4%</td>
-                                <td class="gap-positive">+3.7%</td>
+                                <td class="gap-positive">+3.6%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-premium">Premium</span></td>
-                                <td style="text-align: center;">757</td>
-                                <td style="text-align: center;">13.8%</td>
+                                <td style="text-align: center;">767</td>
+                                <td style="text-align: center;">13.6%</td>
                                 <td style="text-align: center;">10</td>
                                 <td style="text-align: center;">23.8%</td>
                                 <td style="text-align: right;">12,604</td>
                                 <td style="text-align: center;">48.8%</td>
-                                <td class="gap-positive">+10.0%</td>
+                                <td class="gap-positive">+10.2%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-mid-range">Mid-range</span></td>
-                                <td style="text-align: center;">1,558</td>
-                                <td style="text-align: center;">28.4%</td>
+                                <td style="text-align: center;">1,598</td>
+                                <td style="text-align: center;">28.2%</td>
                                 <td style="text-align: center;">14</td>
                                 <td style="text-align: center;">33.3%</td>
                                 <td style="text-align: right;">7,124</td>
                                 <td style="text-align: center;">27.6%</td>
-                                <td class="gap-positive">+4.9%</td>
+                                <td class="gap-positive">+5.1%</td>
                             </tr>
                             <tr>
                                 <td><span class="tier-badge tier-budget">Budget</span></td>
-                                <td style="text-align: center;">2,782</td>
-                                <td style="text-align: center;">50.6%</td>
+                                <td style="text-align: center;">2,885</td>
+                                <td style="text-align: center;">51.0%</td>
                                 <td style="text-align: center;">1</td>
                                 <td style="text-align: center;">2.4%</td>
                                 <td style="text-align: right;">1,003</td>
                                 <td style="text-align: center;">3.9%</td>
-                                <td class="gap-negative">-48.2%</td>
+                                <td class="gap-negative">-48.6%</td>
                             </tr>
                         </tbody>
                     </table>
                     <p style="font-size: 0.7rem; color: #888; margin-top: 12px; text-align: center;">
-                        5,494 active clients &middot; 42 offers this week &middot; 25,843 emails sent
+                        5,660 active clients &middot; 42 offers this week &middot; 25,843 emails sent
                     </p>
                 </div>
             </div>
@@ -2107,6 +2107,166 @@
                     <canvas id="stockChart"></canvas>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- CLIENT DISTRIBUTION SECTION                                       -->
+    <!-- ================================================================ -->
+    <div style="background:#F5F5F5; padding: 60px 0;">
+        <div class="container" style="padding-top:0; padding-bottom:0;">
+            <h2 style="font-family:'Bodoni Moda',serif; font-size:2rem; color:#000; margin-bottom:8px;">Client Distribution</h2>
+            <p style="color:#8B7347; margin-bottom:40px; font-size:0.95rem;">
+                LEADS contacts (120,198 cold-offer recipients) &nbsp;·&nbsp;
+                Active customers (4,456 purchasing in last 9 months) &nbsp;·&nbsp;
+                NT9 inactive (2,814 not purchased 9+ months)
+            </p>
+
+            <!-- Row 1: Country distributions -->
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px; margin-bottom:40px;">
+
+                <!-- LEADS by Country -->
+                <div style="background:#fff; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">LEADS — by Country</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Top 20 countries across all leads contacts</p>
+                    <div style="position:relative; height:380px;"><canvas id="leadsCountryChart"></canvas></div>
+                </div>
+
+                <!-- Active Customers by Country -->
+                <div style="background:#fff; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Active Customers — by Country</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Purchasing customers, last 9 months</p>
+                    <div style="position:relative; height:380px;"><canvas id="activeCountryChart"></canvas></div>
+                </div>
+
+                <!-- NT9 (inactive) by Country -->
+                <div style="background:#fff; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Inactive (NT9) — by Country</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">No purchase in last 9 months — re-engagement pool</p>
+                    <div style="position:relative; height:380px;"><canvas id="nt9CountryChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- Row 2: Salesperson distributions -->
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px; margin-bottom:40px;">
+
+                <!-- LEADS by Salesperson -->
+                <div style="background:#fff; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">LEADS — by Salesperson</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Cold-offer contact list ownership</p>
+                    <div style="position:relative; height:300px;"><canvas id="leadsSpChart"></canvas></div>
+                </div>
+
+                <!-- Active Customers by Salesperson -->
+                <div style="background:#fff; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Active Customers — by Salesperson</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Active purchasing accounts per rep</p>
+                    <div style="position:relative; height:300px;"><canvas id="activeSpChart"></canvas></div>
+                </div>
+
+                <!-- NT9 by Salesperson -->
+                <div style="background:#fff; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Inactive (NT9) — by Salesperson</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Dormant accounts per rep — recovery opportunity</p>
+                    <div style="position:relative; height:300px;"><canvas id="nt9SpChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- Row 3: Summary stats cards -->
+            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+                <div style="background:#000; color:#fff; padding:28px 24px; text-align:center;">
+                    <div style="font-size:2rem; font-family:'Bodoni Moda',serif; color:#D4C294;">120,198</div>
+                    <div style="font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:6px; color:#999;">LEADS Contacts</div>
+                    <div style="font-size:0.75rem; color:#8B7347; margin-top:4px;">cold-offer recipients</div>
+                </div>
+                <div style="background:#000; color:#fff; padding:28px 24px; text-align:center;">
+                    <div style="font-size:2rem; font-family:'Bodoni Moda',serif; color:#D4C294;">4,456</div>
+                    <div style="font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:6px; color:#999;">Active Customers</div>
+                    <div style="font-size:0.75rem; color:#8B7347; margin-top:4px;">purchased last 9 months</div>
+                </div>
+                <div style="background:#000; color:#fff; padding:28px 24px; text-align:center;">
+                    <div style="font-size:2rem; font-family:'Bodoni Moda',serif; color:#D4C294;">2,814</div>
+                    <div style="font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:6px; color:#999;">NT9 Inactive</div>
+                    <div style="font-size:0.75rem; color:#8B7347; margin-top:4px;">re-engagement priority</div>
+                </div>
+                <div style="background:#000; color:#fff; padding:28px 24px; text-align:center;">
+                    <div style="font-size:2rem; font-family:'Bodoni Moda',serif; color:#D4C294;">20</div>
+                    <div style="font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; margin-top:6px; color:#999;">Countries (LEADS)</div>
+                    <div style="font-size:0.75rem; color:#8B7347; margin-top:4px;">global cold-offer reach</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- SALESPERSON PREFERENCES SECTION                                   -->
+    <!-- ================================================================ -->
+    <div style="background:#fff; padding: 60px 0;">
+        <div class="container" style="padding-top:0; padding-bottom:0;">
+            <h2 style="font-family:'Bodoni Moda',serif; font-size:2rem; color:#000; margin-bottom:8px;">Salesperson Preferences</h2>
+            <p style="color:#8B7347; margin-bottom:40px; font-size:0.95rem;">
+                Average turnover, order frequency and client language breakdown per account manager &nbsp;·&nbsp;
+                Active Customers only (last 9 months) &nbsp;·&nbsp; Salesperson codes anonymised
+            </p>
+
+            <!-- Row 1: Avg turnover bar + Turnover distribution -->
+            <div style="display:grid; grid-template-columns:2fr 1fr; gap:32px; margin-bottom:40px;">
+
+                <!-- Avg Turnover per Salesperson -->
+                <div style="background:#F5F5F5; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Avg Turnover per Salesperson (€)</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Average annual turnover per active account, by rep</p>
+                    <div style="position:relative; height:320px;"><canvas id="spAvgTurnoverChart"></canvas></div>
+                </div>
+
+                <!-- Global Turnover Distribution -->
+                <div style="background:#F5F5F5; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Turnover Distribution</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">All active customers by annual turnover bucket</p>
+                    <div style="position:relative; height:320px;"><canvas id="turnoverDistChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- Row 2: Language dist + Order dist -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:40px;">
+
+                <!-- Language Distribution -->
+                <div style="background:#F5F5F5; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Language Distribution</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Active customer preferred language (communication language)</p>
+                    <div style="position:relative; height:280px;"><canvas id="langDistChart"></canvas></div>
+                </div>
+
+                <!-- Order Frequency Distribution -->
+                <div style="background:#F5F5F5; padding:32px; border:1px solid #e0e0e0;">
+                    <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:6px;">Order Frequency</h3>
+                    <p style="font-size:0.78rem; color:#999; margin-bottom:20px;">Active customers by total order count</p>
+                    <div style="position:relative; height:280px;"><canvas id="orderDistChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- Row 3: SP detail table -->
+            <div style="background:#F5F5F5; padding:32px; border:1px solid #e0e0e0; margin-bottom:40px; overflow-x:auto;">
+                <h3 style="font-family:'Bodoni Moda',serif; font-size:1.1rem; color:#000; margin-bottom:20px;">Per-Salesperson Summary</h3>
+                <table id="spSummaryTable" style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #8B7347; text-align:left;">
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600;">Rep</th>
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600; text-align:right;">Accounts</th>
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600; text-align:right;">Avg Turnover (€)</th>
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600; text-align:right;">Median Turnover (€)</th>
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600; text-align:right;">Total Portfolio (€)</th>
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600; text-align:right;">Avg Orders</th>
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600;">Top Language</th>
+                            <th style="padding:10px 14px; color:#8B7347; font-weight:600;">Top Country</th>
+                        </tr>
+                    </thead>
+                    <tbody id="spSummaryBody">
+                        <!-- filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 
@@ -9173,10 +9333,10 @@
         ],
         "client_pct": [
                 1.4,
-                5.8,
-                13.8,
-                28.4,
-                50.6
+                5.9,
+                13.6,
+                28.2,
+                51.0
         ],
         "offer_pct": [
                 31.0,
@@ -9187,8 +9347,558 @@
         ]
 };
 
+        // Client distribution data
+        const leadsCountryData = {
+        "United States of America": 25803,
+        "Switzerland": 24153,
+        "United Kingdom": 8047,
+        "Italy": 7547,
+        "Spain": 6562,
+        "Germany": 4972,
+        "France": 4640,
+        "Thailand": 4064,
+        "Netherlands": 2069,
+        "Poland": 1689,
+        "Turkey": 1654,
+        "Belgium": 1612,
+        "India": 1529,
+        "Sweden": 1273,
+        "Brazil": 1180,
+        "Austria": 1122,
+        "China": 1076,
+        "Ukraine": 1070,
+        "Greece": 923,
+        "Norway": 897
+};
+        const activeCountryData = {
+        "Switzerland": 3474,
+        "Spain": 247,
+        "Italy": 176,
+        "United States of America": 97,
+        "Germany": 86,
+        "France": 48,
+        "United Kingdom": 45,
+        "Belgium": 42,
+        "Liechtenstein": 37,
+        "Austria": 28,
+        "Netherlands": 19,
+        "Monaco": 14,
+        "United Arab Emirates": 11,
+        "Greece": 10,
+        "Singapore": 10,
+        "Portugal": 9,
+        "Romania": 9,
+        "Poland": 7,
+        "Sweden": 7,
+        "Norway": 6
+};
+        const nt9CountryData = {
+        "Switzerland": 2333,
+        "United States of America": 152,
+        "Italy": 94,
+        "Spain": 45,
+        "Germany": 28,
+        "United Kingdom": 26,
+        "Hong Kong": 13,
+        "France": 13,
+        "Liechtenstein": 10,
+        "Australia": 7,
+        "Belgium": 6,
+        "Austria": 6,
+        "Singapore": 5,
+        "Canada": 5,
+        "Netherlands": 5,
+        "United Arab Emirates": 5,
+        "Russian Federation": 5,
+        "Norway": 4,
+        "Malaysia": 4,
+        "Brazil": 3
+};
+        const leadsSpData = {
+        "N.B.": 54508,
+        "A.M.": 9052,
+        "D.G.": 8756,
+        "F.F.": 7941,
+        "N.M.": 5657,
+        "V.V.": 4765,
+        "P.L.": 4043,
+        "A.G.": 3750,
+        "A.S.": 3229,
+        "A.P.": 3145,
+        "G.B.": 2455,
+        "I.A.": 2441,
+        "A.R.": 2413,
+        "F.S.": 2118,
+        "C.N.": 1955,
+        "M.B.": 1528,
+        "A.L.": 1031,
+        "A.A.": 758,
+        "R.A.": 303,
+        "C.B.": 217,
+        "D.H.": 109,
+        "M.F.": 22,
+        "M.C.": 2
+};
+        const activeSpData = {
+        "G.B.": 551,
+        "A.R.": 538,
+        "C.N.": 500,
+        "A.A.": 483,
+        "M.B.": 366,
+        "N.B.": 349,
+        "N.M.": 309,
+        "A.M.": 270,
+        "F.S.": 254,
+        "A.S.": 161,
+        "F.F.": 155,
+        "A.P.": 142,
+        "P.L.": 103,
+        "I.A.": 80,
+        "V.V.": 80,
+        "A.G.": 68,
+        "R.A.": 23,
+        "M.C.": 16,
+        "C.B.": 8
+};
+        const nt9SpData = {
+        "G.B.": 556,
+        "A.A.": 529,
+        "M.B.": 321,
+        "N.B.": 314,
+        "A.R.": 298,
+        "F.S.": 246,
+        "C.N.": 236,
+        "F.F.": 131,
+        "A.M.": 59,
+        "A.P.": 51,
+        "A.S.": 28,
+        "A.G.": 14,
+        "V.V.": 10,
+        "P.L.": 6,
+        "R.A.": 6,
+        "C.B.": 3,
+        "M.C.": 3,
+        "N.M.": 2,
+        "M.F.": 1
+};
+
+        // Salesperson preferences data
+        const spMetricsData = {
+        "A.A.": {
+                "count": 483,
+                "avg_turnover": 34596,
+                "median_turnover": 12906,
+                "total_turnover": 16709639,
+                "avg_orders": 22.7,
+                "lang_top": "DEU",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 30,
+                        "1k-5k": 105,
+                        "5k-10k": 77,
+                        "10k-25k": 110,
+                        "25k-50k": 76,
+                        "50k-100k": 45,
+                        "100k-250k": 33,
+                        "250k-500k": 3,
+                        "500k+": 4
+                }
+        },
+        "A.G.": {
+                "count": 68,
+                "avg_turnover": 37805,
+                "median_turnover": 3430,
+                "total_turnover": 2570758,
+                "avg_orders": 8.9,
+                "lang_top": "ESP",
+                "country_top": "Spain",
+                "turnover_dist": {
+                        "<1k": 12,
+                        "1k-5k": 27,
+                        "5k-10k": 6,
+                        "10k-25k": 13,
+                        "25k-50k": 2,
+                        "50k-100k": 3,
+                        "100k-250k": 1,
+                        "250k-500k": 2,
+                        "500k+": 2
+                }
+        },
+        "A.M.": {
+                "count": 270,
+                "avg_turnover": 34308,
+                "median_turnover": 5089,
+                "total_turnover": 9263068,
+                "avg_orders": 8.9,
+                "lang_top": "ENG",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 35,
+                        "1k-5k": 98,
+                        "5k-10k": 32,
+                        "10k-25k": 58,
+                        "25k-50k": 19,
+                        "50k-100k": 13,
+                        "100k-250k": 7,
+                        "250k-500k": 4,
+                        "500k+": 4
+                }
+        },
+        "A.P.": {
+                "count": 142,
+                "avg_turnover": 8743,
+                "median_turnover": 3847,
+                "total_turnover": 1241460,
+                "avg_orders": 6.3,
+                "lang_top": "FRA",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 22,
+                        "1k-5k": 65,
+                        "5k-10k": 29,
+                        "10k-25k": 17,
+                        "25k-50k": 5,
+                        "50k-100k": 2,
+                        "100k-250k": 2,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "A.R.": {
+                "count": 538,
+                "avg_turnover": 12668,
+                "median_turnover": 3495,
+                "total_turnover": 6815115,
+                "avg_orders": 8.9,
+                "lang_top": "DEU",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 101,
+                        "1k-5k": 213,
+                        "5k-10k": 94,
+                        "10k-25k": 80,
+                        "25k-50k": 28,
+                        "50k-100k": 13,
+                        "100k-250k": 6,
+                        "250k-500k": 1,
+                        "500k+": 2
+                }
+        },
+        "A.S.": {
+                "count": 161,
+                "avg_turnover": 56456,
+                "median_turnover": 6760,
+                "total_turnover": 9089440,
+                "avg_orders": 16.6,
+                "lang_top": "ESP",
+                "country_top": "Spain",
+                "turnover_dist": {
+                        "<1k": 19,
+                        "1k-5k": 42,
+                        "5k-10k": 30,
+                        "10k-25k": 24,
+                        "25k-50k": 17,
+                        "50k-100k": 12,
+                        "100k-250k": 10,
+                        "250k-500k": 3,
+                        "500k+": 4
+                }
+        },
+        "C.B.": {
+                "count": 8,
+                "avg_turnover": 13995,
+                "median_turnover": 4857,
+                "total_turnover": 111962,
+                "avg_orders": 3.2,
+                "lang_top": "ITA",
+                "country_top": "Italy",
+                "turnover_dist": {
+                        "<1k": 0,
+                        "1k-5k": 4,
+                        "5k-10k": 2,
+                        "10k-25k": 1,
+                        "25k-50k": 0,
+                        "50k-100k": 1,
+                        "100k-250k": 0,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "C.N.": {
+                "count": 500,
+                "avg_turnover": 9806,
+                "median_turnover": 4290,
+                "total_turnover": 4903071,
+                "avg_orders": 8.5,
+                "lang_top": "DEU",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 73,
+                        "1k-5k": 195,
+                        "5k-10k": 101,
+                        "10k-25k": 75,
+                        "25k-50k": 39,
+                        "50k-100k": 17,
+                        "100k-250k": 0,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "F.F.": {
+                "count": 155,
+                "avg_turnover": 228882,
+                "median_turnover": 37051,
+                "total_turnover": 35476767,
+                "avg_orders": 13.5,
+                "lang_top": "ENG",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 4,
+                        "1k-5k": 22,
+                        "5k-10k": 14,
+                        "10k-25k": 26,
+                        "25k-50k": 28,
+                        "50k-100k": 16,
+                        "100k-250k": 18,
+                        "250k-500k": 13,
+                        "500k+": 14
+                }
+        },
+        "F.S.": {
+                "count": 254,
+                "avg_turnover": 265547,
+                "median_turnover": 36649,
+                "total_turnover": 67448814,
+                "avg_orders": 28.4,
+                "lang_top": "FRA",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 11,
+                        "1k-5k": 33,
+                        "5k-10k": 21,
+                        "10k-25k": 45,
+                        "25k-50k": 31,
+                        "50k-100k": 39,
+                        "100k-250k": 36,
+                        "250k-500k": 15,
+                        "500k+": 23
+                }
+        },
+        "G.B.": {
+                "count": 551,
+                "avg_turnover": 33156,
+                "median_turnover": 10873,
+                "total_turnover": 18269064,
+                "avg_orders": 18.5,
+                "lang_top": "DEU",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 33,
+                        "1k-5k": 143,
+                        "5k-10k": 88,
+                        "10k-25k": 143,
+                        "25k-50k": 68,
+                        "50k-100k": 37,
+                        "100k-250k": 27,
+                        "250k-500k": 10,
+                        "500k+": 2
+                }
+        },
+        "I.A.": {
+                "count": 80,
+                "avg_turnover": 1443,
+                "median_turnover": 410,
+                "total_turnover": 115405,
+                "avg_orders": 2.6,
+                "lang_top": "ITA",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 61,
+                        "1k-5k": 15,
+                        "5k-10k": 2,
+                        "10k-25k": 1,
+                        "25k-50k": 1,
+                        "50k-100k": 0,
+                        "100k-250k": 0,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "M.B.": {
+                "count": 366,
+                "avg_turnover": 40861,
+                "median_turnover": 7230,
+                "total_turnover": 14955126,
+                "avg_orders": 20.6,
+                "lang_top": "ITA",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 48,
+                        "1k-5k": 101,
+                        "5k-10k": 48,
+                        "10k-25k": 65,
+                        "25k-50k": 41,
+                        "50k-100k": 27,
+                        "100k-250k": 29,
+                        "250k-500k": 4,
+                        "500k+": 3
+                }
+        },
+        "M.C.": {
+                "count": 16,
+                "avg_turnover": 4390,
+                "median_turnover": 2389,
+                "total_turnover": 70240,
+                "avg_orders": 2.3,
+                "lang_top": "DEU",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 3,
+                        "1k-5k": 9,
+                        "5k-10k": 3,
+                        "10k-25k": 0,
+                        "25k-50k": 1,
+                        "50k-100k": 0,
+                        "100k-250k": 0,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "N.B.": {
+                "count": 349,
+                "avg_turnover": 303031,
+                "median_turnover": 83211,
+                "total_turnover": 105757831,
+                "avg_orders": 43.7,
+                "lang_top": "DEU",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 3,
+                        "1k-5k": 18,
+                        "5k-10k": 14,
+                        "10k-25k": 45,
+                        "25k-50k": 54,
+                        "50k-100k": 57,
+                        "100k-250k": 74,
+                        "250k-500k": 33,
+                        "500k+": 51
+                }
+        },
+        "N.M.": {
+                "count": 309,
+                "avg_turnover": 3776,
+                "median_turnover": 1224,
+                "total_turnover": 1166817,
+                "avg_orders": 2.8,
+                "lang_top": "DEU",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 132,
+                        "1k-5k": 132,
+                        "5k-10k": 20,
+                        "10k-25k": 16,
+                        "25k-50k": 5,
+                        "50k-100k": 4,
+                        "100k-250k": 0,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "P.L.": {
+                "count": 103,
+                "avg_turnover": 9118,
+                "median_turnover": 1998,
+                "total_turnover": 939188,
+                "avg_orders": 7.7,
+                "lang_top": "FRA",
+                "country_top": "Switzerland",
+                "turnover_dist": {
+                        "<1k": 26,
+                        "1k-5k": 47,
+                        "5k-10k": 9,
+                        "10k-25k": 9,
+                        "25k-50k": 7,
+                        "50k-100k": 4,
+                        "100k-250k": 1,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "R.A.": {
+                "count": 23,
+                "avg_turnover": 16825,
+                "median_turnover": 3240,
+                "total_turnover": 386967,
+                "avg_orders": 3.6,
+                "lang_top": "ESP",
+                "country_top": "Spain",
+                "turnover_dist": {
+                        "<1k": 4,
+                        "1k-5k": 9,
+                        "5k-10k": 5,
+                        "10k-25k": 3,
+                        "25k-50k": 0,
+                        "50k-100k": 0,
+                        "100k-250k": 2,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        },
+        "V.V.": {
+                "count": 80,
+                "avg_turnover": 14209,
+                "median_turnover": 2255,
+                "total_turnover": 1136685,
+                "avg_orders": 4.8,
+                "lang_top": "ITA",
+                "country_top": "Italy",
+                "turnover_dist": {
+                        "<1k": 18,
+                        "1k-5k": 34,
+                        "5k-10k": 11,
+                        "10k-25k": 9,
+                        "25k-50k": 2,
+                        "50k-100k": 3,
+                        "100k-250k": 3,
+                        "250k-500k": 0,
+                        "500k+": 0
+                }
+        }
+};
+        const turnoverDistData = {
+        "<1k": 635,
+        "1k-5k": 1312,
+        "5k-10k": 606,
+        "10k-25k": 740,
+        "25k-50k": 424,
+        "50k-100k": 293,
+        "100k-250k": 249,
+        "250k-500k": 88,
+        "500k+": 109
+};
+        const orderDistData = {
+        "0": 5,
+        "1": 796,
+        "2-4": 1059,
+        "5-9": 828,
+        "10-19": 731,
+        "20-49": 696,
+        "50-99": 253,
+        "100+": 88
+};
+        const langDistData = {
+        "DEU": 2475,
+        "ENG": 693,
+        "ITA": 581,
+        "FRA": 458,
+        "ESP": 242,
+        "PTG": 6
+};
+
         // Chart instances
         let regionsChart, typesChart, priceTiersChart, dailyPricesChart, stockChart, targetingChart, bundleChart, tierBalanceChart;
+        let leadsCountryChart, activeCountryChart, nt9CountryChart, leadsSpChart, activeSpChart, nt9SpChart;
+        let spAvgTurnoverChart, turnoverDistChart, langDistChart, orderDistChart;
 
         // Chart.js defaults - Minimal Black & White with Gold accents
         Chart.defaults.font.family = "'Inter', sans-serif";
@@ -9499,6 +10209,213 @@
                         }
                     }
                 }
+            });
+        }
+
+        // ── Client Distribution Charts ───────────────────────────────────────────
+
+        function makeHorizontalBar(canvasId, dataObj, label, colorStart, colorEnd) {
+            const labels = Object.keys(dataObj);
+            const values = Object.values(dataObj);
+            const total  = values.reduce((a, b) => a + b, 0);
+            // Build a gradient-ish color array
+            const colors = labels.map((_, i) => {
+                const t = labels.length > 1 ? i / (labels.length - 1) : 0;
+                // Lerp between colorStart and colorEnd (hex strings)
+                return colorStart;  // simplified: single brand color
+            });
+            return new Chart(document.getElementById(canvasId), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{ label: label, data: values,
+                        backgroundColor: '#8B7347', borderColor: '#5A4A2F', borderWidth: 1 }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    const pct = total > 0 ? ((ctx.parsed.x / total) * 100).toFixed(1) : 0;
+                                    return ctx.parsed.x.toLocaleString() + ' (' + pct + '%)';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, grid: { color: '#E8E8E8' },
+                            ticks: { font: { size: 10 } } },
+                        y: { grid: { display: false },
+                            ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
+        }
+
+        function makeDoughnutSp(canvasId, dataObj) {
+            const labels = Object.keys(dataObj);
+            const values = Object.values(dataObj);
+            const total  = values.reduce((a, b) => a + b, 0);
+            const palette = ['#5A4A2F','#6B5839','#8B7347','#A68F5F','#BFA976','#D4C294',
+                             '#C8B89A','#B0A080','#9A8A6A','#7A6A4A','#6A5A3A','#4A3A2A',
+                             '#3A2A1A','#2A1A0A','#1A0A00','#D0C090','#E0D0A0','#C0B080',
+                             '#B0A070','#A09060','#907050','#806040','#705030','#604020'];
+            return new Chart(document.getElementById(canvasId), {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{ data: values,
+                        backgroundColor: palette.slice(0, labels.length),
+                        borderWidth: 2, borderColor: '#fff' }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '45%',
+                    plugins: {
+                        legend: { position: 'right',
+                            labels: { padding: 8, font: { size: 10 }, boxWidth: 10 } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    const pct = total > 0 ? ((ctx.parsed / total) * 100).toFixed(1) : 0;
+                                    return ctx.label + ': ' + ctx.parsed.toLocaleString() + ' (' + pct + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        if (document.getElementById('leadsCountryChart')) {
+            leadsCountryChart  = makeHorizontalBar('leadsCountryChart',  leadsCountryData,  'Contacts', '#8B7347', '#5A4A2F');
+            activeCountryChart = makeHorizontalBar('activeCountryChart', activeCountryData, 'Contacts', '#8B7347', '#5A4A2F');
+            nt9CountryChart    = makeHorizontalBar('nt9CountryChart',    nt9CountryData,    'Contacts', '#8B7347', '#5A4A2F');
+            leadsSpChart       = makeDoughnutSp('leadsSpChart',  leadsSpData);
+            activeSpChart      = makeDoughnutSp('activeSpChart', activeSpData);
+            nt9SpChart         = makeDoughnutSp('nt9SpChart',    nt9SpData);
+        }
+
+        // ── Salesperson Preferences Charts ──────────────────────────────────────
+        if (document.getElementById('spAvgTurnoverChart')) {
+            // Sort SPs by avg_turnover descending
+            const spEntries = Object.entries(spMetricsData).sort((a, b) => b[1].avg_turnover - a[1].avg_turnover);
+            const spLabels  = spEntries.map(e => e[0]);
+            const spAvgVals = spEntries.map(e => e[1].avg_turnover);
+
+            spAvgTurnoverChart = new Chart(document.getElementById('spAvgTurnoverChart'), {
+                type: 'bar',
+                data: {
+                    labels: spLabels,
+                    datasets: [{
+                        label: 'Avg Turnover (€)',
+                        data: spAvgVals,
+                        backgroundColor: spLabels.map((_, i) => {
+                            const t = i / Math.max(spLabels.length - 1, 1);
+                            return `rgba(${Math.round(90 + t * 49)}, ${Math.round(74 + t * 41)}, ${Math.round(47 + t * 26)}, 0.85)`;
+                        }),
+                        borderWidth: 0,
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { callback: v => '€' + v.toLocaleString() }, grid: { color: '#eee' } },
+                        y: { grid: { display: false } }
+                    }
+                }
+            });
+
+            // Turnover distribution (global)
+            const tdLabels = Object.keys(turnoverDistData);
+            const tdVals   = Object.values(turnoverDistData);
+            turnoverDistChart = new Chart(document.getElementById('turnoverDistChart'), {
+                type: 'bar',
+                data: {
+                    labels: tdLabels,
+                    datasets: [{
+                        label: 'Customers',
+                        data: tdVals,
+                        backgroundColor: '#8B7347',
+                        borderWidth: 0,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { ticks: { stepSize: 1 }, grid: { color: '#eee' } }
+                    }
+                }
+            });
+
+            // Language distribution (doughnut)
+            const langLabels = Object.keys(langDistData);
+            const langVals   = Object.values(langDistData);
+            const langColors = ['#5A4A2F','#8B7347','#A68F5F','#BFA976','#D4C294','#6B5839','#C4A882','#7A6540','#4A3D25'];
+            langDistChart = new Chart(document.getElementById('langDistChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: langLabels,
+                    datasets: [{ data: langVals, backgroundColor: langColors.slice(0, langLabels.length), borderWidth: 2, borderColor: '#fff' }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'right' } }
+                }
+            });
+
+            // Order frequency distribution
+            const odLabels = Object.keys(orderDistData);
+            const odVals   = Object.values(orderDistData);
+            orderDistChart = new Chart(document.getElementById('orderDistChart'), {
+                type: 'bar',
+                data: {
+                    labels: odLabels,
+                    datasets: [{
+                        label: 'Customers',
+                        data: odVals,
+                        backgroundColor: '#5A4A2F',
+                        borderWidth: 0,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { ticks: { stepSize: 1 }, grid: { color: '#eee' } }
+                    }
+                }
+            });
+
+            // SP summary table
+            const tbody = document.getElementById('spSummaryBody');
+            spEntries.forEach(([sp, m], i) => {
+                const bg = i % 2 === 0 ? '#fff' : '#fafafa';
+                tbody.innerHTML += `
+                    <tr style="border-bottom:1px solid #eee; background:${bg};">
+                        <td style="padding:10px 14px; font-weight:600; color:#000;">${sp}</td>
+                        <td style="padding:10px 14px; text-align:right;">${m.count.toLocaleString()}</td>
+                        <td style="padding:10px 14px; text-align:right; color:#8B7347; font-weight:600;">€${m.avg_turnover.toLocaleString()}</td>
+                        <td style="padding:10px 14px; text-align:right;">€${m.median_turnover.toLocaleString()}</td>
+                        <td style="padding:10px 14px; text-align:right;">€${m.total_turnover.toLocaleString()}</td>
+                        <td style="padding:10px 14px; text-align:right;">${m.avg_orders}</td>
+                        <td style="padding:10px 14px;">${m.lang_top}</td>
+                        <td style="padding:10px 14px;">${m.country_top}</td>
+                    </tr>`;
             });
         }
 

@@ -127,6 +127,58 @@
             border:1px dashed #D4C294; border-radius:8px; background:#FFFDF5;
         }
 
+        /* ── COMPETITOR TAGS CARD ── */
+        .tags-card {
+            background:#FFFFFF;
+            border:3px solid #8B7347;
+            border-radius:18px;
+            box-shadow:6px 6px 0 #D4C294;
+            padding:28px 36px;
+            margin-bottom:28px;
+        }
+        .tags-card-title {
+            font-family:'Bangers',cursive;
+            font-size:1.4rem; letter-spacing:0.05em;
+            color:#8B7347; margin-bottom:4px;
+        }
+        .tags-card-sub {
+            font-size:0.7rem; letter-spacing:0.1em;
+            text-transform:uppercase; color:#aaa; margin-bottom:20px;
+        }
+        .tags-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fill, minmax(210px,1fr));
+            gap:12px;
+        }
+        .tag-chip {
+            display:flex; align-items:center; justify-content:space-between;
+            background:#FFF9F0;
+            border:2px solid #E5E5E5;
+            border-radius:12px;
+            padding:10px 16px;
+        }
+        .tag-chip-label {
+            font-size:0.72rem; font-weight:700;
+            text-transform:uppercase; letter-spacing:0.06em;
+            color:#1a3a6e;
+        }
+        .tag-chip-sub {
+            font-size:0.65rem; color:#999; margin-top:2px;
+        }
+        .tag-chip-count {
+            font-family:'Bangers',cursive;
+            font-size:1.5rem; color:#8B7347; letter-spacing:0.04em;
+        }
+        .tags-footer {
+            display:flex; gap:16px; flex-wrap:wrap; margin-top:16px;
+            padding-top:14px; border-top:1px dashed #E5E5E5;
+        }
+        .tags-footer-item {
+            font-size:0.7rem; letter-spacing:0.08em;
+            text-transform:uppercase; color:#666;
+        }
+        .tags-footer-item strong { color:#1a3a6e; }
+
         .ts {
             text-align:center; font-size:0.65rem;
             letter-spacing:0.1em; text-transform:uppercase;
@@ -189,17 +241,42 @@
                 <strong>5,660</strong>&nbsp;active clients
             </div>
             <div class="stat-pill">
-                <strong>4</strong>&nbsp;active offers
+                <strong>7</strong>&nbsp;active offers
             </div>
             <div class="stat-pill">
-                <strong>3,594</strong>&nbsp;emails sent
+                <strong>15,373</strong>&nbsp;emails sent
             </div>
             <div class="stat-pill">
-                17 Mar 2026
+                18 Mar 2026
             </div>
         </div>
 
-        <div class="ts">Generated: 2026-03-17 08:54</div>
+        
+        <div class="tags-card">
+            <div class="tags-card-title">Client Intelligence Tags</div>
+            <div class="tags-card-sub">Competitor code segments — unique contacts per group · a contact can carry multiple tags</div>
+            <div class="tags-grid">
+            <div class="tag-chip"><div><div class="tag-chip-label">USA</div><div class="tag-chip-sub">US based clients </div></div><div class="tag-chip-count">23,004</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">SWISS</div><div class="tag-chip-sub">Swiss based clients</div></div><div class="tag-chip-count">6,457</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">MORE THAN 5 AND 10 TIMES</div><div class="tag-chip-sub">Who purchased more than 5 and 10 times (documents)</div></div><div class="tag-chip-count">2,868</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">MORE THAN 10 TIMES</div><div class="tag-chip-sub">Who purchased more than 10 times (documents)</div></div><div class="tag-chip-count">1,806</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">MORE THAN 5 TIMES</div><div class="tag-chip-sub">Who purchased more than 5 times (documents)</div></div><div class="tag-chip-count">1,060</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">MORE THAN 5 EP</div><div class="tag-chip-sub">More than 5 EP</div></div><div class="tag-chip-count">556</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">EUROPE</div><div class="tag-chip-sub">Europe based clients</div></div><div class="tag-chip-count">537</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">MORE THAN 10K</div><div class="tag-chip-sub">Purchased more than 10k (turnover)</div></div><div class="tag-chip-count">250</div></div>
+            <div class="tag-chip"><div><div class="tag-chip-label">SUPER PRICE SENSITIV</div><div class="tag-chip-sub">Super price sensitive. Who has mark price sensetive on the card</div></div><div class="tag-chip-count">93</div></div>
+            </div>
+            <div class="tags-footer">
+                <div class="tags-footer-item">Total unique contacts: <strong>30,212</strong></div>
+                <div class="tags-footer-item">Single-tag: <strong>27,190</strong></div>
+                <div class="tags-footer-item">Multi-tag (loyal/overlap): <strong>3,022</strong></div>
+                <div class="tags-footer-item">Geography tags: <strong>29,994</strong></div>
+                <div class="tags-footer-item">Behaviour tags: <strong>3,046</strong></div>
+            </div>
+        </div>
+
+
+        <div class="ts">Generated: 2026-03-18 08:46</div>
 
     </div>
 
@@ -223,8 +300,8 @@
         // Data injected from Python
         const tierLabels = ["Budget", "Mid-range", "Premium", "Luxury", "Extra luxury"];
         const clientPct  = [51.0, 28.2, 13.6, 5.9, 1.4];
-        const offerPct   = [0.0, 25.0, 25.0, 0.0, 50.0];
-        const gapData    = [-51.0, -3.2, 11.4, -5.9, 48.6];
+        const offerPct   = [0.0, 14.3, 28.6, 14.3, 42.9];
+        const gapData    = [-51.0, -13.9, 15.0, 8.4, 41.5];
 
         // Ideal cosine arc (0 at Budget, peaks at Premium, 0 at Extra Luxury)
         const n = tierLabels.length;

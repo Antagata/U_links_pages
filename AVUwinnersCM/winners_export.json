@@ -1,0 +1,97 @@
+{
+  "exported_at": "2026-03-23T08:01:06Z",
+  "schema_version": 1,
+  "_fingerprint": "68f9db2f6b214438cbc7cfaa15c98893",
+  "top10": [
+    {
+      "rank": 1,
+      "wine": "Único",
+      "vintage": "2015",
+      "producer": "Bodegas Vega Sicilia",
+      "campaign_id": "CM-25-00005",
+      "start_date": "2025-01-07",
+      "score": 0.6376
+    },
+    {
+      "rank": 2,
+      "wine": "Retout",
+      "vintage": "2016",
+      "producer": "Château du Retout",
+      "campaign_id": "CM-25-03279",
+      "start_date": "2025-11-27",
+      "score": 0.4503
+    },
+    {
+      "rank": 3,
+      "wine": "Latour",
+      "vintage": "2016",
+      "producer": "Château Latour",
+      "campaign_id": "CM-25-00570",
+      "start_date": "2025-03-11",
+      "score": 0.4314
+    },
+    {
+      "rank": 4,
+      "wine": "Lafite Rothschild",
+      "vintage": "2022",
+      "producer": "Château Canon",
+      "campaign_id": "CM-25-00539",
+      "start_date": "2025-03-06",
+      "score": 0.4091
+    },
+    {
+      "rank": 5,
+      "wine": "Cos d'Estournel",
+      "vintage": "2021",
+      "producer": "Château Cos d'Estournel",
+      "campaign_id": "CM-25-02231",
+      "start_date": "2025-08-29",
+      "score": 0.3942
+    },
+    {
+      "rank": 6,
+      "wine": "Léoville Las Cases",
+      "vintage": "2022",
+      "producer": "Château Léoville Las Cases",
+      "campaign_id": "CM-25-00155",
+      "start_date": "2025-01-26",
+      "score": 0.377
+    },
+    {
+      "rank": 7,
+      "wine": "Pavie",
+      "vintage": "2019",
+      "producer": "Château Pavie",
+      "campaign_id": "CM-25-02602",
+      "start_date": "2025-09-29",
+      "score": 0.3545
+    },
+    {
+      "rank": 8,
+      "wine": "La Lagune",
+      "vintage": "2020",
+      "producer": "Château La Lagune",
+      "campaign_id": "CM-26-00652",
+      "start_date": "2026-03-02",
+      "score": 0.3518
+    },
+    {
+      "rank": 9,
+      "wine": "Sette",
+      "vintage": "2022",
+      "producer": "Tenuta Sette Ponti",
+      "campaign_id": "CM-25-00245",
+      "start_date": "2025-02-04",
+      "score": 0.3499
+    },
+    {
+      "rank": 10,
+      "wine": "Promontory",
+      "vintage": "2020",
+      "producer": "Promontory",
+      "campaign_id": "CM-25-00515",
+      "start_date": "2025-03-05",
+      "score": 0.3334
+    }
+  ]
+}

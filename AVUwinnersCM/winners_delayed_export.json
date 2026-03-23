@@ -1,0 +1,97 @@
+{
+  "exported_at": "2026-03-23T08:01:06Z",
+  "schema_version": 1,
+  "_fingerprint": "e989a306804dd69a10f99c0f5eb48fa2",
+  "top10": [
+    {
+      "rank": 1,
+      "wine": "Bâtard-Montrachet",
+      "vintage": "2023",
+      "producer": "Domaine Bernard Dugat-Py",
+      "campaign_id": "CM-26-00749",
+      "start_date": "2026-03-07",
+      "score": 0.3064
+    },
+    {
+      "rank": 2,
+      "wine": "Finca Piedra Infinita Gravascal",
+      "vintage": "2021",
+      "producer": "Familia Zuccardi",
+      "campaign_id": "CM-25-02970",
+      "start_date": "2025-10-29",
+      "score": 0.1963
+    },
+    {
+      "rank": 3,
+      "wine": "Chardonnay",
+      "vintage": "2023",
+      "producer": "Giaconda",
+      "campaign_id": "CM-25-03276",
+      "start_date": "2025-11-26",
+      "score": 0.143
+    },
+    {
+      "rank": 4,
+      "wine": "Champagne Extra Brut Les Cintres",
+      "vintage": "2012",
+      "producer": "Philipponnat",
+      "campaign_id": "CM-26-00010",
+      "start_date": "2026-01-08",
+      "score": 0.1334
+    },
+    {
+      "rank": 5,
+      "wine": "Rumbo al Norte",
+      "vintage": "2020",
+      "producer": "Bodega Comando G",
+      "campaign_id": "CM-25-02625",
+      "start_date": "2025-10-01",
+      "score": 0.1284
+    },
+    {
+      "rank": 6,
+      "wine": "Finca Piedra Infinita",
+      "vintage": "2021",
+      "producer": "Familia Zuccardi",
+      "campaign_id": "CM-25-02972",
+      "start_date": "2025-10-29",
+      "score": 0.1101
+    },
+    {
+      "rank": 7,
+      "wine": "Larcis Ducasse",
+      "vintage": "2022",
+      "producer": "Château Larcis Ducasse",
+      "campaign_id": "CM-25-03240",
+      "start_date": "2025-11-21",
+      "score": 0.104
+    },
+    {
+      "rank": 8,
+      "wine": "Cheval Blanc",
+      "vintage": "2005",
+      "producer": "Château Cheval Blanc",
+      "campaign_id": "CM-26-00724",
+      "start_date": "2026-03-05",
+      "score": 0.1018
+    },
+    {
+      "rank": 9,
+      "wine": "Nuits Saint Georges la Perrière",
+      "vintage": "2021",
+      "producer": "Domaine Gouges Henri",
+      "campaign_id": "CM-25-02689",
+      "start_date": "2025-10-07",
+      "score": 0.1002
+    },
+    {
+      "rank": 10,
+      "wine": "Côte Rôtie La Mordorée",
+      "vintage": "1991",
+      "producer": "Maison M. Chapoutier",
+      "campaign_id": "CM-26-00594",
+      "start_date": "2026-02-26",
+      "score": 0.0988
+    }
+  ]
+}

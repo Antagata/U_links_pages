@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-04-13T08:07:12Z",
+  "exported_at": "2026-04-14T08:40:56Z",
   "schema_version": 1,
-  "_fingerprint": "cacc636c3f9b854c9f4f2876d5486b08",
+  "_fingerprint": "12f089808a531521314c2ad573b80988",
   "top10": [
     {
       "rank": 1,
@@ -32,21 +32,21 @@
     },
     {
       "rank": 4,
-      "wine": "Côte Rôtie La Mouline",
-      "vintage": "2010",
-      "producer": "Domaine Guigal",
-      "campaign_id": "CM-26-01175",
-      "start_date": "2026-04-09",
-      "score": 0.4815
-    },
-    {
-      "rank": 5,
       "wine": "Finca Piedra Infinita Gravascal",
       "vintage": "2021",
       "producer": "Familia Zuccardi",
       "campaign_id": "CM-25-02970",
       "start_date": "2025-10-29",
       "score": 0.468
+    },
+    {
+      "rank": 5,
+      "wine": "Côte Rôtie La Mouline",
+      "vintage": "2010",
+      "producer": "Domaine Guigal",
+      "campaign_id": "CM-26-01175",
+      "start_date": "2026-04-09",
+      "score": 0.4674
     },
     {
       "rank": 6,

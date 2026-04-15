@@ -209,6 +209,85 @@
             letter-spacing:0.1em; text-transform:uppercase;
             color:#bbb; margin-top:32px;
         }
+
+        /* ── PREFERENCE PUZZLE ── */
+        .puzzle-section { margin-bottom:28px; }
+        .puzzle-overall {
+            display:flex; align-items:center; gap:24px;
+            margin-bottom:24px; flex-wrap:wrap;
+        }
+        .puzzle-ring { flex-shrink:0; position:relative; width:90px; height:90px; }
+        .puzzle-ring svg { width:90px; height:90px; }
+        .puzzle-ring-pct {
+            position:absolute; inset:0;
+            display:flex; align-items:center; justify-content:center;
+            font-family:'Bangers',cursive; font-size:1.4rem;
+            letter-spacing:0.04em; color:#1a3a6e;
+        }
+        .puzzle-overall-text { flex:1; min-width:180px; }
+        .puzzle-overall-title {
+            font-family:'Bangers',cursive; font-size:1.4rem;
+            letter-spacing:0.05em; color:#1a3a6e; line-height:1.1;
+        }
+        .puzzle-overall-sub {
+            font-size:0.68rem; letter-spacing:0.12em;
+            text-transform:uppercase; color:#8B7347; margin-top:4px;
+        }
+        .puzzle-dim { margin-bottom:18px; }
+        .puzzle-dim-header {
+            display:flex; align-items:center; gap:10px; margin-bottom:6px;
+        }
+        .puzzle-dim-name {
+            font-size:0.65rem; letter-spacing:0.14em;
+            text-transform:uppercase; color:#8B7347;
+            font-weight:700; min-width:110px;
+        }
+        .puzzle-dim-bar {
+            flex:1; height:5px; background:#EEE;
+            border-radius:3px; overflow:hidden;
+        }
+        .puzzle-dim-bar-fill {
+            height:5px; border-radius:3px;
+            background:linear-gradient(90deg,#8B6914,#D4C294);
+        }
+        .puzzle-dim-pct {
+            font-size:0.65rem; color:#666; min-width:42px; text-align:right;
+        }
+        .puzzle-tiles {
+            display:flex; flex-wrap:wrap; gap:4px; align-items:flex-end;
+        }
+        .puzzle-tile {
+            display:inline-flex; align-items:center; justify-content:center;
+            min-width:28px; height:28px; border-radius:5px;
+            font-size:0.55rem; font-weight:700; letter-spacing:0.04em;
+            text-transform:uppercase; cursor:default;
+            transition:transform 0.15s, box-shadow 0.15s;
+            padding:0 5px; box-sizing:border-box;
+            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+            position:relative;
+        }
+        .puzzle-tile:hover {
+            transform:translateY(-2px);
+            box-shadow:0 4px 8px rgba(0,0,0,0.15);
+            z-index:2;
+        }
+        .puzzle-tile.covered {
+            background:linear-gradient(135deg,#8B6914,#D4C294);
+            color:#fff;
+            box-shadow:2px 2px 0 rgba(139,105,20,0.3);
+        }
+        .puzzle-tile.gap {
+            background:#fff;
+            border:2px solid #D0D0D0;
+            color:#AAAAAA;
+        }
+        .puzzle-no-data {
+            padding:20px; text-align:center;
+            border:1px dashed #D4C294; border-radius:8px;
+            background:#FFFDF5; font-size:0.7rem;
+            letter-spacing:0.1em; text-transform:uppercase;
+            color:#8B7347; margin-top:8px;
+        }
     </style>
 </head>
 <body>
@@ -250,8 +329,8 @@
                     <div class="big-number" id="totalClientsNum">5,838</div>
                     <div class="big-number-label">Active clients in our universe</div>
                     <div class="stat-row" style="margin-top:14px;">
-                        <div class="stat-pill"><strong>5</strong>&nbsp;active campaigns</div>
-                        <div class="stat-pill"><strong>3,324</strong>&nbsp;emails sent</div>
+                        <div class="stat-pill"><strong>8</strong>&nbsp;active campaigns</div>
+                        <div class="stat-pill"><strong>11,499</strong>&nbsp;emails sent</div>
                     </div>
                 </div>
             </div>
@@ -263,6 +342,11 @@
                         <div class="pref-title">Client distribution by price tier</div>
                         <div id="tierPrefBars"></div>
                     </div>
+                    
+                    <div style="margin-top:12px; padding:10px 14px; border:1px dashed #D4C294; border-radius:8px; background:#FFFDF5; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:#8B7347;">
+                        Wine preferences not yet computed — run <strong>npm run nra:universe</strong> once per quarter
+                    </div>
+                    
                 </div>
             </details>
         </div>
@@ -297,8 +381,8 @@
                 <div class="section-sub">Active received campaigns · who got an email</div>
 
                 <div class="stat-row">
-                    <div class="stat-pill"><strong>3,324</strong>&nbsp;reached</div>
-                    <div class="stat-pill"><strong>5</strong>&nbsp;campaigns</div>
+                    <div class="stat-pill"><strong>11,499</strong>&nbsp;reached</div>
+                    <div class="stat-pill"><strong>8</strong>&nbsp;campaigns</div>
                 </div>
 
                 <div class="pref-title" style="margin-top:8px;">Campaign distribution by tier</div>
@@ -353,7 +437,364 @@
 
         </div><!-- /.two-col -->
 
-        <div class="ts">Generated: 2026-04-14 17:13</div>
+        <!-- ════════════════════════════════════════════
+             SECTION 4 — THE PREFERENCE PUZZLE
+             ════════════════════════════════════════════ -->
+        <div class="section-card puzzle-section">
+            <div class="section-label">Section 4 of 4</div>
+            <div class="section-title">The Preference Puzzle</div>
+            <div class="section-sub">How well today's campaigns cover the universe's wine preferences</div>
+
+            
+    <div class="puzzle-overall">
+        <div class="puzzle-ring">
+            <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="45" cy="45" r="36" stroke="#EEE" stroke-width="8" fill="none"/><circle cx="45" cy="45" r="36" stroke="url(#pgold)" stroke-width="8" fill="none"  stroke-dasharray="125.54 100.66"  stroke-linecap="round" transform="rotate(-90 45 45)"/><defs><linearGradient id="pgold" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8B6914"/><stop offset="100%" stop-color="#D4C294"/></linearGradient></defs></svg>
+            <div class="puzzle-ring-pct">56%</div>
+        </div>
+        <div class="puzzle-overall-text">
+            <div class="puzzle-overall-title">55.5% of preferences covered</div>
+            <div class="puzzle-overall-sub">
+                Universe: 4,575 clients
+                 &middot; Benchmarked: 2026-04-15
+            </div>
+        </div>
+    </div>
+    
+
+        <div class="puzzle-dim">
+            <div class="puzzle-dim-header">
+                <span class="puzzle-dim-name">Wine Regions</span>
+                <div class="puzzle-dim-bar">
+                    <div class="puzzle-dim-bar-fill" style="width:67.8%"></div>
+                </div>
+                <span class="puzzle-dim-pct">68%</span>
+            </div>
+            <div class="puzzle-tiles">
+        
+<div class="puzzle-tile covered" style="width:90px" title="bordeaux · 56.3% · In active offer">bordeaux</div>
+<div class="puzzle-tile gap" style="width:51px" title="tuscany · 21.5% · Not covered">tuscany</div>
+<div class="puzzle-tile covered" style="width:37px" title="champagne · 8.5% · In active offer">champagne</div>
+<div class="puzzle-tile gap" style="width:34px" title="castilla y leon · 6.1% · Not covered">castilla y…</div>
+<div class="puzzle-tile gap" style="width:29px" title="california · 1.6% · Not covered">california</div>
+<div class="puzzle-tile gap" style="width:29px" title="rhone · 1.6% · Not covered">rhone</div>
+</div></div>
+
+        <div class="puzzle-dim">
+            <div class="puzzle-dim-header">
+                <span class="puzzle-dim-name">Grape Varieties</span>
+                <div class="puzzle-dim-bar">
+                    <div class="puzzle-dim-bar-fill" style="width:33.2%"></div>
+                </div>
+                <span class="puzzle-dim-pct">33%</span>
+            </div>
+            <div class="puzzle-tiles">
+        
+<div class="puzzle-tile gap" style="width:90px" title="Champagne · 36.4% · Not covered">Champagne</div>
+<div class="puzzle-tile covered" style="width:43px" title="Cabernet Sauvignon · 8.9% · In active offer">Cabernet S…</div>
+<div class="puzzle-tile covered" style="width:34px" title="Chardonnay · 4.1% · In active offer">Chardonnay</div>
+<div class="puzzle-tile covered" style="width:33px" title="Riesling · 3.1% · In active offer">Riesling</div>
+<div class="puzzle-tile covered" style="width:31px" title="Barbera · 2.0% · In active offer">Barbera</div>
+</div></div>
+
+        <div class="puzzle-dim">
+            <div class="puzzle-dim-header">
+                <span class="puzzle-dim-name">Wine Types</span>
+                <div class="puzzle-dim-bar">
+                    <div class="puzzle-dim-bar-fill" style="width:100.0%"></div>
+                </div>
+                <span class="puzzle-dim-pct">100%</span>
+            </div>
+            <div class="puzzle-tiles">
+        
+<div class="puzzle-tile covered" style="width:90px" title="still · 94.4% · In active offer">still</div>
+<div class="puzzle-tile covered" style="width:52px" title="sparkling · 37.3% · In active offer">sparkling</div>
+<div class="puzzle-tile covered" style="width:45px" title="sweet · 26.1% · In active offer">sweet</div>
+<div class="puzzle-tile covered" style="width:28px" title="fortified · 0.5% · In active offer">fortified</div>
+</div></div>
+
+        <div class="puzzle-dim">
+            <div class="puzzle-dim-header">
+                <span class="puzzle-dim-name">Vintage Eras</span>
+                <div class="puzzle-dim-bar">
+                    <div class="puzzle-dim-bar-fill" style="width:0.0%"></div>
+                </div>
+                <span class="puzzle-dim-pct">0%</span>
+            </div>
+            <div class="puzzle-tiles">
+        
+<div class="puzzle-tile gap" style="width:90px" title="Unknown · 100.0% · Not covered">Unknown</div>
+</div></div>
+
+        <div class="puzzle-dim">
+            <div class="puzzle-dim-header">
+                <span class="puzzle-dim-name">Producers</span>
+                <div class="puzzle-dim-bar">
+                    <div class="puzzle-dim-bar-fill" style="width:100.0%"></div>
+                </div>
+                <span class="puzzle-dim-pct">100%</span>
+            </div>
+            <div class="puzzle-tiles">
+        
+<div class="puzzle-tile covered" style="width:90px" title="Fattoria Petrolo · 7.3% · In active offer">Fattoria P…</div>
+<div class="puzzle-tile covered" style="width:73px" title="Aalto Bodegas y Viñedos · 5.4% · In active offer">Aalto Bode…</div>
+<div class="puzzle-tile covered" style="width:58px" title="Dom Pérignon · 3.6% · In active offer">Dom Pérign…</div>
+<div class="puzzle-tile covered" style="width:55px" title="Bodegas Vega Sicilia · 3.2% · In active offer">Bodegas Ve…</div>
+<div class="puzzle-tile covered" style="width:50px" title="Tenuta Sette Ponti · 2.7% · In active offer">Tenuta Set…</div>
+<div class="puzzle-tile covered" style="width:50px" title="Tenuta di Biserno · 2.7% · In active offer">Tenuta di …</div>
+<div class="puzzle-tile covered" style="width:50px" title="Château Cos d'Estournel · 2.6% · In active offer">Château Co…</div>
+<div class="puzzle-tile covered" style="width:50px" title="Maison Ruinart · 2.6% · In active offer">Maison Rui…</div>
+<div class="puzzle-tile covered" style="width:48px" title="Marchesi Mazzei Castello di Fonterutoli · 2.4% · In active offer">Marchesi M…</div>
+<div class="puzzle-tile covered" style="width:48px" title="Château Lynch Bages · 2.4% · In active offer">Château Ly…</div>
+</div></div>
+
+        <div class="puzzle-dim">
+            <div class="puzzle-dim-header">
+                <span class="puzzle-dim-name">Bottle Sizes</span>
+                <div class="puzzle-dim-bar">
+                    <div class="puzzle-dim-bar-fill" style="width:100.0%"></div>
+                </div>
+                <span class="puzzle-dim-pct">100%</span>
+            </div>
+            <div class="puzzle-tiles">
+        
+<div class="puzzle-tile covered" style="width:90px" title="75.0 · 93.5% · In active offer">75.0</div>
+<div class="puzzle-tile covered" style="width:30px" title="150.0 · 4.0% · In active offer">150.0</div>
+<div class="puzzle-tile covered" style="width:28px" title="37.5 · 0.6% · In active offer">37.5</div>
+<div class="puzzle-tile covered" style="width:28px" title="300.0 · 0.4% · In active offer">300.0</div>
+</div></div>
+
+        <div style="margin-top:24px; padding-top:20px; border-top:2px dashed #E5E5E5;">
+            <div style="font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase;
+                        color:#8B7347; font-weight:700; margin-bottom:14px;">
+                Client Profile — Who We Serve
+            </div>
+        
+
+            <div style="margin-bottom:14px;">
+                <div style="font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase;
+                            color:#999; margin-bottom:6px;">Loyalty Tier</div>
+            
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="bronze">bronze</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:100.0%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">35.8%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="silver">silver</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:67.9%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">24.3%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="vip">vip</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:64.5%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">23.1%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="gold">gold</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:46.6%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">16.7%</div>
+                </div>
+</div>
+
+            <div style="margin-bottom:14px;">
+                <div style="font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase;
+                            color:#999; margin-bottom:6px;">Avg Spend per 75cl</div>
+            
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="Budget (<50 CHF)">Budget (<50 CHF)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:31.6%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">11.0%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="Mid-range (50-100)">Mid-range (50-100)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:58.3%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">20.3%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="Premium (100-300)">Premium (100-300)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:100.0%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">34.8%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="Luxury (300-750)">Luxury (300-750)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:54.9%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">19.1%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="Extra Luxury (750+)">Extra Luxury (750+)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:41.4%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">14.4%</div>
+                </div>
+</div>
+
+            <div style="margin-bottom:14px;">
+                <div style="font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase;
+                            color:#999; margin-bottom:6px;">Preferred Critic Score</div>
+            
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="90+ (Classic)">90+ (Classic)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:100.0%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">54.6%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="85-89 (Very Good)">85-89 (Very Good)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:20.0%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">10.9%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="80-84 (Good)">80-84 (Good)</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:15.0%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">8.2%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="<80"><80</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:46.3%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">25.3%</div>
+                </div>
+</div>
+
+            <div style="margin-bottom:14px;">
+                <div style="font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase;
+                            color:#999; margin-bottom:6px;">Purchase Frequency</div>
+            
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="1-5 orders">1-5 orders</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:100.0%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">45.7%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="6-15 orders">6-15 orders</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:55.4%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">25.3%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="16-30 orders">16-30 orders</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:29.3%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">13.4%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="31-50 orders">31-50 orders</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:16.0%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">7.3%</div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:5px;">
+                    <div style="font-size:0.68rem; color:#333; min-width:150px;
+                                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                         title="50+ orders">50+ orders</div>
+                    <div style="flex:1; background:#EEE; border-radius:4px; height:7px; overflow:hidden;">
+                        <div style="width:17.1%; height:7px; border-radius:4px;
+                                    background:linear-gradient(90deg,#8B7347,#C4A35A);"></div>
+                    </div>
+                    <div style="font-size:0.63rem; color:#666; min-width:36px; text-align:right;">7.8%</div>
+                </div>
+</div>
+</div>
+        </div>
+
+        <div class="ts">Generated: 2026-04-15 10:51</div>
 
     </div>
 
@@ -377,9 +818,9 @@
         // ── Data injected from Python ──
         const tierLabels  = ["Budget", "Mid-range", "Premium", "Luxury", "Extra luxury"];
         const clientPct   = [51.3, 28.3, 13.4, 5.7, 1.4];
-        const offerPct    = [0.0, 20.0, 0.0, 0.0, 80.0];
+        const offerPct    = [0.0, 37.5, 12.5, 0.0, 50.0];
 
-        // NRA preference data
+        // NRA preference data (Section 3 — The Gap)
         const nraRegionsLabels  = [];
         const nraRegionsVals    = [];
         const nraTypesLabels    = [];
@@ -388,6 +829,16 @@
         const nraBudgetVals     = [];
         const nraLoyaltyLabels  = [];
         const nraLoyaltyVals    = [];
+
+        // Universe preference data (Section 1 — The Full Circle)
+        const uniRegionsLabels  = [];
+        const uniRegionsVals    = [];
+        const uniTypesLabels    = [];
+        const uniTypesVals      = [];
+        const uniBudgetLabels   = [];
+        const uniBudgetVals     = [];
+        const uniLoyaltyLabels  = [];
+        const uniLoyaltyVals    = [];
 
         // ── Helper: render inline bar rows ──
         function renderBarRows(containerId, labels, values, color) {{
@@ -431,6 +882,11 @@
 
         // Tier preference bars (Section 1 expand)
         renderBarRows('tierPrefBars', tierLabels, clientPct, null);
+        // Universe wine preferences (Section 1 expand — populated after nra:universe run)
+        renderBarRows('uniRegionBars',  uniRegionsLabels, uniRegionsVals,  'linear-gradient(90deg,#1a3a6e,#4a7ad4)');
+        renderBarRows('uniTypeBars',    uniTypesLabels,   uniTypesVals,    'linear-gradient(90deg,#1a3a6e,#4a7ad4)');
+        renderBarRows('uniBudgetBars',  uniBudgetLabels,  uniBudgetVals,   'linear-gradient(90deg,#1a3a6e,#4a7ad4)');
+        renderBarRows('uniLoyaltyBars', uniLoyaltyLabels, uniLoyaltyVals,  'linear-gradient(90deg,#1a3a6e,#4a7ad4)');
 
         // ── Section 2: Offer tier horizontal bar ──
         new Chart(document.getElementById('offerTierChart'), {{

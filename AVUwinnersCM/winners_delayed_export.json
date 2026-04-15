@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-04-14T08:40:56Z",
+  "exported_at": "2026-04-15T08:52:03Z",
   "schema_version": 1,
-  "_fingerprint": "12f089808a531521314c2ad573b80988",
+  "_fingerprint": "e87424e7aba0e0773a6f4c81534f640d",
   "top10": [
     {
       "rank": 1,
@@ -46,7 +46,7 @@
       "producer": "Domaine Guigal",
       "campaign_id": "CM-26-01175",
       "start_date": "2026-04-09",
-      "score": 0.4674
+      "score": 0.4616
     },
     {
       "rank": 6,

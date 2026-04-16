@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-04-15T08:52:03Z",
+  "exported_at": "2026-04-16T09:53:06Z",
   "schema_version": 1,
-  "_fingerprint": "e87424e7aba0e0773a6f4c81534f640d",
+  "_fingerprint": "5a698a53b1f555384ad2bb1d5e4684a8",
   "top10": [
     {
       "rank": 1,
@@ -37,7 +37,7 @@
       "producer": "Familia Zuccardi",
       "campaign_id": "CM-25-02970",
       "start_date": "2025-10-29",
-      "score": 0.468
+      "score": 0.4625
     },
     {
       "rank": 5,

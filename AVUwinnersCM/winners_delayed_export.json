@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-04-16T09:53:06Z",
+  "exported_at": "2026-04-20T06:41:44Z",
   "schema_version": 1,
-  "_fingerprint": "5a698a53b1f555384ad2bb1d5e4684a8",
+  "_fingerprint": "99d99294709d44b2785a0b08835ce3c9",
   "top10": [
     {
       "rank": 1,
@@ -32,6 +32,15 @@
     },
     {
       "rank": 4,
+      "wine": "Cabernet Sauvignon",
+      "vintage": "2014",
+      "producer": "Eisele Vineyard",
+      "campaign_id": "CM-26-01241",
+      "start_date": "2026-04-17",
+      "score": 0.4893
+    },
+    {
+      "rank": 5,
       "wine": "Finca Piedra Infinita Gravascal",
       "vintage": "2021",
       "producer": "Familia Zuccardi",
@@ -40,7 +49,7 @@
       "score": 0.4625
     },
     {
-      "rank": 5,
+      "rank": 6,
       "wine": "Côte Rôtie La Mouline",
       "vintage": "2010",
       "producer": "Domaine Guigal",
@@ -49,7 +58,7 @@
       "score": 0.4616
     },
     {
-      "rank": 6,
+      "rank": 7,
       "wine": "Clos de Vougeot",
       "vintage": "1997",
       "producer": "Domaine Leroy",
@@ -58,7 +67,7 @@
       "score": 0.431
     },
     {
-      "rank": 7,
+      "rank": 8,
       "wine": "Riesling Auslese Scharzhofberger",
       "vintage": "2023",
       "producer": "Egon Müller Scharzhof",
@@ -67,7 +76,7 @@
       "score": 0.3753
     },
     {
-      "rank": 8,
+      "rank": 9,
       "wine": "Latour (Ex-Château)",
       "vintage": "1982",
       "producer": "Château Latour",
@@ -76,22 +85,13 @@
       "score": 0.363
     },
     {
-      "rank": 9,
+      "rank": 10,
       "wine": "Cheval Blanc",
       "vintage": "2005",
       "producer": "Château Cheval Blanc",
       "campaign_id": "CM-26-00724",
       "start_date": "2026-03-05",
       "score": 0.3575
-    },
-    {
-      "rank": 10,
-      "wine": "Chambertin Très Vieilles Vignes",
-      "vintage": "2017",
-      "producer": "Domaine Bernard Dugat-Py",
-      "campaign_id": "CM-26-00871",
-      "start_date": "2026-03-16",
-      "score": 0.3293
     }
   ]
 }

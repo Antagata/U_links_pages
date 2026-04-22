@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-04-20T06:41:44Z",
+  "exported_at": "2026-04-22T06:47:34Z",
   "schema_version": 1,
-  "_fingerprint": "99d99294709d44b2785a0b08835ce3c9",
+  "_fingerprint": "2b61acc97a808dcd445d2f7aa125ce0a",
   "top10": [
     {
       "rank": 1,
@@ -19,7 +19,7 @@
       "producer": "Bodegas López de Heredia Viña Tondonia",
       "campaign_id": "CM-26-01041",
       "start_date": "2026-03-30",
-      "score": 0.6276
+      "score": 0.6277
     },
     {
       "rank": 3,
@@ -32,24 +32,15 @@
     },
     {
       "rank": 4,
-      "wine": "Cabernet Sauvignon",
-      "vintage": "2014",
-      "producer": "Eisele Vineyard",
-      "campaign_id": "CM-26-01241",
-      "start_date": "2026-04-17",
-      "score": 0.4893
-    },
-    {
-      "rank": 5,
       "wine": "Finca Piedra Infinita Gravascal",
       "vintage": "2021",
       "producer": "Familia Zuccardi",
       "campaign_id": "CM-25-02970",
       "start_date": "2025-10-29",
-      "score": 0.4625
+      "score": 0.4627
     },
     {
-      "rank": 6,
+      "rank": 5,
       "wine": "Côte Rôtie La Mouline",
       "vintage": "2010",
       "producer": "Domaine Guigal",
@@ -58,7 +49,7 @@
       "score": 0.4616
     },
     {
-      "rank": 7,
+      "rank": 6,
       "wine": "Clos de Vougeot",
       "vintage": "1997",
       "producer": "Domaine Leroy",
@@ -67,7 +58,7 @@
       "score": 0.431
     },
     {
-      "rank": 8,
+      "rank": 7,
       "wine": "Riesling Auslese Scharzhofberger",
       "vintage": "2023",
       "producer": "Egon Müller Scharzhof",
@@ -76,7 +67,7 @@
       "score": 0.3753
     },
     {
-      "rank": 9,
+      "rank": 8,
       "wine": "Latour (Ex-Château)",
       "vintage": "1982",
       "producer": "Château Latour",
@@ -85,13 +76,22 @@
       "score": 0.363
     },
     {
-      "rank": 10,
+      "rank": 9,
       "wine": "Cheval Blanc",
       "vintage": "2005",
       "producer": "Château Cheval Blanc",
       "campaign_id": "CM-26-00724",
       "start_date": "2026-03-05",
       "score": 0.3575
+    },
+    {
+      "rank": 10,
+      "wine": "Côte Rôtie La Turque",
+      "vintage": "2010",
+      "producer": "Domaine Guigal",
+      "campaign_id": "CM-26-01177",
+      "start_date": "2026-04-09",
+      "score": 0.3323
     }
   ]
 }

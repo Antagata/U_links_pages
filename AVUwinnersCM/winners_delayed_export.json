@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-04-22T06:47:34Z",
+  "exported_at": "2026-04-27T07:11:27Z",
   "schema_version": 1,
-  "_fingerprint": "2b61acc97a808dcd445d2f7aa125ce0a",
+  "_fingerprint": "06b1ec3d4386a776df6629edaf22304d",
   "top10": [
     {
       "rank": 1,
@@ -86,12 +86,12 @@
     },
     {
       "rank": 10,
-      "wine": "Côte Rôtie La Turque",
-      "vintage": "2010",
-      "producer": "Domaine Guigal",
-      "campaign_id": "CM-26-01177",
-      "start_date": "2026-04-09",
-      "score": 0.3323
+      "wine": "Chambertin Très Vieilles Vignes",
+      "vintage": "2017",
+      "producer": "Domaine Bernard Dugat-Py",
+      "campaign_id": "CM-26-00871",
+      "start_date": "2026-03-16",
+      "score": 0.3293
     }
   ]
 }

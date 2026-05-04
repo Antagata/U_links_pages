@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-04-27T07:11:27Z",
+  "exported_at": "2026-05-04T07:07:59Z",
   "schema_version": 1,
-  "_fingerprint": "06b1ec3d4386a776df6629edaf22304d",
+  "_fingerprint": "bcdb00782772f9ad948396ee7b54cc78",
   "top10": [
     {
       "rank": 1,
@@ -19,7 +19,7 @@
       "producer": "Bodegas López de Heredia Viña Tondonia",
       "campaign_id": "CM-26-01041",
       "start_date": "2026-03-30",
-      "score": 0.6277
+      "score": 0.6272
     },
     {
       "rank": 3,

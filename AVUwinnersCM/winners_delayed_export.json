@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-05-04T07:07:59Z",
+  "exported_at": "2026-05-11T12:07:26Z",
   "schema_version": 1,
-  "_fingerprint": "bcdb00782772f9ad948396ee7b54cc78",
+  "_fingerprint": "12fa16af9f622f63897fe3063868a24e",
   "top10": [
     {
       "rank": 1,
@@ -37,7 +37,7 @@
       "producer": "Familia Zuccardi",
       "campaign_id": "CM-25-02970",
       "start_date": "2025-10-29",
-      "score": 0.4627
+      "score": 0.4623
     },
     {
       "rank": 5,
@@ -46,7 +46,7 @@
       "producer": "Domaine Guigal",
       "campaign_id": "CM-26-01175",
       "start_date": "2026-04-09",
-      "score": 0.4616
+      "score": 0.4613
     },
     {
       "rank": 6,
@@ -86,12 +86,12 @@
     },
     {
       "rank": 10,
-      "wine": "Chambertin Très Vieilles Vignes",
-      "vintage": "2017",
-      "producer": "Domaine Bernard Dugat-Py",
-      "campaign_id": "CM-26-00871",
-      "start_date": "2026-03-16",
-      "score": 0.3293
+      "wine": "Ca' Marcanda",
+      "vintage": "2020",
+      "producer": "Ca' Marcanda - Gaja",
+      "campaign_id": "CM-26-01431",
+      "start_date": "2026-05-08",
+      "score": 0.3422
     }
   ]
 }

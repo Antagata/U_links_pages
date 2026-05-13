@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-05-11T12:07:26Z",
+  "exported_at": "2026-05-13T06:18:22Z",
   "schema_version": 1,
-  "_fingerprint": "12fa16af9f622f63897fe3063868a24e",
+  "_fingerprint": "3eddd9e080e6fba38d79583844d3516b",
   "top10": [
     {
       "rank": 1,
@@ -59,6 +59,24 @@
     },
     {
       "rank": 7,
+      "wine": "Haut Brion",
+      "vintage": "1982",
+      "producer": "Château Haut Brion",
+      "campaign_id": "CM-26-01439",
+      "start_date": "2026-05-08",
+      "score": 0.4112
+    },
+    {
+      "rank": 8,
+      "wine": "Côte Rôtie La Landonne",
+      "vintage": "2012",
+      "producer": "Domaine Guigal",
+      "campaign_id": "CM-26-01461",
+      "start_date": "2026-05-12",
+      "score": 0.391
+    },
+    {
+      "rank": 9,
       "wine": "Riesling Auslese Scharzhofberger",
       "vintage": "2023",
       "producer": "Egon Müller Scharzhof",
@@ -67,31 +85,13 @@
       "score": 0.3753
     },
     {
-      "rank": 8,
+      "rank": 10,
       "wine": "Latour (Ex-Château)",
       "vintage": "1982",
       "producer": "Château Latour",
       "campaign_id": "CM-26-00293",
       "start_date": "2026-02-02",
       "score": 0.363
-    },
-    {
-      "rank": 9,
-      "wine": "Cheval Blanc",
-      "vintage": "2005",
-      "producer": "Château Cheval Blanc",
-      "campaign_id": "CM-26-00724",
-      "start_date": "2026-03-05",
-      "score": 0.3575
-    },
-    {
-      "rank": 10,
-      "wine": "Ca' Marcanda",
-      "vintage": "2020",
-      "producer": "Ca' Marcanda - Gaja",
-      "campaign_id": "CM-26-01431",
-      "start_date": "2026-05-08",
-      "score": 0.3422
     }
   ]
 }

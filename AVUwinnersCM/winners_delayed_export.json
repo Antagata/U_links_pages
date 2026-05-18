@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-05-13T06:18:22Z",
+  "exported_at": "2026-05-18T06:43:38Z",
   "schema_version": 1,
-  "_fingerprint": "3eddd9e080e6fba38d79583844d3516b",
+  "_fingerprint": "74a3914d58e999d71d34c2fc2cf6e51f",
   "top10": [
     {
       "rank": 1,
@@ -23,6 +23,15 @@
     },
     {
       "rank": 3,
+      "wine": "Haut Brion",
+      "vintage": "1982",
+      "producer": "Château Haut Brion",
+      "campaign_id": "CM-26-01439",
+      "start_date": "2026-05-08",
+      "score": 0.6009
+    },
+    {
+      "rank": 4,
       "wine": "Bâtard-Montrachet",
       "vintage": "2023",
       "producer": "Domaine Bernard Dugat-Py",
@@ -31,7 +40,16 @@
       "score": 0.5227
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "wine": "Côte Rôtie La Landonne",
+      "vintage": "2012",
+      "producer": "Domaine Guigal",
+      "campaign_id": "CM-26-01461",
+      "start_date": "2026-05-12",
+      "score": 0.5178
+    },
+    {
+      "rank": 6,
       "wine": "Finca Piedra Infinita Gravascal",
       "vintage": "2021",
       "producer": "Familia Zuccardi",
@@ -40,7 +58,7 @@
       "score": 0.4623
     },
     {
-      "rank": 5,
+      "rank": 7,
       "wine": "Côte Rôtie La Mouline",
       "vintage": "2010",
       "producer": "Domaine Guigal",
@@ -49,31 +67,13 @@
       "score": 0.4613
     },
     {
-      "rank": 6,
+      "rank": 8,
       "wine": "Clos de Vougeot",
       "vintage": "1997",
       "producer": "Domaine Leroy",
       "campaign_id": "CM-25-02472",
       "start_date": "2025-09-17",
       "score": 0.431
-    },
-    {
-      "rank": 7,
-      "wine": "Haut Brion",
-      "vintage": "1982",
-      "producer": "Château Haut Brion",
-      "campaign_id": "CM-26-01439",
-      "start_date": "2026-05-08",
-      "score": 0.4112
-    },
-    {
-      "rank": 8,
-      "wine": "Côte Rôtie La Landonne",
-      "vintage": "2012",
-      "producer": "Domaine Guigal",
-      "campaign_id": "CM-26-01461",
-      "start_date": "2026-05-12",
-      "score": 0.391
     },
     {
       "rank": 9,

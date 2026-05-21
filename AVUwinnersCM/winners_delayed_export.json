@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-05-18T06:43:38Z",
+  "exported_at": "2026-05-21T11:59:53Z",
   "schema_version": 1,
-  "_fingerprint": "74a3914d58e999d71d34c2fc2cf6e51f",
+  "_fingerprint": "68d30457adce5c73299b4cd5c99abc08",
   "top10": [
     {
       "rank": 1,
@@ -55,7 +55,7 @@
       "producer": "Familia Zuccardi",
       "campaign_id": "CM-25-02970",
       "start_date": "2025-10-29",
-      "score": 0.4623
+      "score": 0.4625
     },
     {
       "rank": 7,
@@ -77,21 +77,21 @@
     },
     {
       "rank": 9,
+      "wine": "Ca' Marcanda",
+      "vintage": "2020",
+      "producer": "Ca' Marcanda - Gaja",
+      "campaign_id": "CM-26-01431",
+      "start_date": "2026-05-08",
+      "score": 0.4125
+    },
+    {
+      "rank": 10,
       "wine": "Riesling Auslese Scharzhofberger",
       "vintage": "2023",
       "producer": "Egon Müller Scharzhof",
       "campaign_id": "CM-26-00771",
       "start_date": "2026-03-09",
       "score": 0.3753
-    },
-    {
-      "rank": 10,
-      "wine": "Latour (Ex-Château)",
-      "vintage": "1982",
-      "producer": "Château Latour",
-      "campaign_id": "CM-26-00293",
-      "start_date": "2026-02-02",
-      "score": 0.363
     }
   ]
 }

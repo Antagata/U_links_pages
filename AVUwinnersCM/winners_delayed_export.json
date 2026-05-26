@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-05-21T11:59:53Z",
+  "exported_at": "2026-05-26T06:35:50Z",
   "schema_version": 1,
-  "_fingerprint": "68d30457adce5c73299b4cd5c99abc08",
+  "_fingerprint": "7aa441e5b8c6272df7005d65e9bd54c0",
   "top10": [
     {
       "rank": 1,
@@ -28,7 +28,7 @@
       "producer": "Château Haut Brion",
       "campaign_id": "CM-26-01439",
       "start_date": "2026-05-08",
-      "score": 0.6009
+      "score": 0.5854
     },
     {
       "rank": 4,

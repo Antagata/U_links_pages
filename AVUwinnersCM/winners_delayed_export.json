@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-06-08T12:52:46Z",
+  "exported_at": "2026-06-10T13:58:10Z",
   "schema_version": 1,
-  "_fingerprint": "b6e4a06f9f32afbc814e5991c11c39f1",
+  "_fingerprint": "006069d282599e90b262bf8cd5b653df",
   "top10": [
     {
       "rank": 1,
@@ -10,7 +10,7 @@
       "producer": "Rouget Emmanuel",
       "campaign_id": "CM-26-01753",
       "start_date": "2026-06-06",
-      "score": 0.7683
+      "score": 0.8581
     },
     {
       "rank": 2,
@@ -19,79 +19,79 @@
       "producer": "Château Cheval Blanc",
       "campaign_id": "CM-26-00714",
       "start_date": "2026-03-04",
-      "score": 0.6381
+      "score": 0.7176
     },
     {
       "rank": 3,
-      "wine": "Viña Tondonia Gran Reserva",
-      "vintage": "2004",
-      "producer": "Bodegas López de Heredia Viña Tondonia",
-      "campaign_id": "CM-26-01041",
-      "start_date": "2026-03-30",
-      "score": 0.5273
-    },
-    {
-      "rank": 4,
       "wine": "Haut Brion",
       "vintage": "1982",
       "producer": "Château Haut Brion",
       "campaign_id": "CM-26-01439",
       "start_date": "2026-05-08",
-      "score": 0.5188
+      "score": 0.6023
     },
     {
-      "rank": 5,
+      "rank": 4,
       "wine": "Bâtard-Montrachet",
       "vintage": "2023",
       "producer": "Domaine Bernard Dugat-Py",
       "campaign_id": "CM-26-00749",
       "start_date": "2026-03-07",
-      "score": 0.4667
+      "score": 0.5508
+    },
+    {
+      "rank": 5,
+      "wine": "Viña Tondonia Gran Reserva",
+      "vintage": "2004",
+      "producer": "Bodegas López de Heredia Viña Tondonia",
+      "campaign_id": "CM-26-01041",
+      "start_date": "2026-03-30",
+      "score": 0.5395
     },
     {
       "rank": 6,
-      "wine": "Côte Rôtie La Landonne",
-      "vintage": "2012",
-      "producer": "Domaine Guigal",
-      "campaign_id": "CM-26-01461",
-      "start_date": "2026-05-12",
-      "score": 0.4405
-    },
-    {
-      "rank": 7,
-      "wine": "Clos de Vougeot",
-      "vintage": "1997",
-      "producer": "Domaine Leroy",
-      "campaign_id": "CM-25-02472",
-      "start_date": "2025-09-17",
-      "score": 0.4258
-    },
-    {
-      "rank": 8,
       "wine": "Finca Piedra Infinita Gravascal",
       "vintage": "2021",
       "producer": "Familia Zuccardi",
       "campaign_id": "CM-25-02970",
       "start_date": "2025-10-29",
-      "score": 0.4239
+      "score": 0.5266
+    },
+    {
+      "rank": 7,
+      "wine": "Côte Rôtie La Landonne",
+      "vintage": "2012",
+      "producer": "Domaine Guigal",
+      "campaign_id": "CM-26-01461",
+      "start_date": "2026-05-12",
+      "score": 0.4646
+    },
+    {
+      "rank": 8,
+      "wine": "Cheval Blanc",
+      "vintage": "2005",
+      "producer": "Château Cheval Blanc",
+      "campaign_id": "CM-26-00724",
+      "start_date": "2026-03-05",
+      "score": 0.4556
     },
     {
       "rank": 9,
+      "wine": "Latour (Ex-Château)",
+      "vintage": "1982",
+      "producer": "Château Latour",
+      "campaign_id": "CM-26-00293",
+      "start_date": "2026-02-02",
+      "score": 0.4547
+    },
+    {
+      "rank": 10,
       "wine": "Côte Rôtie La Mouline",
       "vintage": "2010",
       "producer": "Domaine Guigal",
       "campaign_id": "CM-26-01175",
       "start_date": "2026-04-09",
-      "score": 0.3966
-    },
-    {
-      "rank": 10,
-      "wine": "Duclot 9 bottles Case Bordeaux Collection (1 x 75cl of each Petrus, Mouton, Lafite, Latour, Margaux, Haut Brion, Mission, Cheval, Yquem)",
-      "vintage": "2010",
-      "producer": "Groupe Duclot",
-      "campaign_id": "CM-26-01757",
-      "start_date": "2026-06-07",
-      "score": 0.3672
+      "score": 0.4291
     }
   ]
 }

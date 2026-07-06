@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-06-22T09:35:30Z",
+  "exported_at": "2026-07-06T07:25:06Z",
   "schema_version": 1,
-  "_fingerprint": "ea7b779733d5032b12297bc279221f43",
+  "_fingerprint": "b8693f0ca2d726875f34e009314bcbad",
   "top10": [
     {
       "rank": 1,
@@ -19,19 +19,10 @@
       "producer": "Rouget Emmanuel",
       "campaign_id": "CM-26-01753",
       "start_date": "2026-06-06",
-      "score": 0.7259
+      "score": 0.714
     },
     {
       "rank": 3,
-      "wine": "Haut Brion",
-      "vintage": "1982",
-      "producer": "Château Haut Brion",
-      "campaign_id": "CM-26-01439",
-      "start_date": "2026-05-08",
-      "score": 0.6689
-    },
-    {
-      "rank": 4,
       "wine": "Viña Tondonia Gran Reserva",
       "vintage": "2004",
       "producer": "Bodegas López de Heredia Viña Tondonia",
@@ -40,7 +31,7 @@
       "score": 0.6394
     },
     {
-      "rank": 5,
+      "rank": 4,
       "wine": "Bâtard-Montrachet",
       "vintage": "2023",
       "producer": "Domaine Bernard Dugat-Py",
@@ -49,13 +40,22 @@
       "score": 0.6067
     },
     {
+      "rank": 5,
+      "wine": "Haut Brion",
+      "vintage": "1982",
+      "producer": "Château Haut Brion",
+      "campaign_id": "CM-26-01439",
+      "start_date": "2026-05-08",
+      "score": 0.5579
+    },
+    {
       "rank": 6,
       "wine": "Finca Piedra Infinita Gravascal",
       "vintage": "2021",
       "producer": "Familia Zuccardi",
       "campaign_id": "CM-25-02970",
       "start_date": "2025-10-29",
-      "score": 0.5653
+      "score": 0.5486
     },
     {
       "rank": 7,

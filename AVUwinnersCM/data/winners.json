@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "exported_at": "2026-07-07T11:53:10.586160",
+  "exported_at": "2026-07-08T09:35:59.133100",
   "arrays": {
     "top10_alltime": {
       "period_label": "All-time",
-      "generated_from_rows": 1606,
+      "generated_from_rows": 1277,
       "winners": [
         {
           "rank": 1,
@@ -22,34 +22,6 @@
         },
         {
           "rank": 2,
-          "wine": "Trotanoy",
-          "vintage": "2025",
-          "producer": "Château Trotanoy",
-          "campaign_no": "CM-26-01641",
-          "start_date": "2026-05-27",
-          "score": 0.48,
-          "conversion_rate_pct": 17.65,
-          "total_sales_chf": 16986.6,
-          "email_sent": 51,
-          "unique_buyers": 9,
-          "bottle_price_chf": 165.0
-        },
-        {
-          "rank": 3,
-          "wine": "Retout",
-          "vintage": "2016",
-          "producer": "Château du Retout",
-          "campaign_no": "CM-25-03279",
-          "start_date": "2025-11-27",
-          "score": 0.45,
-          "conversion_rate_pct": 16.78,
-          "total_sales_chf": 6544.14,
-          "email_sent": 149,
-          "unique_buyers": 25,
-          "bottle_price_chf": 14.0
-        },
-        {
-          "rank": 4,
           "wine": "Latour",
           "vintage": "2016",
           "producer": "Château Latour",
@@ -63,7 +35,7 @@
           "bottle_price_chf": 614.0
         },
         {
-          "rank": 5,
+          "rank": 3,
           "wine": "Mouton Rothschild",
           "vintage": "2025",
           "producer": "Château Mouton Rothschild",
@@ -77,7 +49,7 @@
           "bottle_price_chf": 353.0
         },
         {
-          "rank": 6,
+          "rank": 4,
           "wine": "Yquem",
           "vintage": "2023",
           "producer": "Château d'Yquem",
@@ -91,21 +63,7 @@
           "bottle_price_chf": 300.0
         },
         {
-          "rank": 7,
-          "wine": "Les Carmes Haut Brion",
-          "vintage": "2025",
-          "producer": "Château Les Carmes Haut-Brion",
-          "campaign_no": "CM-26-01997",
-          "start_date": "2026-06-25",
-          "score": 0.41,
-          "conversion_rate_pct": 15.25,
-          "total_sales_chf": 10727.95,
-          "email_sent": 59,
-          "unique_buyers": 9,
-          "bottle_price_chf": 675.0
-        },
-        {
-          "rank": 8,
+          "rank": 5,
           "wine": "100 Parker Bordeaux 2022",
           "vintage": "",
           "producer": "",
@@ -119,7 +77,7 @@
           "bottle_price_chf": 713.91
         },
         {
-          "rank": 9,
+          "rank": 6,
           "wine": "Margaux",
           "vintage": "2025",
           "producer": "Château Margaux",
@@ -133,7 +91,7 @@
           "bottle_price_chf": 392.0
         },
         {
-          "rank": 10,
+          "rank": 7,
           "wine": "Cos d'Estournel",
           "vintage": "2021",
           "producer": "Château Cos d'Estournel",
@@ -145,12 +103,54 @@
           "email_sent": 5307,
           "unique_buyers": 324,
           "bottle_price_chf": 98.0
+        },
+        {
+          "rank": 8,
+          "wine": "Montrose",
+          "vintage": "2025",
+          "producer": "Château Montrose",
+          "campaign_no": "CM-26-01821",
+          "start_date": "2026-06-12",
+          "score": 0.39,
+          "conversion_rate_pct": 7.03,
+          "total_sales_chf": 418330.09,
+          "email_sent": 4085,
+          "unique_buyers": 287,
+          "bottle_price_chf": 119.0
+        },
+        {
+          "rank": 9,
+          "wine": "Léoville Las Cases",
+          "vintage": "2022",
+          "producer": "Château Léoville Las Cases",
+          "campaign_no": "CM-25-00155",
+          "start_date": "2025-01-26",
+          "score": 0.38,
+          "conversion_rate_pct": 4.33,
+          "total_sales_chf": 531130.77,
+          "email_sent": 2312,
+          "unique_buyers": 100,
+          "bottle_price_chf": 284.68
+        },
+        {
+          "rank": 10,
+          "wine": "Pavie",
+          "vintage": "2019",
+          "producer": "Château Pavie",
+          "campaign_no": "CM-25-02602",
+          "start_date": "2025-09-29",
+          "score": 0.36,
+          "conversion_rate_pct": 4.21,
+          "total_sales_chf": 492379.05,
+          "email_sent": 5584,
+          "unique_buyers": 235,
+          "bottle_price_chf": 180.0
         }
       ]
     },
     "top10_last7": {
       "period_label": "Last 7 days",
-      "generated_from_rows": 18,
+      "generated_from_rows": 12,
       "winners": [
         {
           "rank": 1,
@@ -182,20 +182,6 @@
         },
         {
           "rank": 3,
-          "wine": "Ser Lapo",
-          "vintage": "2022",
-          "producer": "Marchesi Mazzei Castello di Fonterutoli",
-          "campaign_no": "CM-26-02033",
-          "start_date": "2026-06-30",
-          "score": 0.62,
-          "conversion_rate_pct": 1.64,
-          "total_sales_chf": 2223.71,
-          "email_sent": 550,
-          "unique_buyers": 9,
-          "bottle_price_chf": 19.0
-        },
-        {
-          "rank": 4,
           "wine": "Biserno",
           "vintage": "2022",
           "producer": "Tenuta di Biserno",
@@ -209,7 +195,7 @@
           "bottle_price_chf": 107.0
         },
         {
-          "rank": 5,
+          "rank": 4,
           "wine": "Lynch Bages",
           "vintage": "2000",
           "producer": "Château Lynch Bages",
@@ -223,7 +209,7 @@
           "bottle_price_chf": 286.0
         },
         {
-          "rank": 6,
+          "rank": 5,
           "wine": "Nuits St Georges Murgers",
           "vintage": "2022",
           "producer": "Domaine Méo-Camuzet",
@@ -237,21 +223,7 @@
           "bottle_price_chf": 157.0
         },
         {
-          "rank": 7,
-          "wine": "Concerto",
-          "vintage": "2023",
-          "producer": "Marchesi Mazzei Castello di Fonterutoli",
-          "campaign_no": "CM-26-02050",
-          "start_date": "2026-07-03",
-          "score": 0.44,
-          "conversion_rate_pct": 1.04,
-          "total_sales_chf": 7078.27,
-          "email_sent": 2013,
-          "unique_buyers": 21,
-          "bottle_price_chf": 36.0
-        },
-        {
-          "rank": 8,
+          "rank": 6,
           "wine": "Le Petit Cheval Blanc",
           "vintage": "2023",
           "producer": "Château Cheval Blanc",
@@ -265,13 +237,13 @@
           "bottle_price_chf": 97.0
         },
         {
-          "rank": 9,
+          "rank": 7,
           "wine": "Champagne Mouvance",
           "vintage": "2021",
           "producer": "A. Lamblot",
           "campaign_no": "CM-26-02056",
           "start_date": "2026-07-05",
-          "score": 0.41,
+          "score": 0.42,
           "conversion_rate_pct": 1.05,
           "total_sales_chf": 3716.53,
           "email_sent": 669,
@@ -279,7 +251,7 @@
           "bottle_price_chf": 74.0
         },
         {
-          "rank": 10,
+          "rank": 8,
           "wine": "Pape Clément Blanc",
           "vintage": "2020",
           "producer": "Château Pape Clément",
@@ -291,35 +263,49 @@
           "email_sent": 1145,
           "unique_buyers": 9,
           "bottle_price_chf": 119.0
+        },
+        {
+          "rank": 9,
+          "wine": "Pétrus",
+          "vintage": "2000",
+          "producer": "Château Pétrus",
+          "campaign_no": "CM-26-02046",
+          "start_date": "2026-07-03",
+          "score": 0.31,
+          "conversion_rate_pct": 0.12,
+          "total_sales_chf": 34267.24,
+          "email_sent": 865,
+          "unique_buyers": 1,
+          "bottle_price_chf": 5730.0
+        },
+        {
+          "rank": 10,
+          "wine": "Champagne Synergie",
+          "vintage": "2020",
+          "producer": "A. Lamblot",
+          "campaign_no": "CM-26-02058",
+          "start_date": "2026-07-05",
+          "score": 0.27,
+          "conversion_rate_pct": 0.68,
+          "total_sales_chf": 2708.45,
+          "email_sent": 1170,
+          "unique_buyers": 8,
+          "bottle_price_chf": 59.0
         }
       ]
     },
     "top10_last14": {
       "period_label": "Last 14 days",
-      "generated_from_rows": 48,
+      "generated_from_rows": 38,
       "winners": [
         {
           "rank": 1,
-          "wine": "Les Carmes Haut Brion",
-          "vintage": "2025",
-          "producer": "Château Les Carmes Haut-Brion",
-          "campaign_no": "CM-26-01997",
-          "start_date": "2026-06-25",
-          "score": 0.62,
-          "conversion_rate_pct": 15.25,
-          "total_sales_chf": 10727.95,
-          "email_sent": 59,
-          "unique_buyers": 9,
-          "bottle_price_chf": 675.0
-        },
-        {
-          "rank": 2,
           "wine": "Margaux",
           "vintage": "2009",
           "producer": "Château Margaux",
           "campaign_no": "CM-26-02011",
           "start_date": "2026-06-27",
-          "score": 0.47,
+          "score": 0.71,
           "conversion_rate_pct": 1.69,
           "total_sales_chf": 178158.75,
           "email_sent": 1424,
@@ -327,83 +313,13 @@
           "bottle_price_chf": 705.0
         },
         {
-          "rank": 3,
-          "wine": "Montrose",
-          "vintage": "2010",
-          "producer": "Château Montrose",
-          "campaign_no": "CM-26-02010",
-          "start_date": "2026-06-26",
-          "score": 0.36,
-          "conversion_rate_pct": 1.17,
-          "total_sales_chf": 138659.86,
-          "email_sent": 3002,
-          "unique_buyers": 35,
-          "bottle_price_chf": 195.0
-        },
-        {
-          "rank": 4,
-          "wine": "Côte Rôtie Cuvée Belle Helene",
-          "vintage": "2019",
-          "producer": "Stéphane Ogier",
-          "campaign_no": "CM-26-01974",
-          "start_date": "2026-06-23",
-          "score": 0.26,
-          "conversion_rate_pct": 2.03,
-          "total_sales_chf": 79963.02,
-          "email_sent": 1827,
-          "unique_buyers": 37,
-          "bottle_price_chf": 270.0
-        },
-        {
-          "rank": 5,
-          "wine": "Cheval Blanc",
-          "vintage": "2009",
-          "producer": "Château Cheval Blanc",
-          "campaign_no": "CM-26-02025",
-          "start_date": "2026-06-28",
-          "score": 0.25,
-          "conversion_rate_pct": 0.81,
-          "total_sales_chf": 98697.68,
-          "email_sent": 616,
-          "unique_buyers": 5,
-          "bottle_price_chf": 2540.0
-        },
-        {
-          "rank": 6,
-          "wine": "Palmer Historical XIX L. 20.21",
-          "vintage": "NV",
-          "producer": "Château Palmer",
-          "campaign_no": "CM-26-02017",
-          "start_date": "2026-06-28",
-          "score": 0.21,
-          "conversion_rate_pct": 2.19,
-          "total_sales_chf": 54593.05,
-          "email_sent": 2194,
-          "unique_buyers": 48,
-          "bottle_price_chf": 200.0
-        },
-        {
-          "rank": 7,
-          "wine": "Les Carmes Haut Brion",
-          "vintage": "2025",
-          "producer": "Château Les Carmes Haut-Brion",
-          "campaign_no": "CM-26-01985",
-          "start_date": "2026-06-24",
-          "score": 0.2,
-          "conversion_rate_pct": 1.61,
-          "total_sales_chf": 61381.69,
-          "email_sent": 1615,
-          "unique_buyers": 26,
-          "bottle_price_chf": 82.0
-        },
-        {
-          "rank": 8,
+          "rank": 2,
           "wine": "Les Carmes Haut Brion",
           "vintage": "2025",
           "producer": "Château Les Carmes Haut-Brion",
           "campaign_no": "CM-26-01994",
           "start_date": "2026-06-25",
-          "score": 0.17,
+          "score": 0.64,
           "conversion_rate_pct": 3.24,
           "total_sales_chf": 18058.03,
           "email_sent": 617,
@@ -411,13 +327,69 @@
           "bottle_price_chf": 82.0
         },
         {
-          "rank": 9,
+          "rank": 3,
+          "wine": "Palmer Historical XIX L. 20.21",
+          "vintage": "NV",
+          "producer": "Château Palmer",
+          "campaign_no": "CM-26-02017",
+          "start_date": "2026-06-28",
+          "score": 0.53,
+          "conversion_rate_pct": 2.19,
+          "total_sales_chf": 54593.05,
+          "email_sent": 2194,
+          "unique_buyers": 48,
+          "bottle_price_chf": 200.0
+        },
+        {
+          "rank": 4,
+          "wine": "Montrose",
+          "vintage": "2010",
+          "producer": "Château Montrose",
+          "campaign_no": "CM-26-02010",
+          "start_date": "2026-06-26",
+          "score": 0.53,
+          "conversion_rate_pct": 1.17,
+          "total_sales_chf": 138659.86,
+          "email_sent": 3002,
+          "unique_buyers": 35,
+          "bottle_price_chf": 195.0
+        },
+        {
+          "rank": 5,
+          "wine": "Clos Vougeot",
+          "vintage": "2022",
+          "producer": "Thibault Liger-Belair",
+          "campaign_no": "CM-26-02001",
+          "start_date": "2026-06-25",
+          "score": 0.5,
+          "conversion_rate_pct": 2.47,
+          "total_sales_chf": 20705.53,
+          "email_sent": 485,
+          "unique_buyers": 12,
+          "bottle_price_chf": 227.0
+        },
+        {
+          "rank": 6,
+          "wine": "Cheval Blanc",
+          "vintage": "2009",
+          "producer": "Château Cheval Blanc",
+          "campaign_no": "CM-26-02025",
+          "start_date": "2026-06-28",
+          "score": 0.37,
+          "conversion_rate_pct": 0.81,
+          "total_sales_chf": 98697.68,
+          "email_sent": 616,
+          "unique_buyers": 5,
+          "bottle_price_chf": 2540.0
+        },
+        {
+          "rank": 7,
           "wine": "Hermitage La Chapelle",
           "vintage": "2009",
           "producer": "Domaine Paul Jaboulet Aîné",
           "campaign_no": "CM-26-02048",
           "start_date": "2026-07-03",
-          "score": 0.16,
+          "score": 0.32,
           "conversion_rate_pct": 1.08,
           "total_sales_chf": 51598.11,
           "email_sent": 4090,
@@ -425,61 +397,61 @@
           "bottle_price_chf": 185.0
         },
         {
+          "rank": 8,
+          "wine": "Riesling Ried Achleiten Smaragd",
+          "vintage": "2024",
+          "producer": "Weingut Prager",
+          "campaign_no": "CM-26-02041",
+          "start_date": "2026-07-03",
+          "score": 0.31,
+          "conversion_rate_pct": 1.63,
+          "total_sales_chf": 5237.47,
+          "email_sent": 614,
+          "unique_buyers": 10,
+          "bottle_price_chf": 48.0
+        },
+        {
+          "rank": 9,
+          "wine": "Chardonnay Selva della Tesa",
+          "vintage": "2020",
+          "producer": "Ca' del Bosco",
+          "campaign_no": "CM-26-02002",
+          "start_date": "2026-06-27",
+          "score": 0.27,
+          "conversion_rate_pct": 1.21,
+          "total_sales_chf": 22137.87,
+          "email_sent": 3046,
+          "unique_buyers": 37,
+          "bottle_price_chf": 65.0
+        },
+        {
           "rank": 10,
-          "wine": "Clos Vougeot",
-          "vintage": "2022",
-          "producer": "Thibault Liger-Belair",
-          "campaign_no": "CM-26-02001",
-          "start_date": "2026-06-25",
-          "score": 0.14,
-          "conversion_rate_pct": 2.47,
-          "total_sales_chf": 20705.53,
-          "email_sent": 485,
-          "unique_buyers": 12,
-          "bottle_price_chf": 227.0
+          "wine": "Corton-Charlemagne Vieilles Vignes",
+          "vintage": "2023",
+          "producer": "Domaine Bernard Dugat-Py",
+          "campaign_no": "CM-26-02019",
+          "start_date": "2026-06-27",
+          "score": 0.24,
+          "conversion_rate_pct": 0.83,
+          "total_sales_chf": 39985.63,
+          "email_sent": 1332,
+          "unique_buyers": 11,
+          "bottle_price_chf": 540.0
         }
       ]
     },
     "top10_last_month": {
       "period_label": "June 2026",
-      "generated_from_rows": 159,
+      "generated_from_rows": 122,
       "winners": [
         {
           "rank": 1,
-          "wine": "Les Carmes Haut Brion",
-          "vintage": "2025",
-          "producer": "Château Les Carmes Haut-Brion",
-          "campaign_no": "CM-26-01997",
-          "start_date": "2026-06-25",
-          "score": 0.61,
-          "conversion_rate_pct": 15.25,
-          "total_sales_chf": 10727.95,
-          "email_sent": 59,
-          "unique_buyers": 9,
-          "bottle_price_chf": 675.0
-        },
-        {
-          "rank": 2,
-          "wine": "Mouton Rothschild",
-          "vintage": "2025",
-          "producer": "Château Mouton Rothschild",
-          "campaign_no": "CM-26-01706",
-          "start_date": "2026-06-03",
-          "score": 0.56,
-          "conversion_rate_pct": 3.98,
-          "total_sales_chf": 641834.91,
-          "email_sent": 3515,
-          "unique_buyers": 140,
-          "bottle_price_chf": 353.0
-        },
-        {
-          "rank": 3,
           "wine": "Montrose",
           "vintage": "2025",
           "producer": "Château Montrose",
           "campaign_no": "CM-26-01821",
           "start_date": "2026-06-12",
-          "score": 0.54,
+          "score": 0.86,
           "conversion_rate_pct": 7.03,
           "total_sales_chf": 418330.09,
           "email_sent": 4085,
@@ -487,13 +459,13 @@
           "bottle_price_chf": 119.0
         },
         {
-          "rank": 4,
+          "rank": 2,
           "wine": "Margaux",
           "vintage": "2025",
           "producer": "Château Margaux",
           "campaign_no": "CM-26-01791",
           "start_date": "2026-06-10",
-          "score": 0.54,
+          "score": 0.76,
           "conversion_rate_pct": 4.74,
           "total_sales_chf": 562735.51,
           "email_sent": 2259,
@@ -501,13 +473,27 @@
           "bottle_price_chf": 392.0
         },
         {
-          "rank": 5,
+          "rank": 3,
+          "wine": "Mouton Rothschild",
+          "vintage": "2025",
+          "producer": "Château Mouton Rothschild",
+          "campaign_no": "CM-26-01706",
+          "start_date": "2026-06-03",
+          "score": 0.74,
+          "conversion_rate_pct": 3.98,
+          "total_sales_chf": 641834.91,
+          "email_sent": 3515,
+          "unique_buyers": 140,
+          "bottle_price_chf": 353.0
+        },
+        {
+          "rank": 4,
           "wine": "Figeac",
           "vintage": "2025",
           "producer": "Château Figeac",
           "campaign_no": "CM-26-01790",
           "start_date": "2026-06-09",
-          "score": 0.38,
+          "score": 0.7,
           "conversion_rate_pct": 6.94,
           "total_sales_chf": 179033.73,
           "email_sent": 1239,
@@ -515,18 +501,32 @@
           "bottle_price_chf": 133.0
         },
         {
+          "rank": 5,
+          "wine": "Lodovico",
+          "vintage": "2022",
+          "producer": "Tenuta di Biserno",
+          "campaign_no": "CM-26-01868",
+          "start_date": "2026-06-17",
+          "score": 0.54,
+          "conversion_rate_pct": 6.13,
+          "total_sales_chf": 22643.99,
+          "email_sent": 163,
+          "unique_buyers": 10,
+          "bottle_price_chf": 315.0
+        },
+        {
           "rank": 6,
-          "wine": "Grand Puy Lacoste",
+          "wine": "Beau-Séjour Bécot",
           "vintage": "2025",
-          "producer": "Château Grand Puy Lacoste",
-          "campaign_no": "CM-26-01695",
-          "start_date": "2026-06-01",
-          "score": 0.36,
-          "conversion_rate_pct": 8.89,
-          "total_sales_chf": 23438.76,
-          "email_sent": 495,
-          "unique_buyers": 44,
-          "bottle_price_chf": 44.0
+          "producer": "Château Beau-Séjour Bécot",
+          "campaign_no": "CM-26-01962",
+          "start_date": "2026-06-22",
+          "score": 0.53,
+          "conversion_rate_pct": 5.78,
+          "total_sales_chf": 61575.86,
+          "email_sent": 1453,
+          "unique_buyers": 84,
+          "bottle_price_chf": 53.0
         },
         {
           "rank": 7,
@@ -535,7 +535,7 @@
           "producer": "Château Haut Brion",
           "campaign_no": "CM-26-01785",
           "start_date": "2026-06-09",
-          "score": 0.28,
+          "score": 0.52,
           "conversion_rate_pct": 5.21,
           "total_sales_chf": 127524.18,
           "email_sent": 461,
@@ -544,48 +544,48 @@
         },
         {
           "rank": 8,
-          "wine": "Haut Brion",
+          "wine": "La Conseillante",
           "vintage": "2025",
-          "producer": "Château Haut Brion",
-          "campaign_no": "CM-26-01772",
-          "start_date": "2026-06-09",
-          "score": 0.27,
-          "conversion_rate_pct": 1.94,
-          "total_sales_chf": 308142.47,
-          "email_sent": 3398,
-          "unique_buyers": 66,
-          "bottle_price_chf": 322.0
+          "producer": "Château La Conseillante",
+          "campaign_no": "CM-26-01820",
+          "start_date": "2026-06-12",
+          "score": 0.41,
+          "conversion_rate_pct": 3.96,
+          "total_sales_chf": 116145.45,
+          "email_sent": 1640,
+          "unique_buyers": 65,
+          "bottle_price_chf": 161.0
         },
         {
           "rank": 9,
-          "wine": "Beau-Séjour Bécot",
-          "vintage": "2025",
-          "producer": "Château Beau-Séjour Bécot",
-          "campaign_no": "CM-26-01962",
-          "start_date": "2026-06-22",
-          "score": 0.27,
-          "conversion_rate_pct": 5.78,
-          "total_sales_chf": 61575.86,
-          "email_sent": 1453,
-          "unique_buyers": 84,
-          "bottle_price_chf": 53.0
-        },
-        {
-          "rank": 10,
           "wine": "Ausone",
           "vintage": "2025",
           "producer": "Château Ausone",
-          "campaign_no": "CM-26-01805",
+          "campaign_no": "CM-26-01814",
           "start_date": "2026-06-11",
-          "score": 0.26,
-          "conversion_rate_pct": 2.08,
-          "total_sales_chf": 287793.83,
-          "email_sent": 2546,
-          "unique_buyers": 53,
+          "score": 0.39,
+          "conversion_rate_pct": 3.99,
+          "total_sales_chf": 82918.17,
+          "email_sent": 351,
+          "unique_buyers": 14,
           "bottle_price_chf": 420.0
+        },
+        {
+          "rank": 10,
+          "wine": "Barolo Gran Bussia Riserva",
+          "vintage": "2016",
+          "producer": "Poderi Aldo Conterno",
+          "campaign_no": "CM-26-01887",
+          "start_date": "2026-06-18",
+          "score": 0.38,
+          "conversion_rate_pct": 4.07,
+          "total_sales_chf": 46730.81,
+          "email_sent": 270,
+          "unique_buyers": 11,
+          "bottle_price_chf": 520.0
         }
       ]
     }
   },
-  "_fingerprint": "0c0ebc5a8cc146244fa38b007fe0d0b8"
+  "_fingerprint": "60f31469e61fbd2960b54278b1c517bf"
 }

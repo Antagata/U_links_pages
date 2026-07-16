@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-07-06T07:25:06Z",
+  "exported_at": "2026-07-16T08:52:53Z",
   "schema_version": 1,
-  "_fingerprint": "b8693f0ca2d726875f34e009314bcbad",
+  "_fingerprint": "54a9f2ea701f2da117a0f1b16941a5ae",
   "top10": [
     {
       "rank": 1,
@@ -59,6 +59,15 @@
     },
     {
       "rank": 7,
+      "wine": "Richebourg",
+      "vintage": "2022",
+      "producer": "Thibault Liger-Belair",
+      "campaign_id": "CM-26-02106",
+      "start_date": "2026-07-10",
+      "score": 0.5447
+    },
+    {
+      "rank": 8,
       "wine": "Côte Rôtie La Landonne",
       "vintage": "2012",
       "producer": "Domaine Guigal",
@@ -67,7 +76,7 @@
       "score": 0.5419
     },
     {
-      "rank": 8,
+      "rank": 9,
       "wine": "Côte Rôtie La Mouline",
       "vintage": "2010",
       "producer": "Domaine Guigal",
@@ -76,22 +85,13 @@
       "score": 0.4937
     },
     {
-      "rank": 9,
+      "rank": 10,
       "wine": "Latour (Ex-Château)",
       "vintage": "1982",
       "producer": "Château Latour",
       "campaign_id": "CM-26-00293",
       "start_date": "2026-02-02",
       "score": 0.4741
-    },
-    {
-      "rank": 10,
-      "wine": "Cheval Blanc",
-      "vintage": "2005",
-      "producer": "Château Cheval Blanc",
-      "campaign_id": "CM-26-00724",
-      "start_date": "2026-03-05",
-      "score": 0.4726
     }
   ]
 }

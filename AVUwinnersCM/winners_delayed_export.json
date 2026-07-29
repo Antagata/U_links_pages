@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-07-27T06:26:02Z",
+  "exported_at": "2026-07-29T15:28:15Z",
   "schema_version": 1,
-  "_fingerprint": "a220bce57d905b18d9177f4fc81c0923",
+  "_fingerprint": "7f9ca9ec38d5c6b9b9da40595e2df6ec",
   "top10": [
     {
       "rank": 1,
@@ -10,7 +10,7 @@
       "producer": "Château Cheval Blanc",
       "campaign_id": "CM-26-00714",
       "start_date": "2026-03-04",
-      "score": 0.7622
+      "score": 0.762
     },
     {
       "rank": 2,
@@ -64,7 +64,7 @@
       "producer": "Thibault Liger-Belair",
       "campaign_id": "CM-26-02106",
       "start_date": "2026-07-10",
-      "score": 0.507
+      "score": 0.4998
     },
     {
       "rank": 8,

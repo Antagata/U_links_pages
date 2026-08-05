@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-08-03T20:37:32Z",
+  "exported_at": "2026-08-05T10:42:01Z",
   "schema_version": 1,
-  "_fingerprint": "4e3069960066167cbdc27ea2c0369d37",
+  "_fingerprint": "12b6b8bfb57dbe61d8aaf726ac9c8415",
   "top10": [
     {
       "rank": 1,
@@ -64,7 +64,7 @@
       "producer": "Thibault Liger-Belair",
       "campaign_id": "CM-26-02106",
       "start_date": "2026-07-10",
-      "score": 0.4998
+      "score": 0.4994
     },
     {
       "rank": 8,

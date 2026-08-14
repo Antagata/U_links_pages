@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "exported_at": "2026-08-12T12:37:52.053880",
+  "exported_at": "2026-08-14T16:42:33.630099",
   "arrays": {
     "top10_alltime": {
       "period_label": "All-time",
-      "generated_from_rows": 1337,
+      "generated_from_rows": 1347,
       "winners": [
         {
           "rank": 1,
@@ -150,30 +150,44 @@
     },
     "top10_last7": {
       "period_label": "Last 7 days",
-      "generated_from_rows": 21,
+      "generated_from_rows": 20,
       "winners": [
         {
           "rank": 1,
+          "wine": "Sloan Red",
+          "vintage": "2016",
+          "producer": "Sloan",
+          "campaign_no": "CM-26-02376",
+          "start_date": "2026-08-12",
+          "score": 0.64,
+          "conversion_rate_pct": 1.91,
+          "total_sales_chf": 12736.88,
+          "email_sent": 157,
+          "unique_buyers": 3,
+          "bottle_price_chf": 670.0
+        },
+        {
+          "rank": 2,
           "wine": "D'Issan",
           "vintage": "2022",
           "producer": "Château D'Issan",
           "campaign_no": "CM-26-02337",
           "start_date": "2026-08-08",
-          "score": 0.7,
-          "conversion_rate_pct": 1.42,
-          "total_sales_chf": 57563.31,
+          "score": 0.63,
+          "conversion_rate_pct": 1.47,
+          "total_sales_chf": 59048.94,
           "email_sent": 5296,
-          "unique_buyers": 75,
+          "unique_buyers": 78,
           "bottle_price_chf": 64.0
         },
         {
-          "rank": 2,
+          "rank": 3,
           "wine": "Champagne Brut Cuvée Rare",
           "vintage": "2013",
           "producer": "Piper-Heidsieck",
           "campaign_no": "CM-26-02331",
           "start_date": "2026-08-09",
-          "score": 0.69,
+          "score": 0.59,
           "conversion_rate_pct": 1.59,
           "total_sales_chf": 29649.5,
           "email_sent": 1381,
@@ -181,27 +195,27 @@
           "bottle_price_chf": 140.0
         },
         {
-          "rank": 3,
+          "rank": 4,
           "wine": "Margaux",
           "vintage": "2019",
           "producer": "Château Margaux",
           "campaign_no": "CM-26-02345",
           "start_date": "2026-08-09",
-          "score": 0.6,
-          "conversion_rate_pct": 0.52,
-          "total_sales_chf": 137722.05,
+          "score": 0.57,
+          "conversion_rate_pct": 0.54,
+          "total_sales_chf": 138282.67,
           "email_sent": 5916,
-          "unique_buyers": 31,
+          "unique_buyers": 32,
           "bottle_price_chf": 585.0
         },
         {
-          "rank": 4,
+          "rank": 5,
           "wine": "Pétrus",
           "vintage": "2021",
           "producer": "Château Pétrus",
           "campaign_no": "CM-26-02342",
           "start_date": "2026-08-07",
-          "score": 0.55,
+          "score": 0.52,
           "conversion_rate_pct": 0.44,
           "total_sales_chf": 133615.82,
           "email_sent": 2032,
@@ -209,32 +223,18 @@
           "bottle_price_chf": 2755.0
         },
         {
-          "rank": 5,
-          "wine": "Latour (Ex-Château)",
-          "vintage": "2019",
-          "producer": "Château Latour",
-          "campaign_no": "CM-26-02323",
-          "start_date": "2026-08-06",
-          "score": 0.54,
-          "conversion_rate_pct": 0.73,
-          "total_sales_chf": 91786.74,
-          "email_sent": 2598,
-          "unique_buyers": 19,
-          "bottle_price_chf": 530.0
-        },
-        {
           "rank": 6,
-          "wine": "Blanc de Lynch Bages",
-          "vintage": "2024",
-          "producer": "Château Lynch Bages",
-          "campaign_no": "CM-26-02307",
-          "start_date": "2026-08-08",
-          "score": 0.52,
-          "conversion_rate_pct": 1.29,
-          "total_sales_chf": 12152.98,
-          "email_sent": 1707,
-          "unique_buyers": 22,
-          "bottle_price_chf": 51.0
+          "wine": "Haut Brion",
+          "vintage": "2021",
+          "producer": "Château Haut Brion",
+          "campaign_no": "CM-26-02360",
+          "start_date": "2026-08-12",
+          "score": 0.48,
+          "conversion_rate_pct": 0.74,
+          "total_sales_chf": 85208.65,
+          "email_sent": 4341,
+          "unique_buyers": 32,
+          "bottle_price_chf": 315.0
         },
         {
           "rank": 7,
@@ -243,21 +243,35 @@
           "producer": "Château Lynch Bages",
           "campaign_no": "CM-26-02343",
           "start_date": "2026-08-09",
-          "score": 0.51,
-          "conversion_rate_pct": 0.98,
-          "total_sales_chf": 48433.99,
+          "score": 0.47,
+          "conversion_rate_pct": 1.03,
+          "total_sales_chf": 50415.75,
           "email_sent": 4000,
-          "unique_buyers": 39,
+          "unique_buyers": 41,
           "bottle_price_chf": 108.0
         },
         {
           "rank": 8,
+          "wine": "Blanc de Lynch Bages",
+          "vintage": "2024",
+          "producer": "Château Lynch Bages",
+          "campaign_no": "CM-26-02307",
+          "start_date": "2026-08-08",
+          "score": 0.44,
+          "conversion_rate_pct": 1.29,
+          "total_sales_chf": 12152.98,
+          "email_sent": 1707,
+          "unique_buyers": 22,
+          "bottle_price_chf": 51.0
+        },
+        {
+          "rank": 9,
           "wine": "Péby Faugeres",
           "vintage": "2018",
           "producer": "Château Péby Faugères",
           "campaign_no": "CM-26-02341",
           "start_date": "2026-08-09",
-          "score": 0.48,
+          "score": 0.41,
           "conversion_rate_pct": 1.23,
           "total_sales_chf": 6997.53,
           "email_sent": 653,
@@ -265,38 +279,24 @@
           "bottle_price_chf": 147.0
         },
         {
-          "rank": 9,
-          "wine": "PS",
-          "vintage": "2023",
-          "producer": "Aalto Bodegas y Viñedos",
-          "campaign_no": "CM-26-02320",
-          "start_date": "2026-08-06",
-          "score": 0.46,
-          "conversion_rate_pct": 1.04,
-          "total_sales_chf": 22401.48,
-          "email_sent": 3285,
-          "unique_buyers": 34,
-          "bottle_price_chf": 78.0
-        },
-        {
           "rank": 10,
-          "wine": "Paleo Rosso",
-          "vintage": "2022",
-          "producer": "Le Macchiole",
-          "campaign_no": "CM-26-02318",
-          "start_date": "2026-08-06",
-          "score": 0.44,
-          "conversion_rate_pct": 1.1,
-          "total_sales_chf": 9198.54,
-          "email_sent": 1271,
-          "unique_buyers": 14,
-          "bottle_price_chf": 75.0
+          "wine": "Corton-Charlemagne",
+          "vintage": "2023",
+          "producer": "Domaine Rapet Père & Fils",
+          "campaign_no": "CM-26-02356",
+          "start_date": "2026-08-11",
+          "score": 0.39,
+          "conversion_rate_pct": 0.96,
+          "total_sales_chf": 29892.77,
+          "email_sent": 1872,
+          "unique_buyers": 18,
+          "bottle_price_chf": 135.0
         }
       ]
     },
     "top10_last14": {
       "period_label": "Last 14 days",
-      "generated_from_rows": 46,
+      "generated_from_rows": 47,
       "winners": [
         {
           "rank": 1,
@@ -305,11 +305,11 @@
           "producer": "Tenuta dell'Ornellaia",
           "campaign_no": "CM-26-02295",
           "start_date": "2026-08-04",
-          "score": 0.96,
-          "conversion_rate_pct": 2.6,
-          "total_sales_chf": 254662.89,
+          "score": 0.97,
+          "conversion_rate_pct": 2.64,
+          "total_sales_chf": 256071.72,
           "email_sent": 5260,
-          "unique_buyers": 137,
+          "unique_buyers": 139,
           "bottle_price_chf": 162.0
         },
         {
@@ -328,20 +328,6 @@
         },
         {
           "rank": 3,
-          "wine": "Lafleur",
-          "vintage": "2025",
-          "producer": "Château Lafleur",
-          "campaign_no": "CM-26-02263",
-          "start_date": "2026-07-30",
-          "score": 0.48,
-          "conversion_rate_pct": 0.69,
-          "total_sales_chf": 208763.17,
-          "email_sent": 1603,
-          "unique_buyers": 11,
-          "bottle_price_chf": 875.0
-        },
-        {
-          "rank": 4,
           "wine": "Champagne Brut Dom Pérignon",
           "vintage": "2017",
           "producer": "Dom Pérignon",
@@ -355,6 +341,20 @@
           "bottle_price_chf": 168.0
         },
         {
+          "rank": 4,
+          "wine": "Sloan Red",
+          "vintage": "2016",
+          "producer": "Sloan",
+          "campaign_no": "CM-26-02376",
+          "start_date": "2026-08-12",
+          "score": 0.43,
+          "conversion_rate_pct": 1.91,
+          "total_sales_chf": 12736.88,
+          "email_sent": 157,
+          "unique_buyers": 3,
+          "bottle_price_chf": 670.0
+        },
+        {
           "rank": 5,
           "wine": "Illumination",
           "vintage": "2023",
@@ -363,7 +363,7 @@
           "start_date": "2026-08-04",
           "score": 0.42,
           "conversion_rate_pct": 1.88,
-          "total_sales_chf": 11521.11,
+          "total_sales_chf": 11548.2,
           "email_sent": 1333,
           "unique_buyers": 25,
           "bottle_price_chf": 57.0
@@ -375,11 +375,11 @@
           "producer": "Château D'Issan",
           "campaign_no": "CM-26-02337",
           "start_date": "2026-08-08",
-          "score": 0.4,
-          "conversion_rate_pct": 1.42,
-          "total_sales_chf": 57563.31,
+          "score": 0.41,
+          "conversion_rate_pct": 1.47,
+          "total_sales_chf": 59048.94,
           "email_sent": 5296,
-          "unique_buyers": 75,
+          "unique_buyers": 78,
           "bottle_price_chf": 64.0
         },
         {
@@ -404,25 +404,25 @@
           "campaign_no": "CM-26-02345",
           "start_date": "2026-08-09",
           "score": 0.33,
-          "conversion_rate_pct": 0.52,
-          "total_sales_chf": 137722.05,
+          "conversion_rate_pct": 0.54,
+          "total_sales_chf": 138282.67,
           "email_sent": 5916,
-          "unique_buyers": 31,
+          "unique_buyers": 32,
           "bottle_price_chf": 585.0
         },
         {
           "rank": 9,
-          "wine": "Siepi",
-          "vintage": "2020",
-          "producer": "Marchesi Mazzei Castello di Fonterutoli",
-          "campaign_no": "CM-26-02266",
-          "start_date": "2026-07-30",
+          "wine": "Latour (Ex-Château)",
+          "vintage": "2019",
+          "producer": "Château Latour",
+          "campaign_no": "CM-26-02323",
+          "start_date": "2026-08-06",
           "score": 0.32,
-          "conversion_rate_pct": 1.34,
-          "total_sales_chf": 17760.08,
-          "email_sent": 2392,
-          "unique_buyers": 32,
-          "bottle_price_chf": 64.0
+          "conversion_rate_pct": 0.81,
+          "total_sales_chf": 95719.21,
+          "email_sent": 2598,
+          "unique_buyers": 21,
+          "bottle_price_chf": 530.0
         },
         {
           "rank": 10,
@@ -442,7 +442,7 @@
     },
     "top10_last30": {
       "period_label": "Last 30 days",
-      "generated_from_rows": 100,
+      "generated_from_rows": 102,
       "winners": [
         {
           "rank": 1,
@@ -451,11 +451,11 @@
           "producer": "Tenuta dell'Ornellaia",
           "campaign_no": "CM-26-02295",
           "start_date": "2026-08-04",
-          "score": 0.73,
-          "conversion_rate_pct": 2.6,
-          "total_sales_chf": 254662.89,
+          "score": 0.74,
+          "conversion_rate_pct": 2.64,
+          "total_sales_chf": 256071.72,
           "email_sent": 5260,
-          "unique_buyers": 137,
+          "unique_buyers": 139,
           "bottle_price_chf": 162.0
         },
         {
@@ -479,7 +479,7 @@
           "producer": "Château Lafleur",
           "campaign_no": "CM-26-02263",
           "start_date": "2026-07-30",
-          "score": 0.42,
+          "score": 0.41,
           "conversion_rate_pct": 0.69,
           "total_sales_chf": 208763.17,
           "email_sent": 1603,
@@ -516,20 +516,6 @@
         },
         {
           "rank": 6,
-          "wine": "Champagne Brut Belle Epoque Rosé 120th Anniversary",
-          "vintage": "2013",
-          "producer": "Perrier-Jouët",
-          "campaign_no": "CM-26-02142",
-          "start_date": "2026-07-15",
-          "score": 0.36,
-          "conversion_rate_pct": 2.57,
-          "total_sales_chf": 16731.6,
-          "email_sent": 506,
-          "unique_buyers": 13,
-          "bottle_price_chf": 210.0
-        },
-        {
-          "rank": 7,
           "wine": "L'Évangile",
           "vintage": "2023",
           "producer": "Château L'Évangile",
@@ -543,7 +529,7 @@
           "bottle_price_chf": 114.0
         },
         {
-          "rank": 8,
+          "rank": 7,
           "wine": "Champagne Brut Dom Pérignon",
           "vintage": "2017",
           "producer": "Dom Pérignon",
@@ -557,18 +543,32 @@
           "bottle_price_chf": 168.0
         },
         {
-          "rank": 9,
+          "rank": 8,
           "wine": "Margaux",
           "vintage": "2019",
           "producer": "Château Margaux",
           "campaign_no": "CM-26-02345",
           "start_date": "2026-08-09",
-          "score": 0.28,
-          "conversion_rate_pct": 0.52,
-          "total_sales_chf": 137722.05,
+          "score": 0.29,
+          "conversion_rate_pct": 0.54,
+          "total_sales_chf": 138282.67,
           "email_sent": 5916,
-          "unique_buyers": 31,
+          "unique_buyers": 32,
           "bottle_price_chf": 585.0
+        },
+        {
+          "rank": 9,
+          "wine": "D'Issan",
+          "vintage": "2022",
+          "producer": "Château D'Issan",
+          "campaign_no": "CM-26-02337",
+          "start_date": "2026-08-08",
+          "score": 0.28,
+          "conversion_rate_pct": 1.47,
+          "total_sales_chf": 59048.94,
+          "email_sent": 5296,
+          "unique_buyers": 78,
+          "bottle_price_chf": 64.0
         },
         {
           "rank": 10,
@@ -733,5 +733,5 @@
       ]
     }
   },
-  "_fingerprint": "d0856c6200e6aca6e2e7f061a254f99c"
+  "_fingerprint": "a6503821bfd78bad48e924b824d3d60c"
 }

@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-08-17T10:38:16Z",
+  "exported_at": "2026-08-31T07:32:46Z",
   "schema_version": 1,
-  "_fingerprint": "b381387def2942252b9b9e417abc3d89",
+  "_fingerprint": "40dbc921365c815a917f0b15df6d2511",
   "top10": [
     {
       "rank": 1,
@@ -10,7 +10,7 @@
       "producer": "Château Cheval Blanc",
       "campaign_id": "CM-26-00714",
       "start_date": "2026-03-04",
-      "score": 0.7223
+      "score": 0.7392
     },
     {
       "rank": 2,
@@ -19,7 +19,7 @@
       "producer": "Rouget Emmanuel",
       "campaign_id": "CM-26-01753",
       "start_date": "2026-06-06",
-      "score": 0.6546
+      "score": 0.6662
     },
     {
       "rank": 3,
@@ -28,16 +28,16 @@
       "producer": "Bodegas López de Heredia Viña Tondonia",
       "campaign_id": "CM-26-01041",
       "start_date": "2026-03-30",
-      "score": 0.626
+      "score": 0.6286
     },
     {
       "rank": 4,
-      "wine": "Côte Rôtie La Landonne",
-      "vintage": "2012",
-      "producer": "Domaine Guigal",
-      "campaign_id": "CM-26-01461",
-      "start_date": "2026-05-12",
-      "score": 0.5154
+      "wine": "Mouton Rothschild",
+      "vintage": "1982",
+      "producer": "Château Mouton Rothschild",
+      "campaign_id": "CM-26-02364",
+      "start_date": "2026-08-11",
+      "score": 0.5346
     },
     {
       "rank": 5,
@@ -46,34 +46,34 @@
       "producer": "Domaine Bernard Dugat-Py",
       "campaign_id": "CM-26-00749",
       "start_date": "2026-03-07",
-      "score": 0.5091
+      "score": 0.5265
     },
     {
       "rank": 6,
+      "wine": "Côte Rôtie La Landonne",
+      "vintage": "2012",
+      "producer": "Domaine Guigal",
+      "campaign_id": "CM-26-01461",
+      "start_date": "2026-05-12",
+      "score": 0.5206
+    },
+    {
+      "rank": 7,
       "wine": "Haut Brion",
       "vintage": "1982",
       "producer": "Château Haut Brion",
       "campaign_id": "CM-26-01439",
       "start_date": "2026-05-08",
-      "score": 0.47
+      "score": 0.4871
     },
     {
-      "rank": 7,
+      "rank": 8,
       "wine": "Richebourg",
       "vintage": "2022",
       "producer": "Thibault Liger-Belair",
       "campaign_id": "CM-26-02106",
       "start_date": "2026-07-10",
-      "score": 0.469
-    },
-    {
-      "rank": 8,
-      "wine": "DRC la Tâche",
-      "vintage": "1996",
-      "producer": "Domaine de la Romanée Conti",
-      "campaign_id": "CM-26-02379",
-      "start_date": "2026-08-12",
-      "score": 0.4648
+      "score": 0.482
     },
     {
       "rank": 9,
@@ -82,16 +82,16 @@
       "producer": "Domaine Guigal",
       "campaign_id": "CM-26-01175",
       "start_date": "2026-04-09",
-      "score": 0.4581
+      "score": 0.465
     },
     {
       "rank": 10,
-      "wine": "Finca Piedra Infinita Gravascal",
-      "vintage": "2021",
-      "producer": "Familia Zuccardi",
-      "campaign_id": "CM-25-02970",
-      "start_date": "2025-10-29",
-      "score": 0.4383
+      "wine": "DRC la Tâche",
+      "vintage": "1996",
+      "producer": "Domaine de la Romanée Conti",
+      "campaign_id": "CM-26-02379",
+      "start_date": "2026-08-12",
+      "score": 0.4648
     }
   ]
 }

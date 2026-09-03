@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-08-31T07:32:46Z",
+  "exported_at": "2026-09-03T14:43:22Z",
   "schema_version": 1,
-  "_fingerprint": "40dbc921365c815a917f0b15df6d2511",
+  "_fingerprint": "becd206a36439d8848c5ef5a2a8a4301",
   "top10": [
     {
       "rank": 1,
@@ -46,7 +46,7 @@
       "producer": "Domaine Bernard Dugat-Py",
       "campaign_id": "CM-26-00749",
       "start_date": "2026-03-07",
-      "score": 0.5265
+      "score": 0.5323
     },
     {
       "rank": 6,

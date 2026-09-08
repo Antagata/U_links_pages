@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-09-07T07:05:37Z",
+  "exported_at": "2026-09-08T07:33:49Z",
   "schema_version": 1,
-  "_fingerprint": "1e56c23d1a1ad35f33fa256c47dff746",
+  "_fingerprint": "41e940d099fdbd797414a18c2b367f6e",
   "top10": [
     {
       "rank": 1,
@@ -28,7 +28,7 @@
       "producer": "Domaine Bruno Clair",
       "campaign_id": "CM-26-02591",
       "start_date": "2026-09-04",
-      "score": 0.6608
+      "score": 0.6641
     },
     {
       "rank": 4,

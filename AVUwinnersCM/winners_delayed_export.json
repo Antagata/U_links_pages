@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-09-08T07:33:49Z",
+  "exported_at": "2026-09-23T06:44:34Z",
   "schema_version": 1,
-  "_fingerprint": "41e940d099fdbd797414a18c2b367f6e",
+  "_fingerprint": "a2fff2cf88ea2441704dbdd62561ff26",
   "top10": [
     {
       "rank": 1,
@@ -46,7 +46,7 @@
       "producer": "Château Mouton Rothschild",
       "campaign_id": "CM-26-02364",
       "start_date": "2026-08-11",
-      "score": 0.5346
+      "score": 0.5332
     },
     {
       "rank": 6,
@@ -82,7 +82,7 @@
       "producer": "Thibault Liger-Belair",
       "campaign_id": "CM-26-02106",
       "start_date": "2026-07-10",
-      "score": 0.482
+      "score": 0.4819
     },
     {
       "rank": 10,

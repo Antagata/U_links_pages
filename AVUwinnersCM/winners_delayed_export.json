@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-10-15T12:15:33Z",
+  "exported_at": "2026-10-19T07:53:01Z",
   "schema_version": 1,
-  "_fingerprint": "945d1ef3ac7a8f8138e19e150a394a9e",
+  "_fingerprint": "78103ff9393ce755501ac0365f827dd0",
   "top10": [
     {
       "rank": 1,
@@ -28,7 +28,7 @@
       "producer": "Domaine Bruno Clair",
       "campaign_id": "CM-26-02591",
       "start_date": "2026-09-04",
-      "score": 0.6641
+      "score": 0.652
     },
     {
       "rank": 4,
@@ -82,7 +82,7 @@
       "producer": "Vietti",
       "campaign_id": "CM-26-02854",
       "start_date": "2026-10-11",
-      "score": 0.5087
+      "score": 0.5115
     },
     {
       "rank": 10,

@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-10-26T08:37:51Z",
+  "exported_at": "2026-10-29T14:54:37Z",
   "schema_version": 1,
-  "_fingerprint": "51160af066b4351ca54c099c3b4a66d7",
+  "_fingerprint": "b72220e5ddbf874aa8018a70614e5969",
   "top10": [
     {
       "rank": 1,
@@ -46,7 +46,7 @@
       "producer": "Bodegas López de Heredia Viña Tondonia",
       "campaign_id": "CM-26-01041",
       "start_date": "2026-03-30",
-      "score": 0.5886
+      "score": 0.5884
     },
     {
       "rank": 6,
@@ -64,7 +64,7 @@
       "producer": "Château Mouton Rothschild",
       "campaign_id": "CM-26-02364",
       "start_date": "2026-08-11",
-      "score": 0.5242
+      "score": 0.5223
     },
     {
       "rank": 8,
@@ -91,7 +91,7 @@
       "producer": "Vietti",
       "campaign_id": "CM-26-02854",
       "start_date": "2026-10-11",
-      "score": 0.4836
+      "score": 0.4824
     }
   ]
 }

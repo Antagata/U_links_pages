@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-10-29T14:54:37Z",
+  "exported_at": "2026-11-10T09:25:37Z",
   "schema_version": 1,
-  "_fingerprint": "b72220e5ddbf874aa8018a70614e5969",
+  "_fingerprint": "5f7b207c81fac62de510df121804b09c",
   "top10": [
     {
       "rank": 1,
@@ -77,21 +77,21 @@
     },
     {
       "rank": 9,
-      "wine": "Côte Rôtie La Landonne",
-      "vintage": "2012",
-      "producer": "Domaine Guigal",
-      "campaign_id": "CM-26-01461",
-      "start_date": "2026-05-12",
-      "score": 0.4875
-    },
-    {
-      "rank": 10,
       "wine": "Barolo Villero Riserva",
       "vintage": "2009",
       "producer": "Vietti",
       "campaign_id": "CM-26-02854",
       "start_date": "2026-10-11",
       "score": 0.4824
+    },
+    {
+      "rank": 10,
+      "wine": "DRC la Tâche",
+      "vintage": "1996",
+      "producer": "Domaine de la Romanée Conti",
+      "campaign_id": "CM-26-02379",
+      "start_date": "2026-08-12",
+      "score": 0.4605
     }
   ]
 }

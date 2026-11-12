@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-11-10T09:25:37Z",
+  "exported_at": "2026-11-12T10:27:35Z",
   "schema_version": 1,
-  "_fingerprint": "5f7b207c81fac62de510df121804b09c",
+  "_fingerprint": "b5fec462135ee5daf3f876ec583a42c4",
   "top10": [
     {
       "rank": 1,
@@ -82,7 +82,7 @@
       "producer": "Vietti",
       "campaign_id": "CM-26-02854",
       "start_date": "2026-10-11",
-      "score": 0.4824
+      "score": 0.4797
     },
     {
       "rank": 10,

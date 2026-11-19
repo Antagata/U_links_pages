@@ -1,7 +1,7 @@
 {
-  "exported_at": "2026-11-12T10:27:35Z",
+  "exported_at": "2026-11-19T14:56:53Z",
   "schema_version": 1,
-  "_fingerprint": "b5fec462135ee5daf3f876ec583a42c4",
+  "_fingerprint": "d04761321ed8f9feee49804944fc5521",
   "top10": [
     {
       "rank": 1,
@@ -73,7 +73,7 @@
       "producer": "Domaine Bernard Dugat-Py",
       "campaign_id": "CM-26-00749",
       "start_date": "2026-03-07",
-      "score": 0.5042
+      "score": 0.5036
     },
     {
       "rank": 9,
@@ -82,7 +82,7 @@
       "producer": "Vietti",
       "campaign_id": "CM-26-02854",
       "start_date": "2026-10-11",
-      "score": 0.4797
+      "score": 0.4769
     },
     {
       "rank": 10,
